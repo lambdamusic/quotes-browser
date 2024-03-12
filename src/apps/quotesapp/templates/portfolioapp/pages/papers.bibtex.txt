@@ -1,0 +1,105 @@
+
+
+# <br />
+# Copy/paste the contents of this file and save with extension .bib in order to use elsewhere <br />
+# Generated on: {% now "jS F Y H:i" %} on https://www.michelepasin.org<br />
+# Clean up: https://flamingtempura.github.io/bibtex-tidy/index.html<br />
+# <br />
+<br /><br />
+
+{% load extrafilters %}
+
+ {% for group_and_pubs in return_items %}
+
+	{% ifequal group_and_pubs.0 "Journals"  %}
+
+		{% for pub in group_and_pubs.1 %}
+		{% if not pub.isforthcoming %}
+
+			@article{% templatetag openbrace %}Pasin{{pub.id}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	author = {{pub|printmanyauthors|replace_comma_with_and|add_braces}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	title = {{pub.title|capfirst|add_braces}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	journal = {{pub.journal|add_braces}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	month = "{{pub.pubdate|date:"m"}}",
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	year = "{{pub.pubdate|date:"Y"}}",
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	abstract = "{{pub.abstract|escapejs|default:""}}",
+
+			<br />{% templatetag closebrace %}
+
+		<br />
+		<br />
+
+		{% endif %}{% endfor %}
+		
+	
+	{% endifequal %}
+
+
+	{% ifequal group_and_pubs.0 "Books & Chapters"  %}
+
+		{% for pub in group_and_pubs.1 %}
+		{% if not pub.isforthcoming %}
+
+			@inproceedings{% templatetag openbrace %}Pasin{{pub.id}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	author = {{pub|printmanyauthors|replace_comma_with_and|add_braces}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	title = {{pub.title|capfirst|add_braces}},
+	  		  <br />&nbsp;&nbsp;&nbsp;
+	  		  	booktitle = {{pub.conference|add_braces}},			
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	month = "{{pub.pubdate|date:"m"}}",
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	year = "{{pub.pubdate|date:"Y"}}",
+  			  <br />&nbsp;&nbsp;&nbsp;
+  			  	abstract = "{{pub.abstract|escapejs|default:""}}",
+
+			<br />{% templatetag closebrace %}
+
+		<br />
+		<br />
+
+		{% endif %}{% endfor %}
+		
+	
+	{% endifequal %}
+
+
+	{% ifequal group_and_pubs.0 "Peer Reviewed Articles"  %}
+
+		{% for pub in group_and_pubs.1 %}
+		{% if not pub.isforthcoming %}
+
+			@inproceedings{% templatetag openbrace %}Pasin{{pub.id}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	author = {{pub|printmanyauthors|replace_comma_with_and|add_braces}},
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	title = {{pub.title|capfirst|add_braces}},
+	  		  <br />&nbsp;&nbsp;&nbsp;
+	  		  	booktitle = {{pub.conference|add_braces}},			
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	month = "{{pub.pubdate|date:"m"}}",
+			  <br />&nbsp;&nbsp;&nbsp;
+			  	year = "{{pub.pubdate|date:"Y"}}",
+  			  <br />&nbsp;&nbsp;&nbsp;
+  			  	abstract = "{{pub.abstract|escapejs|default:""}}",
+				
+
+			<br />{% templatetag closebrace %}
+
+		<br />
+		<br />
+
+		{% endif %}{% endfor %}
+	
+	{% endifequal %}
+	
+
+
+{% endfor %}
