@@ -3,4 +3,4 @@
 export ENVIRONMENT=local
 
 cd src
-python manage.py runserver_plus
+python manage.py runserver_plus --keep-meta-shutdown

@@ -11,39 +11,39 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url 'quotesapp:home' %}">michelepasin<sup style="color: red;">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="{% url 'quotesapp:home' %}"><span style="color: rgb(0, 0, 0);">&nbsp;quotes.</span>michelepasin<sup style="color: red;">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
 
         <li {% if thispage == "projects" %}class="active"{% endif %}>
-          <a href="{% url 'quotesapp:projects' %}">Projects</a></li>
+          <a href="{% url 'quotesapp:home' %}">Projects</a></li>
 
         <li {% if thispage == "words" or thispage == "papers" %}class="active"{% endif %}>
-            <a href="{% url 'quotesapp:words' %}">Words</a></li>
+            <a href="{% url 'quotesapp:home' %}">Words</a></li>
 
         <li style="display: none;"{% if thispage == "quotes" %}class="active"{% endif %}>
           <a href="{% url 'quotesapp:quotes' %}">Quotes</a></li>
 
        <li {% if thispage == "music" %}class="active"{% endif %}>
-            <a href="{% url 'quotesapp:music' %}">Sounds</a></li>
+            <a href="{% url 'quotesapp:home' %}">Sounds</a></li>
 
         <li {% if thispage == "events" %}class="active"{% endif %}>
-          <a href="{% url 'quotesapp:events' %}">Events</a></li>
+          <a href="{% url 'quotesapp:home' %}">Events</a></li>
           
           {% comment %}
 
         <li {% if thispage == "photos" %}class="active"{% endif %}>
-          <a href="{% url 'quotesapp:photos' %}">Photos</a></li>
+          <a href="{% url 'quotesapp:home' %}">Photos</a></li>
           {% endcomment %}
 
         <li 
           {% if thispage == "contact" %}class="active"{% endif %}
-            ><a href="{% url 'quotesapp:contact' %}">Contact</a></li>
+            ><a href="{% url 'quotesapp:home' %}">Contact</a></li>
 
         <li 
         {% if thispage == "about" %}class="active"{% endif %}
-          ><a href="{% url 'quotesapp:about' %}">About</a></li>
+          ><a href="{% url 'quotesapp:home' %}">About</a></li>
           
         <li>
           <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">

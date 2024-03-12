@@ -11,15 +11,16 @@ import os
 from time import strftime
 import markdown
 import random
+import datetime
 
-from settings import STATICFILES_DIRS, BLOGS_ROOT
+# from settings import STATICFILES_DIRS, BLOGS_ROOT
 
 # from /src/libs
 from render_block import render_block_to_string
 from myutils.myutils import printDebug
 
-from researchapp.models import *
-from researchapp.topics import *
+# from researchapp.models import *
+# from researchapp.topics import *
 
 # from researchapp.management.commands.do_blogs_reindex import parse_markdown
 
