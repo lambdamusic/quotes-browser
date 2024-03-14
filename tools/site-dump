@@ -33,14 +33,14 @@ fi
 #
 
 
-# DIR_BUILD="build"
-# DIR_DOCS="docs"
-# DIR_MD="/Users/michele.pasin/Dropbox/Apps/NVALT/001/Blog"
+DIR_BUILD="build"
+DIR_DOCS="docs"
+DIR_MD="/Users/michele.pasin/Dropbox/Apps/NVALT/001/Blog"  # UPDATE!
 
-# DIR_ROOT_BACKUP="backups/$(date +"%Y_%m_%d__%I_%M_%S_%p")"
-# DIR_DOCS_BACKUP="$DIR_ROOT_BACKUP/docs"
-# DIR_MD_BACKUP="$DIR_ROOT_BACKUP/md"
-# DIR_DB_BACKUP="$DIR_ROOT_BACKUP/data"
+DIR_ROOT_BACKUP="backups/$(date +"%Y_%m_%d__%I_%M_%S_%p")"
+DIR_DOCS_BACKUP="$DIR_ROOT_BACKUP/docs"
+DIR_MD_BACKUP="$DIR_ROOT_BACKUP/md"
+DIR_DB_BACKUP="$DIR_ROOT_BACKUP/data"
 
 
 # #
