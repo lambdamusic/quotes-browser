@@ -174,7 +174,7 @@ svg.style("cursor","move");
             if (window.location.host.includes("michelepasin.org")) {
                 window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
-                window.location.href = "{% url 'quotesapp:quotes' %}?tag=" + d.id;
+                window.location.href = "{% url 'quotesapp:tags' %}?tag=" + d.id;
             }
             
         });   

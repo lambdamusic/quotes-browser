@@ -9,7 +9,7 @@
 
 {% block navbar %}
 
-    {% with thispage="quotes" %}
+    {% with thispage="tags" %}
 
     {% include "quotesapp/components/default-navbar.html" %}
 
@@ -48,12 +48,17 @@
 
 				{% for obj in return_items %}
 
+				
+				
 					
+
+
 					{% ifchanged obj.source %}
 					    <hr>
 						<h4>
 							<small style="color: #cbcbcb; text-transform: uppercase;">From: 
-								{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}</a>
+								{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}
+									&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
 									{% else %}<span class="text-muted" >{{obj.source}}</span>{% endif %}
 							</small>
 							<!-- Words taken from <cite title="{{obj.source}}">
@@ -63,15 +68,16 @@
 						
 					{% endifchanged %}
 						
-		
+
 					<li style="margin-bottom: 10px;">
-						<a style="font-size: 120%;" href="{{obj.filename}}/">{{obj.title}}</a>
+						<!-- <a style="font-size: 120%;" href="/quotes/{{obj.filename}}">{{obj.title}}</a> -->
+						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.filename %}">{{obj.title}}</a>
 						<br />
+
 						{% for tag in obj.tags %}
-						<a class="text-muted" href="{% url 'quotesapp:quotes' %}?tag={{tag}}">#{{tag}}</a>&nbsp;
-							{% endfor %}
-							</small>
-		
+							<a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag}}">#{{tag}}</a>&nbsp;
+						{% endfor %}
+					
 					
 					</li>
 
@@ -84,7 +90,7 @@
 
 			<div class="col-md-6" style="margin-bottom: 30px;">
 		
-				<span class="text-muted" style="color: #cbcbcb;">Top related keywords:</span>
+				<span class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</span>
 				
 				<div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
 		
@@ -120,7 +126,8 @@
 			{% for tag in tags  %}
 					
 				{% if tag.1 > 1 %}
-					<a href="?tag={{tag.0}}" title="{{tag.1}} quotes" style="{{tag.1|tagsize_quotes}}">{{tag.0}}</a>&nbsp;
+					<!-- <a href="?tag={{tag.0}}" title="{{tag.1}} quotes" style="{{tag.1|tagsize_quotes}}">{{tag.0}}</a>&nbsp; -->
+					<a href="{% url 'quotesapp:tags' %}?tag={{tag.0}}" title="{{tag.1}} quotes" style="{{tag.1|tagsize_quotes}}">{{tag.0}}</a>&nbsp;
 				{% endif %}
 									
 			{% endfor %}

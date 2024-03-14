@@ -88,6 +88,10 @@
             <hr>
           </p>
           
+
+          
+          {% comment %}
+                     
           <p style="color: #cbcbcb; margin-top: 10px;">
             
             <br />
@@ -97,14 +101,18 @@
 
             <br />Saved on {{created}}.
           </p>
-
+          {% endcomment %}
         
+          <p style="color: #cbcbcb; margin-top: 10px;">
+            A quote saved on {{created}}.
+          </p>
+
           
-          <p style="margin-top: 10px;">
+          <p style="margin-top: 30px;">
             {% if tags %}
 
             {% for tag in tags %}
-              <a class="text-muted" href="{% url 'quotesapp:quotes' %}?tag={{tag}}">#{{tag}}</a><br />
+              <a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag}}">#{{tag}}</a><br />
             {% endfor %}
 
             {% endif %}
@@ -114,9 +122,9 @@
 
           {% comment %} **** D3 CHART ***** {% endcomment %}
 
-          <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 50px;">
+          <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -135,12 +143,6 @@
       </div>
       <!-- end of row -->
 
-
-
-
-      {% comment %} SECTION WITH SIMILAR PAPERS LIST {% endcomment %}
-
-      <!-- {% include "quotesapp/components/similar-papers.html" %} -->
 
 
 

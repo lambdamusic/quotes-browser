@@ -1,0 +1,61 @@
+{% extends "quotesapp/components/base.html" %}
+
+{% load static %}
+
+
+{% block pagetitle %}
+<title>About | Michele Pasin</title>
+{% endblock pagetitle %}
+
+
+{% block navbar %}
+
+{% with thispage="about" %}
+
+{% include "quotesapp/components/default-navbar.html" %}
+
+{% endwith %}
+
+{% endblock navbar %}
+
+
+{% block bodycontent %}
+
+<div class="page-header">
+  About
+</div>
+
+<div class="container">
+
+
+
+
+
+  <div class="row" style="-margin-top: 40px;">
+
+
+    <div class="col-md-6 lead" >
+      See this <a href="https://www.michelepasin.org/blog/2022/07/28/introducing-quotes-section/index.html">blog post</a>.
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="row" style="margin-top: 40px;">
+
+    &nbsp;
+
+  </div>
+
+
+</div> <!-- /container -->
+
+
+{% endblock bodycontent %}

@@ -47,7 +47,7 @@ def quotes_all(request):
 	else:
 		admin_change_url = False
 
-	templatee = "quotes.html"
+	templatee = "tags.html"
 
 	# get all MD contents from local directory
 	files_data = read_all_files_data()

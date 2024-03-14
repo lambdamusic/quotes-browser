@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+from django.http.response import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.http import urlquote
 from django.http import HttpResponse, HttpResponseNotFound
@@ -9,19 +10,17 @@ from django.db.models import Q
 import os
 from time import strftime
 import markdown
-# import time
-# import random
+import random
+import datetime
+import itertools
 
 from render_block import render_block_to_string
+from myutils.myutils import printDebug
+from settings import STATICFILES_DIRS, QUOTES_SOURCE_DIR
 
-from settings import STATICFILES_DIRS, BLOGS_ROOT
-
-from researchapp.models import *
-from researchapp.topics import *
-
-from researchapp.management.commands.do_blogs_reindex import parse_markdown
 
 APP = "quotesapp"
+
 
 
 # ===========
@@ -42,338 +41,321 @@ def about(request):
 	bio page
 	"""
 	context = {}
-	return render(request, APP + '/pages/about-bio.html', context)
-
-
-
-def contact(request):
-	"""
-	bio page
-	"""
-	context = {}
-	return render(request, APP + '/pages/about-contact.html', context)
-
-
-
-def photos(request):
-	"""
-	photos page
-	"""
-
-	import flickrapi
-	api_key = "6b36d6a49a7abb07d8f156bbe5562380"
-	secret = "920639143ba2cd27"
-	flickr = flickrapi.FlickrAPI(api_key, secret, cache=True)
-	sets = flickr.photosets_getList(user_id='76186999@N00')
-	sets_list = []
-
-	for s in sets.find('photosets').findall('photoset'):
-		# tip: inspect the s object to see what methods are available
-		url = "https://www.flickr.com/photos/mikele/sets/%s/" % s.get(
-			'id')
-		d = (s[0].text, url, s.get('photos'))  # title, id and count
-		sets_list += [d]
-	context = {
-		'sets_list' : sets_list
-	}
-
-	return render(request, APP + '/pages/photos.html', context)
-
-
-
-def events(request):
-	"""
-	events page
-	"""
-
-	return_items = Publication.objects.filter(
-		isspeaking=True).order_by('-pubdate')
-
-	context = {
-		'return_items': return_items,
-	}
-
-	return render(request, APP + '/pages/events.html', context)
+	return render(request, APP + '/pages/about.html', context)
 
 
 
 # ===========
-# views with details pages 
+# views with single landing page
 # ===========
 
 
-def projects(request, namedetail=""):
+
+
+def quotes_all(request):
 	"""
-	projects page
+	TODO
 	"""
 	context = {}
 
-	if not namedetail:
+	query = request.GET.get('query', 'date')
+	tag = request.GET.get('tag', None)
+	format = request.GET.get('format', 'html')
 
-		# PROJECTS LIST PAGE
-
-		_format = request.GET.get('format', 'html')
-		_active_tag = request.GET.get('k', 'all')
-		# print active_tag
-
-		if _format == 'txt':
-			tags = []
-			projects = Project.objects.all()
-			templatee = 'projects.txt'
-
-		else:
-			tags = Project.all_used_tags()
-			if _active_tag not in tags:
-				_active_tag = "all"
-				projects = Project.objects.all().order_by("-datefrom")
-			else:
-				projects = Project.objects.filter(tags__name=_active_tag).order_by("-datefrom")
-			templatee = 'projects.html'
-
-
-		context = {
-			'projects': projects,
-			'tags': tags,
-			'active_tag': _active_tag,
-		}
-
-
-	else:
-
-		# PROJECTS DETAIL PAGE 
-
-		return_item = get_object_or_404(Project, urlstub=namedetail)
-
-		projects = list(Project.objects.all())
-		this_index = projects.index(return_item)
-
-		# next = projects[this_index + 1] if len(projects) > (
-		# 	this_index + 1) else projects[0]  # recursive
-		# prev = projects[this_index - 1] if (this_index - 1) >= 0 else None
-
-		# load images from manually managed folder
-
-		project_images_names = []
-		THUMBS_FILE = "thumb.png"
-
-		project_images_dir = STATICFILES_DIRS[
-			0] + "/manual_img/" + return_item.urlstub
-		if os.path.exists(project_images_dir):
-			for f in os.listdir(project_images_dir):
-				if os.path.isfile(os.path.join(project_images_dir, f)):
-					if not f.startswith(".") and f != THUMBS_FILE:
-						project_images_names += [f]
-
-		if request.user.is_superuser:
-			admin_change_url = return_item.get_admin_url()
-		else:
-			admin_change_url = None
-
-
-		html_description = markdown.markdown(return_item.description, extensions=['fenced_code', 'codehilite'])
-
-		context = {
-			'admin_change_url': admin_change_url,
-			'return_item': return_item,
-			'return_item_desc': html_description,
-			'project_images_names': sorted(project_images_names),
-			'ALL_PROJECTS': Project.objects.all().order_by("-datefrom")
-		}
-
-		templatee = "detail-projects.html"
-
-
-	return render(request, APP + '/pages/' + templatee, context)
-
-
-
-
-
-def sounds(request, namedetail=""):
-	"""
-	new sounds page
-	"""
-
-	_subpage = request.GET.get('k', 'livecoding')
-	context = {}
-	if not namedetail:
-
-		if _subpage == "livecoding":
-
-			items = Item.objects.exclude(review=True).filter(
-				Q(atype__name__iexact="livecoding")
-				| Q(atype__name__iexact="performance"))
-
-			templatee = "sounds-livecoding.html"
-
-		elif _subpage == "kryos":
-
-			items = Item.objects.filter(pk=7)
-
-			templatee = "sounds-kryos.html"
-
-		elif _subpage == "rebirth":
-
-			items = Item.objects.filter(pk=34)
-
-			templatee = "sounds-rebirth.html"
-
-		elif _subpage == "singles":
-
-			items = Item.objects.exclude(review=True).exclude(id__in=[7, 34]).filter(
-			Q(atype__name__iexact="music"))
-
-			templatee = "sounds-singles.html"
-
-		else:
-
-			return HttpResponseNotFound
-
-		context = {
-			'sounds_subpage' : _subpage,
-			'items' : items,
-		}
-
-	else:
-
-		return_item = get_object_or_404(Item, urlstub=namedetail)
-		next = None
-		prev = None
-
-
-		if request.user.is_superuser:
-			admin_change_url = return_item.get_admin_url()
-		else:
-			admin_change_url = None
-
-		context = {
-			'return_item': return_item,  # 2021-08-31 pass full object
-			'itemtitle': return_item.title,
-			'admin_change_url' : admin_change_url,
-			'itemdesc': return_item.description,
-			'itemembed1': return_item.embedcode1,
-			'itemembed2': return_item.embedcode2,
-			'datefrom': return_item.date,
-			'all_urls': return_item.all_urls(),
-		}
-		templatee = "detail-sounds.html"
-
-	return render(request, APP + '/pages/' + templatee, context)
-
-
-
-# # ===========
-# # SUPPORT FUNCTIONS
-# # ===========
-
-
-# def get_pubs(query, ttype):
-# 	""" retrieves pubs info 
+	nodes, links, tags = [], [], []
 	
-# 	query: the ordering parameter eg date or pubtype
-# 	ttype: the (simplified) type filter  // September 3, 2021
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
 
-# 	"""
+	templatee = "tags.html"
 
-# 	talks = PubType.objects.get(
-# 		pk=12)  # used to exclude 'INVITED TALKS' from articles list
+	# get all MD contents from local directory
+	files_data = read_all_files_data()
+	
+	if tag:
+		# create local graph
+		nodes, links = generate_graph_for_topic(tag, files_data)
+		files_data = [f for f in files_data if tag in f['tags']] #override
+	else:
+		# full word cloud
+		tags = count_tags(files_data)
+		print(f"\nTags total: {len(tags)}")
+		tags = sorted(tags.items()) # turn into a list
 
-# 	QSET = Publication.objects.exclude(review=True)
-
-# 	if query == 'type':
-# 		# exclude talks and blog
-# 		pubtypegroups_list = PubType.objects.exclude(pk=12).exclude(pk=13).values_list(
-# 			'groupfk__name').order_by('groupfk__order').distinct()
-# 		# eg [(u'Books',), (u'Journal Articles & Book Chapters',), (u'Articles in Peer-Reviewed Conference or Proceedings',), (u'White papers, Reports, etc.',)]
-# 		# NOTE talks are excluded as they don't have any groupfk (meta pubtype)
-# 		return_items = []
-# 		for x in pubtypegroups_list:
-# 			return_items.append(
-# 				(x[0], QSET.exclude(pubtype=talks).filter(
-# 					pubtype__groupfk__name=x[0])))
-# 		return return_items
-
-
-# 	elif query == 'project':
-# 		valid_projects = list(
-# 			set([
-# 				x[0] for x in QSET.exclude(
-# 					pubtype=talks).values_list('project__title') if x[0]
-# 			]))
-# 		return_items = []
-# 		for x in valid_projects:
-# 			return_items.append((x, QSET.exclude(
-# 				pubtype=talks).filter(project__title=x)))
-# 		return_items.sort()  # sort by alpha
-# 		return_items.append(('Miscellaneous',
-# 							 QSET.filter(project=None)))
-# 		return return_items
-
-
-# 	else:
-# 		#  query == 'date':  ==>  always fallback here
-
-# 		# http://127.0.0.1:8000/admin/researchapp/pubtypegroup/
-
-# 		if ttype == "blogs":
-
-# 			ddset = QSET.filter(pubtype__groupfk__pk=6)
-
-# 		elif ttype == "papers":
-
-# 			ddset = QSET.exclude(pubtype=talks).exclude(pubtype__groupfk__pk=6).exclude(pubtype__groupfk__pk=3)
-
-# 		elif ttype == "misc":
-
-# 			ddset = QSET.filter(pubtype__groupfk__pk=3)
-
-# 		else:
-
-# 			ddset = QSET.exclude(pubtype=talks)
-
-# 		valid_years = list(
-# 			set([
-# 				x[0].year for x in ddset.values_list('pubdate').distinct()
-# 			]))
-# 		return_items = []
-# 		valid_years.sort(reverse=True)
-# 		# print valid_years
-# 		for x in valid_years:
-# 			return_items.append((x, ddset.filter(pubdate__year=x)))
-# 		return return_items
+	context = {
+		'return_items': files_data,
+		'admin_change_url': admin_change_url,
+		'urlname': "quotes",
+		'query': query,
+		'tag': tag,
+		'tags': tags,
+		'nodes': nodes,
+		'links': links,
+	}
+	
+	return render(request, APP + '/pages/' + templatee, context)
 
 
 
 
+def quote_detail(request, slug):
+	"""
+	TODO
+	"""
+	context = {}
 
-# def get_related_pubs(a_pub):
-# 	""" retrieves pubs info - with similar title"""
+	templatee = "detail-quotes.html"
 
-# 	talks = PubType.objects.get(
-# 		pk=12)  # used to exclude 'INVITED TALKS' from articles list
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
 
-# 	words = a_pub.title.split()
-# 	words = [x for x in words if len(x) > 3]
+	quote_source_file = QUOTES_SOURCE_DIR+slug+".md"
+	TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = parse_markdown(quote_source_file)
+	html_quote_text = markdown.markdown(PURE_MARKDOWN, extensions=['fenced_code', 'codehilite'])
 
-# 	q = Q()
-# 	for word in words:
-# 		q |= Q(title__icontains = word)
-# 	pubs = Publication.objects.exclude(
-# 				pubtype=talks).exclude(
-# 				review=True).filter(q)
+	print(f"Showing: \n\t=> {quote_source_file}\n")
 
-# 	valid_years = list(
-# 		set([
-# 			x[0].year for x in pubs.values_list('pubdate').distinct()
-# 		]))
-# 	return_items = []
-# 	valid_years.sort(reverse=True)
-# 	# print valid_years
-# 	for x in valid_years:
-# 		return_items.append((x, pubs.filter(pubdate__year=x)))
-# 	return return_items
+	# get all MD contents from local directory for Tags Network
+	files_data = read_all_files_data()
+	random_tag = random.choice(TAGS)
+	nodes, links = generate_graph_for_topic(random_tag, files_data)
+
+	context = {
+		'quote_text': html_quote_text,
+		'quote_source_file': quote_source_file,
+		'title': TITLE,
+		'tags': TAGS,
+		'source': SOURCE,
+		'source_url': SOURCE_URL,
+		'created': DATE,
+		'modified': MODIFIED,
+		'admin_change_url': admin_change_url,
+		'nodes': nodes,
+		'links': links,
+	}
+
+	
+	return render(request, APP + '/pages/' + templatee, context)
 
 
 
 
 
+##################################
+###
+# Support Functions
+###
+##################################
+
+
+
+def generate_graph_for_topic(seed, files_data):
+	"""gen graph data
+	
+	seed
+		a tag
+	files_data
+		the full markdown files collection
+	TODO
+	Desc data structure 
+	
+	"""
+	# return (None, None)
+	
+	first_level = calc_cooccurrent_topics(seed, files_data)
+	
+	#  create data for dataviz
+	SIZE0, SIZE1, SIZE2 = 140, 70, 5
+	green, lightgreen, yellow, lightorange, orange, red = 0, 0.4, 0.5, 0.6, 0.7, 0.8
+	LVL0, LVL1, LVL2 = yellow, green, lightgreen  # templates uses this to determine color
+	# LVL0, LVL1, LVL2 = orange, red, lightorange
+
+	rels = calc_cooccurrent_topics(seed, files_data)
+	# LINKS = [(x.subject1, x.subject2) for x in rels]
+
+	LINKS_THRESHOLD_FIRST_LEVEL = 5
+	LINKS_THRESHOLD_SECOND_LEVEL = 4
+
+	LINKS = rels[:LINKS_THRESHOLD_FIRST_LEVEL]
+	SEED = [(seed, SIZE0, LVL0)]
+	NODES = [(x[1], SIZE1, LVL1) for x in LINKS]  # change with x.score
+	NODES_AND_SEED = NODES + SEED  # add home entity by default, PS score drives color
+
+	# second level
+	for node in NODES:
+		for x in calc_cooccurrent_topics(node[0], files_data)[:LINKS_THRESHOLD_SECOND_LEVEL]:
+		# for x in node[0].is_subject_in_relations.all()[:5]:
+			if x[1] not in [n[0] for n in NODES_AND_SEED]:
+				NODES_AND_SEED += [(x[1], SIZE2, LVL2)]
+			LINKS += [(x[0], x[1])]
+	if False:
+		for node in NODES:
+			for x in node[0].is_subject_in_relations.all()[:5]:
+				if x.subject2.id not in [n[0].id for n in NODES_AND_SEED]:
+					NODES_AND_SEED += [(x.subject2, SIZE2, LVL2)]
+				LINKS += [(x.subject1, x.subject2)]
+
+	return (NODES_AND_SEED, LINKS)
+	
+
+def calc_cooccurrent_topics(tag, files_data):
+	"""get all topics that co-occur with a given topic"""
+	rels = []
+	for f in files_data:
+		if tag in f['tags']:
+			for coocctag in f['tags']:
+				if tag != coocctag and (tag, coocctag) not in rels:
+					rels += [(tag, coocctag)]
+	# print(rels)
+	return rels
+
+
+
+
+def read_all_files_data():
+	"""
+	Reads MD files
+
+	If tag is provided, return only matching files.
+
+	Returns a list of dicts with the following keys:
+		title
+		filename
+		tags
+		review
+	"""
+	counter1, counter2, counter3 = 0, 0, 0
+	files_data = []
+
+	for filename in os.listdir(QUOTES_SOURCE_DIR):
+		counter1 +=1
+		if "-" in filename and filename.endswith(".md"):
+
+			counter2 +=1
+			quote =  {}
+
+			TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename)
+
+			quote['filename'] = filename
+			quote['title'] = TITLE
+			quote['tags'] = TAGS
+			quote['source'] = SOURCE
+			quote['source_url'] = SOURCE_URL
+			quote['review'] = REVIEW
+
+			if SOURCE:
+				counter3 +=1
+				files_data += [quote]
+
+
+			# if tag and tag in TAGS:
+			# 	counter3 +=1
+			# 	files_data += [quote]
+			# elif not tag:
+			# 	counter3 +=1
+			# 	files_data += [quote]
+			# else:
+			# 	pass
+
+	# finally
+	files_data = sorted(files_data, key= lambda x: x['source'])
+	printDebug(f"""\n# Files read: {counter1}\n# Records parsed: {counter2}\n# Records selected: {counter3}\n""", "bold")
+	return(files_data)
+
+
+
+
+
+def count_tags(files_data):
+	"""
+	Quick count of quotes per tags
+
+	Return a dict EG
+	 {'such-benefits': 1, 'relata': 1, 'notion-of-sign': 1, 'true-self': 1, 'recognition': 1}
+	"""
+	tags = {}
+	for quote in files_data:
+		for tag in quote['tags']:
+			if str(tag) not in tags:
+				tags[str(tag)] = 1
+			else:
+				tags[str(tag)] += 1
+	return tags
+
+
+
+def parse_markdown(full_file_path, verbose=False): 
+	"""Parse the Obsidian markdown and return title and other metadata. 
+
+	EG 
+	```
+---
+template: quote.html
+title: "Instance of a property"
+source: "Cidoc-crm Version 4.2.4 - Reference Document"
+url: http://www.google.co.uk/url?sa=t&rct=j&q=cidoc-crm%20version%204.2.4%20-%20reference%20document&source=web&cd=1&ved=0CEMQFjAA&url=http%3A%2F%2Fwww.cidoc-crm.org%2Fprevious_releases_cidoc.html&ei=xjnMT
+date: 2013-02-26
+modified: 2015-05-04
+review: false
+---
+#properties #factual-relation #instances #relation #range #intension
+
+
+	==This is where the markdown content starts..==
+	```
+
+	"""
+
+	DEBUG_TAGS = False
+
+	if verbose: printDebug("Parsing..: \n" + full_file_path)
+	with open(full_file_path) as f:
+		lines = f.readlines()
+		text_begins_flag = tag_flag = 0
+		TITLE, SOURCE, SOURCE_URL, PURE_MARKDOWN = "", "", "", ""
+		REVIEW = False
+		DATE, MODIFIED = None, None
+		TAGS = []
+		for l in lines:
+			# printDebug(l)
+			if tag_flag and text_begins_flag == 2:
+				PURE_MARKDOWN += l
+			elif l == "---\n":
+				text_begins_flag += 1  # after second one, the header is over
+			elif l.strip().startswith("#"):
+				tag_flag = 1
+				tags = [x.replace("#", "") for x in l.strip().split()]
+				if DEBUG_TAGS: print(f"Tags: {tags}")
+				TAGS = tags
+			elif l.startswith("title: "):
+				TITLE = l.replace("title: ", "")[1:-2] # remove quotes and newline char
+			elif l.startswith("source: "):
+				SOURCE = l.replace("source: ", "")[1:-2] # remove quotes and newline char
+			elif l.startswith("url: "):
+				SOURCE_URL = l.replace("url: ", "")[0:-1] # remove newline char
+			elif l.startswith("review: "):
+				if "true" in l:
+					REVIEW = True
+			elif l.startswith("date: "):
+				DATE = l.replace("date: ", "") 
+				if DATE[0] == "\"":
+					DATE = DATE[1:-2] # remove quotes and newline char
+				else:
+					DATE = DATE[:-1] # remove newline char
+				DATE = datetime.datetime.strptime(DATE, "%Y-%m-%d")
+				DATE = DATE.replace(tzinfo=datetime.timezone.utc).date()
+			elif l.startswith("modified: "):
+				MODIFIED = l.replace("modified: ", "") 
+				if MODIFIED[0] == "\"":
+					MODIFIED = MODIFIED[1:-2] # remove quotes and newline char
+				else:
+					MODIFIED = MODIFIED[:-1] # remove newline char
+				MODIFIED = datetime.datetime.strptime(MODIFIED, "%Y-%m-%d")
+				MODIFIED = MODIFIED.replace(tzinfo=datetime.timezone.utc).date()
+		
+		return TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN
+		
