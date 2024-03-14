@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -741,47 +741,45 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "resources", "target": "services" },
+          { "source": "clients", "target": "action" },
       
-          { "source": "resources", "target": "metadata-model" },
+          { "source": "clients", "target": "method" },
       
-          { "source": "resources", "target": "digital-libraries" },
+          { "source": "clients", "target": "investment" },
       
-          { "source": "resources", "target": "raw-data" },
+          { "source": "clients", "target": "goal" },
       
-          { "source": "resources", "target": "information-resources" },
+          { "source": "clients", "target": "information-resources" },
       
-          { "source": "services", "target": "things" },
+          { "source": "action", "target": "clients" },
       
-          { "source": "services", "target": "industrial-revolution" },
+          { "source": "action", "target": "method" },
       
-          { "source": "services", "target": "bits" },
+          { "source": "action", "target": "people" },
       
-          { "source": "services", "target": "metadata-model" },
+          { "source": "action", "target": "persons" },
       
-          { "source": "metadata-model", "target": "services" },
+          { "source": "method", "target": "action" },
       
-          { "source": "metadata-model", "target": "digital-libraries" },
+          { "source": "method", "target": "clients" },
       
-          { "source": "metadata-model", "target": "resources" },
+          { "source": "method", "target": "user-testing" },
       
-          { "source": "metadata-model", "target": "raw-data" },
+          { "source": "method", "target": "developers" },
       
-          { "source": "digital-libraries", "target": "raw-data" },
+          { "source": "investment", "target": "clients" },
       
-          { "source": "digital-libraries", "target": "access" },
+          { "source": "investment", "target": "goal" },
       
-          { "source": "digital-libraries", "target": "services" },
+          { "source": "investment", "target": "money" },
       
-          { "source": "digital-libraries", "target": "metadata-model" },
+          { "source": "goal", "target": "team" },
       
-          { "source": "raw-data", "target": "digital-libraries" },
+          { "source": "goal", "target": "link" },
       
-          { "source": "raw-data", "target": "access" },
+          { "source": "goal", "target": "owners" },
       
-          { "source": "raw-data", "target": "services" },
-      
-          { "source": "raw-data", "target": "metadata-model" },
+          { "source": "goal", "target": "product-owners" },
       
           { "source": "information-resources", "target": "URI" },
       
@@ -796,19 +794,19 @@ var data_local_dynamic = {
   "nodes": [
       
 
-        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
+        {"id": "action", "size": 70, "score": 0 , "title": "action", "type": "circle"},
 
       
 
-        {"id": "metadata-model", "size": 70, "score": 0 , "title": "metadata-model", "type": "circle"},
+        {"id": "method", "size": 70, "score": 0 , "title": "method", "type": "circle"},
 
       
 
-        {"id": "digital-libraries", "size": 70, "score": 0 , "title": "digital-libraries", "type": "circle"},
+        {"id": "investment", "size": 70, "score": 0 , "title": "investment", "type": "circle"},
 
       
 
-        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
+        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
 
       
 
@@ -816,23 +814,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "resources", "size": 140, "score": 0.5 , "title": "resources", "type": "circle"},
+        {"id": "clients", "size": 140, "score": 0.5 , "title": "clients", "type": "circle"},
 
       
 
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
 
       
 
-        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
+        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
 
       
 
-        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
+        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
 
       
 
-        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
+        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
+
+      
+
+        {"id": "money", "size": 5, "score": 0.4 , "title": "money", "type": "circle"},
+
+      
+
+        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
+
+      
+
+        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
+
+      
+
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
+
+      
+
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
 
       
 
@@ -844,7 +862,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
+        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
 
        
 
@@ -981,7 +999,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

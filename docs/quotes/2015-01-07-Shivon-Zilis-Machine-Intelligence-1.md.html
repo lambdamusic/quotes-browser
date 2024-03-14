@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -734,15 +734,37 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "machine-learning", "target": "programmers" },
+          { "source": "learning", "target": "students" },
       
-          { "source": "machine-learning", "target": "data-scientists" },
+          { "source": "learning", "target": "instruction" },
       
-          { "source": "machine-learning", "target": "learning" },
+          { "source": "learning", "target": "questions" },
       
-          { "source": "machine-learning", "target": "jobs" },
+          { "source": "learning", "target": "programmers" },
       
-          { "source": "machine-learning", "target": "artificial-intelligence" },
+          { "source": "learning", "target": "data-scientists" },
+      
+          { "source": "students", "target": "learning" },
+      
+          { "source": "students", "target": "instruction" },
+      
+          { "source": "students", "target": "questions" },
+      
+          { "source": "instruction", "target": "students" },
+      
+          { "source": "instruction", "target": "learning" },
+      
+          { "source": "instruction", "target": "questions" },
+      
+          { "source": "instruction", "target": "things" },
+      
+          { "source": "questions", "target": "statements" },
+      
+          { "source": "questions", "target": "students" },
+      
+          { "source": "questions", "target": "learning" },
+      
+          { "source": "questions", "target": "instruction" },
       
           { "source": "programmers", "target": "music" },
       
@@ -759,34 +781,22 @@ var data_local_dynamic = {
           { "source": "data-scientists", "target": "machine-learning" },
       
           { "source": "data-scientists", "target": "learning" },
-      
-          { "source": "learning", "target": "students" },
-      
-          { "source": "learning", "target": "instruction" },
-      
-          { "source": "learning", "target": "questions" },
-      
-          { "source": "learning", "target": "programmers" },
-      
-          { "source": "jobs", "target": "programmers" },
-      
-          { "source": "jobs", "target": "data-scientists" },
-      
-          { "source": "jobs", "target": "machine-learning" },
-      
-          { "source": "jobs", "target": "learning" },
-      
-          { "source": "artificial-intelligence", "target": "years" },
-      
-          { "source": "artificial-intelligence", "target": "intelligence" },
-      
-          { "source": "artificial-intelligence", "target": "God" },
-      
-          { "source": "artificial-intelligence", "target": "philosophy" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "students", "size": 70, "score": 0 , "title": "students", "type": "circle"},
+
+      
+
+        {"id": "instruction", "size": 70, "score": 0 , "title": "instruction", "type": "circle"},
+
+      
+
+        {"id": "questions", "size": 70, "score": 0 , "title": "questions", "type": "circle"},
+
       
 
         {"id": "programmers", "size": 70, "score": 0 , "title": "programmers", "type": "circle"},
@@ -797,19 +807,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "learning", "size": 70, "score": 0 , "title": "learning", "type": "circle"},
+        {"id": "learning", "size": 140, "score": 0.5 , "title": "learning", "type": "circle"},
 
       
 
-        {"id": "jobs", "size": 70, "score": 0 , "title": "jobs", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "artificial-intelligence", "size": 70, "score": 0 , "title": "artificial-intelligence", "type": "circle"},
-
-      
-
-        {"id": "machine-learning", "size": 140, "score": 0.5 , "title": "machine-learning", "type": "circle"},
+        {"id": "statements", "size": 5, "score": 0.4 , "title": "statements", "type": "circle"},
 
       
 
@@ -833,31 +839,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "students", "size": 5, "score": 0.4 , "title": "students", "type": "circle"},
-
-      
-
-        {"id": "instruction", "size": 5, "score": 0.4 , "title": "instruction", "type": "circle"},
-
-      
-
-        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
-
-      
-
-        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
-
-      
-
-        {"id": "intelligence", "size": 5, "score": 0.4 , "title": "intelligence", "type": "circle"},
-
-      
-
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
-
-      
-
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+        {"id": "machine-learning", "size": 5, "score": 0.4 , "title": "machine-learning", "type": "circle"},
 
        
 
@@ -994,7 +976,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,15 +731,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "machine-learning", "target": "programmers" },
+          { "source": "jobs", "target": "programmers" },
       
-          { "source": "machine-learning", "target": "data-scientists" },
+          { "source": "jobs", "target": "data-scientists" },
       
-          { "source": "machine-learning", "target": "learning" },
+          { "source": "jobs", "target": "machine-learning" },
       
-          { "source": "machine-learning", "target": "jobs" },
+          { "source": "jobs", "target": "learning" },
       
-          { "source": "machine-learning", "target": "artificial-intelligence" },
+          { "source": "jobs", "target": "beliefs" },
       
           { "source": "programmers", "target": "music" },
       
@@ -757,6 +757,14 @@ var data_local_dynamic = {
       
           { "source": "data-scientists", "target": "learning" },
       
+          { "source": "machine-learning", "target": "programmers" },
+      
+          { "source": "machine-learning", "target": "data-scientists" },
+      
+          { "source": "machine-learning", "target": "learning" },
+      
+          { "source": "machine-learning", "target": "jobs" },
+      
           { "source": "learning", "target": "students" },
       
           { "source": "learning", "target": "instruction" },
@@ -765,21 +773,13 @@ var data_local_dynamic = {
       
           { "source": "learning", "target": "programmers" },
       
-          { "source": "jobs", "target": "programmers" },
+          { "source": "beliefs", "target": "vocabulary" },
       
-          { "source": "jobs", "target": "data-scientists" },
+          { "source": "beliefs", "target": "pain" },
       
-          { "source": "jobs", "target": "machine-learning" },
+          { "source": "beliefs", "target": "sensation" },
       
-          { "source": "jobs", "target": "learning" },
-      
-          { "source": "artificial-intelligence", "target": "years" },
-      
-          { "source": "artificial-intelligence", "target": "intelligence" },
-      
-          { "source": "artificial-intelligence", "target": "God" },
-      
-          { "source": "artificial-intelligence", "target": "philosophy" },
+          { "source": "beliefs", "target": "subjects" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -794,19 +794,19 @@ var data_local_dynamic = {
 
       
 
+        {"id": "machine-learning", "size": 70, "score": 0 , "title": "machine-learning", "type": "circle"},
+
+      
+
         {"id": "learning", "size": 70, "score": 0 , "title": "learning", "type": "circle"},
 
       
 
-        {"id": "jobs", "size": 70, "score": 0 , "title": "jobs", "type": "circle"},
+        {"id": "beliefs", "size": 70, "score": 0 , "title": "beliefs", "type": "circle"},
 
       
 
-        {"id": "artificial-intelligence", "size": 70, "score": 0 , "title": "artificial-intelligence", "type": "circle"},
-
-      
-
-        {"id": "machine-learning", "size": 140, "score": 0.5 , "title": "machine-learning", "type": "circle"},
+        {"id": "jobs", "size": 140, "score": 0.5 , "title": "jobs", "type": "circle"},
 
       
 
@@ -842,19 +842,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
+        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "intelligence", "size": 5, "score": 0.4 , "title": "intelligence", "type": "circle"},
+        {"id": "pain", "size": 5, "score": 0.4 , "title": "pain", "type": "circle"},
 
       
 
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
+        {"id": "sensation", "size": 5, "score": 0.4 , "title": "sensation", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+        {"id": "subjects", "size": 5, "score": 0.4 , "title": "subjects", "type": "circle"},
 
        
 
@@ -991,7 +991,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

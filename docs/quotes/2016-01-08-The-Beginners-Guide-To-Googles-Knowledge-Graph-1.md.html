@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -728,48 +728,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "knowledge-graph", "target": "data-analytics" },
-      
-          { "source": "knowledge-graph", "target": "analytics" },
-      
-          { "source": "knowledge-graph", "target": "graph" },
-      
-          { "source": "knowledge-graph", "target": "search-engines" },
-      
-          { "source": "knowledge-graph", "target": "search-results" },
-      
-          { "source": "data-analytics", "target": "knowledge-graph" },
-      
-          { "source": "data-analytics", "target": "analytics" },
-      
-          { "source": "data-analytics", "target": "graph" },
-      
-          { "source": "data-analytics", "target": "transactions" },
-      
-          { "source": "analytics", "target": "knowledge-graph" },
-      
-          { "source": "analytics", "target": "data-analytics" },
-      
-          { "source": "analytics", "target": "graph" },
-      
-          { "source": "analytics", "target": "Semantic-Web" },
-      
-          { "source": "graph", "target": "knowledge-graph" },
-      
-          { "source": "graph", "target": "data-analytics" },
-      
-          { "source": "graph", "target": "analytics" },
-      
-          { "source": "graph", "target": "semantics" },
-      
-          { "source": "search-engines", "target": "Web-sites" },
-      
-          { "source": "search-engines", "target": "browser" },
-      
-          { "source": "search-engines", "target": "pages" },
-      
-          { "source": "search-engines", "target": "real-world-objects" },
-      
           { "source": "search-results", "target": "users" },
       
           { "source": "search-results", "target": "prototype" },
@@ -777,77 +735,87 @@ var data_local_dynamic = {
           { "source": "search-results", "target": "user-prototypes" },
       
           { "source": "search-results", "target": "bike" },
+      
+          { "source": "search-results", "target": "user-testing" },
+      
+          { "source": "users", "target": "user-testing" },
+      
+          { "source": "users", "target": "Google" },
+      
+          { "source": "users", "target": "search" },
+      
+          { "source": "users", "target": "version" },
+      
+          { "source": "prototype", "target": "users" },
+      
+          { "source": "prototype", "target": "user-prototypes" },
+      
+          { "source": "prototype", "target": "bike" },
+      
+          { "source": "prototype", "target": "search-results" },
+      
+          { "source": "user-prototypes", "target": "users" },
+      
+          { "source": "user-prototypes", "target": "prototype" },
+      
+          { "source": "user-prototypes", "target": "bike" },
+      
+          { "source": "user-prototypes", "target": "search-results" },
+      
+          { "source": "bike", "target": "users" },
+      
+          { "source": "bike", "target": "prototype" },
+      
+          { "source": "bike", "target": "user-prototypes" },
+      
+          { "source": "bike", "target": "search-results" },
+      
+          { "source": "user-testing", "target": "users" },
+      
+          { "source": "user-testing", "target": "Google" },
+      
+          { "source": "user-testing", "target": "search" },
+      
+          { "source": "user-testing", "target": "version" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "data-analytics", "size": 70, "score": 0 , "title": "data-analytics", "type": "circle"},
+        {"id": "users", "size": 70, "score": 0 , "title": "users", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
+        {"id": "prototype", "size": 70, "score": 0 , "title": "prototype", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
+        {"id": "user-prototypes", "size": 70, "score": 0 , "title": "user-prototypes", "type": "circle"},
 
       
 
-        {"id": "search-engines", "size": 70, "score": 0 , "title": "search-engines", "type": "circle"},
+        {"id": "bike", "size": 70, "score": 0 , "title": "bike", "type": "circle"},
 
       
 
-        {"id": "search-results", "size": 70, "score": 0 , "title": "search-results", "type": "circle"},
+        {"id": "user-testing", "size": 70, "score": 0 , "title": "user-testing", "type": "circle"},
 
       
 
-        {"id": "knowledge-graph", "size": 140, "score": 0.5 , "title": "knowledge-graph", "type": "circle"},
+        {"id": "search-results", "size": 140, "score": 0.5 , "title": "search-results", "type": "circle"},
 
       
 
-        {"id": "transactions", "size": 5, "score": 0.4 , "title": "transactions", "type": "circle"},
+        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
 
       
 
-        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
+        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
-
-      
-
-        {"id": "Web-sites", "size": 5, "score": 0.4 , "title": "Web-sites", "type": "circle"},
-
-      
-
-        {"id": "browser", "size": 5, "score": 0.4 , "title": "browser", "type": "circle"},
-
-      
-
-        {"id": "pages", "size": 5, "score": 0.4 , "title": "pages", "type": "circle"},
-
-      
-
-        {"id": "real-world-objects", "size": 5, "score": 0.4 , "title": "real-world-objects", "type": "circle"},
-
-      
-
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
-
-      
-
-        {"id": "prototype", "size": 5, "score": 0.4 , "title": "prototype", "type": "circle"},
-
-      
-
-        {"id": "user-prototypes", "size": 5, "score": 0.4 , "title": "user-prototypes", "type": "circle"},
-
-      
-
-        {"id": "bike", "size": 5, "score": 0.4 , "title": "bike", "type": "circle"},
+        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
 
        
 
@@ -984,7 +952,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

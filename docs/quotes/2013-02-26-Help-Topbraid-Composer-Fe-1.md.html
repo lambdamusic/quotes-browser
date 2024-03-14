@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -741,16 +741,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "RDFS", "target": "ontology" },
-      
-          { "source": "RDFS", "target": "business-rules" },
-      
-          { "source": "RDFS", "target": "XML-schema" },
-      
-          { "source": "RDFS", "target": "schema" },
-      
-          { "source": "RDFS", "target": "vocabulary" },
-      
           { "source": "ontology", "target": "use-cases" },
       
           { "source": "ontology", "target": "data-model" },
@@ -759,108 +749,74 @@ var data_local_dynamic = {
       
           { "source": "ontology", "target": "requirements" },
       
-          { "source": "business-rules", "target": "ontology" },
+          { "source": "ontology", "target": "domain-specific-ontology" },
       
-          { "source": "business-rules", "target": "XML-schema" },
+          { "source": "use-cases", "target": "ontology" },
       
-          { "source": "business-rules", "target": "schema" },
+          { "source": "use-cases", "target": "data-model" },
       
-          { "source": "business-rules", "target": "RDFS" },
+          { "source": "use-cases", "target": "architecture" },
       
-          { "source": "XML-schema", "target": "ontology" },
+          { "source": "use-cases", "target": "requirements" },
       
-          { "source": "XML-schema", "target": "business-rules" },
+          { "source": "data-model", "target": "ontology" },
       
-          { "source": "XML-schema", "target": "schema" },
+          { "source": "data-model", "target": "use-cases" },
       
-          { "source": "XML-schema", "target": "RDFS" },
+          { "source": "data-model", "target": "architecture" },
       
-          { "source": "schema", "target": "ontology" },
+          { "source": "data-model", "target": "requirements" },
       
-          { "source": "schema", "target": "ethics" },
+          { "source": "architecture", "target": "ontology" },
       
-          { "source": "schema", "target": "philosophy" },
+          { "source": "architecture", "target": "use-cases" },
       
-          { "source": "schema", "target": "fact" },
+          { "source": "architecture", "target": "data-model" },
       
-          { "source": "vocabulary", "target": "authority-files" },
+          { "source": "architecture", "target": "requirements" },
       
-          { "source": "vocabulary", "target": "indexing" },
+          { "source": "requirements", "target": "ontology" },
       
-          { "source": "vocabulary", "target": "thesaurus" },
+          { "source": "requirements", "target": "use-cases" },
       
-          { "source": "vocabulary", "target": "files" },
+          { "source": "requirements", "target": "data-model" },
+      
+          { "source": "requirements", "target": "architecture" },
+      
+          { "source": "domain-specific-ontology", "target": "ontology" },
+      
+          { "source": "domain-specific-ontology", "target": "use-cases" },
+      
+          { "source": "domain-specific-ontology", "target": "data-model" },
+      
+          { "source": "domain-specific-ontology", "target": "architecture" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "business-rules", "size": 70, "score": 0 , "title": "business-rules", "type": "circle"},
+        {"id": "data-model", "size": 70, "score": 0 , "title": "data-model", "type": "circle"},
 
       
 
-        {"id": "XML-schema", "size": 70, "score": 0 , "title": "XML-schema", "type": "circle"},
+        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "schema", "size": 70, "score": 0 , "title": "schema", "type": "circle"},
+        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
+        {"id": "domain-specific-ontology", "size": 70, "score": 0 , "title": "domain-specific-ontology", "type": "circle"},
 
       
 
-        {"id": "RDFS", "size": 140, "score": 0.5 , "title": "RDFS", "type": "circle"},
-
-      
-
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
-
-      
-
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
-
-      
-
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
-
-      
-
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
-
-      
-
-        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
-
-      
-
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
-
-      
-
-        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
-
-      
-
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
-
-      
-
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "ontology", "size": 140, "score": 0.5 , "title": "ontology", "type": "circle"},
 
        
 
@@ -997,7 +953,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

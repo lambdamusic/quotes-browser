@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -735,24 +735,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "semantic-publishing", "target": "machine" },
-      
-          { "source": "semantic-publishing", "target": "publishing" },
-      
-          { "source": "semantic-publishing", "target": "data-environment" },
-      
-          { "source": "semantic-publishing", "target": "semantics" },
-      
-          { "source": "semantic-publishing", "target": "advantages" },
-      
-          { "source": "machine", "target": "things" },
-      
-          { "source": "machine", "target": "manufacturing" },
-      
-          { "source": "machine", "target": "data-citation" },
-      
-          { "source": "machine", "target": "metadata" },
-      
           { "source": "publishing", "target": "article" },
       
           { "source": "publishing", "target": "web-server" },
@@ -761,68 +743,90 @@ var data_local_dynamic = {
       
           { "source": "publishing", "target": "server" },
       
-          { "source": "data-environment", "target": "semantic-publishing" },
+          { "source": "publishing", "target": "data-citation" },
       
-          { "source": "data-environment", "target": "machine" },
+          { "source": "article", "target": "hierarchy" },
       
-          { "source": "data-environment", "target": "publishing" },
+          { "source": "article", "target": "social-sciences" },
       
-          { "source": "data-environment", "target": "semantics" },
+          { "source": "article", "target": "science" },
       
-          { "source": "semantics", "target": "annotation-properties" },
+          { "source": "article", "target": "concept" },
       
-          { "source": "semantics", "target": "data-properties" },
+          { "source": "web-server", "target": "publishing" },
       
-          { "source": "semantics", "target": "blank-nodes" },
+          { "source": "web-server", "target": "article" },
       
-          { "source": "semantics", "target": "OWL-DL" },
+          { "source": "web-server", "target": "academic-publishing" },
       
-          { "source": "advantages", "target": "organisms" },
+          { "source": "web-server", "target": "server" },
       
-          { "source": "advantages", "target": "roots" },
+          { "source": "academic-publishing", "target": "publishing" },
       
-          { "source": "advantages", "target": "semantics" },
+          { "source": "academic-publishing", "target": "article" },
       
-          { "source": "advantages", "target": "data-environment" },
+          { "source": "academic-publishing", "target": "web-server" },
+      
+          { "source": "academic-publishing", "target": "server" },
+      
+          { "source": "server", "target": "metadata" },
+      
+          { "source": "server", "target": "algorithm" },
+      
+          { "source": "server", "target": "publishing" },
+      
+          { "source": "server", "target": "article" },
+      
+          { "source": "data-citation", "target": "publishing" },
+      
+          { "source": "data-citation", "target": "data-discovery" },
+      
+          { "source": "data-citation", "target": "metadata" },
+      
+          { "source": "data-citation", "target": "interoperability" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
+        {"id": "web-server", "size": 70, "score": 0 , "title": "web-server", "type": "circle"},
 
       
 
-        {"id": "data-environment", "size": 70, "score": 0 , "title": "data-environment", "type": "circle"},
+        {"id": "academic-publishing", "size": 70, "score": 0 , "title": "academic-publishing", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
+        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "advantages", "size": 70, "score": 0 , "title": "advantages", "type": "circle"},
+        {"id": "data-citation", "size": 70, "score": 0 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "semantic-publishing", "size": 140, "score": 0.5 , "title": "semantic-publishing", "type": "circle"},
+        {"id": "publishing", "size": 140, "score": 0.5 , "title": "publishing", "type": "circle"},
 
       
 
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "manufacturing", "size": 5, "score": 0.4 , "title": "manufacturing", "type": "circle"},
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
 
       
 
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
@@ -830,43 +834,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
 
       
 
-        {"id": "web-server", "size": 5, "score": 0.4 , "title": "web-server", "type": "circle"},
+        {"id": "data-discovery", "size": 5, "score": 0.4 , "title": "data-discovery", "type": "circle"},
 
       
 
-        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
-        {"id": "annotation-properties", "size": 5, "score": 0.4 , "title": "annotation-properties", "type": "circle"},
-
-      
-
-        {"id": "data-properties", "size": 5, "score": 0.4 , "title": "data-properties", "type": "circle"},
-
-      
-
-        {"id": "blank-nodes", "size": 5, "score": 0.4 , "title": "blank-nodes", "type": "circle"},
-
-      
-
-        {"id": "OWL-DL", "size": 5, "score": 0.4 , "title": "OWL-DL", "type": "circle"},
-
-      
-
-        {"id": "organisms", "size": 5, "score": 0.4 , "title": "organisms", "type": "circle"},
-
-      
-
-        {"id": "roots", "size": 5, "score": 0.4 , "title": "roots", "type": "circle"},
+        {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
 
        
 
@@ -1003,7 +979,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

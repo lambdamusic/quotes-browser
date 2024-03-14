@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -726,15 +726,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "intelligence", "target": "years" },
+          { "source": "artificial-intelligence", "target": "years" },
       
-          { "source": "intelligence", "target": "artificial-intelligence" },
+          { "source": "artificial-intelligence", "target": "intelligence" },
       
-          { "source": "intelligence", "target": "God" },
+          { "source": "artificial-intelligence", "target": "God" },
       
-          { "source": "intelligence", "target": "philosophy" },
+          { "source": "artificial-intelligence", "target": "philosophy" },
       
-          { "source": "intelligence", "target": "connectionism" },
+          { "source": "artificial-intelligence", "target": "connectionism" },
       
           { "source": "years", "target": "factors" },
       
@@ -744,13 +744,13 @@ var data_local_dynamic = {
       
           { "source": "years", "target": "episodes" },
       
-          { "source": "artificial-intelligence", "target": "years" },
+          { "source": "intelligence", "target": "years" },
       
-          { "source": "artificial-intelligence", "target": "intelligence" },
+          { "source": "intelligence", "target": "artificial-intelligence" },
       
-          { "source": "artificial-intelligence", "target": "God" },
+          { "source": "intelligence", "target": "God" },
       
-          { "source": "artificial-intelligence", "target": "philosophy" },
+          { "source": "intelligence", "target": "philosophy" },
       
           { "source": "God", "target": "believers" },
       
@@ -785,7 +785,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "artificial-intelligence", "size": 70, "score": 0 , "title": "artificial-intelligence", "type": "circle"},
+        {"id": "intelligence", "size": 70, "score": 0 , "title": "intelligence", "type": "circle"},
 
       
 
@@ -801,7 +801,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "intelligence", "size": 140, "score": 0.5 , "title": "intelligence", "type": "circle"},
+        {"id": "artificial-intelligence", "size": 140, "score": 0.5 , "title": "artificial-intelligence", "type": "circle"},
 
       
 
@@ -990,7 +990,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

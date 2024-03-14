@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,47 +731,23 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "relation", "target": "world" },
+          { "source": "intension", "target": "class" },
       
-          { "source": "relation", "target": "real-world" },
+          { "source": "intension", "target": "instances" },
       
-          { "source": "relation", "target": "relationship" },
+          { "source": "intension", "target": "criteria" },
       
-          { "source": "relation", "target": "properties" },
+          { "source": "intension", "target": "items" },
       
-          { "source": "relation", "target": "instances" },
+          { "source": "intension", "target": "traits" },
       
-          { "source": "world", "target": "relation" },
+          { "source": "class", "target": "cases" },
       
-          { "source": "world", "target": "real-world" },
+          { "source": "class", "target": "occurrence" },
       
-          { "source": "world", "target": "relationship" },
+          { "source": "class", "target": "events" },
       
-          { "source": "world", "target": "Calvinism" },
-      
-          { "source": "real-world", "target": "relation" },
-      
-          { "source": "real-world", "target": "world" },
-      
-          { "source": "real-world", "target": "relationship" },
-      
-          { "source": "real-world", "target": "class" },
-      
-          { "source": "relationship", "target": "verbs" },
-      
-          { "source": "relationship", "target": "attitudes" },
-      
-          { "source": "relationship", "target": "period" },
-      
-          { "source": "relationship", "target": "relation" },
-      
-          { "source": "properties", "target": "network" },
-      
-          { "source": "properties", "target": "instances" },
-      
-          { "source": "properties", "target": "range" },
-      
-          { "source": "properties", "target": "class" },
+          { "source": "class", "target": "instances" },
       
           { "source": "instances", "target": "cases" },
       
@@ -780,25 +756,37 @@ var data_local_dynamic = {
           { "source": "instances", "target": "events" },
       
           { "source": "instances", "target": "class" },
+      
+          { "source": "criteria", "target": "traits" },
+      
+          { "source": "criteria", "target": "class" },
+      
+          { "source": "criteria", "target": "categories" },
+      
+          { "source": "criteria", "target": "items" },
+      
+          { "source": "items", "target": "traits" },
+      
+          { "source": "items", "target": "class" },
+      
+          { "source": "items", "target": "categories" },
+      
+          { "source": "items", "target": "criteria" },
+      
+          { "source": "traits", "target": "taxa" },
+      
+          { "source": "traits", "target": "class" },
+      
+          { "source": "traits", "target": "categories" },
+      
+          { "source": "traits", "target": "items" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "world", "size": 70, "score": 0 , "title": "world", "type": "circle"},
-
-      
-
-        {"id": "real-world", "size": 70, "score": 0 , "title": "real-world", "type": "circle"},
-
-      
-
-        {"id": "relationship", "size": 70, "score": 0 , "title": "relationship", "type": "circle"},
-
-      
-
-        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
+        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
 
       
 
@@ -806,35 +794,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "relation", "size": 140, "score": 0.5 , "title": "relation", "type": "circle"},
+        {"id": "criteria", "size": 70, "score": 0 , "title": "criteria", "type": "circle"},
 
       
 
-        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
+        {"id": "items", "size": 70, "score": 0 , "title": "items", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "traits", "size": 70, "score": 0 , "title": "traits", "type": "circle"},
 
       
 
-        {"id": "verbs", "size": 5, "score": 0.4 , "title": "verbs", "type": "circle"},
-
-      
-
-        {"id": "attitudes", "size": 5, "score": 0.4 , "title": "attitudes", "type": "circle"},
-
-      
-
-        {"id": "period", "size": 5, "score": 0.4 , "title": "period", "type": "circle"},
-
-      
-
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
-
-      
-
-        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
+        {"id": "intension", "size": 140, "score": 0.5 , "title": "intension", "type": "circle"},
 
       
 
@@ -847,6 +819,14 @@ var data_local_dynamic = {
       
 
         {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "categories", "size": 5, "score": 0.4 , "title": "categories", "type": "circle"},
+
+      
+
+        {"id": "taxa", "size": 5, "score": 0.4 , "title": "taxa", "type": "circle"},
 
        
 
@@ -983,7 +963,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

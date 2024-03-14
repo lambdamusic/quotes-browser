@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,24 +727,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "components", "target": "peer-review" },
-      
-          { "source": "components", "target": "hypothesis" },
-      
-          { "source": "components", "target": "structure" },
-      
-          { "source": "components", "target": "drift" },
-      
-          { "source": "components", "target": "organization" },
-      
-          { "source": "peer-review", "target": "hypothesis" },
-      
-          { "source": "peer-review", "target": "components" },
-      
-          { "source": "peer-review", "target": "dialogue" },
-      
-          { "source": "peer-review", "target": "science" },
-      
           { "source": "hypothesis", "target": "experiments" },
       
           { "source": "hypothesis", "target": "constructs" },
@@ -753,112 +735,98 @@ var data_local_dynamic = {
       
           { "source": "hypothesis", "target": "publications" },
       
-          { "source": "structure", "target": "function" },
+          { "source": "hypothesis", "target": "values" },
       
-          { "source": "structure", "target": "data-structure" },
+          { "source": "experiments", "target": "constructs" },
       
-          { "source": "structure", "target": "process" },
+          { "source": "experiments", "target": "hypothesis" },
       
-          { "source": "structure", "target": "drift" },
+          { "source": "experiments", "target": "process" },
       
-          { "source": "drift", "target": "structure" },
+          { "source": "experiments", "target": "thought-experiment" },
       
-          { "source": "drift", "target": "components" },
+          { "source": "constructs", "target": "experiments" },
       
-          { "source": "drift", "target": "direction" },
+          { "source": "constructs", "target": "hypothesis" },
       
-          { "source": "drift", "target": "engine" },
+          { "source": "constructs", "target": "process" },
       
-          { "source": "organization", "target": "living" },
+          { "source": "constructs", "target": "association" },
       
-          { "source": "organization", "target": "types" },
+          { "source": "process", "target": "experiments" },
       
-          { "source": "organization", "target": "production" },
+          { "source": "process", "target": "constructs" },
       
-          { "source": "organization", "target": "particular-type" },
+          { "source": "process", "target": "hypothesis" },
+      
+          { "source": "process", "target": "bridge" },
+      
+          { "source": "publications", "target": "hypothesis" },
+      
+          { "source": "publications", "target": "values" },
+      
+          { "source": "publications", "target": "distance" },
+      
+          { "source": "publications", "target": "area" },
+      
+          { "source": "values", "target": "publications" },
+      
+          { "source": "values", "target": "hypothesis" },
+      
+          { "source": "values", "target": "distance" },
+      
+          { "source": "values", "target": "properties" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "peer-review", "size": 70, "score": 0 , "title": "peer-review", "type": "circle"},
+        {"id": "experiments", "size": 70, "score": 0 , "title": "experiments", "type": "circle"},
 
       
 
-        {"id": "hypothesis", "size": 70, "score": 0 , "title": "hypothesis", "type": "circle"},
+        {"id": "constructs", "size": 70, "score": 0 , "title": "constructs", "type": "circle"},
 
       
 
-        {"id": "structure", "size": 70, "score": 0 , "title": "structure", "type": "circle"},
+        {"id": "process", "size": 70, "score": 0 , "title": "process", "type": "circle"},
 
       
 
-        {"id": "drift", "size": 70, "score": 0 , "title": "drift", "type": "circle"},
+        {"id": "publications", "size": 70, "score": 0 , "title": "publications", "type": "circle"},
 
       
 
-        {"id": "organization", "size": 70, "score": 0 , "title": "organization", "type": "circle"},
+        {"id": "values", "size": 70, "score": 0 , "title": "values", "type": "circle"},
 
       
 
-        {"id": "components", "size": 140, "score": 0.5 , "title": "components", "type": "circle"},
+        {"id": "hypothesis", "size": 140, "score": 0.5 , "title": "hypothesis", "type": "circle"},
 
       
 
-        {"id": "dialogue", "size": 5, "score": 0.4 , "title": "dialogue", "type": "circle"},
+        {"id": "thought-experiment", "size": 5, "score": 0.4 , "title": "thought-experiment", "type": "circle"},
 
       
 
-        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+        {"id": "association", "size": 5, "score": 0.4 , "title": "association", "type": "circle"},
 
       
 
-        {"id": "experiments", "size": 5, "score": 0.4 , "title": "experiments", "type": "circle"},
+        {"id": "bridge", "size": 5, "score": 0.4 , "title": "bridge", "type": "circle"},
 
       
 
-        {"id": "constructs", "size": 5, "score": 0.4 , "title": "constructs", "type": "circle"},
+        {"id": "distance", "size": 5, "score": 0.4 , "title": "distance", "type": "circle"},
 
       
 
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
+        {"id": "area", "size": 5, "score": 0.4 , "title": "area", "type": "circle"},
 
       
 
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
-
-      
-
-        {"id": "function", "size": 5, "score": 0.4 , "title": "function", "type": "circle"},
-
-      
-
-        {"id": "data-structure", "size": 5, "score": 0.4 , "title": "data-structure", "type": "circle"},
-
-      
-
-        {"id": "direction", "size": 5, "score": 0.4 , "title": "direction", "type": "circle"},
-
-      
-
-        {"id": "engine", "size": 5, "score": 0.4 , "title": "engine", "type": "circle"},
-
-      
-
-        {"id": "living", "size": 5, "score": 0.4 , "title": "living", "type": "circle"},
-
-      
-
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
-
-      
-
-        {"id": "production", "size": 5, "score": 0.4 , "title": "production", "type": "circle"},
-
-      
-
-        {"id": "particular-type", "size": 5, "score": 0.4 , "title": "particular-type", "type": "circle"},
+        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
 
        
 
@@ -995,7 +963,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

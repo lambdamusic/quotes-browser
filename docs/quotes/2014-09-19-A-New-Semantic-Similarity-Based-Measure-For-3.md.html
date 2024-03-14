@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,16 +727,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "use", "target": "assumption" },
-      
-          { "source": "use", "target": "impact" },
-      
-          { "source": "use", "target": "drugs" },
-      
-          { "source": "use", "target": "sound" },
-      
-          { "source": "use", "target": "choice" },
-      
           { "source": "assumption", "target": "use" },
       
           { "source": "assumption", "target": "impact" },
@@ -744,6 +734,16 @@ var data_local_dynamic = {
           { "source": "assumption", "target": "inference" },
       
           { "source": "assumption", "target": "concept" },
+      
+          { "source": "assumption", "target": "science" },
+      
+          { "source": "use", "target": "assumption" },
+      
+          { "source": "use", "target": "impact" },
+      
+          { "source": "use", "target": "drugs" },
+      
+          { "source": "use", "target": "sound" },
       
           { "source": "impact", "target": "use" },
       
@@ -753,36 +753,36 @@ var data_local_dynamic = {
       
           { "source": "impact", "target": "attributes" },
       
-          { "source": "drugs", "target": "eyes" },
+          { "source": "inference", "target": "assumption" },
       
-          { "source": "drugs", "target": "babies" },
+          { "source": "inference", "target": "concept" },
       
-          { "source": "drugs", "target": "control" },
+          { "source": "inference", "target": "elements" },
       
-          { "source": "drugs", "target": "pain" },
+          { "source": "inference", "target": "signifying" },
       
-          { "source": "sound", "target": "drugs" },
+          { "source": "concept", "target": "article" },
       
-          { "source": "sound", "target": "use" },
+          { "source": "concept", "target": "Obama" },
       
-          { "source": "sound", "target": "choice" },
+          { "source": "concept", "target": "information-science" },
       
-          { "source": "sound", "target": "weeks" },
+          { "source": "concept", "target": "users" },
       
-          { "source": "choice", "target": "drugs" },
+          { "source": "science", "target": "article" },
       
-          { "source": "choice", "target": "sound" },
+          { "source": "science", "target": "hierarchy" },
       
-          { "source": "choice", "target": "use" },
+          { "source": "science", "target": "social-sciences" },
       
-          { "source": "choice", "target": "people" },
+          { "source": "science", "target": "publications" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "assumption", "size": 70, "score": 0 , "title": "assumption", "type": "circle"},
+        {"id": "use", "size": 70, "score": 0 , "title": "use", "type": "circle"},
 
       
 
@@ -790,27 +790,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "drugs", "size": 70, "score": 0 , "title": "drugs", "type": "circle"},
+        {"id": "inference", "size": 70, "score": 0 , "title": "inference", "type": "circle"},
 
       
 
-        {"id": "sound", "size": 70, "score": 0 , "title": "sound", "type": "circle"},
+        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "choice", "size": 70, "score": 0 , "title": "choice", "type": "circle"},
+        {"id": "science", "size": 70, "score": 0 , "title": "science", "type": "circle"},
 
       
 
-        {"id": "use", "size": 140, "score": 0.5 , "title": "use", "type": "circle"},
+        {"id": "assumption", "size": 140, "score": 0.5 , "title": "assumption", "type": "circle"},
 
       
 
-        {"id": "inference", "size": 5, "score": 0.4 , "title": "inference", "type": "circle"},
+        {"id": "drugs", "size": 5, "score": 0.4 , "title": "drugs", "type": "circle"},
 
       
 
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+        {"id": "sound", "size": 5, "score": 0.4 , "title": "sound", "type": "circle"},
 
       
 
@@ -822,27 +822,39 @@ var data_local_dynamic = {
 
       
 
-        {"id": "eyes", "size": 5, "score": 0.4 , "title": "eyes", "type": "circle"},
+        {"id": "elements", "size": 5, "score": 0.4 , "title": "elements", "type": "circle"},
 
       
 
-        {"id": "babies", "size": 5, "score": 0.4 , "title": "babies", "type": "circle"},
+        {"id": "signifying", "size": 5, "score": 0.4 , "title": "signifying", "type": "circle"},
 
       
 
-        {"id": "control", "size": 5, "score": 0.4 , "title": "control", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "pain", "size": 5, "score": 0.4 , "title": "pain", "type": "circle"},
+        {"id": "Obama", "size": 5, "score": 0.4 , "title": "Obama", "type": "circle"},
 
       
 
-        {"id": "weeks", "size": 5, "score": 0.4 , "title": "weeks", "type": "circle"},
+        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+
+      
+
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+
+      
+
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
        
 
@@ -979,7 +991,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

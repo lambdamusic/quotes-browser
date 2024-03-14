@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -750,16 +750,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "sets-of-data", "target": "domain-of-interest" },
-      
-          { "source": "sets-of-data", "target": "ontology" },
-      
-          { "source": "sets-of-data", "target": "modeling-tools" },
-      
-          { "source": "sets-of-data", "target": "set" },
-      
-          { "source": "sets-of-data", "target": "rules" },
-      
           { "source": "domain-of-interest", "target": "ontology-development" },
       
           { "source": "domain-of-interest", "target": "domain" },
@@ -767,6 +757,24 @@ var data_local_dynamic = {
           { "source": "domain-of-interest", "target": "ontology" },
       
           { "source": "domain-of-interest", "target": "modeling-tools" },
+      
+          { "source": "domain-of-interest", "target": "set" },
+      
+          { "source": "ontology-development", "target": "ontology" },
+      
+          { "source": "ontology-development", "target": "multiple-legacy-systems" },
+      
+          { "source": "ontology-development", "target": "legacy-systems" },
+      
+          { "source": "ontology-development", "target": "formal-ontology" },
+      
+          { "source": "domain", "target": "changes" },
+      
+          { "source": "domain", "target": "high-impact" },
+      
+          { "source": "domain", "target": "results" },
+      
+          { "source": "domain", "target": "ontology-development" },
       
           { "source": "ontology", "target": "use-cases" },
       
@@ -791,21 +799,17 @@ var data_local_dynamic = {
           { "source": "set", "target": "information-systems" },
       
           { "source": "set", "target": "instances" },
-      
-          { "source": "rules", "target": "cultural-tools" },
-      
-          { "source": "rules", "target": "machine" },
-      
-          { "source": "rules", "target": "representation" },
-      
-          { "source": "rules", "target": "principles" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "domain-of-interest", "size": 70, "score": 0 , "title": "domain-of-interest", "type": "circle"},
+        {"id": "ontology-development", "size": 70, "score": 0 , "title": "ontology-development", "type": "circle"},
+
+      
+
+        {"id": "domain", "size": 70, "score": 0 , "title": "domain", "type": "circle"},
 
       
 
@@ -821,19 +825,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "rules", "size": 70, "score": 0 , "title": "rules", "type": "circle"},
+        {"id": "domain-of-interest", "size": 140, "score": 0.5 , "title": "domain-of-interest", "type": "circle"},
 
       
 
-        {"id": "sets-of-data", "size": 140, "score": 0.5 , "title": "sets-of-data", "type": "circle"},
+        {"id": "multiple-legacy-systems", "size": 5, "score": 0.4 , "title": "multiple-legacy-systems", "type": "circle"},
 
       
 
-        {"id": "ontology-development", "size": 5, "score": 0.4 , "title": "ontology-development", "type": "circle"},
+        {"id": "legacy-systems", "size": 5, "score": 0.4 , "title": "legacy-systems", "type": "circle"},
 
       
 
-        {"id": "domain", "size": 5, "score": 0.4 , "title": "domain", "type": "circle"},
+        {"id": "formal-ontology", "size": 5, "score": 0.4 , "title": "formal-ontology", "type": "circle"},
+
+      
+
+        {"id": "changes", "size": 5, "score": 0.4 , "title": "changes", "type": "circle"},
+
+      
+
+        {"id": "high-impact", "size": 5, "score": 0.4 , "title": "high-impact", "type": "circle"},
+
+      
+
+        {"id": "results", "size": 5, "score": 0.4 , "title": "results", "type": "circle"},
 
       
 
@@ -853,6 +869,10 @@ var data_local_dynamic = {
 
       
 
+        {"id": "sets-of-data", "size": 5, "score": 0.4 , "title": "sets-of-data", "type": "circle"},
+
+      
+
         {"id": "reasoning", "size": 5, "score": 0.4 , "title": "reasoning", "type": "circle"},
 
       
@@ -866,22 +886,6 @@ var data_local_dynamic = {
       
 
         {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
-
-      
-
-        {"id": "cultural-tools", "size": 5, "score": 0.4 , "title": "cultural-tools", "type": "circle"},
-
-      
-
-        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
-
-      
-
-        {"id": "representation", "size": 5, "score": 0.4 , "title": "representation", "type": "circle"},
-
-      
-
-        {"id": "principles", "size": 5, "score": 0.4 , "title": "principles", "type": "circle"},
 
        
 
@@ -1018,7 +1022,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

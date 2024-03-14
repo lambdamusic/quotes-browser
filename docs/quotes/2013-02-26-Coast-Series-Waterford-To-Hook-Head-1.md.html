@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -728,6 +728,12 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "beaches", "target": "power" },
+      
+          { "source": "beaches", "target": "wood" },
+      
+          { "source": "beaches", "target": "infrastructure" },
+      
           { "source": "power", "target": "wood" },
       
           { "source": "power", "target": "beaches" },
@@ -735,8 +741,6 @@ var data_local_dynamic = {
           { "source": "power", "target": "past" },
       
           { "source": "power", "target": "figures" },
-      
-          { "source": "power", "target": "book" },
       
           { "source": "wood", "target": "power" },
       
@@ -746,60 +750,36 @@ var data_local_dynamic = {
       
           { "source": "wood", "target": "dreams" },
       
-          { "source": "beaches", "target": "power" },
+          { "source": "infrastructure", "target": "countries" },
       
-          { "source": "beaches", "target": "wood" },
-      
-          { "source": "beaches", "target": "infrastructure" },
-      
-          { "source": "past", "target": "figures" },
-      
-          { "source": "past", "target": "power" },
-      
-          { "source": "past", "target": "history" },
-      
-          { "source": "figures", "target": "book" },
-      
-          { "source": "figures", "target": "name" },
-      
-          { "source": "figures", "target": "past" },
-      
-          { "source": "figures", "target": "power" },
-      
-          { "source": "book", "target": "news" },
-      
-          { "source": "book", "target": "journals" },
-      
-          { "source": "book", "target": "nature" },
-      
-          { "source": "book", "target": "text" },
+          { "source": "infrastructure", "target": "beaches" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "power", "size": 70, "score": 0 , "title": "power", "type": "circle"},
+
+      
+
         {"id": "wood", "size": 70, "score": 0 , "title": "wood", "type": "circle"},
 
       
 
-        {"id": "beaches", "size": 70, "score": 0 , "title": "beaches", "type": "circle"},
+        {"id": "infrastructure", "size": 70, "score": 0 , "title": "infrastructure", "type": "circle"},
 
       
 
-        {"id": "past", "size": 70, "score": 0 , "title": "past", "type": "circle"},
+        {"id": "beaches", "size": 140, "score": 0.5 , "title": "beaches", "type": "circle"},
 
       
 
-        {"id": "figures", "size": 70, "score": 0 , "title": "figures", "type": "circle"},
+        {"id": "past", "size": 5, "score": 0.4 , "title": "past", "type": "circle"},
 
       
 
-        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
-
-      
-
-        {"id": "power", "size": 140, "score": 0.5 , "title": "power", "type": "circle"},
+        {"id": "figures", "size": 5, "score": 0.4 , "title": "figures", "type": "circle"},
 
       
 
@@ -811,31 +791,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "infrastructure", "size": 5, "score": 0.4 , "title": "infrastructure", "type": "circle"},
-
-      
-
-        {"id": "history", "size": 5, "score": 0.4 , "title": "history", "type": "circle"},
-
-      
-
-        {"id": "name", "size": 5, "score": 0.4 , "title": "name", "type": "circle"},
-
-      
-
-        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
-
-      
-
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
-
-      
-
-        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
-
-      
-
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
 
        
 
@@ -972,7 +928,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

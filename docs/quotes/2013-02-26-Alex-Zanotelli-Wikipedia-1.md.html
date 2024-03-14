@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,6 +729,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "Io", "target": "caso" },
+      
+          { "source": "Io", "target": "Italiano" },
+      
+          { "source": "Io", "target": "minutes" },
+      
+          { "source": "Io", "target": "Suo" },
+      
+          { "source": "Io", "target": "SU" },
+      
           { "source": "caso", "target": "Italiano" },
       
           { "source": "caso", "target": "Io" },
@@ -743,40 +753,60 @@ var data_local_dynamic = {
       
           { "source": "Italiano", "target": "Presto" },
       
-          { "source": "Io", "target": "caso" },
+          { "source": "minutes", "target": "months" },
       
-          { "source": "Io", "target": "Italiano" },
+          { "source": "minutes", "target": "meditation" },
       
-          { "source": "Io", "target": "minutes" },
+          { "source": "minutes", "target": "morning" },
       
-          { "source": "Io", "target": "Suo" },
+          { "source": "minutes", "target": "Suo" },
       
-          { "source": "base", "target": "caso" },
+          { "source": "Suo", "target": "minutes" },
       
-          { "source": "base", "target": "pace" },
+          { "source": "Suo", "target": "SU" },
       
-          { "source": "base", "target": "anni" },
+          { "source": "Suo", "target": "Io" },
       
-          { "source": "base", "target": "Io" },
+          { "source": "Suo", "target": "vistas" },
+      
+          { "source": "SU", "target": "minutes" },
+      
+          { "source": "SU", "target": "Suo" },
+      
+          { "source": "SU", "target": "Io" },
+      
+          { "source": "SU", "target": "vistas" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "caso", "size": 70, "score": 0 , "title": "caso", "type": "circle"},
+
+      
+
         {"id": "Italiano", "size": 70, "score": 0 , "title": "Italiano", "type": "circle"},
 
       
 
-        {"id": "Io", "size": 70, "score": 0 , "title": "Io", "type": "circle"},
+        {"id": "minutes", "size": 70, "score": 0 , "title": "minutes", "type": "circle"},
 
       
 
-        {"id": "base", "size": 70, "score": 0 , "title": "base", "type": "circle"},
+        {"id": "Suo", "size": 70, "score": 0 , "title": "Suo", "type": "circle"},
 
       
 
-        {"id": "caso", "size": 140, "score": 0.5 , "title": "caso", "type": "circle"},
+        {"id": "SU", "size": 70, "score": 0 , "title": "SU", "type": "circle"},
+
+      
+
+        {"id": "Io", "size": 140, "score": 0.5 , "title": "Io", "type": "circle"},
+
+      
+
+        {"id": "base", "size": 5, "score": 0.4 , "title": "base", "type": "circle"},
 
       
 
@@ -788,19 +818,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "minutes", "size": 5, "score": 0.4 , "title": "minutes", "type": "circle"},
+        {"id": "months", "size": 5, "score": 0.4 , "title": "months", "type": "circle"},
 
       
 
-        {"id": "Suo", "size": 5, "score": 0.4 , "title": "Suo", "type": "circle"},
+        {"id": "meditation", "size": 5, "score": 0.4 , "title": "meditation", "type": "circle"},
 
       
 
-        {"id": "pace", "size": 5, "score": 0.4 , "title": "pace", "type": "circle"},
+        {"id": "morning", "size": 5, "score": 0.4 , "title": "morning", "type": "circle"},
 
       
 
-        {"id": "anni", "size": 5, "score": 0.4 , "title": "anni", "type": "circle"},
+        {"id": "vistas", "size": 5, "score": 0.4 , "title": "vistas", "type": "circle"},
 
        
 
@@ -937,7 +967,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

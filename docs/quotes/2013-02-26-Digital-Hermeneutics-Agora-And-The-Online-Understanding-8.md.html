@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -725,16 +725,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "hermeneutics", "target": "digital-hermeneutics" },
-      
-          { "source": "hermeneutics", "target": "objects" },
-      
-          { "source": "hermeneutics", "target": "events" },
-      
-          { "source": "hermeneutics", "target": "Web-technologies" },
-      
-          { "source": "hermeneutics", "target": "web-applications" },
-      
           { "source": "digital-hermeneutics", "target": "objects" },
       
           { "source": "digital-hermeneutics", "target": "events" },
@@ -742,6 +732,8 @@ var data_local_dynamic = {
           { "source": "digital-hermeneutics", "target": "hermeneutics" },
       
           { "source": "digital-hermeneutics", "target": "Web-technologies" },
+      
+          { "source": "digital-hermeneutics", "target": "web-applications" },
       
           { "source": "objects", "target": "class" },
       
@@ -758,6 +750,14 @@ var data_local_dynamic = {
           { "source": "events", "target": "instances" },
       
           { "source": "events", "target": "class" },
+      
+          { "source": "hermeneutics", "target": "digital-hermeneutics" },
+      
+          { "source": "hermeneutics", "target": "objects" },
+      
+          { "source": "hermeneutics", "target": "events" },
+      
+          { "source": "hermeneutics", "target": "Web-technologies" },
       
           { "source": "Web-technologies", "target": "digital-hermeneutics" },
       
@@ -780,15 +780,15 @@ var data_local_dynamic = {
   "nodes": [
       
 
-        {"id": "digital-hermeneutics", "size": 70, "score": 0 , "title": "digital-hermeneutics", "type": "circle"},
-
-      
-
         {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
 
       
 
         {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "hermeneutics", "size": 70, "score": 0 , "title": "hermeneutics", "type": "circle"},
 
       
 
@@ -800,7 +800,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "hermeneutics", "size": 140, "score": 0.5 , "title": "hermeneutics", "type": "circle"},
+        {"id": "digital-hermeneutics", "size": 140, "score": 0.5 , "title": "digital-hermeneutics", "type": "circle"},
 
       
 
@@ -969,7 +969,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -732,31 +732,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "server", "target": "metadata" },
+          { "source": "web-server", "target": "publishing" },
       
-          { "source": "server", "target": "algorithm" },
+          { "source": "web-server", "target": "article" },
       
-          { "source": "server", "target": "publishing" },
+          { "source": "web-server", "target": "academic-publishing" },
       
-          { "source": "server", "target": "article" },
+          { "source": "web-server", "target": "server" },
       
-          { "source": "server", "target": "web-server" },
-      
-          { "source": "metadata", "target": "RDF-databases" },
-      
-          { "source": "metadata", "target": "platform" },
-      
-          { "source": "metadata", "target": "database" },
-      
-          { "source": "metadata", "target": "server" },
-      
-          { "source": "algorithm", "target": "server" },
-      
-          { "source": "algorithm", "target": "metadata" },
-      
-          { "source": "algorithm", "target": "words" },
-      
-          { "source": "algorithm", "target": "readers" },
+          { "source": "web-server", "target": "web-documents" },
       
           { "source": "publishing", "target": "article" },
       
@@ -774,25 +758,33 @@ var data_local_dynamic = {
       
           { "source": "article", "target": "concept" },
       
-          { "source": "web-server", "target": "publishing" },
+          { "source": "academic-publishing", "target": "publishing" },
       
-          { "source": "web-server", "target": "article" },
+          { "source": "academic-publishing", "target": "article" },
       
-          { "source": "web-server", "target": "academic-publishing" },
+          { "source": "academic-publishing", "target": "web-server" },
       
-          { "source": "web-server", "target": "server" },
+          { "source": "academic-publishing", "target": "server" },
+      
+          { "source": "server", "target": "metadata" },
+      
+          { "source": "server", "target": "algorithm" },
+      
+          { "source": "server", "target": "publishing" },
+      
+          { "source": "server", "target": "article" },
+      
+          { "source": "web-documents", "target": "URI" },
+      
+          { "source": "web-documents", "target": "documents" },
+      
+          { "source": "web-documents", "target": "files" },
+      
+          { "source": "web-documents", "target": "Web" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
-      
-
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
-
-      
-
-        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
-
       
 
         {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
@@ -803,35 +795,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "web-server", "size": 70, "score": 0 , "title": "web-server", "type": "circle"},
+        {"id": "academic-publishing", "size": 70, "score": 0 , "title": "academic-publishing", "type": "circle"},
 
       
 
-        {"id": "server", "size": 140, "score": 0.5 , "title": "server", "type": "circle"},
+        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "web-documents", "size": 70, "score": 0 , "title": "web-documents", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
-
-      
-
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
-
-      
-
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
-
-      
-
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
-
-      
-
-        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
+        {"id": "web-server", "size": 140, "score": 0.5 , "title": "web-server", "type": "circle"},
 
       
 
@@ -848,6 +824,30 @@ var data_local_dynamic = {
       
 
         {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+
+      
+
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+
+      
+
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+
+      
+
+        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
+
+      
+
+        {"id": "documents", "size": 5, "score": 0.4 , "title": "documents", "type": "circle"},
+
+      
+
+        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+
+      
+
+        {"id": "Web", "size": 5, "score": 0.4 , "title": "Web", "type": "circle"},
 
        
 
@@ -984,7 +984,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

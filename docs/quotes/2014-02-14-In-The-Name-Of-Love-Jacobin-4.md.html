@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,14 +729,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "happiness", "target": "passion" },
-      
-          { "source": "happiness", "target": "self" },
-      
-          { "source": "happiness", "target": "spirituality" },
-      
-          { "source": "happiness", "target": "answers" },
-      
           { "source": "passion", "target": "morality" },
       
           { "source": "passion", "target": "enemies" },
@@ -745,6 +737,40 @@ var data_local_dynamic = {
       
           { "source": "passion", "target": "happiness" },
       
+          { "source": "passion", "target": "self" },
+      
+          { "source": "morality", "target": "self" },
+      
+          { "source": "morality", "target": "maxim" },
+      
+          { "source": "morality", "target": "passion" },
+      
+          { "source": "morality", "target": "enemies" },
+      
+          { "source": "enemies", "target": "morality" },
+      
+          { "source": "enemies", "target": "passion" },
+      
+          { "source": "enemies", "target": "species" },
+      
+          { "source": "enemies", "target": "conditions" },
+      
+          { "source": "world", "target": "relation" },
+      
+          { "source": "world", "target": "real-world" },
+      
+          { "source": "world", "target": "relationship" },
+      
+          { "source": "world", "target": "Calvinism" },
+      
+          { "source": "happiness", "target": "passion" },
+      
+          { "source": "happiness", "target": "self" },
+      
+          { "source": "happiness", "target": "spirituality" },
+      
+          { "source": "happiness", "target": "answers" },
+      
           { "source": "self", "target": "article" },
       
           { "source": "self", "target": "journals" },
@@ -752,29 +778,25 @@ var data_local_dynamic = {
           { "source": "self", "target": "story" },
       
           { "source": "self", "target": "words" },
-      
-          { "source": "spirituality", "target": "self" },
-      
-          { "source": "spirituality", "target": "happiness" },
-      
-          { "source": "spirituality", "target": "answers" },
-      
-          { "source": "spirituality", "target": "game" },
-      
-          { "source": "answers", "target": "truth" },
-      
-          { "source": "answers", "target": "meaning" },
-      
-          { "source": "answers", "target": "ignorance" },
-      
-          { "source": "answers", "target": "mystery" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "passion", "size": 70, "score": 0 , "title": "passion", "type": "circle"},
+        {"id": "morality", "size": 70, "score": 0 , "title": "morality", "type": "circle"},
+
+      
+
+        {"id": "enemies", "size": 70, "score": 0 , "title": "enemies", "type": "circle"},
+
+      
+
+        {"id": "world", "size": 70, "score": 0 , "title": "world", "type": "circle"},
+
+      
+
+        {"id": "happiness", "size": 70, "score": 0 , "title": "happiness", "type": "circle"},
 
       
 
@@ -782,27 +804,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "spirituality", "size": 70, "score": 0 , "title": "spirituality", "type": "circle"},
+        {"id": "passion", "size": 140, "score": 0.5 , "title": "passion", "type": "circle"},
 
       
 
-        {"id": "answers", "size": 70, "score": 0 , "title": "answers", "type": "circle"},
+        {"id": "maxim", "size": 5, "score": 0.4 , "title": "maxim", "type": "circle"},
 
       
 
-        {"id": "happiness", "size": 140, "score": 0.5 , "title": "happiness", "type": "circle"},
+        {"id": "species", "size": 5, "score": 0.4 , "title": "species", "type": "circle"},
 
       
 
-        {"id": "morality", "size": 5, "score": 0.4 , "title": "morality", "type": "circle"},
+        {"id": "conditions", "size": 5, "score": 0.4 , "title": "conditions", "type": "circle"},
 
       
 
-        {"id": "enemies", "size": 5, "score": 0.4 , "title": "enemies", "type": "circle"},
+        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
+
+      
+
+        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
+
+      
+
+        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
+
+      
+
+        {"id": "spirituality", "size": 5, "score": 0.4 , "title": "spirituality", "type": "circle"},
+
+      
+
+        {"id": "answers", "size": 5, "score": 0.4 , "title": "answers", "type": "circle"},
 
       
 
@@ -819,26 +857,6 @@ var data_local_dynamic = {
       
 
         {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
-
-      
-
-        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
-
-      
-
-        {"id": "truth", "size": 5, "score": 0.4 , "title": "truth", "type": "circle"},
-
-      
-
-        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
-
-      
-
-        {"id": "ignorance", "size": 5, "score": 0.4 , "title": "ignorance", "type": "circle"},
-
-      
-
-        {"id": "mystery", "size": 5, "score": 0.4 , "title": "mystery", "type": "circle"},
 
        
 
@@ -975,7 +993,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

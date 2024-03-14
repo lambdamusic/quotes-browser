@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -732,122 +732,110 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "server", "target": "metadata" },
+          { "source": "URI", "target": "web-documents" },
       
-          { "source": "server", "target": "algorithm" },
+          { "source": "URI", "target": "documents" },
       
-          { "source": "server", "target": "publishing" },
+          { "source": "URI", "target": "files" },
       
-          { "source": "server", "target": "article" },
+          { "source": "URI", "target": "Web" },
       
-          { "source": "server", "target": "web-server" },
+          { "source": "URI", "target": "pages" },
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "web-documents", "target": "URI" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "web-documents", "target": "documents" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "web-documents", "target": "files" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "web-documents", "target": "Web" },
       
-          { "source": "algorithm", "target": "server" },
+          { "source": "documents", "target": "web-documents" },
       
-          { "source": "algorithm", "target": "metadata" },
+          { "source": "documents", "target": "URI" },
       
-          { "source": "algorithm", "target": "words" },
+          { "source": "documents", "target": "files" },
       
-          { "source": "algorithm", "target": "readers" },
+          { "source": "documents", "target": "Web" },
       
-          { "source": "publishing", "target": "article" },
+          { "source": "files", "target": "authority-files" },
       
-          { "source": "publishing", "target": "web-server" },
+          { "source": "files", "target": "indexing" },
       
-          { "source": "publishing", "target": "academic-publishing" },
+          { "source": "files", "target": "thesaurus" },
       
-          { "source": "publishing", "target": "server" },
+          { "source": "files", "target": "vocabulary" },
       
-          { "source": "article", "target": "hierarchy" },
+          { "source": "Web", "target": "web-documents" },
       
-          { "source": "article", "target": "social-sciences" },
+          { "source": "Web", "target": "URI" },
       
-          { "source": "article", "target": "science" },
+          { "source": "Web", "target": "documents" },
       
-          { "source": "article", "target": "concept" },
+          { "source": "Web", "target": "files" },
       
-          { "source": "web-server", "target": "publishing" },
+          { "source": "pages", "target": "Web-sites" },
       
-          { "source": "web-server", "target": "article" },
+          { "source": "pages", "target": "browser" },
       
-          { "source": "web-server", "target": "academic-publishing" },
+          { "source": "pages", "target": "search-engines" },
       
-          { "source": "web-server", "target": "server" },
+          { "source": "pages", "target": "web-documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "web-documents", "size": 70, "score": 0 , "title": "web-documents", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
+        {"id": "documents", "size": 70, "score": 0 , "title": "documents", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
+        {"id": "Web", "size": 70, "score": 0 , "title": "Web", "type": "circle"},
 
       
 
-        {"id": "web-server", "size": 70, "score": 0 , "title": "web-server", "type": "circle"},
+        {"id": "pages", "size": 70, "score": 0 , "title": "pages", "type": "circle"},
 
       
 
-        {"id": "server", "size": 140, "score": 0.5 , "title": "server", "type": "circle"},
+        {"id": "URI", "size": 140, "score": 0.5 , "title": "URI", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "Web-sites", "size": 5, "score": 0.4 , "title": "Web-sites", "type": "circle"},
 
       
 
-        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
+        {"id": "browser", "size": 5, "score": 0.4 , "title": "browser", "type": "circle"},
 
       
 
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
-
-      
-
-        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
-
-      
-
-        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
 
        
 
@@ -984,7 +972,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

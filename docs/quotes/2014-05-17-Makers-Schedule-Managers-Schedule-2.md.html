@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -730,15 +730,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "night", "target": "days" },
+          { "source": "dinner", "target": "days" },
       
-          { "source": "night", "target": "dinner" },
+          { "source": "dinner", "target": "schedule" },
       
-          { "source": "night", "target": "schedule" },
+          { "source": "dinner", "target": "night" },
       
-          { "source": "night", "target": "sleep" },
+          { "source": "dinner", "target": "people" },
       
-          { "source": "night", "target": "dreams" },
+          { "source": "dinner", "target": "fruit" },
       
           { "source": "days", "target": "calories" },
       
@@ -748,14 +748,6 @@ var data_local_dynamic = {
       
           { "source": "days", "target": "time" },
       
-          { "source": "dinner", "target": "days" },
-      
-          { "source": "dinner", "target": "schedule" },
-      
-          { "source": "dinner", "target": "night" },
-      
-          { "source": "dinner", "target": "people" },
-      
           { "source": "schedule", "target": "game" },
       
           { "source": "schedule", "target": "customers" },
@@ -764,21 +756,29 @@ var data_local_dynamic = {
       
           { "source": "schedule", "target": "meeting" },
       
-          { "source": "sleep", "target": "memory" },
+          { "source": "night", "target": "days" },
       
-          { "source": "sleep", "target": "meaning" },
+          { "source": "night", "target": "dinner" },
       
-          { "source": "sleep", "target": "men" },
+          { "source": "night", "target": "schedule" },
       
-          { "source": "sleep", "target": "phrases" },
+          { "source": "night", "target": "sleep" },
       
-          { "source": "dreams", "target": "book" },
+          { "source": "people", "target": "stage" },
       
-          { "source": "dreams", "target": "text" },
+          { "source": "people", "target": "words" },
       
-          { "source": "dreams", "target": "Encyclopedia" },
+          { "source": "people", "target": "God" },
       
-          { "source": "dreams", "target": "sleep" },
+          { "source": "people", "target": "knowledge" },
+      
+          { "source": "fruit", "target": "vegetables" },
+      
+          { "source": "fruit", "target": "variants" },
+      
+          { "source": "fruit", "target": "countries" },
+      
+          { "source": "fruit", "target": "days" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -789,23 +789,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "dinner", "size": 70, "score": 0 , "title": "dinner", "type": "circle"},
-
-      
-
         {"id": "schedule", "size": 70, "score": 0 , "title": "schedule", "type": "circle"},
 
       
 
-        {"id": "sleep", "size": 70, "score": 0 , "title": "sleep", "type": "circle"},
+        {"id": "night", "size": 70, "score": 0 , "title": "night", "type": "circle"},
 
       
 
-        {"id": "dreams", "size": 70, "score": 0 , "title": "dreams", "type": "circle"},
+        {"id": "people", "size": 70, "score": 0 , "title": "people", "type": "circle"},
 
       
 
-        {"id": "night", "size": 140, "score": 0.5 , "title": "night", "type": "circle"},
+        {"id": "fruit", "size": 70, "score": 0 , "title": "fruit", "type": "circle"},
+
+      
+
+        {"id": "dinner", "size": 140, "score": 0.5 , "title": "dinner", "type": "circle"},
 
       
 
@@ -825,10 +825,6 @@ var data_local_dynamic = {
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
-
-      
-
         {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
@@ -845,31 +841,35 @@ var data_local_dynamic = {
 
       
 
-        {"id": "memory", "size": 5, "score": 0.4 , "title": "memory", "type": "circle"},
+        {"id": "sleep", "size": 5, "score": 0.4 , "title": "sleep", "type": "circle"},
 
       
 
-        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
+        {"id": "stage", "size": 5, "score": 0.4 , "title": "stage", "type": "circle"},
 
       
 
-        {"id": "men", "size": 5, "score": 0.4 , "title": "men", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "phrases", "size": 5, "score": 0.4 , "title": "phrases", "type": "circle"},
+        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "knowledge", "size": 5, "score": 0.4 , "title": "knowledge", "type": "circle"},
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "vegetables", "size": 5, "score": 0.4 , "title": "vegetables", "type": "circle"},
 
       
 
-        {"id": "Encyclopedia", "size": 5, "score": 0.4 , "title": "Encyclopedia", "type": "circle"},
+        {"id": "variants", "size": 5, "score": 0.4 , "title": "variants", "type": "circle"},
+
+      
+
+        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
 
        
 
@@ -1006,7 +1006,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

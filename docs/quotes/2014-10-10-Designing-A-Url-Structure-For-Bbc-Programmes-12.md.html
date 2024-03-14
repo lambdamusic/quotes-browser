@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -732,6 +732,30 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "JSON", "target": "API" },
+      
+          { "source": "JSON", "target": "XML" },
+      
+          { "source": "JSON", "target": "representation" },
+      
+          { "source": "JSON", "target": "URL" },
+      
+          { "source": "JSON", "target": "content-negotiation" },
+      
+          { "source": "API", "target": "JSON" },
+      
+          { "source": "API", "target": "citation-graph" },
+      
+          { "source": "API", "target": "graph" },
+      
+          { "source": "XML", "target": "JSON" },
+      
+          { "source": "XML", "target": "representation" },
+      
+          { "source": "XML", "target": "URL" },
+      
+          { "source": "XML", "target": "content-negotiation" },
+      
           { "source": "representation", "target": "concept" },
       
           { "source": "representation", "target": "meaning" },
@@ -740,114 +764,88 @@ var data_local_dynamic = {
       
           { "source": "representation", "target": "terms" },
       
-          { "source": "representation", "target": "JSON" },
+          { "source": "URL", "target": "JSON" },
       
-          { "source": "concept", "target": "article" },
+          { "source": "URL", "target": "XML" },
       
-          { "source": "concept", "target": "Obama" },
+          { "source": "URL", "target": "representation" },
       
-          { "source": "concept", "target": "information-science" },
+          { "source": "URL", "target": "content-negotiation" },
       
-          { "source": "concept", "target": "users" },
+          { "source": "content-negotiation", "target": "web-documents" },
       
-          { "source": "meaning", "target": "concept" },
+          { "source": "content-negotiation", "target": "server" },
       
-          { "source": "meaning", "target": "knowledge-representation" },
+          { "source": "content-negotiation", "target": "format" },
       
-          { "source": "meaning", "target": "representation" },
-      
-          { "source": "meaning", "target": "terms" },
-      
-          { "source": "knowledge-representation", "target": "reasoning" },
-      
-          { "source": "knowledge-representation", "target": "set" },
-      
-          { "source": "knowledge-representation", "target": "information-systems" },
-      
-          { "source": "knowledge-representation", "target": "concept" },
-      
-          { "source": "terms", "target": "concept" },
-      
-          { "source": "terms", "target": "meaning" },
-      
-          { "source": "terms", "target": "knowledge-representation" },
-      
-          { "source": "terms", "target": "representation" },
-      
-          { "source": "JSON", "target": "API" },
-      
-          { "source": "JSON", "target": "XML" },
-      
-          { "source": "JSON", "target": "representation" },
-      
-          { "source": "JSON", "target": "URL" },
+          { "source": "content-negotiation", "target": "documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
+        {"id": "API", "size": 70, "score": 0 , "title": "API", "type": "circle"},
 
       
 
-        {"id": "meaning", "size": 70, "score": 0 , "title": "meaning", "type": "circle"},
+        {"id": "XML", "size": 70, "score": 0 , "title": "XML", "type": "circle"},
 
       
 
-        {"id": "knowledge-representation", "size": 70, "score": 0 , "title": "knowledge-representation", "type": "circle"},
+        {"id": "representation", "size": 70, "score": 0 , "title": "representation", "type": "circle"},
 
       
 
-        {"id": "terms", "size": 70, "score": 0 , "title": "terms", "type": "circle"},
+        {"id": "URL", "size": 70, "score": 0 , "title": "URL", "type": "circle"},
 
       
 
-        {"id": "JSON", "size": 70, "score": 0 , "title": "JSON", "type": "circle"},
+        {"id": "content-negotiation", "size": 70, "score": 0 , "title": "content-negotiation", "type": "circle"},
 
       
 
-        {"id": "representation", "size": 140, "score": 0.5 , "title": "representation", "type": "circle"},
+        {"id": "JSON", "size": 140, "score": 0.5 , "title": "JSON", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "citation-graph", "size": 5, "score": 0.4 , "title": "citation-graph", "type": "circle"},
 
       
 
-        {"id": "Obama", "size": 5, "score": 0.4 , "title": "Obama", "type": "circle"},
+        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
 
       
 
-        {"id": "reasoning", "size": 5, "score": 0.4 , "title": "reasoning", "type": "circle"},
+        {"id": "knowledge-representation", "size": 5, "score": 0.4 , "title": "knowledge-representation", "type": "circle"},
 
       
 
-        {"id": "set", "size": 5, "score": 0.4 , "title": "set", "type": "circle"},
+        {"id": "terms", "size": 5, "score": 0.4 , "title": "terms", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "web-documents", "size": 5, "score": 0.4 , "title": "web-documents", "type": "circle"},
 
       
 
-        {"id": "API", "size": 5, "score": 0.4 , "title": "API", "type": "circle"},
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "XML", "size": 5, "score": 0.4 , "title": "XML", "type": "circle"},
+        {"id": "format", "size": 5, "score": 0.4 , "title": "format", "type": "circle"},
 
       
 
-        {"id": "URL", "size": 5, "score": 0.4 , "title": "URL", "type": "circle"},
+        {"id": "documents", "size": 5, "score": 0.4 , "title": "documents", "type": "circle"},
 
        
 
@@ -984,7 +982,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

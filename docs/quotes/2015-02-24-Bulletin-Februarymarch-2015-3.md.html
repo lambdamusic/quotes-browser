@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -739,31 +739,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "machine", "target": "things" },
+          { "source": "interoperability", "target": "data-citation" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "interoperability", "target": "metadata" },
       
-          { "source": "machine", "target": "data-citation" },
+          { "source": "interoperability", "target": "machine" },
       
-          { "source": "machine", "target": "metadata" },
+          { "source": "interoperability", "target": "data-repository" },
       
-          { "source": "machine", "target": "interoperability" },
-      
-          { "source": "things", "target": "industrial-revolution" },
-      
-          { "source": "things", "target": "bits" },
-      
-          { "source": "things", "target": "services" },
-      
-          { "source": "things", "target": "machine" },
-      
-          { "source": "manufacturing", "target": "machine" },
-      
-          { "source": "manufacturing", "target": "things" },
-      
-          { "source": "manufacturing", "target": "process" },
-      
-          { "source": "manufacturing", "target": "elements" },
+          { "source": "interoperability", "target": "different-information-systems" },
       
           { "source": "data-citation", "target": "publishing" },
       
@@ -781,25 +765,33 @@ var data_local_dynamic = {
       
           { "source": "metadata", "target": "server" },
       
-          { "source": "interoperability", "target": "data-citation" },
+          { "source": "machine", "target": "things" },
       
-          { "source": "interoperability", "target": "metadata" },
+          { "source": "machine", "target": "manufacturing" },
       
-          { "source": "interoperability", "target": "machine" },
+          { "source": "machine", "target": "data-citation" },
       
-          { "source": "interoperability", "target": "data-repository" },
+          { "source": "machine", "target": "metadata" },
+      
+          { "source": "data-repository", "target": "data-citation" },
+      
+          { "source": "data-repository", "target": "metadata" },
+      
+          { "source": "data-repository", "target": "interoperability" },
+      
+          { "source": "data-repository", "target": "machine" },
+      
+          { "source": "different-information-systems", "target": "system" },
+      
+          { "source": "different-information-systems", "target": "information-systems" },
+      
+          { "source": "different-information-systems", "target": "interoperability" },
+      
+          { "source": "different-information-systems", "target": "capability" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
-      
-
-        {"id": "things", "size": 70, "score": 0 , "title": "things", "type": "circle"},
-
-      
-
-        {"id": "manufacturing", "size": 70, "score": 0 , "title": "manufacturing", "type": "circle"},
-
       
 
         {"id": "data-citation", "size": 70, "score": 0 , "title": "data-citation", "type": "circle"},
@@ -810,31 +802,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "interoperability", "size": 70, "score": 0 , "title": "interoperability", "type": "circle"},
+        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "machine", "size": 140, "score": 0.5 , "title": "machine", "type": "circle"},
+        {"id": "data-repository", "size": 70, "score": 0 , "title": "data-repository", "type": "circle"},
 
       
 
-        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
+        {"id": "different-information-systems", "size": 70, "score": 0 , "title": "different-information-systems", "type": "circle"},
 
       
 
-        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
-
-      
-
-        {"id": "services", "size": 5, "score": 0.4 , "title": "services", "type": "circle"},
-
-      
-
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
-
-      
-
-        {"id": "elements", "size": 5, "score": 0.4 , "title": "elements", "type": "circle"},
+        {"id": "interoperability", "size": 140, "score": 0.5 , "title": "interoperability", "type": "circle"},
 
       
 
@@ -862,7 +842,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "data-repository", "size": 5, "score": 0.4 , "title": "data-repository", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+
+      
+
+        {"id": "manufacturing", "size": 5, "score": 0.4 , "title": "manufacturing", "type": "circle"},
+
+      
+
+        {"id": "system", "size": 5, "score": 0.4 , "title": "system", "type": "circle"},
+
+      
+
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+
+      
+
+        {"id": "capability", "size": 5, "score": 0.4 , "title": "capability", "type": "circle"},
 
        
 
@@ -999,7 +995,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

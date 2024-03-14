@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -733,6 +733,12 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "Greek-society", "target": "rights" },
+      
+          { "source": "Greek-society", "target": "society" },
+      
+          { "source": "Greek-society", "target": "relation" },
+      
           { "source": "rights", "target": "law" },
       
           { "source": "rights", "target": "opinion" },
@@ -740,24 +746,6 @@ var data_local_dynamic = {
           { "source": "rights", "target": "society" },
       
           { "source": "rights", "target": "relation" },
-      
-          { "source": "rights", "target": "Greek-society" },
-      
-          { "source": "law", "target": "rights" },
-      
-          { "source": "law", "target": "development" },
-      
-          { "source": "law", "target": "coding" },
-      
-          { "source": "law", "target": "physics" },
-      
-          { "source": "opinion", "target": "politicians" },
-      
-          { "source": "opinion", "target": "citizens" },
-      
-          { "source": "opinion", "target": "representative-democracy" },
-      
-          { "source": "opinion", "target": "rights" },
       
           { "source": "society", "target": "family" },
       
@@ -774,23 +762,13 @@ var data_local_dynamic = {
           { "source": "relation", "target": "relationship" },
       
           { "source": "relation", "target": "properties" },
-      
-          { "source": "Greek-society", "target": "rights" },
-      
-          { "source": "Greek-society", "target": "society" },
-      
-          { "source": "Greek-society", "target": "relation" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "law", "size": 70, "score": 0 , "title": "law", "type": "circle"},
-
-      
-
-        {"id": "opinion", "size": 70, "score": 0 , "title": "opinion", "type": "circle"},
+        {"id": "rights", "size": 70, "score": 0 , "title": "rights", "type": "circle"},
 
       
 
@@ -802,35 +780,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "Greek-society", "size": 70, "score": 0 , "title": "Greek-society", "type": "circle"},
+        {"id": "Greek-society", "size": 140, "score": 0.5 , "title": "Greek-society", "type": "circle"},
 
       
 
-        {"id": "rights", "size": 140, "score": 0.5 , "title": "rights", "type": "circle"},
+        {"id": "law", "size": 5, "score": 0.4 , "title": "law", "type": "circle"},
 
       
 
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
-
-      
-
-        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
-
-      
-
-        {"id": "physics", "size": 5, "score": 0.4 , "title": "physics", "type": "circle"},
-
-      
-
-        {"id": "politicians", "size": 5, "score": 0.4 , "title": "politicians", "type": "circle"},
-
-      
-
-        {"id": "citizens", "size": 5, "score": 0.4 , "title": "citizens", "type": "circle"},
-
-      
-
-        {"id": "representative-democracy", "size": 5, "score": 0.4 , "title": "representative-democracy", "type": "circle"},
+        {"id": "opinion", "size": 5, "score": 0.4 , "title": "opinion", "type": "circle"},
 
       
 
@@ -991,7 +949,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

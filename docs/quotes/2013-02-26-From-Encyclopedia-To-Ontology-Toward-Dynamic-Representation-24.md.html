@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,14 +727,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "critics", "target": "philosophical-ideas" },
-      
-          { "source": "critics", "target": "kind" },
-      
-          { "source": "critics", "target": "desire" },
-      
-          { "source": "critics", "target": "game" },
-      
           { "source": "philosophical-ideas", "target": "kind" },
       
           { "source": "philosophical-ideas", "target": "critics" },
@@ -742,6 +734,8 @@ var data_local_dynamic = {
           { "source": "philosophical-ideas", "target": "idea" },
       
           { "source": "philosophical-ideas", "target": "philosophy-of-mind" },
+      
+          { "source": "philosophical-ideas", "target": "philosophy" },
       
           { "source": "kind", "target": "properties" },
       
@@ -751,52 +745,60 @@ var data_local_dynamic = {
       
           { "source": "kind", "target": "slots" },
       
-          { "source": "desire", "target": "critics" },
+          { "source": "critics", "target": "philosophical-ideas" },
       
-          { "source": "desire", "target": "game" },
+          { "source": "critics", "target": "kind" },
       
-          { "source": "desire", "target": "words" },
+          { "source": "critics", "target": "desire" },
       
-          { "source": "desire", "target": "sexual-desire" },
+          { "source": "critics", "target": "game" },
       
-          { "source": "game", "target": "story" },
+          { "source": "idea", "target": "language" },
       
-          { "source": "game", "target": "text" },
+          { "source": "idea", "target": "Sapir-Whorf-hypothesis" },
       
-          { "source": "game", "target": "character" },
+          { "source": "idea", "target": "different-languages" },
       
-          { "source": "game", "target": "interactive-fiction" },
+          { "source": "idea", "target": "linguistics" },
+      
+          { "source": "philosophy-of-mind", "target": "philosophical-ideas" },
+      
+          { "source": "philosophy-of-mind", "target": "idea" },
+      
+          { "source": "philosophy", "target": "ontology" },
+      
+          { "source": "philosophy", "target": "ethics" },
+      
+          { "source": "philosophy", "target": "schema" },
+      
+          { "source": "philosophy", "target": "fact" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "philosophical-ideas", "size": 70, "score": 0 , "title": "philosophical-ideas", "type": "circle"},
-
-      
-
         {"id": "kind", "size": 70, "score": 0 , "title": "kind", "type": "circle"},
 
       
 
-        {"id": "desire", "size": 70, "score": 0 , "title": "desire", "type": "circle"},
+        {"id": "critics", "size": 70, "score": 0 , "title": "critics", "type": "circle"},
 
       
 
-        {"id": "game", "size": 70, "score": 0 , "title": "game", "type": "circle"},
+        {"id": "idea", "size": 70, "score": 0 , "title": "idea", "type": "circle"},
 
       
 
-        {"id": "critics", "size": 140, "score": 0.5 , "title": "critics", "type": "circle"},
+        {"id": "philosophy-of-mind", "size": 70, "score": 0 , "title": "philosophy-of-mind", "type": "circle"},
 
       
 
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
 
       
 
-        {"id": "philosophy-of-mind", "size": 5, "score": 0.4 , "title": "philosophy-of-mind", "type": "circle"},
+        {"id": "philosophical-ideas", "size": 140, "score": 0.5 , "title": "philosophical-ideas", "type": "circle"},
 
       
 
@@ -816,27 +818,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "desire", "size": 5, "score": 0.4 , "title": "desire", "type": "circle"},
 
       
 
-        {"id": "sexual-desire", "size": 5, "score": 0.4 , "title": "sexual-desire", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
 
       
 
-        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
+        {"id": "different-languages", "size": 5, "score": 0.4 , "title": "different-languages", "type": "circle"},
 
       
 
-        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
+        {"id": "linguistics", "size": 5, "score": 0.4 , "title": "linguistics", "type": "circle"},
+
+      
+
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+
+      
+
+        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
+
+      
+
+        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
+
+      
+
+        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
 
        
 
@@ -973,7 +991,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

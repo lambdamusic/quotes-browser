@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -748,39 +748,39 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "class", "target": "cases" },
+          { "source": "OWL-DL", "target": "annotation-properties" },
       
-          { "source": "class", "target": "occurrence" },
+          { "source": "OWL-DL", "target": "data-values" },
       
-          { "source": "class", "target": "events" },
+          { "source": "OWL-DL", "target": "ontology" },
       
-          { "source": "class", "target": "instances" },
+          { "source": "OWL-DL", "target": "instances" },
       
-          { "source": "class", "target": "objects" },
+          { "source": "OWL-DL", "target": "datatype-properties" },
       
-          { "source": "cases", "target": "title" },
+          { "source": "annotation-properties", "target": "OWL-DL" },
       
-          { "source": "cases", "target": "content" },
+          { "source": "annotation-properties", "target": "data-values" },
       
-          { "source": "cases", "target": "story" },
+          { "source": "annotation-properties", "target": "ontology" },
       
-          { "source": "cases", "target": "occurrence" },
+          { "source": "annotation-properties", "target": "instances" },
       
-          { "source": "occurrence", "target": "cases" },
+          { "source": "data-values", "target": "OWL-DL" },
       
-          { "source": "occurrence", "target": "events" },
+          { "source": "data-values", "target": "annotation-properties" },
       
-          { "source": "occurrence", "target": "instances" },
+          { "source": "data-values", "target": "ontology" },
       
-          { "source": "occurrence", "target": "class" },
+          { "source": "data-values", "target": "instances" },
       
-          { "source": "events", "target": "cases" },
+          { "source": "ontology", "target": "use-cases" },
       
-          { "source": "events", "target": "occurrence" },
+          { "source": "ontology", "target": "data-model" },
       
-          { "source": "events", "target": "instances" },
+          { "source": "ontology", "target": "architecture" },
       
-          { "source": "events", "target": "class" },
+          { "source": "ontology", "target": "requirements" },
       
           { "source": "instances", "target": "cases" },
       
@@ -790,28 +790,28 @@ var data_local_dynamic = {
       
           { "source": "instances", "target": "class" },
       
-          { "source": "objects", "target": "class" },
+          { "source": "datatype-properties", "target": "OWL-DL" },
       
-          { "source": "objects", "target": "real-world" },
+          { "source": "datatype-properties", "target": "annotation-properties" },
       
-          { "source": "objects", "target": "instances" },
+          { "source": "datatype-properties", "target": "data-values" },
       
-          { "source": "objects", "target": "types" },
+          { "source": "datatype-properties", "target": "ontology" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "annotation-properties", "size": 70, "score": 0 , "title": "annotation-properties", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
+        {"id": "data-values", "size": 70, "score": 0 , "title": "data-values", "type": "circle"},
 
       
 
-        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
+        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
 
       
 
@@ -819,31 +819,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+        {"id": "datatype-properties", "size": 70, "score": 0 , "title": "datatype-properties", "type": "circle"},
 
       
 
-        {"id": "class", "size": 140, "score": 0.5 , "title": "class", "type": "circle"},
+        {"id": "OWL-DL", "size": 140, "score": 0.5 , "title": "OWL-DL", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
 
       
 
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
+        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
+        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+
+      
+
+        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
        
 
@@ -980,7 +992,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

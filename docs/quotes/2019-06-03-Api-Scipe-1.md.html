@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,15 +729,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "method", "target": "action" },
+          { "source": "clients", "target": "action" },
       
-          { "source": "method", "target": "clients" },
+          { "source": "clients", "target": "method" },
       
-          { "source": "method", "target": "user-testing" },
+          { "source": "clients", "target": "investment" },
       
-          { "source": "method", "target": "developers" },
+          { "source": "clients", "target": "goal" },
       
-          { "source": "method", "target": "persons" },
+          { "source": "clients", "target": "information-resources" },
       
           { "source": "action", "target": "clients" },
       
@@ -747,37 +747,35 @@ var data_local_dynamic = {
       
           { "source": "action", "target": "persons" },
       
-          { "source": "clients", "target": "action" },
+          { "source": "method", "target": "action" },
       
-          { "source": "clients", "target": "method" },
+          { "source": "method", "target": "clients" },
       
-          { "source": "clients", "target": "investment" },
+          { "source": "method", "target": "user-testing" },
       
-          { "source": "clients", "target": "goal" },
+          { "source": "method", "target": "developers" },
       
-          { "source": "user-testing", "target": "users" },
+          { "source": "investment", "target": "clients" },
       
-          { "source": "user-testing", "target": "Google" },
+          { "source": "investment", "target": "goal" },
       
-          { "source": "user-testing", "target": "search" },
+          { "source": "investment", "target": "money" },
       
-          { "source": "user-testing", "target": "version" },
+          { "source": "goal", "target": "team" },
       
-          { "source": "developers", "target": "algorithm" },
+          { "source": "goal", "target": "link" },
       
-          { "source": "developers", "target": "code" },
+          { "source": "goal", "target": "owners" },
       
-          { "source": "developers", "target": "Scrum" },
+          { "source": "goal", "target": "product-owners" },
       
-          { "source": "developers", "target": "user-testing" },
+          { "source": "information-resources", "target": "URI" },
       
-          { "source": "persons", "target": "team" },
+          { "source": "information-resources", "target": "server" },
       
-          { "source": "persons", "target": "role" },
+          { "source": "information-resources", "target": "clients" },
       
-          { "source": "persons", "target": "benefits" },
-      
-          { "source": "persons", "target": "humans" },
+          { "source": "information-resources", "target": "resources" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -788,23 +786,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "clients", "size": 70, "score": 0 , "title": "clients", "type": "circle"},
+        {"id": "method", "size": 70, "score": 0 , "title": "method", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 70, "score": 0 , "title": "user-testing", "type": "circle"},
+        {"id": "investment", "size": 70, "score": 0 , "title": "investment", "type": "circle"},
 
       
 
-        {"id": "developers", "size": 70, "score": 0 , "title": "developers", "type": "circle"},
+        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
 
       
 
-        {"id": "persons", "size": 70, "score": 0 , "title": "persons", "type": "circle"},
+        {"id": "information-resources", "size": 70, "score": 0 , "title": "information-resources", "type": "circle"},
 
       
 
-        {"id": "method", "size": 140, "score": 0.5 , "title": "method", "type": "circle"},
+        {"id": "clients", "size": 140, "score": 0.5 , "title": "clients", "type": "circle"},
 
       
 
@@ -812,39 +810,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "investment", "size": 5, "score": 0.4 , "title": "investment", "type": "circle"},
+        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
 
       
 
-        {"id": "goal", "size": 5, "score": 0.4 , "title": "goal", "type": "circle"},
+        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
 
       
 
-        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
-
-      
-
-        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
-
-      
-
-        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
-
-      
-
-        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
-
-      
-
-        {"id": "code", "size": 5, "score": 0.4 , "title": "code", "type": "circle"},
-
-      
-
-        {"id": "Scrum", "size": 5, "score": 0.4 , "title": "Scrum", "type": "circle"},
+        {"id": "money", "size": 5, "score": 0.4 , "title": "money", "type": "circle"},
 
       
 
@@ -852,15 +830,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "role", "size": 5, "score": 0.4 , "title": "role", "type": "circle"},
+        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
 
       
 
-        {"id": "benefits", "size": 5, "score": 0.4 , "title": "benefits", "type": "circle"},
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+
+      
+
+        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+
+      
+
+        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
 
        
 
@@ -997,7 +987,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

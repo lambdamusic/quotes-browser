@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,6 +727,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "character", "target": "story" },
+      
+          { "source": "character", "target": "text" },
+      
+          { "source": "character", "target": "game" },
+      
+          { "source": "character", "target": "interactive-fiction" },
+      
+          { "source": "character", "target": "motif" },
+      
           { "source": "story", "target": "text" },
       
           { "source": "story", "target": "game" },
@@ -734,8 +744,6 @@ var data_local_dynamic = {
           { "source": "story", "target": "character" },
       
           { "source": "story", "target": "interactive-fiction" },
-      
-          { "source": "story", "target": "cases" },
       
           { "source": "text", "target": "story" },
       
@@ -753,14 +761,6 @@ var data_local_dynamic = {
       
           { "source": "game", "target": "interactive-fiction" },
       
-          { "source": "character", "target": "story" },
-      
-          { "source": "character", "target": "text" },
-      
-          { "source": "character", "target": "game" },
-      
-          { "source": "character", "target": "interactive-fiction" },
-      
           { "source": "interactive-fiction", "target": "story" },
       
           { "source": "interactive-fiction", "target": "text" },
@@ -769,17 +769,21 @@ var data_local_dynamic = {
       
           { "source": "interactive-fiction", "target": "character" },
       
-          { "source": "cases", "target": "title" },
+          { "source": "motif", "target": "character" },
       
-          { "source": "cases", "target": "content" },
+          { "source": "motif", "target": "maturity" },
       
-          { "source": "cases", "target": "story" },
+          { "source": "motif", "target": "lines" },
       
-          { "source": "cases", "target": "occurrence" },
+          { "source": "motif", "target": "course" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
+
       
 
         {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
@@ -790,31 +794,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "character", "size": 70, "score": 0 , "title": "character", "type": "circle"},
-
-      
-
         {"id": "interactive-fiction", "size": 70, "score": 0 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "motif", "size": 70, "score": 0 , "title": "motif", "type": "circle"},
 
       
 
-        {"id": "story", "size": 140, "score": 0.5 , "title": "story", "type": "circle"},
+        {"id": "character", "size": 140, "score": 0.5 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "maturity", "size": 5, "score": 0.4 , "title": "maturity", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "lines", "size": 5, "score": 0.4 , "title": "lines", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+        {"id": "course", "size": 5, "score": 0.4 , "title": "course", "type": "circle"},
 
        
 
@@ -951,7 +951,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

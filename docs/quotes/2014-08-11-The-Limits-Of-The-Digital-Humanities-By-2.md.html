@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,82 +727,106 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "text", "target": "story" },
+          { "source": "humanity", "target": "music" },
       
-          { "source": "text", "target": "game" },
+          { "source": "humanity", "target": "science" },
       
-          { "source": "text", "target": "character" },
+          { "source": "humanity", "target": "journals" },
       
-          { "source": "text", "target": "interactive-fiction" },
+          { "source": "humanity", "target": "social-sciences" },
       
-          { "source": "text", "target": "book" },
+          { "source": "humanity", "target": "philosophical-problems" },
       
-          { "source": "story", "target": "text" },
+          { "source": "music", "target": "audience" },
       
-          { "source": "story", "target": "game" },
+          { "source": "music", "target": "eNO" },
       
-          { "source": "story", "target": "character" },
+          { "source": "music", "target": "programmers" },
       
-          { "source": "story", "target": "interactive-fiction" },
+          { "source": "music", "target": "humanity" },
       
-          { "source": "game", "target": "story" },
+          { "source": "science", "target": "article" },
       
-          { "source": "game", "target": "text" },
+          { "source": "science", "target": "hierarchy" },
       
-          { "source": "game", "target": "character" },
+          { "source": "science", "target": "social-sciences" },
       
-          { "source": "game", "target": "interactive-fiction" },
+          { "source": "science", "target": "publications" },
       
-          { "source": "character", "target": "story" },
+          { "source": "journals", "target": "news" },
       
-          { "source": "character", "target": "text" },
+          { "source": "journals", "target": "book" },
       
-          { "source": "character", "target": "game" },
+          { "source": "journals", "target": "nature" },
       
-          { "source": "character", "target": "interactive-fiction" },
+          { "source": "journals", "target": "database" },
       
-          { "source": "interactive-fiction", "target": "story" },
+          { "source": "social-sciences", "target": "article" },
       
-          { "source": "interactive-fiction", "target": "text" },
+          { "source": "social-sciences", "target": "hierarchy" },
       
-          { "source": "interactive-fiction", "target": "game" },
+          { "source": "social-sciences", "target": "science" },
       
-          { "source": "interactive-fiction", "target": "character" },
+          { "source": "social-sciences", "target": "journals" },
       
-          { "source": "book", "target": "news" },
+          { "source": "philosophical-problems", "target": "philosophy" },
       
-          { "source": "book", "target": "journals" },
+          { "source": "philosophical-problems", "target": "humanity" },
       
-          { "source": "book", "target": "nature" },
+          { "source": "philosophical-problems", "target": "philosophers" },
       
-          { "source": "book", "target": "text" },
+          { "source": "philosophical-problems", "target": "philosophical-truth" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
+        {"id": "music", "size": 70, "score": 0 , "title": "music", "type": "circle"},
 
       
 
-        {"id": "game", "size": 70, "score": 0 , "title": "game", "type": "circle"},
+        {"id": "science", "size": 70, "score": 0 , "title": "science", "type": "circle"},
 
       
 
-        {"id": "character", "size": 70, "score": 0 , "title": "character", "type": "circle"},
+        {"id": "journals", "size": 70, "score": 0 , "title": "journals", "type": "circle"},
 
       
 
-        {"id": "interactive-fiction", "size": 70, "score": 0 , "title": "interactive-fiction", "type": "circle"},
+        {"id": "social-sciences", "size": 70, "score": 0 , "title": "social-sciences", "type": "circle"},
 
       
 
-        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
+        {"id": "philosophical-problems", "size": 70, "score": 0 , "title": "philosophical-problems", "type": "circle"},
 
       
 
-        {"id": "text", "size": 140, "score": 0.5 , "title": "text", "type": "circle"},
+        {"id": "humanity", "size": 140, "score": 0.5 , "title": "humanity", "type": "circle"},
+
+      
+
+        {"id": "audience", "size": 5, "score": 0.4 , "title": "audience", "type": "circle"},
+
+      
+
+        {"id": "eNO", "size": 5, "score": 0.4 , "title": "eNO", "type": "circle"},
+
+      
+
+        {"id": "programmers", "size": 5, "score": 0.4 , "title": "programmers", "type": "circle"},
+
+      
+
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+
+      
+
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
       
 
@@ -810,11 +834,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
         {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+
+      
+
+        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+
+      
+
+        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+
+      
+
+        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
+
+      
+
+        {"id": "philosophical-truth", "size": 5, "score": 0.4 , "title": "philosophical-truth", "type": "circle"},
 
        
 
@@ -951,7 +991,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

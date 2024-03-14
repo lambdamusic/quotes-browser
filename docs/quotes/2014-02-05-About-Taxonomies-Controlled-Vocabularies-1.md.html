@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -737,48 +737,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "taxonomy", "target": "ontology" },
-      
-          { "source": "taxonomy", "target": "Semantic-Web" },
-      
-          { "source": "taxonomy", "target": "information-systems" },
-      
-          { "source": "taxonomy", "target": "companies" },
-      
-          { "source": "taxonomy", "target": "authority-files" },
-      
-          { "source": "ontology", "target": "use-cases" },
-      
-          { "source": "ontology", "target": "data-model" },
-      
-          { "source": "ontology", "target": "architecture" },
-      
-          { "source": "ontology", "target": "requirements" },
-      
-          { "source": "Semantic-Web", "target": "ontology" },
-      
-          { "source": "Semantic-Web", "target": "information-systems" },
-      
-          { "source": "Semantic-Web", "target": "companies" },
-      
-          { "source": "Semantic-Web", "target": "taxonomy" },
-      
-          { "source": "information-systems", "target": "ontology" },
-      
-          { "source": "information-systems", "target": "Semantic-Web" },
-      
-          { "source": "information-systems", "target": "companies" },
-      
-          { "source": "information-systems", "target": "taxonomy" },
-      
-          { "source": "companies", "target": "ontology" },
-      
-          { "source": "companies", "target": "Semantic-Web" },
-      
-          { "source": "companies", "target": "information-systems" },
-      
-          { "source": "companies", "target": "taxonomy" },
-      
           { "source": "authority-files", "target": "indexing" },
       
           { "source": "authority-files", "target": "thesaurus" },
@@ -786,65 +744,91 @@ var data_local_dynamic = {
           { "source": "authority-files", "target": "vocabulary" },
       
           { "source": "authority-files", "target": "files" },
+      
+          { "source": "authority-files", "target": "taxonomy" },
+      
+          { "source": "indexing", "target": "authority-files" },
+      
+          { "source": "indexing", "target": "thesaurus" },
+      
+          { "source": "indexing", "target": "vocabulary" },
+      
+          { "source": "indexing", "target": "files" },
+      
+          { "source": "thesaurus", "target": "authority-files" },
+      
+          { "source": "thesaurus", "target": "indexing" },
+      
+          { "source": "thesaurus", "target": "vocabulary" },
+      
+          { "source": "thesaurus", "target": "files" },
+      
+          { "source": "vocabulary", "target": "authority-files" },
+      
+          { "source": "vocabulary", "target": "indexing" },
+      
+          { "source": "vocabulary", "target": "thesaurus" },
+      
+          { "source": "vocabulary", "target": "files" },
+      
+          { "source": "files", "target": "authority-files" },
+      
+          { "source": "files", "target": "indexing" },
+      
+          { "source": "files", "target": "thesaurus" },
+      
+          { "source": "files", "target": "vocabulary" },
+      
+          { "source": "taxonomy", "target": "ontology" },
+      
+          { "source": "taxonomy", "target": "Semantic-Web" },
+      
+          { "source": "taxonomy", "target": "information-systems" },
+      
+          { "source": "taxonomy", "target": "companies" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "indexing", "size": 70, "score": 0 , "title": "indexing", "type": "circle"},
 
       
 
-        {"id": "Semantic-Web", "size": 70, "score": 0 , "title": "Semantic-Web", "type": "circle"},
+        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 70, "score": 0 , "title": "information-systems", "type": "circle"},
+        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "companies", "size": 70, "score": 0 , "title": "companies", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "authority-files", "size": 70, "score": 0 , "title": "authority-files", "type": "circle"},
+        {"id": "taxonomy", "size": 70, "score": 0 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "taxonomy", "size": 140, "score": 0.5 , "title": "taxonomy", "type": "circle"},
+        {"id": "authority-files", "size": 140, "score": 0.5 , "title": "authority-files", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
-
-      
-
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
 
        
 
@@ -981,7 +965,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

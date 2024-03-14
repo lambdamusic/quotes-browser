@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,16 +731,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "factors", "target": "years" },
-      
-          { "source": "factors", "target": "article" },
-      
-          { "source": "factors", "target": "citations" },
-      
-          { "source": "factors", "target": "task" },
-      
-          { "source": "factors", "target": "performance" },
-      
           { "source": "years", "target": "factors" },
       
           { "source": "years", "target": "article" },
@@ -748,6 +738,16 @@ var data_local_dynamic = {
           { "source": "years", "target": "citations" },
       
           { "source": "years", "target": "episodes" },
+      
+          { "source": "years", "target": "orphans" },
+      
+          { "source": "factors", "target": "years" },
+      
+          { "source": "factors", "target": "article" },
+      
+          { "source": "factors", "target": "citations" },
+      
+          { "source": "factors", "target": "task" },
       
           { "source": "article", "target": "hierarchy" },
       
@@ -765,28 +765,28 @@ var data_local_dynamic = {
       
           { "source": "citations", "target": "evaluation" },
       
-          { "source": "task", "target": "comprehension" },
+          { "source": "episodes", "target": "orphans" },
       
-          { "source": "task", "target": "judgments" },
+          { "source": "episodes", "target": "series" },
       
-          { "source": "task", "target": "skills" },
+          { "source": "episodes", "target": "years" },
       
-          { "source": "task", "target": "learning" },
+          { "source": "episodes", "target": "time" },
       
-          { "source": "performance", "target": "task" },
+          { "source": "orphans", "target": "episodes" },
       
-          { "source": "performance", "target": "factors" },
+          { "source": "orphans", "target": "series" },
       
-          { "source": "performance", "target": "results" },
+          { "source": "orphans", "target": "years" },
       
-          { "source": "performance", "target": "ability" },
+          { "source": "orphans", "target": "time" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "years", "size": 70, "score": 0 , "title": "years", "type": "circle"},
+        {"id": "factors", "size": 70, "score": 0 , "title": "factors", "type": "circle"},
 
       
 
@@ -798,19 +798,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "task", "size": 70, "score": 0 , "title": "task", "type": "circle"},
+        {"id": "episodes", "size": 70, "score": 0 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "performance", "size": 70, "score": 0 , "title": "performance", "type": "circle"},
+        {"id": "orphans", "size": 70, "score": 0 , "title": "orphans", "type": "circle"},
 
       
 
-        {"id": "factors", "size": 140, "score": 0.5 , "title": "factors", "type": "circle"},
+        {"id": "years", "size": 140, "score": 0.5 , "title": "years", "type": "circle"},
 
       
 
-        {"id": "episodes", "size": 5, "score": 0.4 , "title": "episodes", "type": "circle"},
+        {"id": "task", "size": 5, "score": 0.4 , "title": "task", "type": "circle"},
 
       
 
@@ -846,27 +846,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "comprehension", "size": 5, "score": 0.4 , "title": "comprehension", "type": "circle"},
+        {"id": "series", "size": 5, "score": 0.4 , "title": "series", "type": "circle"},
 
       
 
-        {"id": "judgments", "size": 5, "score": 0.4 , "title": "judgments", "type": "circle"},
-
-      
-
-        {"id": "skills", "size": 5, "score": 0.4 , "title": "skills", "type": "circle"},
-
-      
-
-        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
-
-      
-
-        {"id": "results", "size": 5, "score": 0.4 , "title": "results", "type": "circle"},
-
-      
-
-        {"id": "ability", "size": 5, "score": 0.4 , "title": "ability", "type": "circle"},
+        {"id": "time", "size": 5, "score": 0.4 , "title": "time", "type": "circle"},
 
        
 
@@ -1003,7 +987,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

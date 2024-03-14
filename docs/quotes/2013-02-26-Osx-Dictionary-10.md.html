@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,16 +731,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "nouns", "target": "verbs" },
-      
-          { "source": "nouns", "target": "century" },
-      
-          { "source": "nouns", "target": "persons" },
-      
-          { "source": "nouns", "target": "career" },
-      
-          { "source": "nouns", "target": "stint" },
-      
           { "source": "verbs", "target": "attitudes" },
       
           { "source": "verbs", "target": "relationship" },
@@ -748,6 +738,32 @@ var data_local_dynamic = {
           { "source": "verbs", "target": "nouns" },
       
           { "source": "verbs", "target": "century" },
+      
+          { "source": "verbs", "target": "persons" },
+      
+          { "source": "attitudes", "target": "verbs" },
+      
+          { "source": "attitudes", "target": "relationship" },
+      
+          { "source": "attitudes", "target": "countries" },
+      
+          { "source": "attitudes", "target": "Iran" },
+      
+          { "source": "relationship", "target": "verbs" },
+      
+          { "source": "relationship", "target": "attitudes" },
+      
+          { "source": "relationship", "target": "period" },
+      
+          { "source": "relationship", "target": "relation" },
+      
+          { "source": "nouns", "target": "verbs" },
+      
+          { "source": "nouns", "target": "century" },
+      
+          { "source": "nouns", "target": "persons" },
+      
+          { "source": "nouns", "target": "career" },
       
           { "source": "century", "target": "foundation" },
       
@@ -764,29 +780,21 @@ var data_local_dynamic = {
           { "source": "persons", "target": "benefits" },
       
           { "source": "persons", "target": "humans" },
-      
-          { "source": "career", "target": "space" },
-      
-          { "source": "career", "target": "people" },
-      
-          { "source": "career", "target": "idea" },
-      
-          { "source": "career", "target": "verbs" },
-      
-          { "source": "stint", "target": "verbs" },
-      
-          { "source": "stint", "target": "nouns" },
-      
-          { "source": "stint", "target": "persons" },
-      
-          { "source": "stint", "target": "career" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "verbs", "size": 70, "score": 0 , "title": "verbs", "type": "circle"},
+        {"id": "attitudes", "size": 70, "score": 0 , "title": "attitudes", "type": "circle"},
+
+      
+
+        {"id": "relationship", "size": 70, "score": 0 , "title": "relationship", "type": "circle"},
+
+      
+
+        {"id": "nouns", "size": 70, "score": 0 , "title": "nouns", "type": "circle"},
 
       
 
@@ -798,23 +806,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "career", "size": 70, "score": 0 , "title": "career", "type": "circle"},
+        {"id": "verbs", "size": 140, "score": 0.5 , "title": "verbs", "type": "circle"},
 
       
 
-        {"id": "stint", "size": 70, "score": 0 , "title": "stint", "type": "circle"},
+        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
 
       
 
-        {"id": "nouns", "size": 140, "score": 0.5 , "title": "nouns", "type": "circle"},
+        {"id": "Iran", "size": 5, "score": 0.4 , "title": "Iran", "type": "circle"},
 
       
 
-        {"id": "attitudes", "size": 5, "score": 0.4 , "title": "attitudes", "type": "circle"},
+        {"id": "period", "size": 5, "score": 0.4 , "title": "period", "type": "circle"},
 
       
 
-        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
+        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
+
+      
+
+        {"id": "career", "size": 5, "score": 0.4 , "title": "career", "type": "circle"},
 
       
 
@@ -847,18 +859,6 @@ var data_local_dynamic = {
       
 
         {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
-
-      
-
-        {"id": "space", "size": 5, "score": 0.4 , "title": "space", "type": "circle"},
-
-      
-
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
-
-      
-
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
 
        
 
@@ -995,7 +995,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,6 +727,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "visual-design", "target": "design" },
+      
+          { "source": "visual-design", "target": "information-design" },
+      
+          { "source": "visual-design", "target": "prototype" },
+      
+          { "source": "visual-design", "target": "user-prototypes" },
+      
+          { "source": "visual-design", "target": "usability-issues" },
+      
           { "source": "design", "target": "model" },
       
           { "source": "design", "target": "bottom" },
@@ -734,24 +744,6 @@ var data_local_dynamic = {
           { "source": "design", "target": "information-design" },
       
           { "source": "design", "target": "visual-design" },
-      
-          { "source": "design", "target": "users" },
-      
-          { "source": "model", "target": "design" },
-      
-          { "source": "model", "target": "bottom" },
-      
-          { "source": "model", "target": "theory" },
-      
-          { "source": "model", "target": "noise" },
-      
-          { "source": "bottom", "target": "model" },
-      
-          { "source": "bottom", "target": "design" },
-      
-          { "source": "bottom", "target": "office" },
-      
-          { "source": "bottom", "target": "one" },
       
           { "source": "information-design", "target": "design" },
       
@@ -761,32 +753,36 @@ var data_local_dynamic = {
       
           { "source": "information-design", "target": "information-graphics" },
       
-          { "source": "visual-design", "target": "design" },
+          { "source": "prototype", "target": "users" },
       
-          { "source": "visual-design", "target": "information-design" },
+          { "source": "prototype", "target": "user-prototypes" },
       
-          { "source": "visual-design", "target": "prototype" },
+          { "source": "prototype", "target": "bike" },
       
-          { "source": "visual-design", "target": "user-prototypes" },
+          { "source": "prototype", "target": "search-results" },
       
-          { "source": "users", "target": "user-testing" },
+          { "source": "user-prototypes", "target": "users" },
       
-          { "source": "users", "target": "Google" },
+          { "source": "user-prototypes", "target": "prototype" },
       
-          { "source": "users", "target": "search" },
+          { "source": "user-prototypes", "target": "bike" },
       
-          { "source": "users", "target": "version" },
+          { "source": "user-prototypes", "target": "search-results" },
+      
+          { "source": "usability-issues", "target": "prototype" },
+      
+          { "source": "usability-issues", "target": "user-prototypes" },
+      
+          { "source": "usability-issues", "target": "visual-design" },
+      
+          { "source": "usability-issues", "target": "users" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "model", "size": 70, "score": 0 , "title": "model", "type": "circle"},
-
-      
-
-        {"id": "bottom", "size": 70, "score": 0 , "title": "bottom", "type": "circle"},
+        {"id": "design", "size": 70, "score": 0 , "title": "design", "type": "circle"},
 
       
 
@@ -794,31 +790,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "visual-design", "size": 70, "score": 0 , "title": "visual-design", "type": "circle"},
+        {"id": "prototype", "size": 70, "score": 0 , "title": "prototype", "type": "circle"},
 
       
 
-        {"id": "users", "size": 70, "score": 0 , "title": "users", "type": "circle"},
+        {"id": "user-prototypes", "size": 70, "score": 0 , "title": "user-prototypes", "type": "circle"},
 
       
 
-        {"id": "design", "size": 140, "score": 0.5 , "title": "design", "type": "circle"},
+        {"id": "usability-issues", "size": 70, "score": 0 , "title": "usability-issues", "type": "circle"},
 
       
 
-        {"id": "theory", "size": 5, "score": 0.4 , "title": "theory", "type": "circle"},
+        {"id": "visual-design", "size": 140, "score": 0.5 , "title": "visual-design", "type": "circle"},
 
       
 
-        {"id": "noise", "size": 5, "score": 0.4 , "title": "noise", "type": "circle"},
+        {"id": "model", "size": 5, "score": 0.4 , "title": "model", "type": "circle"},
 
       
 
-        {"id": "office", "size": 5, "score": 0.4 , "title": "office", "type": "circle"},
-
-      
-
-        {"id": "one", "size": 5, "score": 0.4 , "title": "one", "type": "circle"},
+        {"id": "bottom", "size": 5, "score": 0.4 , "title": "bottom", "type": "circle"},
 
       
 
@@ -830,27 +822,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "prototype", "size": 5, "score": 0.4 , "title": "prototype", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
       
 
-        {"id": "user-prototypes", "size": 5, "score": 0.4 , "title": "user-prototypes", "type": "circle"},
+        {"id": "bike", "size": 5, "score": 0.4 , "title": "bike", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
-
-      
-
-        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
-
-      
-
-        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
-
-      
-
-        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
+        {"id": "search-results", "size": 5, "score": 0.4 , "title": "search-results", "type": "circle"},
 
        
 
@@ -987,7 +967,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

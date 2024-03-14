@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -733,6 +733,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "data-environment", "target": "semantic-publishing" },
+      
+          { "source": "data-environment", "target": "machine" },
+      
+          { "source": "data-environment", "target": "publishing" },
+      
+          { "source": "data-environment", "target": "semantics" },
+      
+          { "source": "data-environment", "target": "advantages" },
+      
           { "source": "semantic-publishing", "target": "machine" },
       
           { "source": "semantic-publishing", "target": "publishing" },
@@ -740,8 +750,6 @@ var data_local_dynamic = {
           { "source": "semantic-publishing", "target": "data-environment" },
       
           { "source": "semantic-publishing", "target": "semantics" },
-      
-          { "source": "semantic-publishing", "target": "advantages" },
       
           { "source": "machine", "target": "things" },
       
@@ -758,14 +766,6 @@ var data_local_dynamic = {
           { "source": "publishing", "target": "academic-publishing" },
       
           { "source": "publishing", "target": "server" },
-      
-          { "source": "data-environment", "target": "semantic-publishing" },
-      
-          { "source": "data-environment", "target": "machine" },
-      
-          { "source": "data-environment", "target": "publishing" },
-      
-          { "source": "data-environment", "target": "semantics" },
       
           { "source": "semantics", "target": "annotation-properties" },
       
@@ -788,15 +788,15 @@ var data_local_dynamic = {
   "nodes": [
       
 
+        {"id": "semantic-publishing", "size": 70, "score": 0 , "title": "semantic-publishing", "type": "circle"},
+
+      
+
         {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
 
       
 
         {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
-
-      
-
-        {"id": "data-environment", "size": 70, "score": 0 , "title": "data-environment", "type": "circle"},
 
       
 
@@ -808,7 +808,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "semantic-publishing", "size": 140, "score": 0.5 , "title": "semantic-publishing", "type": "circle"},
+        {"id": "data-environment", "size": 140, "score": 0.5 , "title": "data-environment", "type": "circle"},
 
       
 
@@ -1001,7 +1001,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,6 +727,12 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "eggs", "target": "birds" },
+      
+          { "source": "eggs", "target": "lines" },
+      
+          { "source": "eggs", "target": "cause" },
+      
           { "source": "birds", "target": "animals" },
       
           { "source": "birds", "target": "number" },
@@ -734,30 +740,6 @@ var data_local_dynamic = {
           { "source": "birds", "target": "eggs" },
       
           { "source": "birds", "target": "lines" },
-      
-          { "source": "birds", "target": "species" },
-      
-          { "source": "animals", "target": "fire" },
-      
-          { "source": "animals", "target": "extent" },
-      
-          { "source": "animals", "target": "class" },
-      
-          { "source": "animals", "target": "birds" },
-      
-          { "source": "number", "target": "impact" },
-      
-          { "source": "number", "target": "manuscript" },
-      
-          { "source": "number", "target": "interaction" },
-      
-          { "source": "number", "target": "content" },
-      
-          { "source": "eggs", "target": "birds" },
-      
-          { "source": "eggs", "target": "lines" },
-      
-          { "source": "eggs", "target": "cause" },
       
           { "source": "lines", "target": "motif" },
       
@@ -767,28 +749,20 @@ var data_local_dynamic = {
       
           { "source": "lines", "target": "elements" },
       
-          { "source": "species", "target": "anni" },
+          { "source": "cause", "target": "evidence" },
       
-          { "source": "species", "target": "solo" },
+          { "source": "cause", "target": "subjects" },
       
-          { "source": "species", "target": "food" },
+          { "source": "cause", "target": "cats" },
       
-          { "source": "species", "target": "structure" },
+          { "source": "cause", "target": "head" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "animals", "size": 70, "score": 0 , "title": "animals", "type": "circle"},
-
-      
-
-        {"id": "number", "size": 70, "score": 0 , "title": "number", "type": "circle"},
-
-      
-
-        {"id": "eggs", "size": 70, "score": 0 , "title": "eggs", "type": "circle"},
+        {"id": "birds", "size": 70, "score": 0 , "title": "birds", "type": "circle"},
 
       
 
@@ -796,43 +770,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "species", "size": 70, "score": 0 , "title": "species", "type": "circle"},
+        {"id": "cause", "size": 70, "score": 0 , "title": "cause", "type": "circle"},
 
       
 
-        {"id": "birds", "size": 140, "score": 0.5 , "title": "birds", "type": "circle"},
+        {"id": "eggs", "size": 140, "score": 0.5 , "title": "eggs", "type": "circle"},
 
       
 
-        {"id": "fire", "size": 5, "score": 0.4 , "title": "fire", "type": "circle"},
+        {"id": "animals", "size": 5, "score": 0.4 , "title": "animals", "type": "circle"},
 
       
 
-        {"id": "extent", "size": 5, "score": 0.4 , "title": "extent", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
-
-      
-
-        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
-
-      
-
-        {"id": "manuscript", "size": 5, "score": 0.4 , "title": "manuscript", "type": "circle"},
-
-      
-
-        {"id": "interaction", "size": 5, "score": 0.4 , "title": "interaction", "type": "circle"},
-
-      
-
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
-
-      
-
-        {"id": "cause", "size": 5, "score": 0.4 , "title": "cause", "type": "circle"},
+        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
 
       
 
@@ -852,19 +802,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "anni", "size": 5, "score": 0.4 , "title": "anni", "type": "circle"},
+        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
 
       
 
-        {"id": "solo", "size": 5, "score": 0.4 , "title": "solo", "type": "circle"},
+        {"id": "subjects", "size": 5, "score": 0.4 , "title": "subjects", "type": "circle"},
 
       
 
-        {"id": "food", "size": 5, "score": 0.4 , "title": "food", "type": "circle"},
+        {"id": "cats", "size": 5, "score": 0.4 , "title": "cats", "type": "circle"},
 
       
 
-        {"id": "structure", "size": 5, "score": 0.4 , "title": "structure", "type": "circle"},
+        {"id": "head", "size": 5, "score": 0.4 , "title": "head", "type": "circle"},
 
        
 
@@ -1001,7 +951,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

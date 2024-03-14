@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,15 +729,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "journals", "target": "news" },
+          { "source": "book", "target": "news" },
       
-          { "source": "journals", "target": "book" },
+          { "source": "book", "target": "journals" },
       
-          { "source": "journals", "target": "nature" },
+          { "source": "book", "target": "nature" },
       
-          { "source": "journals", "target": "database" },
+          { "source": "book", "target": "text" },
       
-          { "source": "journals", "target": "months" },
+          { "source": "book", "target": "readers" },
       
           { "source": "news", "target": "journals" },
       
@@ -747,13 +747,13 @@ var data_local_dynamic = {
       
           { "source": "news", "target": "grammar" },
       
-          { "source": "book", "target": "news" },
+          { "source": "journals", "target": "news" },
       
-          { "source": "book", "target": "journals" },
+          { "source": "journals", "target": "book" },
       
-          { "source": "book", "target": "nature" },
+          { "source": "journals", "target": "nature" },
       
-          { "source": "book", "target": "text" },
+          { "source": "journals", "target": "database" },
       
           { "source": "nature", "target": "news" },
       
@@ -763,21 +763,21 @@ var data_local_dynamic = {
       
           { "source": "nature", "target": "people" },
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "text", "target": "story" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "text", "target": "game" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "text", "target": "character" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "months", "target": "database" },
+          { "source": "readers", "target": "text" },
       
-          { "source": "months", "target": "publications" },
+          { "source": "readers", "target": "book" },
       
-          { "source": "months", "target": "journals" },
+          { "source": "readers", "target": "words" },
       
-          { "source": "months", "target": "access" },
+          { "source": "readers", "target": "algorithm" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -788,7 +788,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
+        {"id": "journals", "size": 70, "score": 0 , "title": "journals", "type": "circle"},
 
       
 
@@ -796,15 +796,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
+        {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "months", "size": 70, "score": 0 , "title": "months", "type": "circle"},
+        {"id": "readers", "size": 70, "score": 0 , "title": "readers", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 140, "score": 0.5 , "title": "journals", "type": "circle"},
+        {"id": "book", "size": 140, "score": 0.5 , "title": "book", "type": "circle"},
 
       
 
@@ -812,7 +812,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
 
       
 
@@ -820,27 +820,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
 
        
 
@@ -977,7 +977,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

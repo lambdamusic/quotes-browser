@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,16 +731,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "ego", "target": "pride" },
-      
-          { "source": "ego", "target": "game" },
-      
-          { "source": "ego", "target": "people" },
-      
-          { "source": "ego", "target": "unselfishness" },
-      
-          { "source": "ego", "target": "individuals" },
-      
           { "source": "pride", "target": "traits" },
       
           { "source": "pride", "target": "friends" },
@@ -748,6 +738,32 @@ var data_local_dynamic = {
           { "source": "pride", "target": "ego" },
       
           { "source": "pride", "target": "game" },
+      
+          { "source": "pride", "target": "people" },
+      
+          { "source": "traits", "target": "taxa" },
+      
+          { "source": "traits", "target": "class" },
+      
+          { "source": "traits", "target": "categories" },
+      
+          { "source": "traits", "target": "items" },
+      
+          { "source": "friends", "target": "pride" },
+      
+          { "source": "friends", "target": "traits" },
+      
+          { "source": "friends", "target": "New-York" },
+      
+          { "source": "friends", "target": "business" },
+      
+          { "source": "ego", "target": "pride" },
+      
+          { "source": "ego", "target": "game" },
+      
+          { "source": "ego", "target": "people" },
+      
+          { "source": "ego", "target": "unselfishness" },
       
           { "source": "game", "target": "story" },
       
@@ -764,29 +780,21 @@ var data_local_dynamic = {
           { "source": "people", "target": "God" },
       
           { "source": "people", "target": "knowledge" },
-      
-          { "source": "unselfishness", "target": "pride" },
-      
-          { "source": "unselfishness", "target": "ego" },
-      
-          { "source": "unselfishness", "target": "game" },
-      
-          { "source": "unselfishness", "target": "people" },
-      
-          { "source": "individuals", "target": "connectionism" },
-      
-          { "source": "individuals", "target": "philosophy" },
-      
-          { "source": "individuals", "target": "instances" },
-      
-          { "source": "individuals", "target": "ontology" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "pride", "size": 70, "score": 0 , "title": "pride", "type": "circle"},
+        {"id": "traits", "size": 70, "score": 0 , "title": "traits", "type": "circle"},
+
+      
+
+        {"id": "friends", "size": 70, "score": 0 , "title": "friends", "type": "circle"},
+
+      
+
+        {"id": "ego", "size": 70, "score": 0 , "title": "ego", "type": "circle"},
 
       
 
@@ -798,23 +806,35 @@ var data_local_dynamic = {
 
       
 
-        {"id": "unselfishness", "size": 70, "score": 0 , "title": "unselfishness", "type": "circle"},
+        {"id": "pride", "size": 140, "score": 0.5 , "title": "pride", "type": "circle"},
 
       
 
-        {"id": "individuals", "size": 70, "score": 0 , "title": "individuals", "type": "circle"},
+        {"id": "taxa", "size": 5, "score": 0.4 , "title": "taxa", "type": "circle"},
 
       
 
-        {"id": "ego", "size": 140, "score": 0.5 , "title": "ego", "type": "circle"},
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "traits", "size": 5, "score": 0.4 , "title": "traits", "type": "circle"},
+        {"id": "categories", "size": 5, "score": 0.4 , "title": "categories", "type": "circle"},
 
       
 
-        {"id": "friends", "size": 5, "score": 0.4 , "title": "friends", "type": "circle"},
+        {"id": "items", "size": 5, "score": 0.4 , "title": "items", "type": "circle"},
+
+      
+
+        {"id": "New-York", "size": 5, "score": 0.4 , "title": "New-York", "type": "circle"},
+
+      
+
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+
+      
+
+        {"id": "unselfishness", "size": 5, "score": 0.4 , "title": "unselfishness", "type": "circle"},
 
       
 
@@ -847,22 +867,6 @@ var data_local_dynamic = {
       
 
         {"id": "knowledge", "size": 5, "score": 0.4 , "title": "knowledge", "type": "circle"},
-
-      
-
-        {"id": "connectionism", "size": 5, "score": 0.4 , "title": "connectionism", "type": "circle"},
-
-      
-
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
-
-      
-
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
-
-      
-
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
        
 
@@ -999,7 +1003,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,12 +727,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "sinfulness", "target": "Christians" },
-      
-          { "source": "sinfulness", "target": "Christianity" },
-      
-          { "source": "sinfulness", "target": "Buddhist" },
-      
           { "source": "Christians", "target": "believers" },
       
           { "source": "Christians", "target": "sin" },
@@ -740,6 +734,32 @@ var data_local_dynamic = {
           { "source": "Christians", "target": "God" },
       
           { "source": "Christians", "target": "Christianity" },
+      
+          { "source": "Christians", "target": "sinfulness" },
+      
+          { "source": "believers", "target": "sin" },
+      
+          { "source": "believers", "target": "Christians" },
+      
+          { "source": "believers", "target": "God" },
+      
+          { "source": "believers", "target": "religion" },
+      
+          { "source": "sin", "target": "believers" },
+      
+          { "source": "sin", "target": "Christians" },
+      
+          { "source": "sin", "target": "God" },
+      
+          { "source": "sin", "target": "nature" },
+      
+          { "source": "God", "target": "believers" },
+      
+          { "source": "God", "target": "sin" },
+      
+          { "source": "God", "target": "Christians" },
+      
+          { "source": "God", "target": "words" },
       
           { "source": "Christianity", "target": "prayer" },
       
@@ -749,20 +769,26 @@ var data_local_dynamic = {
       
           { "source": "Christianity", "target": "sinfulness" },
       
-          { "source": "Buddhist", "target": "sinfulness" },
+          { "source": "sinfulness", "target": "Christians" },
       
-          { "source": "Buddhist", "target": "world" },
+          { "source": "sinfulness", "target": "Christianity" },
       
-          { "source": "Buddhist", "target": "good-life" },
-      
-          { "source": "Buddhist", "target": "religion" },
+          { "source": "sinfulness", "target": "Buddhist" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "Christians", "size": 70, "score": 0 , "title": "Christians", "type": "circle"},
+        {"id": "believers", "size": 70, "score": 0 , "title": "believers", "type": "circle"},
+
+      
+
+        {"id": "sin", "size": 70, "score": 0 , "title": "sin", "type": "circle"},
+
+      
+
+        {"id": "God", "size": 70, "score": 0 , "title": "God", "type": "circle"},
 
       
 
@@ -770,23 +796,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "Buddhist", "size": 70, "score": 0 , "title": "Buddhist", "type": "circle"},
+        {"id": "sinfulness", "size": 70, "score": 0 , "title": "sinfulness", "type": "circle"},
 
       
 
-        {"id": "sinfulness", "size": 140, "score": 0.5 , "title": "sinfulness", "type": "circle"},
+        {"id": "Christians", "size": 140, "score": 0.5 , "title": "Christians", "type": "circle"},
 
       
 
-        {"id": "believers", "size": 5, "score": 0.4 , "title": "believers", "type": "circle"},
+        {"id": "religion", "size": 5, "score": 0.4 , "title": "religion", "type": "circle"},
 
       
 
-        {"id": "sin", "size": 5, "score": 0.4 , "title": "sin", "type": "circle"},
+        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
 
       
 
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
@@ -798,15 +824,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
-
-      
-
-        {"id": "good-life", "size": 5, "score": 0.4 , "title": "good-life", "type": "circle"},
-
-      
-
-        {"id": "religion", "size": 5, "score": 0.4 , "title": "religion", "type": "circle"},
+        {"id": "Buddhist", "size": 5, "score": 0.4 , "title": "Buddhist", "type": "circle"},
 
        
 
@@ -943,7 +961,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

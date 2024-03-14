@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,47 +729,13 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "publishing", "target": "article" },
+          { "source": "data-discovery", "target": "data-citation" },
       
-          { "source": "publishing", "target": "web-server" },
+          { "source": "data-discovery", "target": "publishing" },
       
-          { "source": "publishing", "target": "academic-publishing" },
+          { "source": "data-discovery", "target": "analytics" },
       
-          { "source": "publishing", "target": "server" },
-      
-          { "source": "publishing", "target": "data-citation" },
-      
-          { "source": "article", "target": "hierarchy" },
-      
-          { "source": "article", "target": "social-sciences" },
-      
-          { "source": "article", "target": "science" },
-      
-          { "source": "article", "target": "concept" },
-      
-          { "source": "web-server", "target": "publishing" },
-      
-          { "source": "web-server", "target": "article" },
-      
-          { "source": "web-server", "target": "academic-publishing" },
-      
-          { "source": "web-server", "target": "server" },
-      
-          { "source": "academic-publishing", "target": "publishing" },
-      
-          { "source": "academic-publishing", "target": "article" },
-      
-          { "source": "academic-publishing", "target": "web-server" },
-      
-          { "source": "academic-publishing", "target": "server" },
-      
-          { "source": "server", "target": "metadata" },
-      
-          { "source": "server", "target": "algorithm" },
-      
-          { "source": "server", "target": "publishing" },
-      
-          { "source": "server", "target": "article" },
+          { "source": "data-discovery", "target": "access" },
       
           { "source": "data-citation", "target": "publishing" },
       
@@ -778,49 +744,53 @@ var data_local_dynamic = {
           { "source": "data-citation", "target": "metadata" },
       
           { "source": "data-citation", "target": "interoperability" },
+      
+          { "source": "publishing", "target": "article" },
+      
+          { "source": "publishing", "target": "web-server" },
+      
+          { "source": "publishing", "target": "academic-publishing" },
+      
+          { "source": "publishing", "target": "server" },
+      
+          { "source": "analytics", "target": "knowledge-graph" },
+      
+          { "source": "analytics", "target": "data-analytics" },
+      
+          { "source": "analytics", "target": "graph" },
+      
+          { "source": "analytics", "target": "Semantic-Web" },
+      
+          { "source": "access", "target": "humans" },
+      
+          { "source": "access", "target": "need" },
+      
+          { "source": "access", "target": "publications" },
+      
+          { "source": "access", "target": "situation" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
-
-      
-
-        {"id": "web-server", "size": 70, "score": 0 , "title": "web-server", "type": "circle"},
-
-      
-
-        {"id": "academic-publishing", "size": 70, "score": 0 , "title": "academic-publishing", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
-
-      
-
         {"id": "data-citation", "size": 70, "score": 0 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 140, "score": 0.5 , "title": "publishing", "type": "circle"},
+        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
 
       
 
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
 
       
 
-        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+        {"id": "data-discovery", "size": 140, "score": 0.5 , "title": "data-discovery", "type": "circle"},
 
       
 
@@ -828,15 +798,55 @@ var data_local_dynamic = {
 
       
 
-        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
-
-      
-
-        {"id": "data-discovery", "size": 5, "score": 0.4 , "title": "data-discovery", "type": "circle"},
-
-      
-
         {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
+
+      
+
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "web-server", "size": 5, "score": 0.4 , "title": "web-server", "type": "circle"},
+
+      
+
+        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+
+      
+
+        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
+
+      
+
+        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
+
+      
+
+        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
+
+      
+
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
+
+      
+
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
+
+      
+
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
+
+      
+
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+
+      
+
+        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
 
        
 
@@ -973,7 +983,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

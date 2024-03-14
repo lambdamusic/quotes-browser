@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -729,90 +729,94 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "team", "target": "goal" },
+          { "source": "weeks", "target": "calories" },
       
-          { "source": "team", "target": "link" },
+          { "source": "weeks", "target": "hours" },
       
-          { "source": "team", "target": "owners" },
+          { "source": "weeks", "target": "days" },
       
-          { "source": "team", "target": "product-owners" },
+          { "source": "weeks", "target": "time" },
       
-          { "source": "team", "target": "business" },
+          { "source": "weeks", "target": "experience" },
       
-          { "source": "goal", "target": "team" },
+          { "source": "calories", "target": "hours" },
       
-          { "source": "goal", "target": "link" },
+          { "source": "calories", "target": "days" },
       
-          { "source": "goal", "target": "owners" },
+          { "source": "calories", "target": "weeks" },
       
-          { "source": "goal", "target": "product-owners" },
+          { "source": "calories", "target": "energy-expenditure" },
       
-          { "source": "link", "target": "team" },
+          { "source": "hours", "target": "calories" },
       
-          { "source": "link", "target": "goal" },
+          { "source": "hours", "target": "days" },
       
-          { "source": "link", "target": "owners" },
+          { "source": "hours", "target": "weeks" },
       
-          { "source": "link", "target": "product-owners" },
+          { "source": "hours", "target": "men" },
       
-          { "source": "owners", "target": "product-owners" },
+          { "source": "days", "target": "calories" },
       
-          { "source": "owners", "target": "project" },
+          { "source": "days", "target": "hours" },
       
-          { "source": "owners", "target": "business" },
+          { "source": "days", "target": "weeks" },
       
-          { "source": "owners", "target": "product-backlog" },
+          { "source": "days", "target": "time" },
       
-          { "source": "product-owners", "target": "owners" },
+          { "source": "time", "target": "weeks" },
       
-          { "source": "product-owners", "target": "project" },
+          { "source": "time", "target": "experience" },
       
-          { "source": "product-owners", "target": "business" },
+          { "source": "time", "target": "days" },
       
-          { "source": "product-owners", "target": "product-backlog" },
+          { "source": "time", "target": "lack" },
       
-          { "source": "business", "target": "product-owners" },
+          { "source": "experience", "target": "time" },
       
-          { "source": "business", "target": "owners" },
+          { "source": "experience", "target": "weeks" },
       
-          { "source": "business", "target": "project" },
+          { "source": "experience", "target": "days" },
       
-          { "source": "business", "target": "product-backlog" },
+          { "source": "experience", "target": "lack" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
+        {"id": "calories", "size": 70, "score": 0 , "title": "calories", "type": "circle"},
 
       
 
-        {"id": "link", "size": 70, "score": 0 , "title": "link", "type": "circle"},
+        {"id": "hours", "size": 70, "score": 0 , "title": "hours", "type": "circle"},
 
       
 
-        {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
+        {"id": "days", "size": 70, "score": 0 , "title": "days", "type": "circle"},
 
       
 
-        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
+        {"id": "time", "size": 70, "score": 0 , "title": "time", "type": "circle"},
 
       
 
-        {"id": "business", "size": 70, "score": 0 , "title": "business", "type": "circle"},
+        {"id": "experience", "size": 70, "score": 0 , "title": "experience", "type": "circle"},
 
       
 
-        {"id": "team", "size": 140, "score": 0.5 , "title": "team", "type": "circle"},
+        {"id": "weeks", "size": 140, "score": 0.5 , "title": "weeks", "type": "circle"},
 
       
 
-        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
+        {"id": "energy-expenditure", "size": 5, "score": 0.4 , "title": "energy-expenditure", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
+        {"id": "men", "size": 5, "score": 0.4 , "title": "men", "type": "circle"},
+
+      
+
+        {"id": "lack", "size": 5, "score": 0.4 , "title": "lack", "type": "circle"},
 
        
 
@@ -949,7 +953,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -731,15 +731,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "hours", "target": "calories" },
+          { "source": "days", "target": "calories" },
       
-          { "source": "hours", "target": "days" },
+          { "source": "days", "target": "hours" },
       
-          { "source": "hours", "target": "weeks" },
+          { "source": "days", "target": "weeks" },
       
-          { "source": "hours", "target": "men" },
+          { "source": "days", "target": "time" },
       
-          { "source": "hours", "target": "morning" },
+          { "source": "days", "target": "experience" },
       
           { "source": "calories", "target": "hours" },
       
@@ -749,13 +749,13 @@ var data_local_dynamic = {
       
           { "source": "calories", "target": "energy-expenditure" },
       
-          { "source": "days", "target": "calories" },
+          { "source": "hours", "target": "calories" },
       
-          { "source": "days", "target": "hours" },
+          { "source": "hours", "target": "days" },
       
-          { "source": "days", "target": "weeks" },
+          { "source": "hours", "target": "weeks" },
       
-          { "source": "days", "target": "time" },
+          { "source": "hours", "target": "men" },
       
           { "source": "weeks", "target": "calories" },
       
@@ -765,21 +765,21 @@ var data_local_dynamic = {
       
           { "source": "weeks", "target": "time" },
       
-          { "source": "men", "target": "phrases" },
+          { "source": "time", "target": "weeks" },
       
-          { "source": "men", "target": "sleep" },
+          { "source": "time", "target": "experience" },
       
-          { "source": "men", "target": "living" },
+          { "source": "time", "target": "days" },
       
-          { "source": "men", "target": "years" },
+          { "source": "time", "target": "lack" },
       
-          { "source": "morning", "target": "months" },
+          { "source": "experience", "target": "time" },
       
-          { "source": "morning", "target": "minutes" },
+          { "source": "experience", "target": "weeks" },
       
-          { "source": "morning", "target": "meditation" },
+          { "source": "experience", "target": "days" },
       
-          { "source": "morning", "target": "weeks" },
+          { "source": "experience", "target": "lack" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -790,7 +790,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "days", "size": 70, "score": 0 , "title": "days", "type": "circle"},
+        {"id": "hours", "size": 70, "score": 0 , "title": "hours", "type": "circle"},
 
       
 
@@ -798,15 +798,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "men", "size": 70, "score": 0 , "title": "men", "type": "circle"},
+        {"id": "time", "size": 70, "score": 0 , "title": "time", "type": "circle"},
 
       
 
-        {"id": "morning", "size": 70, "score": 0 , "title": "morning", "type": "circle"},
+        {"id": "experience", "size": 70, "score": 0 , "title": "experience", "type": "circle"},
 
       
 
-        {"id": "hours", "size": 140, "score": 0.5 , "title": "hours", "type": "circle"},
+        {"id": "days", "size": 140, "score": 0.5 , "title": "days", "type": "circle"},
 
       
 
@@ -814,35 +814,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "time", "size": 5, "score": 0.4 , "title": "time", "type": "circle"},
+        {"id": "men", "size": 5, "score": 0.4 , "title": "men", "type": "circle"},
 
       
 
-        {"id": "phrases", "size": 5, "score": 0.4 , "title": "phrases", "type": "circle"},
-
-      
-
-        {"id": "sleep", "size": 5, "score": 0.4 , "title": "sleep", "type": "circle"},
-
-      
-
-        {"id": "living", "size": 5, "score": 0.4 , "title": "living", "type": "circle"},
-
-      
-
-        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
-
-      
-
-        {"id": "months", "size": 5, "score": 0.4 , "title": "months", "type": "circle"},
-
-      
-
-        {"id": "minutes", "size": 5, "score": 0.4 , "title": "minutes", "type": "circle"},
-
-      
-
-        {"id": "meditation", "size": 5, "score": 0.4 , "title": "meditation", "type": "circle"},
+        {"id": "lack", "size": 5, "score": 0.4 , "title": "lack", "type": "circle"},
 
        
 
@@ -979,7 +955,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

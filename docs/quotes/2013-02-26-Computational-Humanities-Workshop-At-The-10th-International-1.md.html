@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -727,24 +727,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "humanity", "target": "music" },
-      
-          { "source": "humanity", "target": "science" },
-      
-          { "source": "humanity", "target": "journals" },
-      
-          { "source": "humanity", "target": "social-sciences" },
-      
-          { "source": "humanity", "target": "philosophical-problems" },
-      
-          { "source": "music", "target": "audience" },
-      
-          { "source": "music", "target": "eNO" },
-      
-          { "source": "music", "target": "programmers" },
-      
-          { "source": "music", "target": "humanity" },
-      
           { "source": "science", "target": "article" },
       
           { "source": "science", "target": "hierarchy" },
@@ -753,13 +735,23 @@ var data_local_dynamic = {
       
           { "source": "science", "target": "publications" },
       
-          { "source": "journals", "target": "news" },
+          { "source": "science", "target": "area" },
       
-          { "source": "journals", "target": "book" },
+          { "source": "article", "target": "hierarchy" },
       
-          { "source": "journals", "target": "nature" },
+          { "source": "article", "target": "social-sciences" },
       
-          { "source": "journals", "target": "database" },
+          { "source": "article", "target": "science" },
+      
+          { "source": "article", "target": "concept" },
+      
+          { "source": "hierarchy", "target": "article" },
+      
+          { "source": "hierarchy", "target": "social-sciences" },
+      
+          { "source": "hierarchy", "target": "science" },
+      
+          { "source": "hierarchy", "target": "nodes" },
       
           { "source": "social-sciences", "target": "article" },
       
@@ -769,28 +761,32 @@ var data_local_dynamic = {
       
           { "source": "social-sciences", "target": "journals" },
       
-          { "source": "philosophical-problems", "target": "philosophy" },
+          { "source": "publications", "target": "hypothesis" },
       
-          { "source": "philosophical-problems", "target": "humanity" },
+          { "source": "publications", "target": "values" },
       
-          { "source": "philosophical-problems", "target": "philosophers" },
+          { "source": "publications", "target": "distance" },
       
-          { "source": "philosophical-problems", "target": "philosophical-truth" },
+          { "source": "publications", "target": "area" },
+      
+          { "source": "area", "target": "publications" },
+      
+          { "source": "area", "target": "contribution" },
+      
+          { "source": "area", "target": "highest-contribution" },
+      
+          { "source": "area", "target": "science" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "music", "size": 70, "score": 0 , "title": "music", "type": "circle"},
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "science", "size": 70, "score": 0 , "title": "science", "type": "circle"},
-
-      
-
-        {"id": "journals", "size": 70, "score": 0 , "title": "journals", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
 
       
 
@@ -798,63 +794,47 @@ var data_local_dynamic = {
 
       
 
-        {"id": "philosophical-problems", "size": 70, "score": 0 , "title": "philosophical-problems", "type": "circle"},
+        {"id": "publications", "size": 70, "score": 0 , "title": "publications", "type": "circle"},
 
       
 
-        {"id": "humanity", "size": 140, "score": 0.5 , "title": "humanity", "type": "circle"},
+        {"id": "area", "size": 70, "score": 0 , "title": "area", "type": "circle"},
 
       
 
-        {"id": "audience", "size": 5, "score": 0.4 , "title": "audience", "type": "circle"},
+        {"id": "science", "size": 140, "score": 0.5 , "title": "science", "type": "circle"},
 
       
 
-        {"id": "eNO", "size": 5, "score": 0.4 , "title": "eNO", "type": "circle"},
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "programmers", "size": 5, "score": 0.4 , "title": "programmers", "type": "circle"},
+        {"id": "nodes", "size": 5, "score": 0.4 , "title": "nodes", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
 
       
 
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+        {"id": "hypothesis", "size": 5, "score": 0.4 , "title": "hypothesis", "type": "circle"},
 
       
 
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+        {"id": "values", "size": 5, "score": 0.4 , "title": "values", "type": "circle"},
 
       
 
-        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
+        {"id": "distance", "size": 5, "score": 0.4 , "title": "distance", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "contribution", "size": 5, "score": 0.4 , "title": "contribution", "type": "circle"},
 
       
 
-        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
-
-      
-
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
-
-      
-
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
-
-      
-
-        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
-
-      
-
-        {"id": "philosophical-truth", "size": 5, "score": 0.4 , "title": "philosophical-truth", "type": "circle"},
+        {"id": "highest-contribution", "size": 5, "score": 0.4 , "title": "highest-contribution", "type": "circle"},
 
        
 
@@ -991,7 +971,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

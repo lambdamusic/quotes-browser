@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -734,15 +734,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "historical-context", "target": "historical-events" },
+          { "source": "museum-collections", "target": "historical-events" },
       
-          { "source": "historical-context", "target": "war" },
+          { "source": "museum-collections", "target": "historical-context" },
       
-          { "source": "historical-context", "target": "book" },
+          { "source": "museum-collections", "target": "objects" },
       
-          { "source": "historical-context", "target": "Simple-Event-Model" },
+          { "source": "museum-collections", "target": "war" },
       
-          { "source": "historical-context", "target": "narratives" },
+          { "source": "museum-collections", "target": "collection" },
       
           { "source": "historical-events", "target": "historical-context" },
       
@@ -752,6 +752,22 @@ var data_local_dynamic = {
       
           { "source": "historical-events", "target": "Simple-Event-Model" },
       
+          { "source": "historical-context", "target": "historical-events" },
+      
+          { "source": "historical-context", "target": "war" },
+      
+          { "source": "historical-context", "target": "book" },
+      
+          { "source": "historical-context", "target": "Simple-Event-Model" },
+      
+          { "source": "objects", "target": "class" },
+      
+          { "source": "objects", "target": "real-world" },
+      
+          { "source": "objects", "target": "instances" },
+      
+          { "source": "objects", "target": "types" },
+      
           { "source": "war", "target": "historical-events" },
       
           { "source": "war", "target": "historical-context" },
@@ -760,29 +776,13 @@ var data_local_dynamic = {
       
           { "source": "war", "target": "Simple-Event-Model" },
       
-          { "source": "book", "target": "news" },
+          { "source": "collection", "target": "metadata" },
       
-          { "source": "book", "target": "journals" },
+          { "source": "collection", "target": "collection-objects" },
       
-          { "source": "book", "target": "nature" },
+          { "source": "collection", "target": "objects" },
       
-          { "source": "book", "target": "text" },
-      
-          { "source": "Simple-Event-Model", "target": "historical-events" },
-      
-          { "source": "Simple-Event-Model", "target": "historical-context" },
-      
-          { "source": "Simple-Event-Model", "target": "war" },
-      
-          { "source": "Simple-Event-Model", "target": "book" },
-      
-          { "source": "narratives", "target": "historical-events" },
-      
-          { "source": "narratives", "target": "historical-context" },
-      
-          { "source": "narratives", "target": "collection-objects" },
-      
-          { "source": "narratives", "target": "meaning" },
+          { "source": "collection", "target": "information" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -793,39 +793,51 @@ var data_local_dynamic = {
 
       
 
+        {"id": "historical-context", "size": 70, "score": 0 , "title": "historical-context", "type": "circle"},
+
+      
+
+        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+
+      
+
         {"id": "war", "size": 70, "score": 0 , "title": "war", "type": "circle"},
 
       
 
-        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
+        {"id": "collection", "size": 70, "score": 0 , "title": "collection", "type": "circle"},
 
       
 
-        {"id": "Simple-Event-Model", "size": 70, "score": 0 , "title": "Simple-Event-Model", "type": "circle"},
+        {"id": "museum-collections", "size": 140, "score": 0.5 , "title": "museum-collections", "type": "circle"},
 
       
 
-        {"id": "narratives", "size": 70, "score": 0 , "title": "narratives", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "historical-context", "size": 140, "score": 0.5 , "title": "historical-context", "type": "circle"},
+        {"id": "Simple-Event-Model", "size": 5, "score": 0.4 , "title": "Simple-Event-Model", "type": "circle"},
 
       
 
-        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+
+      
+
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
@@ -833,7 +845,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
+        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
 
        
 
@@ -970,7 +982,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }

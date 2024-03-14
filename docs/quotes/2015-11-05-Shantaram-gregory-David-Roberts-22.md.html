@@ -447,7 +447,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: rgb(230, 5, 32);">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -728,15 +728,39 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "acts", "target": "tone" },
+          { "source": "voice", "target": "language" },
       
-          { "source": "acts", "target": "impression" },
+          { "source": "voice", "target": "reification" },
       
-          { "source": "acts", "target": "voice" },
+          { "source": "voice", "target": "nouns" },
       
-          { "source": "acts", "target": "course" },
+          { "source": "voice", "target": "tone" },
       
-          { "source": "acts", "target": "shadow" },
+          { "source": "voice", "target": "impression" },
+      
+          { "source": "language", "target": "words" },
+      
+          { "source": "language", "target": "Sapir-Whorf-hypothesis" },
+      
+          { "source": "language", "target": "idea" },
+      
+          { "source": "language", "target": "different-languages" },
+      
+          { "source": "reification", "target": "language" },
+      
+          { "source": "reification", "target": "voice" },
+      
+          { "source": "reification", "target": "questions" },
+      
+          { "source": "reification", "target": "philosophers" },
+      
+          { "source": "nouns", "target": "verbs" },
+      
+          { "source": "nouns", "target": "century" },
+      
+          { "source": "nouns", "target": "persons" },
+      
+          { "source": "nouns", "target": "career" },
       
           { "source": "tone", "target": "impression" },
       
@@ -753,34 +777,22 @@ var data_local_dynamic = {
           { "source": "impression", "target": "voice" },
       
           { "source": "impression", "target": "behavior" },
-      
-          { "source": "voice", "target": "language" },
-      
-          { "source": "voice", "target": "reification" },
-      
-          { "source": "voice", "target": "nouns" },
-      
-          { "source": "voice", "target": "tone" },
-      
-          { "source": "course", "target": "changes" },
-      
-          { "source": "course", "target": "shadow" },
-      
-          { "source": "course", "target": "motif" },
-      
-          { "source": "course", "target": "acts" },
-      
-          { "source": "shadow", "target": "course" },
-      
-          { "source": "shadow", "target": "motif" },
-      
-          { "source": "shadow", "target": "acts" },
-      
-          { "source": "shadow", "target": "light" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "language", "size": 70, "score": 0 , "title": "language", "type": "circle"},
+
+      
+
+        {"id": "reification", "size": 70, "score": 0 , "title": "reification", "type": "circle"},
+
+      
+
+        {"id": "nouns", "size": 70, "score": 0 , "title": "nouns", "type": "circle"},
+
       
 
         {"id": "tone", "size": 70, "score": 0 , "title": "tone", "type": "circle"},
@@ -791,19 +803,51 @@ var data_local_dynamic = {
 
       
 
-        {"id": "voice", "size": 70, "score": 0 , "title": "voice", "type": "circle"},
+        {"id": "voice", "size": 140, "score": 0.5 , "title": "voice", "type": "circle"},
 
       
 
-        {"id": "course", "size": 70, "score": 0 , "title": "course", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "shadow", "size": 70, "score": 0 , "title": "shadow", "type": "circle"},
+        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
 
       
 
-        {"id": "acts", "size": 140, "score": 0.5 , "title": "acts", "type": "circle"},
+        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+
+      
+
+        {"id": "different-languages", "size": 5, "score": 0.4 , "title": "different-languages", "type": "circle"},
+
+      
+
+        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
+
+      
+
+        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
+
+      
+
+        {"id": "verbs", "size": 5, "score": 0.4 , "title": "verbs", "type": "circle"},
+
+      
+
+        {"id": "century", "size": 5, "score": 0.4 , "title": "century", "type": "circle"},
+
+      
+
+        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
+
+      
+
+        {"id": "career", "size": 5, "score": 0.4 , "title": "career", "type": "circle"},
+
+      
+
+        {"id": "acts", "size": 5, "score": 0.4 , "title": "acts", "type": "circle"},
 
       
 
@@ -812,30 +856,6 @@ var data_local_dynamic = {
       
 
         {"id": "behavior", "size": 5, "score": 0.4 , "title": "behavior", "type": "circle"},
-
-      
-
-        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
-
-      
-
-        {"id": "reification", "size": 5, "score": 0.4 , "title": "reification", "type": "circle"},
-
-      
-
-        {"id": "nouns", "size": 5, "score": 0.4 , "title": "nouns", "type": "circle"},
-
-      
-
-        {"id": "changes", "size": 5, "score": 0.4 , "title": "changes", "type": "circle"},
-
-      
-
-        {"id": "motif", "size": 5, "score": 0.4 , "title": "motif", "type": "circle"},
-
-      
-
-        {"id": "light", "size": 5, "score": 0.4 , "title": "light", "type": "circle"},
 
        
 
@@ -972,7 +992,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://www.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
