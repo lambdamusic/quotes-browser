@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,40 +712,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "dialogue", "target": "science" },
-      
-          { "source": "dialogue", "target": "peer-review" },
-      
-          { "source": "dialogue", "target": "authors" },
-      
-          { "source": "dialogue", "target": "critique" },
-      
-          { "source": "dialogue", "target": "sprint" },
-      
-          { "source": "science", "target": "article" },
-      
-          { "source": "science", "target": "hierarchy" },
-      
-          { "source": "science", "target": "social-sciences" },
-      
-          { "source": "science", "target": "publications" },
-      
-          { "source": "peer-review", "target": "hypothesis" },
-      
-          { "source": "peer-review", "target": "components" },
-      
-          { "source": "peer-review", "target": "dialogue" },
-      
-          { "source": "peer-review", "target": "science" },
-      
-          { "source": "authors", "target": "expectations" },
-      
-          { "source": "authors", "target": "DOI" },
-      
-          { "source": "authors", "target": "citations" },
-      
-          { "source": "authors", "target": "levels" },
-      
           { "source": "critique", "target": "philosophy" },
       
           { "source": "critique", "target": "philosophers" },
@@ -773,40 +720,130 @@ var data_local_dynamic = {
       
           { "source": "critique", "target": "dialogue" },
       
-          { "source": "sprint", "target": "weeks" },
+          { "source": "critique", "target": "science" },
       
-          { "source": "sprint", "target": "duration" },
+          { "source": "philosophy", "target": "ontology" },
       
-          { "source": "sprint", "target": "team" },
+          { "source": "philosophy", "target": "ethics" },
       
-          { "source": "sprint", "target": "features" },
+          { "source": "philosophy", "target": "schema" },
+      
+          { "source": "philosophy", "target": "fact" },
+      
+          { "source": "philosophers", "target": "intuition" },
+      
+          { "source": "philosophers", "target": "consciousness" },
+      
+          { "source": "philosophers", "target": "people" },
+      
+          { "source": "philosophers", "target": "philosophical-problems" },
+      
+          { "source": "attention", "target": "citations" },
+      
+          { "source": "attention", "target": "evaluation" },
+      
+          { "source": "attention", "target": "measures" },
+      
+          { "source": "attention", "target": "analysis" },
+      
+          { "source": "dialogue", "target": "science" },
+      
+          { "source": "dialogue", "target": "peer-review" },
+      
+          { "source": "dialogue", "target": "authors" },
+      
+          { "source": "dialogue", "target": "critique" },
+      
+          { "source": "science", "target": "article" },
+      
+          { "source": "science", "target": "hierarchy" },
+      
+          { "source": "science", "target": "social-sciences" },
+      
+          { "source": "science", "target": "publications" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
+
+      
+
+        {"id": "philosophers", "size": 70, "score": 0 , "title": "philosophers", "type": "circle"},
+
+      
+
+        {"id": "attention", "size": 70, "score": 0 , "title": "attention", "type": "circle"},
+
+      
+
+        {"id": "dialogue", "size": 70, "score": 0 , "title": "dialogue", "type": "circle"},
+
+      
+
         {"id": "science", "size": 70, "score": 0 , "title": "science", "type": "circle"},
 
       
 
-        {"id": "peer-review", "size": 70, "score": 0 , "title": "peer-review", "type": "circle"},
+        {"id": "critique", "size": 140, "score": 0.5 , "title": "critique", "type": "circle"},
 
       
 
-        {"id": "authors", "size": 70, "score": 0 , "title": "authors", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "critique", "size": 70, "score": 0 , "title": "critique", "type": "circle"},
+        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
 
       
 
-        {"id": "sprint", "size": 70, "score": 0 , "title": "sprint", "type": "circle"},
+        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
 
       
 
-        {"id": "dialogue", "size": 140, "score": 0.5 , "title": "dialogue", "type": "circle"},
+        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
+
+      
+
+        {"id": "intuition", "size": 5, "score": 0.4 , "title": "intuition", "type": "circle"},
+
+      
+
+        {"id": "consciousness", "size": 5, "score": 0.4 , "title": "consciousness", "type": "circle"},
+
+      
+
+        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+
+      
+
+        {"id": "philosophical-problems", "size": 5, "score": 0.4 , "title": "philosophical-problems", "type": "circle"},
+
+      
+
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+
+      
+
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
+
+      
+
+        {"id": "measures", "size": 5, "score": 0.4 , "title": "measures", "type": "circle"},
+
+      
+
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
+
+      
+
+        {"id": "peer-review", "size": 5, "score": 0.4 , "title": "peer-review", "type": "circle"},
+
+      
+
+        {"id": "authors", "size": 5, "score": 0.4 , "title": "authors", "type": "circle"},
 
       
 
@@ -823,58 +860,6 @@ var data_local_dynamic = {
       
 
         {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
-
-      
-
-        {"id": "hypothesis", "size": 5, "score": 0.4 , "title": "hypothesis", "type": "circle"},
-
-      
-
-        {"id": "components", "size": 5, "score": 0.4 , "title": "components", "type": "circle"},
-
-      
-
-        {"id": "expectations", "size": 5, "score": 0.4 , "title": "expectations", "type": "circle"},
-
-      
-
-        {"id": "DOI", "size": 5, "score": 0.4 , "title": "DOI", "type": "circle"},
-
-      
-
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
-
-      
-
-        {"id": "levels", "size": 5, "score": 0.4 , "title": "levels", "type": "circle"},
-
-      
-
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
-
-      
-
-        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
-
-      
-
-        {"id": "attention", "size": 5, "score": 0.4 , "title": "attention", "type": "circle"},
-
-      
-
-        {"id": "weeks", "size": 5, "score": 0.4 , "title": "weeks", "type": "circle"},
-
-      
-
-        {"id": "duration", "size": 5, "score": 0.4 , "title": "duration", "type": "circle"},
-
-      
-
-        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
-
-      
-
-        {"id": "features", "size": 5, "score": 0.4 , "title": "features", "type": "circle"},
 
        
 
@@ -1011,7 +996,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1162,7 +1147,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

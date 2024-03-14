@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -625,7 +606,7 @@ The exciting thing is or course that the arts and humanities as well as the scie
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -687,13 +668,13 @@ The exciting thing is or course that the arts and humanities as well as the scie
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -735,130 +716,142 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "software-systems", "target": "environment" },
+          { "source": "digital-humanities", "target": "place" },
       
-          { "source": "software-systems", "target": "interface" },
+          { "source": "digital-humanities", "target": "humanity" },
       
-          { "source": "software-systems", "target": "software-products" },
+          { "source": "digital-humanities", "target": "writing" },
       
-          { "source": "software-systems", "target": "creation" },
+          { "source": "digital-humanities", "target": "reading" },
       
-          { "source": "software-systems", "target": "machine" },
+          { "source": "digital-humanities", "target": "scholars" },
       
-          { "source": "environment", "target": "interface" },
+          { "source": "place", "target": "article" },
       
-          { "source": "environment", "target": "software-systems" },
+          { "source": "place", "target": "problem" },
       
-          { "source": "environment", "target": "software-products" },
+          { "source": "place", "target": "system" },
       
-          { "source": "environment", "target": "machine" },
+          { "source": "place", "target": "structure" },
       
-          { "source": "interface", "target": "user-interface" },
+          { "source": "humanity", "target": "music" },
       
-          { "source": "interface", "target": "users" },
+          { "source": "humanity", "target": "science" },
       
-          { "source": "interface", "target": "task" },
+          { "source": "humanity", "target": "journals" },
       
-          { "source": "interface", "target": "operation" },
+          { "source": "humanity", "target": "social-sciences" },
       
-          { "source": "software-products", "target": "products" },
+          { "source": "writing", "target": "Philip-K-Dick" },
       
-          { "source": "software-products", "target": "relationship" },
+          { "source": "writing", "target": "book" },
       
-          { "source": "software-products", "target": "environment" },
+          { "source": "writing", "target": "world" },
       
-          { "source": "software-products", "target": "interface" },
+          { "source": "writing", "target": "Encyclopedia" },
       
-          { "source": "creation", "target": "digital-environment" },
+          { "source": "reading", "target": "fiction" },
       
-          { "source": "creation", "target": "properties" },
+          { "source": "reading", "target": "wives" },
       
-          { "source": "creation", "target": "software-systems" },
+          { "source": "reading", "target": "digital-humanities" },
       
-          { "source": "creation", "target": "software-products" },
+          { "source": "reading", "target": "humanity" },
       
-          { "source": "machine", "target": "things" },
+          { "source": "scholars", "target": "disciplines" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "scholars", "target": "Encyclopedia" },
       
-          { "source": "machine", "target": "data-citation" },
+          { "source": "scholars", "target": "digital-humanities" },
       
-          { "source": "machine", "target": "metadata" },
+          { "source": "scholars", "target": "humanity" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "environment", "size": 70, "score": 0 , "title": "environment", "type": "circle"},
+        {"id": "place", "size": 70, "score": 0 , "title": "place", "type": "circle"},
 
       
 
-        {"id": "interface", "size": 70, "score": 0 , "title": "interface", "type": "circle"},
+        {"id": "humanity", "size": 70, "score": 0 , "title": "humanity", "type": "circle"},
 
       
 
-        {"id": "software-products", "size": 70, "score": 0 , "title": "software-products", "type": "circle"},
+        {"id": "writing", "size": 70, "score": 0 , "title": "writing", "type": "circle"},
 
       
 
-        {"id": "creation", "size": 70, "score": 0 , "title": "creation", "type": "circle"},
+        {"id": "reading", "size": 70, "score": 0 , "title": "reading", "type": "circle"},
 
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "scholars", "size": 70, "score": 0 , "title": "scholars", "type": "circle"},
 
       
 
-        {"id": "software-systems", "size": 140, "score": 0.5 , "title": "software-systems", "type": "circle"},
+        {"id": "digital-humanities", "size": 140, "score": 0.5 , "title": "digital-humanities", "type": "circle"},
 
       
 
-        {"id": "user-interface", "size": 5, "score": 0.4 , "title": "user-interface", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "problem", "size": 5, "score": 0.4 , "title": "problem", "type": "circle"},
 
       
 
-        {"id": "task", "size": 5, "score": 0.4 , "title": "task", "type": "circle"},
+        {"id": "system", "size": 5, "score": 0.4 , "title": "system", "type": "circle"},
 
       
 
-        {"id": "operation", "size": 5, "score": 0.4 , "title": "operation", "type": "circle"},
+        {"id": "structure", "size": 5, "score": 0.4 , "title": "structure", "type": "circle"},
 
       
 
-        {"id": "products", "size": 5, "score": 0.4 , "title": "products", "type": "circle"},
+        {"id": "music", "size": 5, "score": 0.4 , "title": "music", "type": "circle"},
 
       
 
-        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
 
       
 
-        {"id": "digital-environment", "size": 5, "score": 0.4 , "title": "digital-environment", "type": "circle"},
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
 
       
 
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+        {"id": "Philip-K-Dick", "size": 5, "score": 0.4 , "title": "Philip-K-Dick", "type": "circle"},
 
       
 
-        {"id": "manufacturing", "size": 5, "score": 0.4 , "title": "manufacturing", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
+        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "Encyclopedia", "size": 5, "score": 0.4 , "title": "Encyclopedia", "type": "circle"},
+
+      
+
+        {"id": "fiction", "size": 5, "score": 0.4 , "title": "fiction", "type": "circle"},
+
+      
+
+        {"id": "wives", "size": 5, "score": 0.4 , "title": "wives", "type": "circle"},
+
+      
+
+        {"id": "disciplines", "size": 5, "score": 0.4 , "title": "disciplines", "type": "circle"},
 
        
 
@@ -995,7 +988,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1146,7 +1139,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

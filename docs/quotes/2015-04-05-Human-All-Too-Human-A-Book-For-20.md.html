@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -615,7 +596,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -677,13 +658,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -725,14 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "foundation", "target": "century" },
-      
-          { "source": "foundation", "target": "requirements" },
-      
-          { "source": "foundation", "target": "work" },
-      
-          { "source": "foundation", "target": "analysis" },
-      
           { "source": "century", "target": "foundation" },
       
           { "source": "century", "target": "Iranians" },
@@ -741,108 +714,102 @@ var data_local_dynamic = {
       
           { "source": "century", "target": "Iraq" },
       
-          { "source": "requirements", "target": "ontology" },
+          { "source": "century", "target": "Iran" },
       
-          { "source": "requirements", "target": "use-cases" },
+          { "source": "foundation", "target": "century" },
       
-          { "source": "requirements", "target": "data-model" },
+          { "source": "foundation", "target": "requirements" },
       
-          { "source": "requirements", "target": "architecture" },
+          { "source": "foundation", "target": "work" },
       
-          { "source": "work", "target": "citations" },
+          { "source": "foundation", "target": "analysis" },
       
-          { "source": "work", "target": "tradition" },
+          { "source": "Iranians", "target": "war" },
       
-          { "source": "work", "target": "number" },
+          { "source": "Iranians", "target": "century" },
       
-          { "source": "work", "target": "data" },
+          { "source": "Iranians", "target": "Iraq" },
       
-          { "source": "analysis", "target": "citations" },
+          { "source": "Iranians", "target": "Iran" },
       
-          { "source": "analysis", "target": "evaluation" },
+          { "source": "war", "target": "historical-events" },
       
-          { "source": "analysis", "target": "measures" },
+          { "source": "war", "target": "historical-context" },
       
-          { "source": "analysis", "target": "attention" },
+          { "source": "war", "target": "book" },
+      
+          { "source": "war", "target": "Simple-Event-Model" },
+      
+          { "source": "Iraq", "target": "Iranians" },
+      
+          { "source": "Iraq", "target": "war" },
+      
+          { "source": "Iraq", "target": "century" },
+      
+          { "source": "Iraq", "target": "Iran" },
+      
+          { "source": "Iran", "target": "Iranians" },
+      
+          { "source": "Iran", "target": "war" },
+      
+          { "source": "Iran", "target": "century" },
+      
+          { "source": "Iran", "target": "Iraq" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "century", "size": 70, "score": 0 , "title": "century", "type": "circle"},
+        {"id": "foundation", "size": 70, "score": 0 , "title": "foundation", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
+        {"id": "Iranians", "size": 70, "score": 0 , "title": "Iranians", "type": "circle"},
 
       
 
-        {"id": "work", "size": 70, "score": 0 , "title": "work", "type": "circle"},
+        {"id": "war", "size": 70, "score": 0 , "title": "war", "type": "circle"},
 
       
 
-        {"id": "analysis", "size": 70, "score": 0 , "title": "analysis", "type": "circle"},
+        {"id": "Iraq", "size": 70, "score": 0 , "title": "Iraq", "type": "circle"},
 
       
 
-        {"id": "foundation", "size": 140, "score": 0.5 , "title": "foundation", "type": "circle"},
+        {"id": "Iran", "size": 70, "score": 0 , "title": "Iran", "type": "circle"},
 
       
 
-        {"id": "Iranians", "size": 5, "score": 0.4 , "title": "Iranians", "type": "circle"},
+        {"id": "century", "size": 140, "score": 0.5 , "title": "century", "type": "circle"},
 
       
 
-        {"id": "war", "size": 5, "score": 0.4 , "title": "war", "type": "circle"},
+        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "Iraq", "size": 5, "score": 0.4 , "title": "Iraq", "type": "circle"},
+        {"id": "work", "size": 5, "score": 0.4 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
+        {"id": "historical-events", "size": 5, "score": 0.4 , "title": "historical-events", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
+        {"id": "historical-context", "size": 5, "score": 0.4 , "title": "historical-context", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
-
-      
-
-        {"id": "tradition", "size": 5, "score": 0.4 , "title": "tradition", "type": "circle"},
-
-      
-
-        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
-
-      
-
-        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
-
-      
-
-        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
-
-      
-
-        {"id": "measures", "size": 5, "score": 0.4 , "title": "measures", "type": "circle"},
-
-      
-
-        {"id": "attention", "size": 5, "score": 0.4 , "title": "attention", "type": "circle"},
+        {"id": "Simple-Event-Model", "size": 5, "score": 0.4 , "title": "Simple-Event-Model", "type": "circle"},
 
        
 
@@ -979,7 +946,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1130,7 +1097,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

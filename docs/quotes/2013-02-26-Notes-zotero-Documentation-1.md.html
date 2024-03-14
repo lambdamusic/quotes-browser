@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,39 +709,47 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "note", "target": "thesaurus" },
+          { "source": "research", "target": "historical-research" },
       
-          { "source": "note", "target": "vocabulary" },
+          { "source": "research", "target": "development" },
       
-          { "source": "note", "target": "information-science" },
+          { "source": "research", "target": "role" },
       
-          { "source": "note", "target": "items" },
+          { "source": "research", "target": "justice" },
       
-          { "source": "note", "target": "research" },
+          { "source": "research", "target": "items" },
       
-          { "source": "thesaurus", "target": "authority-files" },
+          { "source": "historical-research", "target": "development" },
       
-          { "source": "thesaurus", "target": "indexing" },
+          { "source": "historical-research", "target": "research" },
       
-          { "source": "thesaurus", "target": "vocabulary" },
+          { "source": "historical-research", "target": "role" },
       
-          { "source": "thesaurus", "target": "files" },
+          { "source": "historical-research", "target": "Garfield" },
       
-          { "source": "vocabulary", "target": "authority-files" },
+          { "source": "development", "target": "law" },
       
-          { "source": "vocabulary", "target": "indexing" },
+          { "source": "development", "target": "coding" },
       
-          { "source": "vocabulary", "target": "thesaurus" },
+          { "source": "development", "target": "historical-research" },
       
-          { "source": "vocabulary", "target": "files" },
+          { "source": "development", "target": "research" },
       
-          { "source": "information-science", "target": "thesaurus" },
+          { "source": "role", "target": "team" },
       
-          { "source": "information-science", "target": "vocabulary" },
+          { "source": "role", "target": "persons" },
       
-          { "source": "information-science", "target": "note" },
+          { "source": "role", "target": "benefits" },
       
-          { "source": "information-science", "target": "users" },
+          { "source": "role", "target": "historical-research" },
+      
+          { "source": "justice", "target": "God" },
+      
+          { "source": "justice", "target": "antiquity" },
+      
+          { "source": "justice", "target": "things" },
+      
+          { "source": "justice", "target": "assertion" },
       
           { "source": "items", "target": "traits" },
       
@@ -769,29 +758,25 @@ var data_local_dynamic = {
           { "source": "items", "target": "categories" },
       
           { "source": "items", "target": "criteria" },
-      
-          { "source": "research", "target": "historical-research" },
-      
-          { "source": "research", "target": "development" },
-      
-          { "source": "research", "target": "role" },
-      
-          { "source": "research", "target": "justice" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
+        {"id": "historical-research", "size": 70, "score": 0 , "title": "historical-research", "type": "circle"},
 
       
 
-        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
+        {"id": "development", "size": 70, "score": 0 , "title": "development", "type": "circle"},
 
       
 
-        {"id": "information-science", "size": 70, "score": 0 , "title": "information-science", "type": "circle"},
+        {"id": "role", "size": 70, "score": 0 , "title": "role", "type": "circle"},
+
+      
+
+        {"id": "justice", "size": 70, "score": 0 , "title": "justice", "type": "circle"},
 
       
 
@@ -799,27 +784,47 @@ var data_local_dynamic = {
 
       
 
-        {"id": "research", "size": 70, "score": 0 , "title": "research", "type": "circle"},
+        {"id": "research", "size": 140, "score": 0.5 , "title": "research", "type": "circle"},
 
       
 
-        {"id": "note", "size": 140, "score": 0.5 , "title": "note", "type": "circle"},
+        {"id": "Garfield", "size": 5, "score": 0.4 , "title": "Garfield", "type": "circle"},
 
       
 
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
+        {"id": "law", "size": 5, "score": 0.4 , "title": "law", "type": "circle"},
 
       
 
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
+        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
 
       
 
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
+
+      
+
+        {"id": "benefits", "size": 5, "score": 0.4 , "title": "benefits", "type": "circle"},
+
+      
+
+        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
+
+      
+
+        {"id": "antiquity", "size": 5, "score": 0.4 , "title": "antiquity", "type": "circle"},
+
+      
+
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+
+      
+
+        {"id": "assertion", "size": 5, "score": 0.4 , "title": "assertion", "type": "circle"},
 
       
 
@@ -836,22 +841,6 @@ var data_local_dynamic = {
       
 
         {"id": "criteria", "size": 5, "score": 0.4 , "title": "criteria", "type": "circle"},
-
-      
-
-        {"id": "historical-research", "size": 5, "score": 0.4 , "title": "historical-research", "type": "circle"},
-
-      
-
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
-
-      
-
-        {"id": "role", "size": 5, "score": 0.4 , "title": "role", "type": "circle"},
-
-      
-
-        {"id": "justice", "size": 5, "score": 0.4 , "title": "justice", "type": "circle"},
 
        
 
@@ -988,7 +977,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1139,7 +1128,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

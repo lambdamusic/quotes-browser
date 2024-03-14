@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -619,7 +600,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -681,13 +662,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -729,24 +710,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "most-web-pages", "target": "web-pages" },
-      
-          { "source": "most-web-pages", "target": "pages" },
-      
-          { "source": "most-web-pages", "target": "browser" },
-      
-          { "source": "most-web-pages", "target": "services" },
-      
-          { "source": "most-web-pages", "target": "Web" },
-      
-          { "source": "web-pages", "target": "URI" },
-      
-          { "source": "web-pages", "target": "pages" },
-      
-          { "source": "web-pages", "target": "Web-sites" },
-      
-          { "source": "web-pages", "target": "things" },
-      
           { "source": "pages", "target": "Web-sites" },
       
           { "source": "pages", "target": "browser" },
@@ -754,6 +717,16 @@ var data_local_dynamic = {
           { "source": "pages", "target": "search-engines" },
       
           { "source": "pages", "target": "web-documents" },
+      
+          { "source": "pages", "target": "URI" },
+      
+          { "source": "Web-sites", "target": "browser" },
+      
+          { "source": "Web-sites", "target": "search-engines" },
+      
+          { "source": "Web-sites", "target": "pages" },
+      
+          { "source": "Web-sites", "target": "web-pages" },
       
           { "source": "browser", "target": "Web-sites" },
       
@@ -763,32 +736,36 @@ var data_local_dynamic = {
       
           { "source": "browser", "target": "RDF" },
       
-          { "source": "services", "target": "things" },
+          { "source": "search-engines", "target": "Web-sites" },
       
-          { "source": "services", "target": "industrial-revolution" },
+          { "source": "search-engines", "target": "browser" },
       
-          { "source": "services", "target": "bits" },
+          { "source": "search-engines", "target": "pages" },
       
-          { "source": "services", "target": "metadata-model" },
+          { "source": "search-engines", "target": "real-world-objects" },
       
-          { "source": "Web", "target": "web-documents" },
+          { "source": "web-documents", "target": "URI" },
       
-          { "source": "Web", "target": "URI" },
+          { "source": "web-documents", "target": "documents" },
       
-          { "source": "Web", "target": "documents" },
+          { "source": "web-documents", "target": "files" },
       
-          { "source": "Web", "target": "files" },
+          { "source": "web-documents", "target": "Web" },
+      
+          { "source": "URI", "target": "web-documents" },
+      
+          { "source": "URI", "target": "documents" },
+      
+          { "source": "URI", "target": "files" },
+      
+          { "source": "URI", "target": "Web" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "web-pages", "size": 70, "score": 0 , "title": "web-pages", "type": "circle"},
-
-      
-
-        {"id": "pages", "size": 70, "score": 0 , "title": "pages", "type": "circle"},
+        {"id": "Web-sites", "size": 70, "score": 0 , "title": "Web-sites", "type": "circle"},
 
       
 
@@ -796,35 +773,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
+        {"id": "search-engines", "size": 70, "score": 0 , "title": "search-engines", "type": "circle"},
 
       
 
-        {"id": "Web", "size": 70, "score": 0 , "title": "Web", "type": "circle"},
+        {"id": "web-documents", "size": 70, "score": 0 , "title": "web-documents", "type": "circle"},
 
       
 
-        {"id": "most-web-pages", "size": 140, "score": 0.5 , "title": "most-web-pages", "type": "circle"},
+        {"id": "URI", "size": 70, "score": 0 , "title": "URI", "type": "circle"},
 
       
 
-        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
+        {"id": "pages", "size": 140, "score": 0.5 , "title": "pages", "type": "circle"},
 
       
 
-        {"id": "Web-sites", "size": 5, "score": 0.4 , "title": "Web-sites", "type": "circle"},
-
-      
-
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
-
-      
-
-        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
-
-      
-
-        {"id": "web-documents", "size": 5, "score": 0.4 , "title": "web-documents", "type": "circle"},
+        {"id": "web-pages", "size": 5, "score": 0.4 , "title": "web-pages", "type": "circle"},
 
       
 
@@ -832,15 +797,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
-
-      
-
-        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
-
-      
-
-        {"id": "metadata-model", "size": 5, "score": 0.4 , "title": "metadata-model", "type": "circle"},
+        {"id": "real-world-objects", "size": 5, "score": 0.4 , "title": "real-world-objects", "type": "circle"},
 
       
 
@@ -849,6 +806,10 @@ var data_local_dynamic = {
       
 
         {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+
+      
+
+        {"id": "Web", "size": 5, "score": 0.4 , "title": "Web", "type": "circle"},
 
        
 
@@ -985,7 +946,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1136,7 +1097,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

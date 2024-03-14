@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ The frequency of such categories in the taxonomies supplied by experts suggests 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ The frequency of such categories in the taxonomies supplied by experts suggests 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,90 +709,86 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "work", "target": "citations" },
+          { "source": "cases", "target": "title" },
       
-          { "source": "work", "target": "tradition" },
+          { "source": "cases", "target": "content" },
       
-          { "source": "work", "target": "number" },
+          { "source": "cases", "target": "story" },
       
-          { "source": "work", "target": "data" },
+          { "source": "cases", "target": "occurrence" },
       
-          { "source": "work", "target": "technology" },
+          { "source": "cases", "target": "events" },
       
-          { "source": "citations", "target": "attributes" },
+          { "source": "title", "target": "cases" },
       
-          { "source": "citations", "target": "evidence" },
+          { "source": "title", "target": "content" },
       
-          { "source": "citations", "target": "impact" },
+          { "source": "title", "target": "story" },
       
-          { "source": "citations", "target": "evaluation" },
+          { "source": "title", "target": "humans" },
       
-          { "source": "tradition", "target": "citations" },
+          { "source": "content", "target": "impact" },
       
-          { "source": "tradition", "target": "work" },
+          { "source": "content", "target": "number" },
       
-          { "source": "tradition", "target": "Calvinism" },
+          { "source": "content", "target": "manuscript" },
       
-          { "source": "tradition", "target": "medium" },
+          { "source": "content", "target": "interaction" },
       
-          { "source": "number", "target": "impact" },
+          { "source": "story", "target": "text" },
       
-          { "source": "number", "target": "manuscript" },
+          { "source": "story", "target": "game" },
       
-          { "source": "number", "target": "interaction" },
+          { "source": "story", "target": "character" },
       
-          { "source": "number", "target": "content" },
+          { "source": "story", "target": "interactive-fiction" },
       
-          { "source": "data", "target": "information" },
+          { "source": "occurrence", "target": "cases" },
       
-          { "source": "data", "target": "information-systems" },
+          { "source": "occurrence", "target": "events" },
       
-          { "source": "data", "target": "communication" },
+          { "source": "occurrence", "target": "instances" },
       
-          { "source": "data", "target": "number" },
+          { "source": "occurrence", "target": "class" },
       
-          { "source": "technology", "target": "computer-systems" },
+          { "source": "events", "target": "cases" },
       
-          { "source": "technology", "target": "work" },
+          { "source": "events", "target": "occurrence" },
       
-          { "source": "technology", "target": "semantic-enrichment" },
+          { "source": "events", "target": "instances" },
       
-          { "source": "technology", "target": "users" },
+          { "source": "events", "target": "class" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
+        {"id": "title", "size": 70, "score": 0 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "tradition", "size": 70, "score": 0 , "title": "tradition", "type": "circle"},
+        {"id": "content", "size": 70, "score": 0 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "number", "size": 70, "score": 0 , "title": "number", "type": "circle"},
+        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "data", "size": 70, "score": 0 , "title": "data", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "technology", "size": 70, "score": 0 , "title": "technology", "type": "circle"},
+        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "work", "size": 140, "score": 0.5 , "title": "work", "type": "circle"},
+        {"id": "cases", "size": 140, "score": 0.5 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
-
-      
-
-        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
 
       
 
@@ -819,15 +796,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
-
-      
-
-        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
-
-      
-
-        {"id": "medium", "size": 5, "score": 0.4 , "title": "medium", "type": "circle"},
+        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
 
       
 
@@ -839,31 +808,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "computer-systems", "size": 5, "score": 0.4 , "title": "computer-systems", "type": "circle"},
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "semantic-enrichment", "size": 5, "score": 0.4 , "title": "semantic-enrichment", "type": "circle"},
-
-      
-
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
        
 
@@ -1000,7 +965,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1151,7 +1116,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

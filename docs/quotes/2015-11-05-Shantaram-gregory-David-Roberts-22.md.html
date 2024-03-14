@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,39 +709,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "voice", "target": "language" },
+          { "source": "impression", "target": "tone" },
       
-          { "source": "voice", "target": "reification" },
+          { "source": "impression", "target": "acts" },
       
-          { "source": "voice", "target": "nouns" },
+          { "source": "impression", "target": "voice" },
       
-          { "source": "voice", "target": "tone" },
+          { "source": "impression", "target": "behavior" },
       
-          { "source": "voice", "target": "impression" },
-      
-          { "source": "language", "target": "words" },
-      
-          { "source": "language", "target": "Sapir-Whorf-hypothesis" },
-      
-          { "source": "language", "target": "idea" },
-      
-          { "source": "language", "target": "different-languages" },
-      
-          { "source": "reification", "target": "language" },
-      
-          { "source": "reification", "target": "voice" },
-      
-          { "source": "reification", "target": "questions" },
-      
-          { "source": "reification", "target": "philosophers" },
-      
-          { "source": "nouns", "target": "verbs" },
-      
-          { "source": "nouns", "target": "century" },
-      
-          { "source": "nouns", "target": "persons" },
-      
-          { "source": "nouns", "target": "career" },
+          { "source": "impression", "target": "attention" },
       
           { "source": "tone", "target": "impression" },
       
@@ -770,84 +727,64 @@ var data_local_dynamic = {
       
           { "source": "tone", "target": "music" },
       
-          { "source": "impression", "target": "tone" },
+          { "source": "acts", "target": "tone" },
       
-          { "source": "impression", "target": "acts" },
+          { "source": "acts", "target": "impression" },
       
-          { "source": "impression", "target": "voice" },
+          { "source": "acts", "target": "voice" },
       
-          { "source": "impression", "target": "behavior" },
+          { "source": "acts", "target": "course" },
+      
+          { "source": "voice", "target": "language" },
+      
+          { "source": "voice", "target": "reification" },
+      
+          { "source": "voice", "target": "nouns" },
+      
+          { "source": "voice", "target": "tone" },
+      
+          { "source": "behavior", "target": "linguistic-behavior" },
+      
+          { "source": "behavior", "target": "Maturana" },
+      
+          { "source": "behavior", "target": "medium" },
+      
+          { "source": "behavior", "target": "example" },
+      
+          { "source": "attention", "target": "citations" },
+      
+          { "source": "attention", "target": "evaluation" },
+      
+          { "source": "attention", "target": "measures" },
+      
+          { "source": "attention", "target": "analysis" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "language", "size": 70, "score": 0 , "title": "language", "type": "circle"},
-
-      
-
-        {"id": "reification", "size": 70, "score": 0 , "title": "reification", "type": "circle"},
-
-      
-
-        {"id": "nouns", "size": 70, "score": 0 , "title": "nouns", "type": "circle"},
-
-      
-
         {"id": "tone", "size": 70, "score": 0 , "title": "tone", "type": "circle"},
 
       
 
-        {"id": "impression", "size": 70, "score": 0 , "title": "impression", "type": "circle"},
+        {"id": "acts", "size": 70, "score": 0 , "title": "acts", "type": "circle"},
 
       
 
-        {"id": "voice", "size": 140, "score": 0.5 , "title": "voice", "type": "circle"},
+        {"id": "voice", "size": 70, "score": 0 , "title": "voice", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "behavior", "size": 70, "score": 0 , "title": "behavior", "type": "circle"},
 
       
 
-        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
+        {"id": "attention", "size": 70, "score": 0 , "title": "attention", "type": "circle"},
 
       
 
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
-
-      
-
-        {"id": "different-languages", "size": 5, "score": 0.4 , "title": "different-languages", "type": "circle"},
-
-      
-
-        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
-
-      
-
-        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
-
-      
-
-        {"id": "verbs", "size": 5, "score": 0.4 , "title": "verbs", "type": "circle"},
-
-      
-
-        {"id": "century", "size": 5, "score": 0.4 , "title": "century", "type": "circle"},
-
-      
-
-        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
-
-      
-
-        {"id": "career", "size": 5, "score": 0.4 , "title": "career", "type": "circle"},
-
-      
-
-        {"id": "acts", "size": 5, "score": 0.4 , "title": "acts", "type": "circle"},
+        {"id": "impression", "size": 140, "score": 0.5 , "title": "impression", "type": "circle"},
 
       
 
@@ -855,7 +792,51 @@ var data_local_dynamic = {
 
       
 
-        {"id": "behavior", "size": 5, "score": 0.4 , "title": "behavior", "type": "circle"},
+        {"id": "course", "size": 5, "score": 0.4 , "title": "course", "type": "circle"},
+
+      
+
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
+
+      
+
+        {"id": "reification", "size": 5, "score": 0.4 , "title": "reification", "type": "circle"},
+
+      
+
+        {"id": "nouns", "size": 5, "score": 0.4 , "title": "nouns", "type": "circle"},
+
+      
+
+        {"id": "linguistic-behavior", "size": 5, "score": 0.4 , "title": "linguistic-behavior", "type": "circle"},
+
+      
+
+        {"id": "Maturana", "size": 5, "score": 0.4 , "title": "Maturana", "type": "circle"},
+
+      
+
+        {"id": "medium", "size": 5, "score": 0.4 , "title": "medium", "type": "circle"},
+
+      
+
+        {"id": "example", "size": 5, "score": 0.4 , "title": "example", "type": "circle"},
+
+      
+
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+
+      
+
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
+
+      
+
+        {"id": "measures", "size": 5, "score": 0.4 , "title": "measures", "type": "circle"},
+
+      
+
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
 
        
 
@@ -992,7 +973,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1143,7 +1124,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -620,7 +601,7 @@ fuzziness of the "data or metadata" distinction14 [19]. For example, we have not
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -682,13 +663,13 @@ fuzziness of the "data or metadata" distinction14 [19]. For example, we have not
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -730,110 +711,110 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "digital-libraries", "target": "raw-data" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "digital-libraries", "target": "access" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "digital-libraries", "target": "services" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "digital-libraries", "target": "metadata-model" },
       
-          { "source": "metadata", "target": "algorithm" },
+          { "source": "digital-libraries", "target": "resources" },
       
-          { "source": "RDF-databases", "target": "metadata" },
+          { "source": "raw-data", "target": "digital-libraries" },
       
-          { "source": "RDF-databases", "target": "platform" },
+          { "source": "raw-data", "target": "access" },
       
-          { "source": "RDF-databases", "target": "database" },
+          { "source": "raw-data", "target": "services" },
       
-          { "source": "RDF-databases", "target": "triple-stores" },
+          { "source": "raw-data", "target": "metadata-model" },
       
-          { "source": "platform", "target": "RDF-databases" },
+          { "source": "access", "target": "humans" },
       
-          { "source": "platform", "target": "metadata" },
+          { "source": "access", "target": "need" },
       
-          { "source": "platform", "target": "database" },
+          { "source": "access", "target": "publications" },
       
-          { "source": "platform", "target": "thesaurus" },
+          { "source": "access", "target": "situation" },
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "services", "target": "things" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "services", "target": "industrial-revolution" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "services", "target": "bits" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "services", "target": "metadata-model" },
       
-          { "source": "server", "target": "metadata" },
+          { "source": "metadata-model", "target": "services" },
       
-          { "source": "server", "target": "algorithm" },
+          { "source": "metadata-model", "target": "digital-libraries" },
       
-          { "source": "server", "target": "publishing" },
+          { "source": "metadata-model", "target": "resources" },
       
-          { "source": "server", "target": "article" },
+          { "source": "metadata-model", "target": "raw-data" },
       
-          { "source": "algorithm", "target": "server" },
+          { "source": "resources", "target": "services" },
       
-          { "source": "algorithm", "target": "metadata" },
+          { "source": "resources", "target": "metadata-model" },
       
-          { "source": "algorithm", "target": "words" },
+          { "source": "resources", "target": "digital-libraries" },
       
-          { "source": "algorithm", "target": "readers" },
+          { "source": "resources", "target": "raw-data" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "RDF-databases", "size": 70, "score": 0 , "title": "RDF-databases", "type": "circle"},
+        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 70, "score": 0 , "title": "platform", "type": "circle"},
+        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
 
       
 
-        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
+        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
+        {"id": "metadata-model", "size": 70, "score": 0 , "title": "metadata-model", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
+        {"id": "resources", "size": 70, "score": 0 , "title": "resources", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 140, "score": 0.5 , "title": "metadata", "type": "circle"},
+        {"id": "digital-libraries", "size": 140, "score": 0.5 , "title": "digital-libraries", "type": "circle"},
 
       
 
-        {"id": "triple-stores", "size": 5, "score": 0.4 , "title": "triple-stores", "type": "circle"},
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
 
       
 
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 5, "score": 0.4 , "title": "publishing", "type": "circle"},
+        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
 
        
 
@@ -970,7 +951,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1121,7 +1102,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

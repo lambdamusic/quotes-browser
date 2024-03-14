@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -623,7 +604,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -685,13 +666,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -733,142 +714,154 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "messages", "target": "users" },
+          { "source": "specification", "target": "graph" },
       
-          { "source": "messages", "target": "communication" },
+          { "source": "specification", "target": "semantics" },
       
-          { "source": "messages", "target": "designers" },
+          { "source": "specification", "target": "metadata" },
       
-          { "source": "messages", "target": "decision-support-system" },
+          { "source": "specification", "target": "things" },
       
-          { "source": "messages", "target": "ontology" },
+          { "source": "specification", "target": "format" },
       
-          { "source": "users", "target": "user-testing" },
+          { "source": "graph", "target": "knowledge-graph" },
       
-          { "source": "users", "target": "Google" },
+          { "source": "graph", "target": "data-analytics" },
       
-          { "source": "users", "target": "search" },
+          { "source": "graph", "target": "analytics" },
       
-          { "source": "users", "target": "version" },
+          { "source": "graph", "target": "semantics" },
       
-          { "source": "communication", "target": "culture" },
+          { "source": "semantics", "target": "annotation-properties" },
       
-          { "source": "communication", "target": "digital-media" },
+          { "source": "semantics", "target": "data-properties" },
       
-          { "source": "communication", "target": "human-communication" },
+          { "source": "semantics", "target": "blank-nodes" },
       
-          { "source": "communication", "target": "information" },
+          { "source": "semantics", "target": "OWL-DL" },
       
-          { "source": "designers", "target": "information-architects" },
+          { "source": "metadata", "target": "RDF-databases" },
       
-          { "source": "designers", "target": "users" },
+          { "source": "metadata", "target": "platform" },
       
-          { "source": "designers", "target": "websites" },
+          { "source": "metadata", "target": "database" },
       
-          { "source": "designers", "target": "architects" },
+          { "source": "metadata", "target": "server" },
       
-          { "source": "decision-support-system", "target": "users" },
+          { "source": "things", "target": "industrial-revolution" },
       
-          { "source": "decision-support-system", "target": "communication" },
+          { "source": "things", "target": "bits" },
       
-          { "source": "decision-support-system", "target": "designers" },
+          { "source": "things", "target": "services" },
       
-          { "source": "decision-support-system", "target": "messages" },
+          { "source": "things", "target": "machine" },
       
-          { "source": "ontology", "target": "use-cases" },
+          { "source": "format", "target": "web-documents" },
       
-          { "source": "ontology", "target": "data-model" },
+          { "source": "format", "target": "content-negotiation" },
       
-          { "source": "ontology", "target": "architecture" },
+          { "source": "format", "target": "server" },
       
-          { "source": "ontology", "target": "requirements" },
+          { "source": "format", "target": "documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "users", "size": 70, "score": 0 , "title": "users", "type": "circle"},
+        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "communication", "size": 70, "score": 0 , "title": "communication", "type": "circle"},
+        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "designers", "size": 70, "score": 0 , "title": "designers", "type": "circle"},
+        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "decision-support-system", "size": 70, "score": 0 , "title": "decision-support-system", "type": "circle"},
+        {"id": "things", "size": 70, "score": 0 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "format", "size": 70, "score": 0 , "title": "format", "type": "circle"},
 
       
 
-        {"id": "messages", "size": 140, "score": 0.5 , "title": "messages", "type": "circle"},
+        {"id": "specification", "size": 140, "score": 0.5 , "title": "specification", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
 
       
 
-        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
+        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
 
       
 
-        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
+        {"id": "analytics", "size": 5, "score": 0.4 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
+        {"id": "annotation-properties", "size": 5, "score": 0.4 , "title": "annotation-properties", "type": "circle"},
 
       
 
-        {"id": "culture", "size": 5, "score": 0.4 , "title": "culture", "type": "circle"},
+        {"id": "data-properties", "size": 5, "score": 0.4 , "title": "data-properties", "type": "circle"},
 
       
 
-        {"id": "digital-media", "size": 5, "score": 0.4 , "title": "digital-media", "type": "circle"},
+        {"id": "blank-nodes", "size": 5, "score": 0.4 , "title": "blank-nodes", "type": "circle"},
 
       
 
-        {"id": "human-communication", "size": 5, "score": 0.4 , "title": "human-communication", "type": "circle"},
+        {"id": "OWL-DL", "size": 5, "score": 0.4 , "title": "OWL-DL", "type": "circle"},
 
       
 
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
 
       
 
-        {"id": "information-architects", "size": 5, "score": 0.4 , "title": "information-architects", "type": "circle"},
+        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
 
       
 
-        {"id": "websites", "size": 5, "score": 0.4 , "title": "websites", "type": "circle"},
+        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
 
       
 
-        {"id": "architects", "size": 5, "score": 0.4 , "title": "architects", "type": "circle"},
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
+        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
+        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+        {"id": "services", "size": 5, "score": 0.4 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
+
+      
+
+        {"id": "web-documents", "size": 5, "score": 0.4 , "title": "web-documents", "type": "circle"},
+
+      
+
+        {"id": "content-negotiation", "size": 5, "score": 0.4 , "title": "content-negotiation", "type": "circle"},
+
+      
+
+        {"id": "documents", "size": 5, "score": 0.4 , "title": "documents", "type": "circle"},
 
        
 
@@ -1005,7 +998,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1156,7 +1149,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

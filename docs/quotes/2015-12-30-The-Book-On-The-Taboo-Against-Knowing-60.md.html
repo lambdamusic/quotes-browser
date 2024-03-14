@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -615,7 +596,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -677,13 +658,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -725,142 +706,110 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "vision", "target": "information-architects" },
+          { "source": "things", "target": "industrial-revolution" },
       
-          { "source": "vision", "target": "architects" },
+          { "source": "things", "target": "bits" },
       
-          { "source": "vision", "target": "project" },
+          { "source": "things", "target": "services" },
       
-          { "source": "vision", "target": "skills" },
+          { "source": "things", "target": "machine" },
       
-          { "source": "vision", "target": "action" },
+          { "source": "things", "target": "manufacturing" },
       
-          { "source": "information-architects", "target": "users" },
+          { "source": "industrial-revolution", "target": "things" },
       
-          { "source": "information-architects", "target": "designers" },
+          { "source": "industrial-revolution", "target": "bits" },
       
-          { "source": "information-architects", "target": "websites" },
+          { "source": "industrial-revolution", "target": "services" },
       
-          { "source": "information-architects", "target": "architects" },
+          { "source": "industrial-revolution", "target": "energy" },
       
-          { "source": "architects", "target": "information-architects" },
+          { "source": "bits", "target": "things" },
       
-          { "source": "architects", "target": "users" },
+          { "source": "bits", "target": "industrial-revolution" },
       
-          { "source": "architects", "target": "designers" },
+          { "source": "bits", "target": "services" },
       
-          { "source": "architects", "target": "websites" },
+          { "source": "bits", "target": "ontology" },
       
-          { "source": "project", "target": "product-owners" },
+          { "source": "services", "target": "things" },
       
-          { "source": "project", "target": "owners" },
+          { "source": "services", "target": "industrial-revolution" },
       
-          { "source": "project", "target": "business" },
+          { "source": "services", "target": "bits" },
       
-          { "source": "project", "target": "product-backlog" },
+          { "source": "services", "target": "metadata-model" },
       
-          { "source": "skills", "target": "task" },
+          { "source": "machine", "target": "things" },
       
-          { "source": "skills", "target": "comprehension" },
+          { "source": "machine", "target": "manufacturing" },
       
-          { "source": "skills", "target": "judgments" },
+          { "source": "machine", "target": "data-citation" },
       
-          { "source": "skills", "target": "learning" },
+          { "source": "machine", "target": "metadata" },
       
-          { "source": "action", "target": "clients" },
+          { "source": "manufacturing", "target": "machine" },
       
-          { "source": "action", "target": "method" },
+          { "source": "manufacturing", "target": "things" },
       
-          { "source": "action", "target": "people" },
+          { "source": "manufacturing", "target": "process" },
       
-          { "source": "action", "target": "persons" },
+          { "source": "manufacturing", "target": "elements" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "information-architects", "size": 70, "score": 0 , "title": "information-architects", "type": "circle"},
+        {"id": "industrial-revolution", "size": 70, "score": 0 , "title": "industrial-revolution", "type": "circle"},
 
       
 
-        {"id": "architects", "size": 70, "score": 0 , "title": "architects", "type": "circle"},
+        {"id": "bits", "size": 70, "score": 0 , "title": "bits", "type": "circle"},
 
       
 
-        {"id": "project", "size": 70, "score": 0 , "title": "project", "type": "circle"},
+        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "skills", "size": 70, "score": 0 , "title": "skills", "type": "circle"},
+        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "action", "size": 70, "score": 0 , "title": "action", "type": "circle"},
+        {"id": "manufacturing", "size": 70, "score": 0 , "title": "manufacturing", "type": "circle"},
 
       
 
-        {"id": "vision", "size": 140, "score": 0.5 , "title": "vision", "type": "circle"},
+        {"id": "things", "size": 140, "score": 0.5 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "energy", "size": 5, "score": 0.4 , "title": "energy", "type": "circle"},
 
       
 
-        {"id": "designers", "size": 5, "score": 0.4 , "title": "designers", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "websites", "size": 5, "score": 0.4 , "title": "websites", "type": "circle"},
+        {"id": "metadata-model", "size": 5, "score": 0.4 , "title": "metadata-model", "type": "circle"},
 
       
 
-        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
-
-      
-
-        {"id": "task", "size": 5, "score": 0.4 , "title": "task", "type": "circle"},
-
-      
-
-        {"id": "comprehension", "size": 5, "score": 0.4 , "title": "comprehension", "type": "circle"},
-
-      
-
-        {"id": "judgments", "size": 5, "score": 0.4 , "title": "judgments", "type": "circle"},
-
-      
-
-        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
-
-      
-
-        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
-
-      
-
-        {"id": "method", "size": 5, "score": 0.4 , "title": "method", "type": "circle"},
-
-      
-
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
-
-      
-
-        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
+        {"id": "elements", "size": 5, "score": 0.4 , "title": "elements", "type": "circle"},
 
        
 
@@ -997,7 +946,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1148,7 +1097,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

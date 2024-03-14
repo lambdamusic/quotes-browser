@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -619,7 +600,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -681,13 +662,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -729,31 +710,39 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "foot", "target": "nail" },
+          { "source": "death", "target": "hallucinations" },
       
-          { "source": "foot", "target": "association" },
+          { "source": "death", "target": "fear" },
       
-          { "source": "foot", "target": "men" },
+          { "source": "death", "target": "meditation" },
       
-          { "source": "foot", "target": "toe" },
+          { "source": "death", "target": "men" },
       
-          { "source": "foot", "target": "border" },
+          { "source": "death", "target": "justice" },
       
-          { "source": "nail", "target": "foot" },
+          { "source": "hallucinations", "target": "death" },
       
-          { "source": "nail", "target": "association" },
+          { "source": "hallucinations", "target": "fear" },
       
-          { "source": "nail", "target": "animals" },
+          { "source": "hallucinations", "target": "meditation" },
       
-          { "source": "nail", "target": "fathers" },
+          { "source": "hallucinations", "target": "mechanism" },
       
-          { "source": "association", "target": "foot" },
+          { "source": "fear", "target": "hallucinations" },
       
-          { "source": "association", "target": "nail" },
+          { "source": "fear", "target": "death" },
       
-          { "source": "association", "target": "malaria" },
+          { "source": "fear", "target": "meditation" },
       
-          { "source": "association", "target": "patterns" },
+          { "source": "fear", "target": "night" },
+      
+          { "source": "meditation", "target": "hallucinations" },
+      
+          { "source": "meditation", "target": "death" },
+      
+          { "source": "meditation", "target": "fear" },
+      
+          { "source": "meditation", "target": "months" },
       
           { "source": "men", "target": "phrases" },
       
@@ -763,32 +752,28 @@ var data_local_dynamic = {
       
           { "source": "men", "target": "years" },
       
-          { "source": "toe", "target": "men" },
+          { "source": "justice", "target": "God" },
       
-          { "source": "toe", "target": "foot" },
+          { "source": "justice", "target": "antiquity" },
       
-          { "source": "toe", "target": "border" },
+          { "source": "justice", "target": "things" },
       
-          { "source": "toe", "target": "vein" },
-      
-          { "source": "border", "target": "Iranians" },
-      
-          { "source": "border", "target": "Iraq" },
-      
-          { "source": "border", "target": "Turkish" },
-      
-          { "source": "border", "target": "Iran" },
+          { "source": "justice", "target": "assertion" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "nail", "size": 70, "score": 0 , "title": "nail", "type": "circle"},
+        {"id": "hallucinations", "size": 70, "score": 0 , "title": "hallucinations", "type": "circle"},
 
       
 
-        {"id": "association", "size": 70, "score": 0 , "title": "association", "type": "circle"},
+        {"id": "fear", "size": 70, "score": 0 , "title": "fear", "type": "circle"},
+
+      
+
+        {"id": "meditation", "size": 70, "score": 0 , "title": "meditation", "type": "circle"},
 
       
 
@@ -796,31 +781,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "toe", "size": 70, "score": 0 , "title": "toe", "type": "circle"},
+        {"id": "justice", "size": 70, "score": 0 , "title": "justice", "type": "circle"},
 
       
 
-        {"id": "border", "size": 70, "score": 0 , "title": "border", "type": "circle"},
+        {"id": "death", "size": 140, "score": 0.5 , "title": "death", "type": "circle"},
 
       
 
-        {"id": "foot", "size": 140, "score": 0.5 , "title": "foot", "type": "circle"},
+        {"id": "mechanism", "size": 5, "score": 0.4 , "title": "mechanism", "type": "circle"},
 
       
 
-        {"id": "animals", "size": 5, "score": 0.4 , "title": "animals", "type": "circle"},
+        {"id": "night", "size": 5, "score": 0.4 , "title": "night", "type": "circle"},
 
       
 
-        {"id": "fathers", "size": 5, "score": 0.4 , "title": "fathers", "type": "circle"},
-
-      
-
-        {"id": "malaria", "size": 5, "score": 0.4 , "title": "malaria", "type": "circle"},
-
-      
-
-        {"id": "patterns", "size": 5, "score": 0.4 , "title": "patterns", "type": "circle"},
+        {"id": "months", "size": 5, "score": 0.4 , "title": "months", "type": "circle"},
 
       
 
@@ -840,23 +817,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "vein", "size": 5, "score": 0.4 , "title": "vein", "type": "circle"},
+        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
 
       
 
-        {"id": "Iranians", "size": 5, "score": 0.4 , "title": "Iranians", "type": "circle"},
+        {"id": "antiquity", "size": 5, "score": 0.4 , "title": "antiquity", "type": "circle"},
 
       
 
-        {"id": "Iraq", "size": 5, "score": 0.4 , "title": "Iraq", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "Turkish", "size": 5, "score": 0.4 , "title": "Turkish", "type": "circle"},
-
-      
-
-        {"id": "Iran", "size": 5, "score": 0.4 , "title": "Iran", "type": "circle"},
+        {"id": "assertion", "size": 5, "score": 0.4 , "title": "assertion", "type": "circle"},
 
        
 
@@ -993,7 +966,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1144,7 +1117,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

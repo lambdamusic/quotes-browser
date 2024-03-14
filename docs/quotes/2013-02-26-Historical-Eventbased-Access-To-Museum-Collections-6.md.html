@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -619,7 +600,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -681,13 +662,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -729,6 +710,32 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "definition", "target": "form" },
+      
+          { "source": "definition", "target": "relation" },
+      
+          { "source": "definition", "target": "computer-science" },
+      
+          { "source": "definition", "target": "cultural-heritage" },
+      
+          { "source": "definition", "target": "project" },
+      
+          { "source": "form", "target": "relation" },
+      
+          { "source": "form", "target": "definition" },
+      
+          { "source": "form", "target": "activity" },
+      
+          { "source": "form", "target": "work" },
+      
+          { "source": "relation", "target": "world" },
+      
+          { "source": "relation", "target": "real-world" },
+      
+          { "source": "relation", "target": "relationship" },
+      
+          { "source": "relation", "target": "properties" },
+      
           { "source": "computer-science", "target": "machine" },
       
           { "source": "computer-science", "target": "computer-program" },
@@ -737,134 +744,108 @@ var data_local_dynamic = {
       
           { "source": "computer-science", "target": "Simple-Event-Model" },
       
-          { "source": "computer-science", "target": "definition" },
+          { "source": "cultural-heritage", "target": "computer-science" },
       
-          { "source": "machine", "target": "things" },
+          { "source": "cultural-heritage", "target": "definition" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "cultural-heritage", "target": "project" },
       
-          { "source": "machine", "target": "data-citation" },
+          { "source": "cultural-heritage", "target": "heritage" },
       
-          { "source": "machine", "target": "metadata" },
+          { "source": "project", "target": "product-owners" },
       
-          { "source": "computer-program", "target": "machine" },
+          { "source": "project", "target": "owners" },
       
-          { "source": "computer-program", "target": "natural-language-processing" },
+          { "source": "project", "target": "business" },
       
-          { "source": "computer-program", "target": "computer-science" },
-      
-          { "source": "computer-program", "target": "code" },
-      
-          { "source": "natural-language-processing", "target": "formal-ontology" },
-      
-          { "source": "natural-language-processing", "target": "domain-specific-ontology" },
-      
-          { "source": "natural-language-processing", "target": "ontology" },
-      
-          { "source": "natural-language-processing", "target": "machine" },
-      
-          { "source": "Simple-Event-Model", "target": "historical-events" },
-      
-          { "source": "Simple-Event-Model", "target": "historical-context" },
-      
-          { "source": "Simple-Event-Model", "target": "war" },
-      
-          { "source": "Simple-Event-Model", "target": "book" },
-      
-          { "source": "definition", "target": "form" },
-      
-          { "source": "definition", "target": "relation" },
-      
-          { "source": "definition", "target": "computer-science" },
-      
-          { "source": "definition", "target": "cultural-heritage" },
+          { "source": "project", "target": "product-backlog" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "form", "size": 70, "score": 0 , "title": "form", "type": "circle"},
 
       
 
-        {"id": "computer-program", "size": 70, "score": 0 , "title": "computer-program", "type": "circle"},
+        {"id": "relation", "size": 70, "score": 0 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "natural-language-processing", "size": 70, "score": 0 , "title": "natural-language-processing", "type": "circle"},
+        {"id": "computer-science", "size": 70, "score": 0 , "title": "computer-science", "type": "circle"},
 
       
 
-        {"id": "Simple-Event-Model", "size": 70, "score": 0 , "title": "Simple-Event-Model", "type": "circle"},
+        {"id": "cultural-heritage", "size": 70, "score": 0 , "title": "cultural-heritage", "type": "circle"},
 
       
 
-        {"id": "definition", "size": 70, "score": 0 , "title": "definition", "type": "circle"},
+        {"id": "project", "size": 70, "score": 0 , "title": "project", "type": "circle"},
 
       
 
-        {"id": "computer-science", "size": 140, "score": 0.5 , "title": "computer-science", "type": "circle"},
+        {"id": "definition", "size": 140, "score": 0.5 , "title": "definition", "type": "circle"},
 
       
 
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+        {"id": "activity", "size": 5, "score": 0.4 , "title": "activity", "type": "circle"},
 
       
 
-        {"id": "manufacturing", "size": 5, "score": 0.4 , "title": "manufacturing", "type": "circle"},
+        {"id": "work", "size": 5, "score": 0.4 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
+        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "code", "size": 5, "score": 0.4 , "title": "code", "type": "circle"},
+        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
 
       
 
-        {"id": "formal-ontology", "size": 5, "score": 0.4 , "title": "formal-ontology", "type": "circle"},
+        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
 
       
 
-        {"id": "domain-specific-ontology", "size": 5, "score": 0.4 , "title": "domain-specific-ontology", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "computer-program", "size": 5, "score": 0.4 , "title": "computer-program", "type": "circle"},
 
       
 
-        {"id": "historical-events", "size": 5, "score": 0.4 , "title": "historical-events", "type": "circle"},
+        {"id": "natural-language-processing", "size": 5, "score": 0.4 , "title": "natural-language-processing", "type": "circle"},
 
       
 
-        {"id": "historical-context", "size": 5, "score": 0.4 , "title": "historical-context", "type": "circle"},
+        {"id": "Simple-Event-Model", "size": 5, "score": 0.4 , "title": "Simple-Event-Model", "type": "circle"},
 
       
 
-        {"id": "war", "size": 5, "score": 0.4 , "title": "war", "type": "circle"},
+        {"id": "heritage", "size": 5, "score": 0.4 , "title": "heritage", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
 
       
 
-        {"id": "form", "size": 5, "score": 0.4 , "title": "form", "type": "circle"},
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
 
       
 
-        {"id": "cultural-heritage", "size": 5, "score": 0.4 , "title": "cultural-heritage", "type": "circle"},
+        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
 
        
 
@@ -1001,7 +982,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1152,7 +1133,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

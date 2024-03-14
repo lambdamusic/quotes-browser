@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -617,7 +598,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -679,13 +660,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -727,18 +708,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "language-action-perspective", "target": "conceptual-modeling" },
-      
-          { "source": "language-action-perspective", "target": "artificial-intelligence" },
-      
-          { "source": "language-action-perspective", "target": "computing" },
-      
-          { "source": "language-action-perspective", "target": "conversation" },
-      
-          { "source": "language-action-perspective", "target": "persons" },
-      
-          { "source": "conceptual-modeling", "target": "language-action-perspective" },
-      
           { "source": "artificial-intelligence", "target": "years" },
       
           { "source": "artificial-intelligence", "target": "intelligence" },
@@ -747,100 +716,126 @@ var data_local_dynamic = {
       
           { "source": "artificial-intelligence", "target": "philosophy" },
       
-          { "source": "computing", "target": "language-action-perspective" },
+          { "source": "artificial-intelligence", "target": "connectionism" },
       
-          { "source": "computing", "target": "artificial-intelligence" },
+          { "source": "years", "target": "factors" },
       
-          { "source": "conversation", "target": "identity" },
+          { "source": "years", "target": "article" },
       
-          { "source": "conversation", "target": "languaging" },
+          { "source": "years", "target": "citations" },
       
-          { "source": "conversation", "target": "emotions" },
+          { "source": "years", "target": "episodes" },
       
-          { "source": "conversation", "target": "expectations" },
+          { "source": "intelligence", "target": "years" },
       
-          { "source": "persons", "target": "team" },
+          { "source": "intelligence", "target": "artificial-intelligence" },
       
-          { "source": "persons", "target": "role" },
+          { "source": "intelligence", "target": "God" },
       
-          { "source": "persons", "target": "benefits" },
+          { "source": "intelligence", "target": "philosophy" },
       
-          { "source": "persons", "target": "humans" },
+          { "source": "God", "target": "believers" },
+      
+          { "source": "God", "target": "sin" },
+      
+          { "source": "God", "target": "Christians" },
+      
+          { "source": "God", "target": "words" },
+      
+          { "source": "philosophy", "target": "ontology" },
+      
+          { "source": "philosophy", "target": "ethics" },
+      
+          { "source": "philosophy", "target": "schema" },
+      
+          { "source": "philosophy", "target": "fact" },
+      
+          { "source": "connectionism", "target": "philosophy" },
+      
+          { "source": "connectionism", "target": "artificial-intelligence" },
+      
+          { "source": "connectionism", "target": "intelligence" },
+      
+          { "source": "connectionism", "target": "name" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "conceptual-modeling", "size": 70, "score": 0 , "title": "conceptual-modeling", "type": "circle"},
+        {"id": "years", "size": 70, "score": 0 , "title": "years", "type": "circle"},
 
       
 
-        {"id": "artificial-intelligence", "size": 70, "score": 0 , "title": "artificial-intelligence", "type": "circle"},
+        {"id": "intelligence", "size": 70, "score": 0 , "title": "intelligence", "type": "circle"},
 
       
 
-        {"id": "computing", "size": 70, "score": 0 , "title": "computing", "type": "circle"},
+        {"id": "God", "size": 70, "score": 0 , "title": "God", "type": "circle"},
 
       
 
-        {"id": "conversation", "size": 70, "score": 0 , "title": "conversation", "type": "circle"},
+        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
 
       
 
-        {"id": "persons", "size": 70, "score": 0 , "title": "persons", "type": "circle"},
+        {"id": "connectionism", "size": 70, "score": 0 , "title": "connectionism", "type": "circle"},
 
       
 
-        {"id": "language-action-perspective", "size": 140, "score": 0.5 , "title": "language-action-perspective", "type": "circle"},
+        {"id": "artificial-intelligence", "size": 140, "score": 0.5 , "title": "artificial-intelligence", "type": "circle"},
 
       
 
-        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
+        {"id": "factors", "size": 5, "score": 0.4 , "title": "factors", "type": "circle"},
 
       
 
-        {"id": "intelligence", "size": 5, "score": 0.4 , "title": "intelligence", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+        {"id": "episodes", "size": 5, "score": 0.4 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "identity", "size": 5, "score": 0.4 , "title": "identity", "type": "circle"},
+        {"id": "believers", "size": 5, "score": 0.4 , "title": "believers", "type": "circle"},
 
       
 
-        {"id": "languaging", "size": 5, "score": 0.4 , "title": "languaging", "type": "circle"},
+        {"id": "sin", "size": 5, "score": 0.4 , "title": "sin", "type": "circle"},
 
       
 
-        {"id": "emotions", "size": 5, "score": 0.4 , "title": "emotions", "type": "circle"},
+        {"id": "Christians", "size": 5, "score": 0.4 , "title": "Christians", "type": "circle"},
 
       
 
-        {"id": "expectations", "size": 5, "score": 0.4 , "title": "expectations", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "role", "size": 5, "score": 0.4 , "title": "role", "type": "circle"},
+        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
 
       
 
-        {"id": "benefits", "size": 5, "score": 0.4 , "title": "benefits", "type": "circle"},
+        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
 
       
 
-        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
+        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
+
+      
+
+        {"id": "name", "size": 5, "score": 0.4 , "title": "name", "type": "circle"},
 
        
 
@@ -977,7 +972,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1128,7 +1123,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,6 +709,30 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "data-discovery", "target": "data-citation" },
+      
+          { "source": "data-discovery", "target": "publishing" },
+      
+          { "source": "data-discovery", "target": "analytics" },
+      
+          { "source": "data-discovery", "target": "access" },
+      
+          { "source": "data-citation", "target": "publishing" },
+      
+          { "source": "data-citation", "target": "data-discovery" },
+      
+          { "source": "data-citation", "target": "metadata" },
+      
+          { "source": "data-citation", "target": "interoperability" },
+      
+          { "source": "publishing", "target": "article" },
+      
+          { "source": "publishing", "target": "web-server" },
+      
+          { "source": "publishing", "target": "academic-publishing" },
+      
+          { "source": "publishing", "target": "server" },
+      
           { "source": "analytics", "target": "knowledge-graph" },
       
           { "source": "analytics", "target": "data-analytics" },
@@ -736,118 +741,92 @@ var data_local_dynamic = {
       
           { "source": "analytics", "target": "Semantic-Web" },
       
-          { "source": "analytics", "target": "readers" },
+          { "source": "access", "target": "humans" },
       
-          { "source": "knowledge-graph", "target": "data-analytics" },
+          { "source": "access", "target": "need" },
       
-          { "source": "knowledge-graph", "target": "analytics" },
+          { "source": "access", "target": "publications" },
       
-          { "source": "knowledge-graph", "target": "graph" },
-      
-          { "source": "knowledge-graph", "target": "search-engines" },
-      
-          { "source": "data-analytics", "target": "knowledge-graph" },
-      
-          { "source": "data-analytics", "target": "analytics" },
-      
-          { "source": "data-analytics", "target": "graph" },
-      
-          { "source": "data-analytics", "target": "transactions" },
-      
-          { "source": "graph", "target": "knowledge-graph" },
-      
-          { "source": "graph", "target": "data-analytics" },
-      
-          { "source": "graph", "target": "analytics" },
-      
-          { "source": "graph", "target": "semantics" },
-      
-          { "source": "Semantic-Web", "target": "ontology" },
-      
-          { "source": "Semantic-Web", "target": "information-systems" },
-      
-          { "source": "Semantic-Web", "target": "companies" },
-      
-          { "source": "Semantic-Web", "target": "taxonomy" },
-      
-          { "source": "readers", "target": "text" },
-      
-          { "source": "readers", "target": "book" },
-      
-          { "source": "readers", "target": "words" },
-      
-          { "source": "readers", "target": "algorithm" },
+          { "source": "access", "target": "situation" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "knowledge-graph", "size": 70, "score": 0 , "title": "knowledge-graph", "type": "circle"},
+        {"id": "data-citation", "size": 70, "score": 0 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "data-analytics", "size": 70, "score": 0 , "title": "data-analytics", "type": "circle"},
+        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
+        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "Semantic-Web", "size": 70, "score": 0 , "title": "Semantic-Web", "type": "circle"},
+        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 70, "score": 0 , "title": "readers", "type": "circle"},
+        {"id": "data-discovery", "size": 140, "score": 0.5 , "title": "data-discovery", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 140, "score": 0.5 , "title": "analytics", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
+        {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
 
       
 
-        {"id": "transactions", "size": 5, "score": 0.4 , "title": "transactions", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
+        {"id": "web-server", "size": 5, "score": 0.4 , "title": "web-server", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
+        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
 
       
 
-        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
+        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
+
+      
+
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+
+      
+
+        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
 
        
 
@@ -984,7 +963,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1135,7 +1114,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

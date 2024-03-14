@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,32 +709,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "name", "target": "book" },
-      
-          { "source": "name", "target": "figures" },
-      
-          { "source": "name", "target": "cases" },
-      
-          { "source": "name", "target": "philosophy" },
-      
-          { "source": "name", "target": "connectionism" },
-      
-          { "source": "book", "target": "news" },
-      
-          { "source": "book", "target": "journals" },
-      
-          { "source": "book", "target": "nature" },
-      
-          { "source": "book", "target": "text" },
-      
-          { "source": "figures", "target": "book" },
-      
-          { "source": "figures", "target": "name" },
-      
-          { "source": "figures", "target": "past" },
-      
-          { "source": "figures", "target": "power" },
-      
           { "source": "cases", "target": "title" },
       
           { "source": "cases", "target": "content" },
@@ -762,60 +717,94 @@ var data_local_dynamic = {
       
           { "source": "cases", "target": "occurrence" },
       
-          { "source": "philosophy", "target": "ontology" },
+          { "source": "cases", "target": "events" },
       
-          { "source": "philosophy", "target": "ethics" },
+          { "source": "title", "target": "cases" },
       
-          { "source": "philosophy", "target": "schema" },
+          { "source": "title", "target": "content" },
       
-          { "source": "philosophy", "target": "fact" },
+          { "source": "title", "target": "story" },
       
-          { "source": "connectionism", "target": "philosophy" },
+          { "source": "title", "target": "humans" },
       
-          { "source": "connectionism", "target": "artificial-intelligence" },
+          { "source": "content", "target": "impact" },
       
-          { "source": "connectionism", "target": "intelligence" },
+          { "source": "content", "target": "number" },
       
-          { "source": "connectionism", "target": "name" },
+          { "source": "content", "target": "manuscript" },
+      
+          { "source": "content", "target": "interaction" },
+      
+          { "source": "story", "target": "text" },
+      
+          { "source": "story", "target": "game" },
+      
+          { "source": "story", "target": "character" },
+      
+          { "source": "story", "target": "interactive-fiction" },
+      
+          { "source": "occurrence", "target": "cases" },
+      
+          { "source": "occurrence", "target": "events" },
+      
+          { "source": "occurrence", "target": "instances" },
+      
+          { "source": "occurrence", "target": "class" },
+      
+          { "source": "events", "target": "cases" },
+      
+          { "source": "events", "target": "occurrence" },
+      
+          { "source": "events", "target": "instances" },
+      
+          { "source": "events", "target": "class" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
+        {"id": "title", "size": 70, "score": 0 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "figures", "size": 70, "score": 0 , "title": "figures", "type": "circle"},
+        {"id": "content", "size": 70, "score": 0 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "connectionism", "size": 70, "score": 0 , "title": "connectionism", "type": "circle"},
+        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "name", "size": 140, "score": 0.5 , "title": "name", "type": "circle"},
+        {"id": "cases", "size": 140, "score": 0.5 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
+
+      
+
+        {"id": "manuscript", "size": 5, "score": 0.4 , "title": "manuscript", "type": "circle"},
+
+      
+
+        {"id": "interaction", "size": 5, "score": 0.4 , "title": "interaction", "type": "circle"},
 
       
 
@@ -823,51 +812,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "past", "size": 5, "score": 0.4 , "title": "past", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "power", "size": 5, "score": 0.4 , "title": "power", "type": "circle"},
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
-
-      
-
-        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
-
-      
-
-        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
-
-      
-
-        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
-
-      
-
-        {"id": "artificial-intelligence", "size": 5, "score": 0.4 , "title": "artificial-intelligence", "type": "circle"},
-
-      
-
-        {"id": "intelligence", "size": 5, "score": 0.4 , "title": "intelligence", "type": "circle"},
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
        
 
@@ -1004,7 +965,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1155,7 +1116,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

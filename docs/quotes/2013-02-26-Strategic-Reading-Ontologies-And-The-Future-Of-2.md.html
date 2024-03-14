@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ More recent studies of the research process have emphasized the varied ways in w
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ More recent studies of the research process have emphasized the varied ways in w
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,6 +709,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "scientists", "target": "information" },
+      
+          { "source": "scientists", "target": "data-scientists" },
+      
+          { "source": "scientists", "target": "technique" },
+      
+          { "source": "scientists", "target": "answers" },
+      
+          { "source": "scientists", "target": "software" },
+      
           { "source": "information", "target": "nanopublications" },
       
           { "source": "information", "target": "metadata" },
@@ -736,118 +727,130 @@ var data_local_dynamic = {
       
           { "source": "information", "target": "collection-objects" },
       
-          { "source": "information", "target": "objects" },
+          { "source": "data-scientists", "target": "decision-making" },
       
-          { "source": "nanopublications", "target": "metadata" },
+          { "source": "data-scientists", "target": "programmers" },
       
-          { "source": "nanopublications", "target": "information" },
+          { "source": "data-scientists", "target": "machine-learning" },
       
-          { "source": "nanopublications", "target": "contextual-information" },
+          { "source": "data-scientists", "target": "learning" },
       
-          { "source": "nanopublications", "target": "graph" },
+          { "source": "technique", "target": "values" },
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "technique", "target": "data-scientists" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "technique", "target": "scientists" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "answers", "target": "truth" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "answers", "target": "meaning" },
       
-          { "source": "contextual-information", "target": "nanopublications" },
+          { "source": "answers", "target": "ignorance" },
       
-          { "source": "contextual-information", "target": "metadata" },
+          { "source": "answers", "target": "mystery" },
       
-          { "source": "contextual-information", "target": "information" },
+          { "source": "software", "target": "disambiguation" },
       
-          { "source": "contextual-information", "target": "data-sets" },
+          { "source": "software", "target": "entities" },
       
-          { "source": "collection-objects", "target": "metadata" },
+          { "source": "software", "target": "ontology" },
       
-          { "source": "collection-objects", "target": "objects" },
-      
-          { "source": "collection-objects", "target": "information" },
-      
-          { "source": "collection-objects", "target": "collection" },
-      
-          { "source": "objects", "target": "class" },
-      
-          { "source": "objects", "target": "real-world" },
-      
-          { "source": "objects", "target": "instances" },
-      
-          { "source": "objects", "target": "types" },
+          { "source": "software", "target": "gazetteers" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "nanopublications", "size": 70, "score": 0 , "title": "nanopublications", "type": "circle"},
+        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "data-scientists", "size": 70, "score": 0 , "title": "data-scientists", "type": "circle"},
 
       
 
-        {"id": "contextual-information", "size": 70, "score": 0 , "title": "contextual-information", "type": "circle"},
+        {"id": "technique", "size": 70, "score": 0 , "title": "technique", "type": "circle"},
 
       
 
-        {"id": "collection-objects", "size": 70, "score": 0 , "title": "collection-objects", "type": "circle"},
+        {"id": "answers", "size": 70, "score": 0 , "title": "answers", "type": "circle"},
 
       
 
-        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+        {"id": "software", "size": 70, "score": 0 , "title": "software", "type": "circle"},
 
       
 
-        {"id": "information", "size": 140, "score": 0.5 , "title": "information", "type": "circle"},
+        {"id": "scientists", "size": 140, "score": 0.5 , "title": "scientists", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
+        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
 
       
 
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+        {"id": "decision-making", "size": 5, "score": 0.4 , "title": "decision-making", "type": "circle"},
 
       
 
-        {"id": "data-sets", "size": 5, "score": 0.4 , "title": "data-sets", "type": "circle"},
+        {"id": "programmers", "size": 5, "score": 0.4 , "title": "programmers", "type": "circle"},
 
       
 
-        {"id": "collection", "size": 5, "score": 0.4 , "title": "collection", "type": "circle"},
+        {"id": "machine-learning", "size": 5, "score": 0.4 , "title": "machine-learning", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
 
       
 
-        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
+        {"id": "values", "size": 5, "score": 0.4 , "title": "values", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
+        {"id": "truth", "size": 5, "score": 0.4 , "title": "truth", "type": "circle"},
 
       
 
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
+
+      
+
+        {"id": "ignorance", "size": 5, "score": 0.4 , "title": "ignorance", "type": "circle"},
+
+      
+
+        {"id": "mystery", "size": 5, "score": 0.4 , "title": "mystery", "type": "circle"},
+
+      
+
+        {"id": "disambiguation", "size": 5, "score": 0.4 , "title": "disambiguation", "type": "circle"},
+
+      
+
+        {"id": "entities", "size": 5, "score": 0.4 , "title": "entities", "type": "circle"},
+
+      
+
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+
+      
+
+        {"id": "gazetteers", "size": 5, "score": 0.4 , "title": "gazetteers", "type": "circle"},
 
        
 
@@ -984,7 +987,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1135,7 +1138,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

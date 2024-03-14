@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -619,7 +600,7 @@ Small found co-citation analysis pointed to the specialty as the natural organiz
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -681,13 +662,13 @@ Small found co-citation analysis pointed to the specialty as the natural organiz
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -729,48 +710,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "physics", "target": "theory" },
-      
-          { "source": "physics", "target": "law" },
-      
-          { "source": "physics", "target": "system" },
-      
-          { "source": "physics", "target": "field" },
-      
-          { "source": "physics", "target": "structure" },
-      
-          { "source": "theory", "target": "cognitive-processes" },
-      
-          { "source": "theory", "target": "intuition" },
-      
-          { "source": "theory", "target": "psychological-state" },
-      
-          { "source": "theory", "target": "physics" },
-      
-          { "source": "law", "target": "rights" },
-      
-          { "source": "law", "target": "development" },
-      
-          { "source": "law", "target": "coding" },
-      
-          { "source": "law", "target": "physics" },
-      
-          { "source": "system", "target": "different-information-systems" },
-      
-          { "source": "system", "target": "information-systems" },
-      
-          { "source": "system", "target": "interoperability" },
-      
-          { "source": "system", "target": "capability" },
-      
-          { "source": "field", "target": "contribution" },
-      
-          { "source": "field", "target": "Internet" },
-      
-          { "source": "field", "target": "world" },
-      
-          { "source": "field", "target": "structure" },
-      
           { "source": "structure", "target": "function" },
       
           { "source": "structure", "target": "data-structure" },
@@ -778,101 +717,111 @@ var data_local_dynamic = {
           { "source": "structure", "target": "process" },
       
           { "source": "structure", "target": "drift" },
+      
+          { "source": "structure", "target": "components" },
+      
+          { "source": "function", "target": "structure" },
+      
+          { "source": "function", "target": "data-structure" },
+      
+          { "source": "function", "target": "process" },
+      
+          { "source": "function", "target": "language" },
+      
+          { "source": "data-structure", "target": "function" },
+      
+          { "source": "data-structure", "target": "structure" },
+      
+          { "source": "data-structure", "target": "process" },
+      
+          { "source": "data-structure", "target": "resources" },
+      
+          { "source": "process", "target": "experiments" },
+      
+          { "source": "process", "target": "constructs" },
+      
+          { "source": "process", "target": "hypothesis" },
+      
+          { "source": "process", "target": "bridge" },
+      
+          { "source": "drift", "target": "structure" },
+      
+          { "source": "drift", "target": "components" },
+      
+          { "source": "drift", "target": "direction" },
+      
+          { "source": "drift", "target": "engine" },
+      
+          { "source": "components", "target": "peer-review" },
+      
+          { "source": "components", "target": "hypothesis" },
+      
+          { "source": "components", "target": "structure" },
+      
+          { "source": "components", "target": "drift" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "theory", "size": 70, "score": 0 , "title": "theory", "type": "circle"},
+        {"id": "function", "size": 70, "score": 0 , "title": "function", "type": "circle"},
 
       
 
-        {"id": "law", "size": 70, "score": 0 , "title": "law", "type": "circle"},
+        {"id": "data-structure", "size": 70, "score": 0 , "title": "data-structure", "type": "circle"},
 
       
 
-        {"id": "system", "size": 70, "score": 0 , "title": "system", "type": "circle"},
+        {"id": "process", "size": 70, "score": 0 , "title": "process", "type": "circle"},
 
       
 
-        {"id": "field", "size": 70, "score": 0 , "title": "field", "type": "circle"},
+        {"id": "drift", "size": 70, "score": 0 , "title": "drift", "type": "circle"},
 
       
 
-        {"id": "structure", "size": 70, "score": 0 , "title": "structure", "type": "circle"},
+        {"id": "components", "size": 70, "score": 0 , "title": "components", "type": "circle"},
 
       
 
-        {"id": "physics", "size": 140, "score": 0.5 , "title": "physics", "type": "circle"},
+        {"id": "structure", "size": 140, "score": 0.5 , "title": "structure", "type": "circle"},
 
       
 
-        {"id": "cognitive-processes", "size": 5, "score": 0.4 , "title": "cognitive-processes", "type": "circle"},
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "intuition", "size": 5, "score": 0.4 , "title": "intuition", "type": "circle"},
+        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
 
       
 
-        {"id": "psychological-state", "size": 5, "score": 0.4 , "title": "psychological-state", "type": "circle"},
+        {"id": "experiments", "size": 5, "score": 0.4 , "title": "experiments", "type": "circle"},
 
       
 
-        {"id": "rights", "size": 5, "score": 0.4 , "title": "rights", "type": "circle"},
+        {"id": "constructs", "size": 5, "score": 0.4 , "title": "constructs", "type": "circle"},
 
       
 
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
+        {"id": "hypothesis", "size": 5, "score": 0.4 , "title": "hypothesis", "type": "circle"},
 
       
 
-        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
+        {"id": "bridge", "size": 5, "score": 0.4 , "title": "bridge", "type": "circle"},
 
       
 
-        {"id": "different-information-systems", "size": 5, "score": 0.4 , "title": "different-information-systems", "type": "circle"},
+        {"id": "direction", "size": 5, "score": 0.4 , "title": "direction", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "engine", "size": 5, "score": 0.4 , "title": "engine", "type": "circle"},
 
       
 
-        {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
-
-      
-
-        {"id": "capability", "size": 5, "score": 0.4 , "title": "capability", "type": "circle"},
-
-      
-
-        {"id": "contribution", "size": 5, "score": 0.4 , "title": "contribution", "type": "circle"},
-
-      
-
-        {"id": "Internet", "size": 5, "score": 0.4 , "title": "Internet", "type": "circle"},
-
-      
-
-        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
-
-      
-
-        {"id": "function", "size": 5, "score": 0.4 , "title": "function", "type": "circle"},
-
-      
-
-        {"id": "data-structure", "size": 5, "score": 0.4 , "title": "data-structure", "type": "circle"},
-
-      
-
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
-
-      
-
-        {"id": "drift", "size": 5, "score": 0.4 , "title": "drift", "type": "circle"},
+        {"id": "peer-review", "size": 5, "score": 0.4 , "title": "peer-review", "type": "circle"},
 
        
 
@@ -1009,7 +958,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1160,7 +1109,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

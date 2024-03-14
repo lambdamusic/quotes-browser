@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,126 +712,138 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "behavior", "target": "linguistic-behavior" },
+          { "source": "trends", "target": "facets" },
       
-          { "source": "behavior", "target": "Maturana" },
+          { "source": "trends", "target": "addition" },
       
-          { "source": "behavior", "target": "medium" },
+          { "source": "trends", "target": "types" },
       
-          { "source": "behavior", "target": "example" },
+          { "source": "trends", "target": "relationship" },
       
-          { "source": "behavior", "target": "interaction" },
+          { "source": "trends", "target": "patterns" },
       
-          { "source": "linguistic-behavior", "target": "Maturana" },
+          { "source": "facets", "target": "addition" },
       
-          { "source": "linguistic-behavior", "target": "medium" },
+          { "source": "facets", "target": "types" },
       
-          { "source": "linguistic-behavior", "target": "example" },
+          { "source": "facets", "target": "trends" },
       
-          { "source": "linguistic-behavior", "target": "behavior" },
+          { "source": "facets", "target": "relationship" },
       
-          { "source": "Maturana", "target": "perception" },
+          { "source": "addition", "target": "subclasses" },
       
-          { "source": "Maturana", "target": "mistakes" },
+          { "source": "addition", "target": "instances" },
       
-          { "source": "Maturana", "target": "authorities" },
+          { "source": "addition", "target": "exception" },
       
-          { "source": "Maturana", "target": "linguistic-behavior" },
+          { "source": "addition", "target": "class" },
       
-          { "source": "medium", "target": "meaning" },
+          { "source": "types", "target": "class" },
       
-          { "source": "medium", "target": "tradition" },
+          { "source": "types", "target": "objects" },
       
-          { "source": "medium", "target": "humanism" },
+          { "source": "types", "target": "real-world" },
       
-          { "source": "medium", "target": "cons" },
+          { "source": "types", "target": "instances" },
       
-          { "source": "example", "target": "linguistic-behavior" },
+          { "source": "relationship", "target": "verbs" },
       
-          { "source": "example", "target": "Maturana" },
+          { "source": "relationship", "target": "attitudes" },
       
-          { "source": "example", "target": "medium" },
+          { "source": "relationship", "target": "period" },
       
-          { "source": "example", "target": "behavior" },
+          { "source": "relationship", "target": "relation" },
       
-          { "source": "interaction", "target": "impact" },
+          { "source": "patterns", "target": "sense" },
       
-          { "source": "interaction", "target": "number" },
+          { "source": "patterns", "target": "mind" },
       
-          { "source": "interaction", "target": "manuscript" },
+          { "source": "patterns", "target": "information" },
       
-          { "source": "interaction", "target": "content" },
+          { "source": "patterns", "target": "need" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "linguistic-behavior", "size": 70, "score": 0 , "title": "linguistic-behavior", "type": "circle"},
+        {"id": "facets", "size": 70, "score": 0 , "title": "facets", "type": "circle"},
 
       
 
-        {"id": "Maturana", "size": 70, "score": 0 , "title": "Maturana", "type": "circle"},
+        {"id": "addition", "size": 70, "score": 0 , "title": "addition", "type": "circle"},
 
       
 
-        {"id": "medium", "size": 70, "score": 0 , "title": "medium", "type": "circle"},
+        {"id": "types", "size": 70, "score": 0 , "title": "types", "type": "circle"},
 
       
 
-        {"id": "example", "size": 70, "score": 0 , "title": "example", "type": "circle"},
+        {"id": "relationship", "size": 70, "score": 0 , "title": "relationship", "type": "circle"},
 
       
 
-        {"id": "interaction", "size": 70, "score": 0 , "title": "interaction", "type": "circle"},
+        {"id": "patterns", "size": 70, "score": 0 , "title": "patterns", "type": "circle"},
 
       
 
-        {"id": "behavior", "size": 140, "score": 0.5 , "title": "behavior", "type": "circle"},
+        {"id": "trends", "size": 140, "score": 0.5 , "title": "trends", "type": "circle"},
 
       
 
-        {"id": "perception", "size": 5, "score": 0.4 , "title": "perception", "type": "circle"},
+        {"id": "subclasses", "size": 5, "score": 0.4 , "title": "subclasses", "type": "circle"},
 
       
 
-        {"id": "mistakes", "size": 5, "score": 0.4 , "title": "mistakes", "type": "circle"},
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "authorities", "size": 5, "score": 0.4 , "title": "authorities", "type": "circle"},
+        {"id": "exception", "size": 5, "score": 0.4 , "title": "exception", "type": "circle"},
 
       
 
-        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "tradition", "size": 5, "score": 0.4 , "title": "tradition", "type": "circle"},
+        {"id": "objects", "size": 5, "score": 0.4 , "title": "objects", "type": "circle"},
 
       
 
-        {"id": "humanism", "size": 5, "score": 0.4 , "title": "humanism", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "cons", "size": 5, "score": 0.4 , "title": "cons", "type": "circle"},
+        {"id": "verbs", "size": 5, "score": 0.4 , "title": "verbs", "type": "circle"},
 
       
 
-        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
+        {"id": "attitudes", "size": 5, "score": 0.4 , "title": "attitudes", "type": "circle"},
 
       
 
-        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
+        {"id": "period", "size": 5, "score": 0.4 , "title": "period", "type": "circle"},
 
       
 
-        {"id": "manuscript", "size": 5, "score": 0.4 , "title": "manuscript", "type": "circle"},
+        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "sense", "size": 5, "score": 0.4 , "title": "sense", "type": "circle"},
+
+      
+
+        {"id": "mind", "size": 5, "score": 0.4 , "title": "mind", "type": "circle"},
+
+      
+
+        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+
+      
+
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
 
        
 
@@ -987,7 +980,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1138,7 +1131,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

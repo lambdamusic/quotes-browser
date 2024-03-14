@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li class="active">
           <a href="index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -554,89 +535,105 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 		<div class="row" style="margin-top: 30px;">
 
-			<div class="col-md-6" >
-
-				
-
-				
-				
-					  
-					
-					<fieldset class="border p-2">
-						<legend class="w-auto"><a href="http://ceur-ws.org/Vol-624/paper1.pdf" class="text-muted" target="_blank">Historical Event-based Access To Museum Collections
-							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
-							</legend>
-
-					
-						
-
-					<li style="margin-bottom: 10px;">
-						<!-- <a style="font-size: 120%;" href="/quotes/2013-02-26-Historical-Eventbased-Access-To-Museum-Collections-4.md">Limitation of faceted search systems</a> -->
-						<a style="font-size: 120%;" href="../quotes/2013-02-26-Historical-Eventbased-Access-To-Museum-Collections-4.md.html">Limitation of faceted search systems</a>
-						<br />
-
-						
-							<a class="text-muted" href="index.html%3Ftag=keyword-search.html">#keyword-search</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=users.html">#users</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=search.html">#search</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=objects.html">#objects</a>&nbsp;
-						
-					
-					
-					</li>
-
-		
-				
-
-				
-				
-					  
-					</fieldset><br/><br/>
-					<fieldset class="border p-2">
-						<legend class="w-auto"><a href="http://dl.acm.org/citation.cfm?id=958674" class="text-muted" target="_blank">Where Are The Semantics In The Semantic Web?
-							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
-							</legend>
-
-					
-						
-
-					<li style="margin-bottom: 10px;">
-						<!-- <a style="font-size: 120%;" href="/quotes/2013-02-26-Where-Are-The-Semantics-In-The-Semantic-6.md">The evolving web</a> -->
-						<a style="font-size: 120%;" href="../quotes/2013-02-26-Where-Are-The-Semantics-In-The-Semantic-6.md.html">The evolving web</a>
-						<br />
-
-						
-							<a class="text-muted" href="index.html%3Ftag=Web.html">#Web</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=things.html">#things</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=web-resources.html">#web-resources</a>&nbsp;
-						
-							<a class="text-muted" href="index.html%3Ftag=keyword-search.html">#keyword-search</a>&nbsp;
-						
-					
-					
-					</li>
-
-		
-				
-			</div>
-
-
 			
 
-			<div class="col-md-6" style="margin-bottom: 30px;">
+			<div class="col-md-12" style="margin-bottom: 30px;">
 		
-				<span class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</span>
+				<span class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</span>
 				
 				<div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
 		
 				</div>
 			
 			</div>
+
+			<div class="col-md-8" style="margin-top: 50px;">
+
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >This keyword includes 2 quotes from 2 sources:</p>
+
+				
+				
+					  
+					
+					<fieldset class="border p-2">
+						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;<a href="http://ceur-ws.org/Vol-624/paper1.pdf" class="text-muted" target="_blank">Historical Event-based Access To Museum Collections
+							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
+							</legend>
+
+					
+						
+
+					<li class="quotes-list">
+						<!-- <a style="font-size: 120%;" href="/quotes/2013-02-26-Historical-Eventbased-Access-To-Museum-Collections-4.md">Limitation of faceted search systems</a> -->
+						<a style="font-size: 120%;" href="../quotes/2013-02-26-Historical-Eventbased-Access-To-Museum-Collections-4.md.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Limitation of faceted search systems</a>
+						<br />
+
+						
+							
+							<span class="text-muted" style="font-weight: bold;">#keyword-search</span>&nbsp;
+							
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=users.html">#users</a>&nbsp;
+							
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=search.html">#search</a>&nbsp;
+							
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=objects.html">#objects</a>&nbsp;
+							
+						
+					
+					
+					</li>
+
+		
+				
+				
+					  
+					</fieldset><br/><br/>
+					<fieldset class="border p-2">
+						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;<a href="http://dl.acm.org/citation.cfm?id=958674" class="text-muted" target="_blank">Where Are The Semantics In The Semantic Web?
+							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
+							</legend>
+
+					
+						
+
+					<li class="quotes-list">
+						<!-- <a style="font-size: 120%;" href="/quotes/2013-02-26-Where-Are-The-Semantics-In-The-Semantic-6.md">The evolving web</a> -->
+						<a style="font-size: 120%;" href="../quotes/2013-02-26-Where-Are-The-Semantics-In-The-Semantic-6.md.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The evolving web</a>
+						<br />
+
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=Web.html">#Web</a>&nbsp;
+							
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=things.html">#things</a>&nbsp;
+							
+						
+							
+							<a class="text-muted" href="index.html%3Ftag=web-resources.html">#web-resources</a>&nbsp;
+							
+						
+							
+							<span class="text-muted" style="font-weight: bold;">#keyword-search</span>&nbsp;
+							
+						
+					
+					
+					</li>
+
+		
+				
+			</div>
+
+
+
 
 		</div>
 
@@ -686,13 +683,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -1007,7 +1004,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1158,7 +1155,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

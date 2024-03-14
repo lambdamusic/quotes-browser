@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -620,7 +601,7 @@ Journal citations provide the most readily available data for a. test of such me
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -682,13 +663,13 @@ Journal citations provide the most readily available data for a. test of such me
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -730,86 +711,102 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "subjects", "target": "evidence" },
+          { "source": "years", "target": "factors" },
       
-          { "source": "subjects", "target": "cause" },
+          { "source": "years", "target": "article" },
       
-          { "source": "subjects", "target": "pain" },
+          { "source": "years", "target": "citations" },
       
-          { "source": "subjects", "target": "sensation" },
+          { "source": "years", "target": "episodes" },
       
-          { "source": "subjects", "target": "feelings" },
+          { "source": "years", "target": "orphans" },
       
-          { "source": "evidence", "target": "citations" },
+          { "source": "factors", "target": "years" },
       
-          { "source": "evidence", "target": "attributes" },
+          { "source": "factors", "target": "article" },
       
-          { "source": "evidence", "target": "impact" },
+          { "source": "factors", "target": "citations" },
       
-          { "source": "evidence", "target": "cause" },
+          { "source": "factors", "target": "task" },
       
-          { "source": "cause", "target": "evidence" },
+          { "source": "article", "target": "hierarchy" },
       
-          { "source": "cause", "target": "subjects" },
+          { "source": "article", "target": "social-sciences" },
       
-          { "source": "cause", "target": "cats" },
+          { "source": "article", "target": "science" },
       
-          { "source": "cause", "target": "head" },
+          { "source": "article", "target": "concept" },
       
-          { "source": "pain", "target": "eyes" },
+          { "source": "citations", "target": "attributes" },
       
-          { "source": "pain", "target": "babies" },
+          { "source": "citations", "target": "evidence" },
       
-          { "source": "pain", "target": "drugs" },
+          { "source": "citations", "target": "impact" },
       
-          { "source": "pain", "target": "control" },
+          { "source": "citations", "target": "evaluation" },
       
-          { "source": "sensation", "target": "pain" },
+          { "source": "episodes", "target": "orphans" },
       
-          { "source": "sensation", "target": "subjects" },
+          { "source": "episodes", "target": "series" },
       
-          { "source": "sensation", "target": "feelings" },
+          { "source": "episodes", "target": "years" },
       
-          { "source": "sensation", "target": "beliefs" },
+          { "source": "episodes", "target": "time" },
       
-          { "source": "feelings", "target": "emotions" },
+          { "source": "orphans", "target": "episodes" },
       
-          { "source": "feelings", "target": "memory" },
+          { "source": "orphans", "target": "series" },
       
-          { "source": "feelings", "target": "words" },
+          { "source": "orphans", "target": "years" },
       
-          { "source": "feelings", "target": "pain" },
+          { "source": "orphans", "target": "time" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "evidence", "size": 70, "score": 0 , "title": "evidence", "type": "circle"},
+        {"id": "factors", "size": 70, "score": 0 , "title": "factors", "type": "circle"},
 
       
 
-        {"id": "cause", "size": 70, "score": 0 , "title": "cause", "type": "circle"},
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "pain", "size": 70, "score": 0 , "title": "pain", "type": "circle"},
+        {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "sensation", "size": 70, "score": 0 , "title": "sensation", "type": "circle"},
+        {"id": "episodes", "size": 70, "score": 0 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "feelings", "size": 70, "score": 0 , "title": "feelings", "type": "circle"},
+        {"id": "orphans", "size": 70, "score": 0 , "title": "orphans", "type": "circle"},
 
       
 
-        {"id": "subjects", "size": 140, "score": 0.5 , "title": "subjects", "type": "circle"},
+        {"id": "years", "size": 140, "score": 0.5 , "title": "years", "type": "circle"},
 
       
 
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+        {"id": "task", "size": 5, "score": 0.4 , "title": "task", "type": "circle"},
+
+      
+
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+
+      
+
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
@@ -817,47 +814,23 @@ var data_local_dynamic = {
 
       
 
+        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
+
+      
+
         {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "cats", "size": 5, "score": 0.4 , "title": "cats", "type": "circle"},
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
 
       
 
-        {"id": "head", "size": 5, "score": 0.4 , "title": "head", "type": "circle"},
+        {"id": "series", "size": 5, "score": 0.4 , "title": "series", "type": "circle"},
 
       
 
-        {"id": "eyes", "size": 5, "score": 0.4 , "title": "eyes", "type": "circle"},
-
-      
-
-        {"id": "babies", "size": 5, "score": 0.4 , "title": "babies", "type": "circle"},
-
-      
-
-        {"id": "drugs", "size": 5, "score": 0.4 , "title": "drugs", "type": "circle"},
-
-      
-
-        {"id": "control", "size": 5, "score": 0.4 , "title": "control", "type": "circle"},
-
-      
-
-        {"id": "beliefs", "size": 5, "score": 0.4 , "title": "beliefs", "type": "circle"},
-
-      
-
-        {"id": "emotions", "size": 5, "score": 0.4 , "title": "emotions", "type": "circle"},
-
-      
-
-        {"id": "memory", "size": 5, "score": 0.4 , "title": "memory", "type": "circle"},
-
-      
-
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "time", "size": 5, "score": 0.4 , "title": "time", "type": "circle"},
 
        
 
@@ -994,7 +967,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1145,7 +1118,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

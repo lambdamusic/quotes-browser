@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ The architectural function of books has made possible architec- tural discourses
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ The architectural function of books has made possible architec- tural discourses
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,124 +712,82 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "narratives", "target": "historical-events" },
+          { "source": "discourse", "target": "text" },
       
-          { "source": "narratives", "target": "historical-context" },
+          { "source": "discourse", "target": "readers" },
       
-          { "source": "narratives", "target": "collection-objects" },
+          { "source": "discourse", "target": "book" },
       
-          { "source": "narratives", "target": "meaning" },
+          { "source": "discourse", "target": "cultural-tools" },
       
-          { "source": "narratives", "target": "lexias" },
+          { "source": "discourse", "target": "realm" },
       
-          { "source": "historical-events", "target": "historical-context" },
+          { "source": "text", "target": "story" },
       
-          { "source": "historical-events", "target": "war" },
+          { "source": "text", "target": "game" },
       
-          { "source": "historical-events", "target": "book" },
+          { "source": "text", "target": "character" },
       
-          { "source": "historical-events", "target": "Simple-Event-Model" },
+          { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "historical-context", "target": "historical-events" },
+          { "source": "readers", "target": "text" },
       
-          { "source": "historical-context", "target": "war" },
+          { "source": "readers", "target": "book" },
       
-          { "source": "historical-context", "target": "book" },
+          { "source": "readers", "target": "words" },
       
-          { "source": "historical-context", "target": "Simple-Event-Model" },
+          { "source": "readers", "target": "algorithm" },
       
-          { "source": "collection-objects", "target": "metadata" },
+          { "source": "book", "target": "news" },
       
-          { "source": "collection-objects", "target": "objects" },
+          { "source": "book", "target": "journals" },
       
-          { "source": "collection-objects", "target": "information" },
+          { "source": "book", "target": "nature" },
       
-          { "source": "collection-objects", "target": "collection" },
+          { "source": "book", "target": "text" },
       
-          { "source": "meaning", "target": "concept" },
+          { "source": "cultural-tools", "target": "machine" },
       
-          { "source": "meaning", "target": "knowledge-representation" },
+          { "source": "cultural-tools", "target": "representation" },
       
-          { "source": "meaning", "target": "representation" },
+          { "source": "cultural-tools", "target": "rules" },
       
-          { "source": "meaning", "target": "terms" },
+          { "source": "cultural-tools", "target": "book" },
       
-          { "source": "lexias", "target": "narratives" },
+          { "source": "realm", "target": "book" },
       
-          { "source": "lexias", "target": "story" },
+          { "source": "realm", "target": "cultural-tools" },
       
-          { "source": "lexias", "target": "pages" },
+          { "source": "realm", "target": "discourse" },
+      
+          { "source": "realm", "target": "necessity" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "historical-events", "size": 70, "score": 0 , "title": "historical-events", "type": "circle"},
+        {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "historical-context", "size": 70, "score": 0 , "title": "historical-context", "type": "circle"},
+        {"id": "readers", "size": 70, "score": 0 , "title": "readers", "type": "circle"},
 
       
 
-        {"id": "collection-objects", "size": 70, "score": 0 , "title": "collection-objects", "type": "circle"},
+        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "meaning", "size": 70, "score": 0 , "title": "meaning", "type": "circle"},
+        {"id": "cultural-tools", "size": 70, "score": 0 , "title": "cultural-tools", "type": "circle"},
 
       
 
-        {"id": "lexias", "size": 70, "score": 0 , "title": "lexias", "type": "circle"},
+        {"id": "realm", "size": 70, "score": 0 , "title": "realm", "type": "circle"},
 
       
 
-        {"id": "narratives", "size": 140, "score": 0.5 , "title": "narratives", "type": "circle"},
-
-      
-
-        {"id": "war", "size": 5, "score": 0.4 , "title": "war", "type": "circle"},
-
-      
-
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
-
-      
-
-        {"id": "Simple-Event-Model", "size": 5, "score": 0.4 , "title": "Simple-Event-Model", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
-
-      
-
-        {"id": "objects", "size": 5, "score": 0.4 , "title": "objects", "type": "circle"},
-
-      
-
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
-
-      
-
-        {"id": "collection", "size": 5, "score": 0.4 , "title": "collection", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
-
-      
-
-        {"id": "knowledge-representation", "size": 5, "score": 0.4 , "title": "knowledge-representation", "type": "circle"},
-
-      
-
-        {"id": "representation", "size": 5, "score": 0.4 , "title": "representation", "type": "circle"},
-
-      
-
-        {"id": "terms", "size": 5, "score": 0.4 , "title": "terms", "type": "circle"},
+        {"id": "discourse", "size": 140, "score": 0.5 , "title": "discourse", "type": "circle"},
 
       
 
@@ -856,7 +795,51 @@ var data_local_dynamic = {
 
       
 
-        {"id": "pages", "size": 5, "score": 0.4 , "title": "pages", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
+
+      
+
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
+
+      
+
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
+
+      
+
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+
+      
+
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+
+      
+
+        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
+
+      
+
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+
+      
+
+        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+
+      
+
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
+
+      
+
+        {"id": "representation", "size": 5, "score": 0.4 , "title": "representation", "type": "circle"},
+
+      
+
+        {"id": "rules", "size": 5, "score": 0.4 , "title": "rules", "type": "circle"},
+
+      
+
+        {"id": "necessity", "size": 5, "score": 0.4 , "title": "necessity", "type": "circle"},
 
        
 
@@ -993,7 +976,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1144,7 +1127,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

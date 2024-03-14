@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -619,7 +600,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -681,13 +662,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -729,88 +710,114 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "morality", "target": "self" },
+          { "source": "interpretation", "target": "judgments" },
       
-          { "source": "morality", "target": "maxim" },
+          { "source": "interpretation", "target": "conversation" },
       
-          { "source": "morality", "target": "passion" },
+          { "source": "interpretation", "target": "game" },
       
-          { "source": "morality", "target": "enemies" },
+          { "source": "interpretation", "target": "text" },
       
-          { "source": "morality", "target": "conduct" },
+          { "source": "interpretation", "target": "tradition" },
       
-          { "source": "self", "target": "article" },
+          { "source": "judgments", "target": "task" },
       
-          { "source": "self", "target": "journals" },
+          { "source": "judgments", "target": "comprehension" },
       
-          { "source": "self", "target": "story" },
+          { "source": "judgments", "target": "skills" },
       
-          { "source": "self", "target": "words" },
+          { "source": "judgments", "target": "learning" },
       
-          { "source": "maxim", "target": "self" },
+          { "source": "conversation", "target": "identity" },
       
-          { "source": "maxim", "target": "morality" },
+          { "source": "conversation", "target": "languaging" },
       
-          { "source": "maxim", "target": "virtue" },
+          { "source": "conversation", "target": "emotions" },
       
-          { "source": "passion", "target": "morality" },
+          { "source": "conversation", "target": "expectations" },
       
-          { "source": "passion", "target": "enemies" },
+          { "source": "game", "target": "story" },
       
-          { "source": "passion", "target": "world" },
+          { "source": "game", "target": "text" },
       
-          { "source": "passion", "target": "happiness" },
+          { "source": "game", "target": "character" },
       
-          { "source": "enemies", "target": "morality" },
+          { "source": "game", "target": "interactive-fiction" },
       
-          { "source": "enemies", "target": "passion" },
+          { "source": "text", "target": "story" },
       
-          { "source": "enemies", "target": "species" },
+          { "source": "text", "target": "game" },
       
-          { "source": "enemies", "target": "conditions" },
+          { "source": "text", "target": "character" },
       
-          { "source": "conduct", "target": "responsibility" },
+          { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "conduct", "target": "nature" },
+          { "source": "tradition", "target": "citations" },
       
-          { "source": "conduct", "target": "affairs" },
+          { "source": "tradition", "target": "work" },
       
-          { "source": "conduct", "target": "mankind" },
+          { "source": "tradition", "target": "Calvinism" },
+      
+          { "source": "tradition", "target": "medium" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "self", "size": 70, "score": 0 , "title": "self", "type": "circle"},
+        {"id": "judgments", "size": 70, "score": 0 , "title": "judgments", "type": "circle"},
 
       
 
-        {"id": "maxim", "size": 70, "score": 0 , "title": "maxim", "type": "circle"},
+        {"id": "conversation", "size": 70, "score": 0 , "title": "conversation", "type": "circle"},
 
       
 
-        {"id": "passion", "size": 70, "score": 0 , "title": "passion", "type": "circle"},
+        {"id": "game", "size": 70, "score": 0 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "enemies", "size": 70, "score": 0 , "title": "enemies", "type": "circle"},
+        {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "conduct", "size": 70, "score": 0 , "title": "conduct", "type": "circle"},
+        {"id": "tradition", "size": 70, "score": 0 , "title": "tradition", "type": "circle"},
 
       
 
-        {"id": "morality", "size": 140, "score": 0.5 , "title": "morality", "type": "circle"},
+        {"id": "interpretation", "size": 140, "score": 0.5 , "title": "interpretation", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "task", "size": 5, "score": 0.4 , "title": "task", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+        {"id": "comprehension", "size": 5, "score": 0.4 , "title": "comprehension", "type": "circle"},
+
+      
+
+        {"id": "skills", "size": 5, "score": 0.4 , "title": "skills", "type": "circle"},
+
+      
+
+        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
+
+      
+
+        {"id": "identity", "size": 5, "score": 0.4 , "title": "identity", "type": "circle"},
+
+      
+
+        {"id": "languaging", "size": 5, "score": 0.4 , "title": "languaging", "type": "circle"},
+
+      
+
+        {"id": "emotions", "size": 5, "score": 0.4 , "title": "emotions", "type": "circle"},
+
+      
+
+        {"id": "expectations", "size": 5, "score": 0.4 , "title": "expectations", "type": "circle"},
 
       
 
@@ -818,43 +825,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "virtue", "size": 5, "score": 0.4 , "title": "virtue", "type": "circle"},
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "happiness", "size": 5, "score": 0.4 , "title": "happiness", "type": "circle"},
+        {"id": "work", "size": 5, "score": 0.4 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "species", "size": 5, "score": 0.4 , "title": "species", "type": "circle"},
+        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
 
       
 
-        {"id": "conditions", "size": 5, "score": 0.4 , "title": "conditions", "type": "circle"},
-
-      
-
-        {"id": "responsibility", "size": 5, "score": 0.4 , "title": "responsibility", "type": "circle"},
-
-      
-
-        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
-
-      
-
-        {"id": "affairs", "size": 5, "score": 0.4 , "title": "affairs", "type": "circle"},
-
-      
-
-        {"id": "mankind", "size": 5, "score": 0.4 , "title": "mankind", "type": "circle"},
+        {"id": "medium", "size": 5, "score": 0.4 , "title": "medium", "type": "circle"},
 
        
 
@@ -991,7 +982,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1142,7 +1133,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -618,7 +599,7 @@ ROI and related metrics provide a snapshot of profitability, adjusted for the si
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -680,13 +661,13 @@ ROI and related metrics provide a snapshot of profitability, adjusted for the si
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -728,28 +709,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "investment", "target": "clients" },
-      
-          { "source": "investment", "target": "goal" },
-      
-          { "source": "investment", "target": "money" },
-      
-          { "source": "clients", "target": "action" },
-      
-          { "source": "clients", "target": "method" },
-      
-          { "source": "clients", "target": "investment" },
-      
-          { "source": "clients", "target": "goal" },
-      
-          { "source": "goal", "target": "team" },
-      
-          { "source": "goal", "target": "link" },
-      
-          { "source": "goal", "target": "owners" },
-      
-          { "source": "goal", "target": "product-owners" },
-      
           { "source": "money", "target": "companies" },
       
           { "source": "money", "target": "business" },
@@ -757,45 +716,91 @@ var data_local_dynamic = {
           { "source": "money", "target": "finance" },
       
           { "source": "money", "target": "scholatics" },
+      
+          { "source": "money", "target": "philosophy" },
+      
+          { "source": "companies", "target": "ontology" },
+      
+          { "source": "companies", "target": "Semantic-Web" },
+      
+          { "source": "companies", "target": "information-systems" },
+      
+          { "source": "companies", "target": "taxonomy" },
+      
+          { "source": "business", "target": "product-owners" },
+      
+          { "source": "business", "target": "owners" },
+      
+          { "source": "business", "target": "project" },
+      
+          { "source": "business", "target": "product-backlog" },
+      
+          { "source": "finance", "target": "scholatics" },
+      
+          { "source": "finance", "target": "philosophy" },
+      
+          { "source": "finance", "target": "morality" },
+      
+          { "source": "finance", "target": "money" },
+      
+          { "source": "scholatics", "target": "finance" },
+      
+          { "source": "scholatics", "target": "philosophy" },
+      
+          { "source": "scholatics", "target": "morality" },
+      
+          { "source": "scholatics", "target": "money" },
+      
+          { "source": "philosophy", "target": "ontology" },
+      
+          { "source": "philosophy", "target": "ethics" },
+      
+          { "source": "philosophy", "target": "schema" },
+      
+          { "source": "philosophy", "target": "fact" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "clients", "size": 70, "score": 0 , "title": "clients", "type": "circle"},
+        {"id": "companies", "size": 70, "score": 0 , "title": "companies", "type": "circle"},
 
       
 
-        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
+        {"id": "business", "size": 70, "score": 0 , "title": "business", "type": "circle"},
 
       
 
-        {"id": "money", "size": 70, "score": 0 , "title": "money", "type": "circle"},
+        {"id": "finance", "size": 70, "score": 0 , "title": "finance", "type": "circle"},
 
       
 
-        {"id": "investment", "size": 140, "score": 0.5 , "title": "investment", "type": "circle"},
+        {"id": "scholatics", "size": 70, "score": 0 , "title": "scholatics", "type": "circle"},
 
       
 
-        {"id": "action", "size": 5, "score": 0.4 , "title": "action", "type": "circle"},
+        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
 
       
 
-        {"id": "method", "size": 5, "score": 0.4 , "title": "method", "type": "circle"},
+        {"id": "money", "size": 140, "score": 0.5 , "title": "money", "type": "circle"},
 
       
 
-        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+
+      
+
+        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
 
       
 
@@ -803,19 +808,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
 
       
 
-        {"id": "finance", "size": 5, "score": 0.4 , "title": "finance", "type": "circle"},
+        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
 
       
 
-        {"id": "scholatics", "size": 5, "score": 0.4 , "title": "scholatics", "type": "circle"},
+        {"id": "morality", "size": 5, "score": 0.4 , "title": "morality", "type": "circle"},
+
+      
+
+        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
+
+      
+
+        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
+
+      
+
+        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
 
        
 
@@ -952,7 +969,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1103,7 +1120,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

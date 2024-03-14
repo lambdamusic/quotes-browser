@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -616,7 +597,7 @@ First, re-conceptualizations which result from large-scale paradigm shifts may n
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -678,13 +659,13 @@ First, re-conceptualizations which result from large-scale paradigm shifts may n
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -726,16 +707,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "dynamic-ontology", "target": "ontology" },
-      
-          { "source": "dynamic-ontology", "target": "formal-ontology" },
-      
-          { "source": "dynamic-ontology", "target": "computational-ontology" },
-      
-          { "source": "dynamic-ontology", "target": "information-scientists" },
-      
-          { "source": "dynamic-ontology", "target": "computer" },
-      
           { "source": "ontology", "target": "use-cases" },
       
           { "source": "ontology", "target": "data-model" },
@@ -744,120 +715,74 @@ var data_local_dynamic = {
       
           { "source": "ontology", "target": "requirements" },
       
-          { "source": "formal-ontology", "target": "ontology" },
+          { "source": "ontology", "target": "domain-specific-ontology" },
       
-          { "source": "formal-ontology", "target": "multiple-legacy-systems" },
+          { "source": "use-cases", "target": "ontology" },
       
-          { "source": "formal-ontology", "target": "legacy-systems" },
+          { "source": "use-cases", "target": "data-model" },
       
-          { "source": "formal-ontology", "target": "ontology-development" },
+          { "source": "use-cases", "target": "architecture" },
       
-          { "source": "computational-ontology", "target": "ontology" },
+          { "source": "use-cases", "target": "requirements" },
       
-          { "source": "computational-ontology", "target": "graph" },
+          { "source": "data-model", "target": "ontology" },
       
-          { "source": "computational-ontology", "target": "nodes" },
+          { "source": "data-model", "target": "use-cases" },
       
-          { "source": "computational-ontology", "target": "concept" },
+          { "source": "data-model", "target": "architecture" },
       
-          { "source": "information-scientists", "target": "information-science" },
+          { "source": "data-model", "target": "requirements" },
       
-          { "source": "information-scientists", "target": "ontology" },
+          { "source": "architecture", "target": "ontology" },
       
-          { "source": "information-scientists", "target": "computer" },
+          { "source": "architecture", "target": "use-cases" },
       
-          { "source": "information-scientists", "target": "formal-ontology" },
+          { "source": "architecture", "target": "data-model" },
       
-          { "source": "computer", "target": "information" },
+          { "source": "architecture", "target": "requirements" },
       
-          { "source": "computer", "target": "data" },
+          { "source": "requirements", "target": "ontology" },
       
-          { "source": "computer", "target": "symbols" },
+          { "source": "requirements", "target": "use-cases" },
       
-          { "source": "computer", "target": "concept" },
+          { "source": "requirements", "target": "data-model" },
+      
+          { "source": "requirements", "target": "architecture" },
+      
+          { "source": "domain-specific-ontology", "target": "ontology" },
+      
+          { "source": "domain-specific-ontology", "target": "use-cases" },
+      
+          { "source": "domain-specific-ontology", "target": "data-model" },
+      
+          { "source": "domain-specific-ontology", "target": "architecture" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "formal-ontology", "size": 70, "score": 0 , "title": "formal-ontology", "type": "circle"},
+        {"id": "data-model", "size": 70, "score": 0 , "title": "data-model", "type": "circle"},
 
       
 
-        {"id": "computational-ontology", "size": 70, "score": 0 , "title": "computational-ontology", "type": "circle"},
+        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "information-scientists", "size": 70, "score": 0 , "title": "information-scientists", "type": "circle"},
+        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "computer", "size": 70, "score": 0 , "title": "computer", "type": "circle"},
+        {"id": "domain-specific-ontology", "size": 70, "score": 0 , "title": "domain-specific-ontology", "type": "circle"},
 
       
 
-        {"id": "dynamic-ontology", "size": 140, "score": 0.5 , "title": "dynamic-ontology", "type": "circle"},
-
-      
-
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
-
-      
-
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
-
-      
-
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
-
-      
-
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
-
-      
-
-        {"id": "multiple-legacy-systems", "size": 5, "score": 0.4 , "title": "multiple-legacy-systems", "type": "circle"},
-
-      
-
-        {"id": "legacy-systems", "size": 5, "score": 0.4 , "title": "legacy-systems", "type": "circle"},
-
-      
-
-        {"id": "ontology-development", "size": 5, "score": 0.4 , "title": "ontology-development", "type": "circle"},
-
-      
-
-        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
-
-      
-
-        {"id": "nodes", "size": 5, "score": 0.4 , "title": "nodes", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
-
-      
-
-        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
-
-      
-
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
-
-      
-
-        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
-
-      
-
-        {"id": "symbols", "size": 5, "score": 0.4 , "title": "symbols", "type": "circle"},
+        {"id": "ontology", "size": 140, "score": 0.5 , "title": "ontology", "type": "circle"},
 
        
 
@@ -994,7 +919,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1145,7 +1070,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

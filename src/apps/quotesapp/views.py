@@ -52,7 +52,7 @@ def about(request):
 
 
 
-def quotes_all(request):
+def tags_all(request,):
 	"""
 	TODO
 	"""
@@ -78,11 +78,14 @@ def quotes_all(request):
 		# create local graph
 		nodes, links = generate_graph_for_topic(tag, files_data)
 		files_data = [f for f in files_data if tag in f['tags']] #override
+		tot_quotes = len(files_data)
+		tot_sources = len(list(set([f['source'] for f in files_data])))
 	else:
 		# full word cloud
 		tags = count_tags(files_data)
 		print(f"\nTags total: {len(tags)}")
 		tags = sorted(tags.items()) # turn into a list
+		tot_quotes, tot_sources = 0, 0 # not needed in this case
 
 	context = {
 		'return_items': files_data,
@@ -93,6 +96,8 @@ def quotes_all(request):
 		'tags': tags,
 		'nodes': nodes,
 		'links': links,
+		'tot_quotes': tot_quotes,
+		'tot_sources': tot_sources,
 	}
 	
 	return render(request, APP + '/pages/' + templatee, context)

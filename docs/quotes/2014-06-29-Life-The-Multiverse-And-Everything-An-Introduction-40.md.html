@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -626,7 +607,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -688,13 +669,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -736,118 +717,122 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "structure", "target": "function" },
+          { "source": "system", "target": "different-information-systems" },
       
-          { "source": "structure", "target": "data-structure" },
+          { "source": "system", "target": "information-systems" },
       
-          { "source": "structure", "target": "process" },
+          { "source": "system", "target": "interoperability" },
       
-          { "source": "structure", "target": "drift" },
+          { "source": "system", "target": "capability" },
       
-          { "source": "structure", "target": "components" },
+          { "source": "system", "target": "semantic-interoperability" },
       
-          { "source": "function", "target": "structure" },
+          { "source": "different-information-systems", "target": "system" },
       
-          { "source": "function", "target": "data-structure" },
+          { "source": "different-information-systems", "target": "information-systems" },
       
-          { "source": "function", "target": "process" },
+          { "source": "different-information-systems", "target": "interoperability" },
       
-          { "source": "function", "target": "language" },
+          { "source": "different-information-systems", "target": "capability" },
       
-          { "source": "data-structure", "target": "function" },
+          { "source": "information-systems", "target": "ontology" },
       
-          { "source": "data-structure", "target": "structure" },
+          { "source": "information-systems", "target": "Semantic-Web" },
       
-          { "source": "data-structure", "target": "process" },
+          { "source": "information-systems", "target": "companies" },
       
-          { "source": "data-structure", "target": "resources" },
+          { "source": "information-systems", "target": "taxonomy" },
       
-          { "source": "process", "target": "experiments" },
+          { "source": "interoperability", "target": "data-citation" },
       
-          { "source": "process", "target": "constructs" },
+          { "source": "interoperability", "target": "metadata" },
       
-          { "source": "process", "target": "hypothesis" },
+          { "source": "interoperability", "target": "machine" },
       
-          { "source": "process", "target": "bridge" },
+          { "source": "interoperability", "target": "data-repository" },
       
-          { "source": "drift", "target": "structure" },
+          { "source": "capability", "target": "different-information-systems" },
       
-          { "source": "drift", "target": "components" },
+          { "source": "capability", "target": "system" },
       
-          { "source": "drift", "target": "direction" },
+          { "source": "capability", "target": "information-systems" },
       
-          { "source": "drift", "target": "engine" },
+          { "source": "capability", "target": "interoperability" },
       
-          { "source": "components", "target": "peer-review" },
+          { "source": "semantic-interoperability", "target": "legacy-systems" },
       
-          { "source": "components", "target": "hypothesis" },
+          { "source": "semantic-interoperability", "target": "ontology" },
       
-          { "source": "components", "target": "structure" },
+          { "source": "semantic-interoperability", "target": "multiple-legacy-systems" },
       
-          { "source": "components", "target": "drift" },
+          { "source": "semantic-interoperability", "target": "different-information-systems" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "function", "size": 70, "score": 0 , "title": "function", "type": "circle"},
+        {"id": "different-information-systems", "size": 70, "score": 0 , "title": "different-information-systems", "type": "circle"},
 
       
 
-        {"id": "data-structure", "size": 70, "score": 0 , "title": "data-structure", "type": "circle"},
+        {"id": "information-systems", "size": 70, "score": 0 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "process", "size": 70, "score": 0 , "title": "process", "type": "circle"},
+        {"id": "interoperability", "size": 70, "score": 0 , "title": "interoperability", "type": "circle"},
 
       
 
-        {"id": "drift", "size": 70, "score": 0 , "title": "drift", "type": "circle"},
+        {"id": "capability", "size": 70, "score": 0 , "title": "capability", "type": "circle"},
 
       
 
-        {"id": "components", "size": 70, "score": 0 , "title": "components", "type": "circle"},
+        {"id": "semantic-interoperability", "size": 70, "score": 0 , "title": "semantic-interoperability", "type": "circle"},
 
       
 
-        {"id": "structure", "size": 140, "score": 0.5 , "title": "structure", "type": "circle"},
+        {"id": "system", "size": 140, "score": 0.5 , "title": "system", "type": "circle"},
 
       
 
-        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "experiments", "size": 5, "score": 0.4 , "title": "experiments", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
 
       
 
-        {"id": "constructs", "size": 5, "score": 0.4 , "title": "constructs", "type": "circle"},
+        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "hypothesis", "size": 5, "score": 0.4 , "title": "hypothesis", "type": "circle"},
+        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "bridge", "size": 5, "score": 0.4 , "title": "bridge", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "direction", "size": 5, "score": 0.4 , "title": "direction", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "engine", "size": 5, "score": 0.4 , "title": "engine", "type": "circle"},
+        {"id": "data-repository", "size": 5, "score": 0.4 , "title": "data-repository", "type": "circle"},
 
       
 
-        {"id": "peer-review", "size": 5, "score": 0.4 , "title": "peer-review", "type": "circle"},
+        {"id": "legacy-systems", "size": 5, "score": 0.4 , "title": "legacy-systems", "type": "circle"},
+
+      
+
+        {"id": "multiple-legacy-systems", "size": 5, "score": 0.4 , "title": "multiple-legacy-systems", "type": "circle"},
 
        
 
@@ -984,7 +969,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1135,7 +1120,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

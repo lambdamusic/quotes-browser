@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,24 +712,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "employees", "target": "language" },
-      
-          { "source": "employees", "target": "mind" },
-      
-          { "source": "employees", "target": "people" },
-      
-          { "source": "employees", "target": "jobs" },
-      
-          { "source": "employees", "target": "vocabulary" },
-      
-          { "source": "language", "target": "words" },
-      
-          { "source": "language", "target": "Sapir-Whorf-hypothesis" },
-      
-          { "source": "language", "target": "idea" },
-      
-          { "source": "language", "target": "different-languages" },
-      
           { "source": "mind", "target": "human-experience" },
       
           { "source": "mind", "target": "transpersonal-consciousness" },
@@ -757,132 +720,106 @@ var data_local_dynamic = {
       
           { "source": "mind", "target": "philosophers" },
       
-          { "source": "people", "target": "stage" },
+          { "source": "mind", "target": "employees" },
       
-          { "source": "people", "target": "words" },
+          { "source": "human-experience", "target": "humanists" },
       
-          { "source": "people", "target": "God" },
+          { "source": "human-experience", "target": "mind" },
       
-          { "source": "people", "target": "knowledge" },
+          { "source": "human-experience", "target": "transpersonal-consciousness" },
       
-          { "source": "jobs", "target": "programmers" },
+          { "source": "human-experience", "target": "consciousness" },
       
-          { "source": "jobs", "target": "data-scientists" },
+          { "source": "transpersonal-consciousness", "target": "human-experience" },
       
-          { "source": "jobs", "target": "machine-learning" },
+          { "source": "transpersonal-consciousness", "target": "mind" },
       
-          { "source": "jobs", "target": "learning" },
+          { "source": "transpersonal-consciousness", "target": "consciousness" },
       
-          { "source": "vocabulary", "target": "authority-files" },
+          { "source": "transpersonal-consciousness", "target": "world" },
       
-          { "source": "vocabulary", "target": "indexing" },
+          { "source": "consciousness", "target": "philosophers" },
       
-          { "source": "vocabulary", "target": "thesaurus" },
+          { "source": "consciousness", "target": "intuition" },
       
-          { "source": "vocabulary", "target": "files" },
+          { "source": "consciousness", "target": "people" },
+      
+          { "source": "consciousness", "target": "subjective-experience" },
+      
+          { "source": "philosophers", "target": "intuition" },
+      
+          { "source": "philosophers", "target": "consciousness" },
+      
+          { "source": "philosophers", "target": "people" },
+      
+          { "source": "philosophers", "target": "philosophical-problems" },
+      
+          { "source": "employees", "target": "language" },
+      
+          { "source": "employees", "target": "mind" },
+      
+          { "source": "employees", "target": "people" },
+      
+          { "source": "employees", "target": "jobs" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "language", "size": 70, "score": 0 , "title": "language", "type": "circle"},
+        {"id": "human-experience", "size": 70, "score": 0 , "title": "human-experience", "type": "circle"},
 
       
 
-        {"id": "mind", "size": 70, "score": 0 , "title": "mind", "type": "circle"},
+        {"id": "transpersonal-consciousness", "size": 70, "score": 0 , "title": "transpersonal-consciousness", "type": "circle"},
 
       
 
-        {"id": "people", "size": 70, "score": 0 , "title": "people", "type": "circle"},
+        {"id": "consciousness", "size": 70, "score": 0 , "title": "consciousness", "type": "circle"},
 
       
 
-        {"id": "jobs", "size": 70, "score": 0 , "title": "jobs", "type": "circle"},
+        {"id": "philosophers", "size": 70, "score": 0 , "title": "philosophers", "type": "circle"},
 
       
 
-        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
+        {"id": "employees", "size": 70, "score": 0 , "title": "employees", "type": "circle"},
 
       
 
-        {"id": "employees", "size": 140, "score": 0.5 , "title": "employees", "type": "circle"},
+        {"id": "mind", "size": 140, "score": 0.5 , "title": "mind", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "humanists", "size": 5, "score": 0.4 , "title": "humanists", "type": "circle"},
 
       
 
-        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
+        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
 
       
 
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+        {"id": "intuition", "size": 5, "score": 0.4 , "title": "intuition", "type": "circle"},
 
       
 
-        {"id": "different-languages", "size": 5, "score": 0.4 , "title": "different-languages", "type": "circle"},
+        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
 
       
 
-        {"id": "human-experience", "size": 5, "score": 0.4 , "title": "human-experience", "type": "circle"},
+        {"id": "subjective-experience", "size": 5, "score": 0.4 , "title": "subjective-experience", "type": "circle"},
 
       
 
-        {"id": "transpersonal-consciousness", "size": 5, "score": 0.4 , "title": "transpersonal-consciousness", "type": "circle"},
+        {"id": "philosophical-problems", "size": 5, "score": 0.4 , "title": "philosophical-problems", "type": "circle"},
 
       
 
-        {"id": "consciousness", "size": 5, "score": 0.4 , "title": "consciousness", "type": "circle"},
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
-
-      
-
-        {"id": "stage", "size": 5, "score": 0.4 , "title": "stage", "type": "circle"},
-
-      
-
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
-
-      
-
-        {"id": "knowledge", "size": 5, "score": 0.4 , "title": "knowledge", "type": "circle"},
-
-      
-
-        {"id": "programmers", "size": 5, "score": 0.4 , "title": "programmers", "type": "circle"},
-
-      
-
-        {"id": "data-scientists", "size": 5, "score": 0.4 , "title": "data-scientists", "type": "circle"},
-
-      
-
-        {"id": "machine-learning", "size": 5, "score": 0.4 , "title": "machine-learning", "type": "circle"},
-
-      
-
-        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
-
-      
-
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
-
-      
-
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "jobs", "size": 5, "score": 0.4 , "title": "jobs", "type": "circle"},
 
        
 
@@ -1019,7 +956,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1170,7 +1107,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

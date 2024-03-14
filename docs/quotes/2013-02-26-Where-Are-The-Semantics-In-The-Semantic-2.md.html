@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ In order to carry out their required tasks, intelligent agents must communicate 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ In order to carry out their required tasks, intelligent agents must communicate 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,110 +712,130 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "task", "target": "comprehension" },
+          { "source": "capability", "target": "different-information-systems" },
       
-          { "source": "task", "target": "judgments" },
+          { "source": "capability", "target": "system" },
       
-          { "source": "task", "target": "skills" },
+          { "source": "capability", "target": "information-systems" },
       
-          { "source": "task", "target": "learning" },
+          { "source": "capability", "target": "interoperability" },
       
-          { "source": "task", "target": "performance" },
+          { "source": "capability", "target": "information-resources" },
       
-          { "source": "comprehension", "target": "task" },
+          { "source": "different-information-systems", "target": "system" },
       
-          { "source": "comprehension", "target": "judgments" },
+          { "source": "different-information-systems", "target": "information-systems" },
       
-          { "source": "comprehension", "target": "skills" },
+          { "source": "different-information-systems", "target": "interoperability" },
       
-          { "source": "comprehension", "target": "learning" },
+          { "source": "different-information-systems", "target": "capability" },
       
-          { "source": "judgments", "target": "task" },
+          { "source": "system", "target": "different-information-systems" },
       
-          { "source": "judgments", "target": "comprehension" },
+          { "source": "system", "target": "information-systems" },
       
-          { "source": "judgments", "target": "skills" },
+          { "source": "system", "target": "interoperability" },
       
-          { "source": "judgments", "target": "learning" },
+          { "source": "system", "target": "capability" },
       
-          { "source": "skills", "target": "task" },
+          { "source": "information-systems", "target": "ontology" },
       
-          { "source": "skills", "target": "comprehension" },
+          { "source": "information-systems", "target": "Semantic-Web" },
       
-          { "source": "skills", "target": "judgments" },
+          { "source": "information-systems", "target": "companies" },
       
-          { "source": "skills", "target": "learning" },
+          { "source": "information-systems", "target": "taxonomy" },
       
-          { "source": "learning", "target": "students" },
+          { "source": "interoperability", "target": "data-citation" },
       
-          { "source": "learning", "target": "instruction" },
+          { "source": "interoperability", "target": "metadata" },
       
-          { "source": "learning", "target": "questions" },
+          { "source": "interoperability", "target": "machine" },
       
-          { "source": "learning", "target": "programmers" },
+          { "source": "interoperability", "target": "data-repository" },
       
-          { "source": "performance", "target": "task" },
+          { "source": "information-resources", "target": "URI" },
       
-          { "source": "performance", "target": "factors" },
+          { "source": "information-resources", "target": "server" },
       
-          { "source": "performance", "target": "results" },
+          { "source": "information-resources", "target": "clients" },
       
-          { "source": "performance", "target": "ability" },
+          { "source": "information-resources", "target": "resources" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "comprehension", "size": 70, "score": 0 , "title": "comprehension", "type": "circle"},
+        {"id": "different-information-systems", "size": 70, "score": 0 , "title": "different-information-systems", "type": "circle"},
 
       
 
-        {"id": "judgments", "size": 70, "score": 0 , "title": "judgments", "type": "circle"},
+        {"id": "system", "size": 70, "score": 0 , "title": "system", "type": "circle"},
 
       
 
-        {"id": "skills", "size": 70, "score": 0 , "title": "skills", "type": "circle"},
+        {"id": "information-systems", "size": 70, "score": 0 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "learning", "size": 70, "score": 0 , "title": "learning", "type": "circle"},
+        {"id": "interoperability", "size": 70, "score": 0 , "title": "interoperability", "type": "circle"},
 
       
 
-        {"id": "performance", "size": 70, "score": 0 , "title": "performance", "type": "circle"},
+        {"id": "information-resources", "size": 70, "score": 0 , "title": "information-resources", "type": "circle"},
 
       
 
-        {"id": "task", "size": 140, "score": 0.5 , "title": "task", "type": "circle"},
+        {"id": "capability", "size": 140, "score": 0.5 , "title": "capability", "type": "circle"},
 
       
 
-        {"id": "students", "size": 5, "score": 0.4 , "title": "students", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "instruction", "size": 5, "score": 0.4 , "title": "instruction", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
 
       
 
-        {"id": "programmers", "size": 5, "score": 0.4 , "title": "programmers", "type": "circle"},
+        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "factors", "size": 5, "score": 0.4 , "title": "factors", "type": "circle"},
+        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "results", "size": 5, "score": 0.4 , "title": "results", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "ability", "size": 5, "score": 0.4 , "title": "ability", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
+
+      
+
+        {"id": "data-repository", "size": 5, "score": 0.4 , "title": "data-repository", "type": "circle"},
+
+      
+
+        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+
+      
+
+        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
+
+      
+
+        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
 
        
 
@@ -971,7 +972,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1122,7 +1123,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

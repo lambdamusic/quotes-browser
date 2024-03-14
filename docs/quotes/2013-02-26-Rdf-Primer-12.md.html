@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -623,7 +604,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -685,13 +666,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -733,122 +714,134 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "people", "target": "stage" },
+          { "source": "subjects", "target": "evidence" },
       
-          { "source": "people", "target": "words" },
+          { "source": "subjects", "target": "cause" },
       
-          { "source": "people", "target": "God" },
+          { "source": "subjects", "target": "pain" },
       
-          { "source": "people", "target": "knowledge" },
+          { "source": "subjects", "target": "sensation" },
       
-          { "source": "people", "target": "being" },
+          { "source": "subjects", "target": "feelings" },
       
-          { "source": "stage", "target": "people" },
+          { "source": "evidence", "target": "citations" },
       
-          { "source": "stage", "target": "extent" },
+          { "source": "evidence", "target": "attributes" },
       
-          { "source": "stage", "target": "feelings" },
+          { "source": "evidence", "target": "impact" },
       
-          { "source": "stage", "target": "development" },
+          { "source": "evidence", "target": "cause" },
       
-          { "source": "words", "target": "language" },
+          { "source": "cause", "target": "evidence" },
       
-          { "source": "words", "target": "Sapir-Whorf-hypothesis" },
+          { "source": "cause", "target": "subjects" },
       
-          { "source": "words", "target": "readers" },
+          { "source": "cause", "target": "cats" },
       
-          { "source": "words", "target": "algorithm" },
+          { "source": "cause", "target": "head" },
       
-          { "source": "God", "target": "believers" },
+          { "source": "pain", "target": "eyes" },
       
-          { "source": "God", "target": "sin" },
+          { "source": "pain", "target": "babies" },
       
-          { "source": "God", "target": "Christians" },
+          { "source": "pain", "target": "drugs" },
       
-          { "source": "God", "target": "words" },
+          { "source": "pain", "target": "control" },
       
-          { "source": "knowledge", "target": "words" },
+          { "source": "sensation", "target": "pain" },
       
-          { "source": "knowledge", "target": "people" },
+          { "source": "sensation", "target": "subjects" },
       
-          { "source": "knowledge", "target": "God" },
+          { "source": "sensation", "target": "feelings" },
       
-          { "source": "knowledge", "target": "being" },
+          { "source": "sensation", "target": "beliefs" },
       
-          { "source": "being", "target": "words" },
+          { "source": "feelings", "target": "emotions" },
       
-          { "source": "being", "target": "people" },
+          { "source": "feelings", "target": "memory" },
       
-          { "source": "being", "target": "God" },
+          { "source": "feelings", "target": "words" },
       
-          { "source": "being", "target": "knowledge" },
+          { "source": "feelings", "target": "pain" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "stage", "size": 70, "score": 0 , "title": "stage", "type": "circle"},
+        {"id": "evidence", "size": 70, "score": 0 , "title": "evidence", "type": "circle"},
 
       
 
-        {"id": "words", "size": 70, "score": 0 , "title": "words", "type": "circle"},
+        {"id": "cause", "size": 70, "score": 0 , "title": "cause", "type": "circle"},
 
       
 
-        {"id": "God", "size": 70, "score": 0 , "title": "God", "type": "circle"},
+        {"id": "pain", "size": 70, "score": 0 , "title": "pain", "type": "circle"},
 
       
 
-        {"id": "knowledge", "size": 70, "score": 0 , "title": "knowledge", "type": "circle"},
+        {"id": "sensation", "size": 70, "score": 0 , "title": "sensation", "type": "circle"},
 
       
 
-        {"id": "being", "size": 70, "score": 0 , "title": "being", "type": "circle"},
+        {"id": "feelings", "size": 70, "score": 0 , "title": "feelings", "type": "circle"},
 
       
 
-        {"id": "people", "size": 140, "score": 0.5 , "title": "people", "type": "circle"},
+        {"id": "subjects", "size": 140, "score": 0.5 , "title": "subjects", "type": "circle"},
 
       
 
-        {"id": "extent", "size": 5, "score": 0.4 , "title": "extent", "type": "circle"},
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "feelings", "size": 5, "score": 0.4 , "title": "feelings", "type": "circle"},
+        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
 
       
 
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
+        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
+        {"id": "cats", "size": 5, "score": 0.4 , "title": "cats", "type": "circle"},
 
       
 
-        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
+        {"id": "head", "size": 5, "score": 0.4 , "title": "head", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "eyes", "size": 5, "score": 0.4 , "title": "eyes", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+        {"id": "babies", "size": 5, "score": 0.4 , "title": "babies", "type": "circle"},
 
       
 
-        {"id": "believers", "size": 5, "score": 0.4 , "title": "believers", "type": "circle"},
+        {"id": "drugs", "size": 5, "score": 0.4 , "title": "drugs", "type": "circle"},
 
       
 
-        {"id": "sin", "size": 5, "score": 0.4 , "title": "sin", "type": "circle"},
+        {"id": "control", "size": 5, "score": 0.4 , "title": "control", "type": "circle"},
 
       
 
-        {"id": "Christians", "size": 5, "score": 0.4 , "title": "Christians", "type": "circle"},
+        {"id": "beliefs", "size": 5, "score": 0.4 , "title": "beliefs", "type": "circle"},
+
+      
+
+        {"id": "emotions", "size": 5, "score": 0.4 , "title": "emotions", "type": "circle"},
+
+      
+
+        {"id": "memory", "size": 5, "score": 0.4 , "title": "memory", "type": "circle"},
+
+      
+
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
        
 
@@ -985,7 +978,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1136,7 +1129,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

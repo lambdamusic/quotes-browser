@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -617,7 +598,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -679,13 +660,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -727,6 +708,40 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "opportunities", "target": "expectations" },
+      
+          { "source": "opportunities", "target": "practice" },
+      
+          { "source": "opportunities", "target": "implications" },
+      
+          { "source": "opportunities", "target": "friends" },
+      
+          { "source": "opportunities", "target": "family" },
+      
+          { "source": "expectations", "target": "DOI" },
+      
+          { "source": "expectations", "target": "citations" },
+      
+          { "source": "expectations", "target": "authors" },
+      
+          { "source": "expectations", "target": "levels" },
+      
+          { "source": "practice", "target": "expectations" },
+      
+          { "source": "practice", "target": "opportunities" },
+      
+          { "source": "practice", "target": "implications" },
+      
+          { "source": "practice", "target": "issues" },
+      
+          { "source": "implications", "target": "types" },
+      
+          { "source": "implications", "target": "categories" },
+      
+          { "source": "implications", "target": "levels" },
+      
+          { "source": "implications", "target": "combination" },
+      
           { "source": "friends", "target": "pride" },
       
           { "source": "friends", "target": "traits" },
@@ -735,90 +750,62 @@ var data_local_dynamic = {
       
           { "source": "friends", "target": "business" },
       
-          { "source": "friends", "target": "Africa" },
+          { "source": "family", "target": "friends" },
       
-          { "source": "pride", "target": "traits" },
+          { "source": "family", "target": "opportunities" },
       
-          { "source": "pride", "target": "friends" },
-      
-          { "source": "pride", "target": "ego" },
-      
-          { "source": "pride", "target": "game" },
-      
-          { "source": "traits", "target": "taxa" },
-      
-          { "source": "traits", "target": "class" },
-      
-          { "source": "traits", "target": "categories" },
-      
-          { "source": "traits", "target": "items" },
-      
-          { "source": "New-York", "target": "Americans" },
-      
-          { "source": "New-York", "target": "Union" },
-      
-          { "source": "New-York", "target": "Spain" },
-      
-          { "source": "New-York", "target": "countries" },
-      
-          { "source": "business", "target": "product-owners" },
-      
-          { "source": "business", "target": "owners" },
-      
-          { "source": "business", "target": "project" },
-      
-          { "source": "business", "target": "product-backlog" },
-      
-          { "source": "Africa", "target": "New-York" },
-      
-          { "source": "Africa", "target": "business" },
-      
-          { "source": "Africa", "target": "friends" },
-      
-          { "source": "Africa", "target": "Asia" },
+          { "source": "family", "target": "society" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "pride", "size": 70, "score": 0 , "title": "pride", "type": "circle"},
+        {"id": "expectations", "size": 70, "score": 0 , "title": "expectations", "type": "circle"},
 
       
 
-        {"id": "traits", "size": 70, "score": 0 , "title": "traits", "type": "circle"},
+        {"id": "practice", "size": 70, "score": 0 , "title": "practice", "type": "circle"},
 
       
 
-        {"id": "New-York", "size": 70, "score": 0 , "title": "New-York", "type": "circle"},
+        {"id": "implications", "size": 70, "score": 0 , "title": "implications", "type": "circle"},
 
       
 
-        {"id": "business", "size": 70, "score": 0 , "title": "business", "type": "circle"},
+        {"id": "friends", "size": 70, "score": 0 , "title": "friends", "type": "circle"},
 
       
 
-        {"id": "Africa", "size": 70, "score": 0 , "title": "Africa", "type": "circle"},
+        {"id": "family", "size": 70, "score": 0 , "title": "family", "type": "circle"},
 
       
 
-        {"id": "friends", "size": 140, "score": 0.5 , "title": "friends", "type": "circle"},
+        {"id": "opportunities", "size": 140, "score": 0.5 , "title": "opportunities", "type": "circle"},
 
       
 
-        {"id": "ego", "size": 5, "score": 0.4 , "title": "ego", "type": "circle"},
+        {"id": "DOI", "size": 5, "score": 0.4 , "title": "DOI", "type": "circle"},
 
       
 
-        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "taxa", "size": 5, "score": 0.4 , "title": "taxa", "type": "circle"},
+        {"id": "authors", "size": 5, "score": 0.4 , "title": "authors", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "levels", "size": 5, "score": 0.4 , "title": "levels", "type": "circle"},
+
+      
+
+        {"id": "issues", "size": 5, "score": 0.4 , "title": "issues", "type": "circle"},
+
+      
+
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
 
       
 
@@ -826,43 +813,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "items", "size": 5, "score": 0.4 , "title": "items", "type": "circle"},
+        {"id": "combination", "size": 5, "score": 0.4 , "title": "combination", "type": "circle"},
 
       
 
-        {"id": "Americans", "size": 5, "score": 0.4 , "title": "Americans", "type": "circle"},
+        {"id": "pride", "size": 5, "score": 0.4 , "title": "pride", "type": "circle"},
 
       
 
-        {"id": "Union", "size": 5, "score": 0.4 , "title": "Union", "type": "circle"},
+        {"id": "traits", "size": 5, "score": 0.4 , "title": "traits", "type": "circle"},
 
       
 
-        {"id": "Spain", "size": 5, "score": 0.4 , "title": "Spain", "type": "circle"},
+        {"id": "New-York", "size": 5, "score": 0.4 , "title": "New-York", "type": "circle"},
 
       
 
-        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
 
       
 
-        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
-
-      
-
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
-
-      
-
-        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
-
-      
-
-        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
-
-      
-
-        {"id": "Asia", "size": 5, "score": 0.4 , "title": "Asia", "type": "circle"},
+        {"id": "society", "size": 5, "score": 0.4 , "title": "society", "type": "circle"},
 
        
 
@@ -999,7 +970,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1150,7 +1121,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

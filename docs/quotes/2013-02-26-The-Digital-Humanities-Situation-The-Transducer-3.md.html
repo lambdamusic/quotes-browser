@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,118 +712,90 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "whole", "target": "self" },
+          { "source": "one", "target": "outcomes" },
       
-          { "source": "whole", "target": "work" },
+          { "source": "one", "target": "people" },
       
-          { "source": "whole", "target": "being" },
+          { "source": "one", "target": "countries" },
       
-          { "source": "whole", "target": "sense" },
+          { "source": "one", "target": "euro" },
       
-          { "source": "whole", "target": "fact" },
+          { "source": "one", "target": "office" },
       
-          { "source": "self", "target": "article" },
+          { "source": "outcomes", "target": "people" },
       
-          { "source": "self", "target": "journals" },
+          { "source": "outcomes", "target": "countries" },
       
-          { "source": "self", "target": "story" },
+          { "source": "outcomes", "target": "euro" },
       
-          { "source": "self", "target": "words" },
+          { "source": "outcomes", "target": "one" },
       
-          { "source": "work", "target": "citations" },
+          { "source": "people", "target": "stage" },
       
-          { "source": "work", "target": "tradition" },
+          { "source": "people", "target": "words" },
       
-          { "source": "work", "target": "number" },
+          { "source": "people", "target": "God" },
       
-          { "source": "work", "target": "data" },
+          { "source": "people", "target": "knowledge" },
       
-          { "source": "being", "target": "words" },
+          { "source": "countries", "target": "Americans" },
       
-          { "source": "being", "target": "people" },
+          { "source": "countries", "target": "Union" },
       
-          { "source": "being", "target": "God" },
+          { "source": "countries", "target": "Spain" },
       
-          { "source": "being", "target": "knowledge" },
+          { "source": "countries", "target": "New-York" },
       
-          { "source": "sense", "target": "religion" },
+          { "source": "euro", "target": "outcomes" },
       
-          { "source": "sense", "target": "mind" },
+          { "source": "euro", "target": "people" },
       
-          { "source": "sense", "target": "information" },
+          { "source": "euro", "target": "countries" },
       
-          { "source": "sense", "target": "patterns" },
+          { "source": "euro", "target": "one" },
       
-          { "source": "fact", "target": "ontology" },
+          { "source": "office", "target": "one" },
       
-          { "source": "fact", "target": "ethics" },
+          { "source": "office", "target": "bottom" },
       
-          { "source": "fact", "target": "philosophy" },
+          { "source": "office", "target": "responsibility" },
       
-          { "source": "fact", "target": "schema" },
+          { "source": "office", "target": "values" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "self", "size": 70, "score": 0 , "title": "self", "type": "circle"},
+        {"id": "outcomes", "size": 70, "score": 0 , "title": "outcomes", "type": "circle"},
 
       
 
-        {"id": "work", "size": 70, "score": 0 , "title": "work", "type": "circle"},
+        {"id": "people", "size": 70, "score": 0 , "title": "people", "type": "circle"},
 
       
 
-        {"id": "being", "size": 70, "score": 0 , "title": "being", "type": "circle"},
+        {"id": "countries", "size": 70, "score": 0 , "title": "countries", "type": "circle"},
 
       
 
-        {"id": "sense", "size": 70, "score": 0 , "title": "sense", "type": "circle"},
+        {"id": "euro", "size": 70, "score": 0 , "title": "euro", "type": "circle"},
 
       
 
-        {"id": "fact", "size": 70, "score": 0 , "title": "fact", "type": "circle"},
+        {"id": "office", "size": 70, "score": 0 , "title": "office", "type": "circle"},
 
       
 
-        {"id": "whole", "size": 140, "score": 0.5 , "title": "whole", "type": "circle"},
+        {"id": "one", "size": 140, "score": 0.5 , "title": "one", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
-
-      
-
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
-
-      
-
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
+        {"id": "stage", "size": 5, "score": 0.4 , "title": "stage", "type": "circle"},
 
       
 
         {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
-
-      
-
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
-
-      
-
-        {"id": "tradition", "size": 5, "score": 0.4 , "title": "tradition", "type": "circle"},
-
-      
-
-        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
-
-      
-
-        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
-
-      
-
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
 
       
 
@@ -854,35 +807,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "religion", "size": 5, "score": 0.4 , "title": "religion", "type": "circle"},
+        {"id": "Americans", "size": 5, "score": 0.4 , "title": "Americans", "type": "circle"},
 
       
 
-        {"id": "mind", "size": 5, "score": 0.4 , "title": "mind", "type": "circle"},
+        {"id": "Union", "size": 5, "score": 0.4 , "title": "Union", "type": "circle"},
 
       
 
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+        {"id": "Spain", "size": 5, "score": 0.4 , "title": "Spain", "type": "circle"},
 
       
 
-        {"id": "patterns", "size": 5, "score": 0.4 , "title": "patterns", "type": "circle"},
+        {"id": "New-York", "size": 5, "score": 0.4 , "title": "New-York", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "bottom", "size": 5, "score": 0.4 , "title": "bottom", "type": "circle"},
 
       
 
-        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
+        {"id": "responsibility", "size": 5, "score": 0.4 , "title": "responsibility", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
-
-      
-
-        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
+        {"id": "values", "size": 5, "score": 0.4 , "title": "values", "type": "circle"},
 
        
 
@@ -1019,7 +968,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1170,7 +1119,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

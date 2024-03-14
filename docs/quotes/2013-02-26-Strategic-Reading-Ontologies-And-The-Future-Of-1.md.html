@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -620,7 +601,7 @@ Scientists have always strived to avoid unnecessary reading.Like all researchers
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -682,13 +663,13 @@ Scientists have always strived to avoid unnecessary reading.Like all researchers
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -730,40 +711,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "social-networks", "target": "Floridi" },
-      
-          { "source": "social-networks", "target": "Internet" },
-      
-          { "source": "social-networks", "target": "computer" },
-      
-          { "source": "social-networks", "target": "indexing" },
-      
-          { "source": "social-networks", "target": "information" },
-      
-          { "source": "Floridi", "target": "social-networks" },
-      
-          { "source": "Floridi", "target": "Internet" },
-      
-          { "source": "Floridi", "target": "computer" },
-      
-          { "source": "Floridi", "target": "information" },
-      
-          { "source": "Internet", "target": "book" },
-      
-          { "source": "Internet", "target": "ideology" },
-      
-          { "source": "Internet", "target": "Uniform-Resource-Identifiers" },
-      
-          { "source": "Internet", "target": "Resource-Identifiers" },
-      
-          { "source": "computer", "target": "information" },
-      
-          { "source": "computer", "target": "data" },
-      
-          { "source": "computer", "target": "symbols" },
-      
-          { "source": "computer", "target": "concept" },
-      
           { "source": "indexing", "target": "authority-files" },
       
           { "source": "indexing", "target": "thesaurus" },
@@ -772,100 +719,90 @@ var data_local_dynamic = {
       
           { "source": "indexing", "target": "files" },
       
-          { "source": "information", "target": "nanopublications" },
+          { "source": "indexing", "target": "taxonomy" },
       
-          { "source": "information", "target": "metadata" },
+          { "source": "authority-files", "target": "indexing" },
       
-          { "source": "information", "target": "contextual-information" },
+          { "source": "authority-files", "target": "thesaurus" },
       
-          { "source": "information", "target": "collection-objects" },
+          { "source": "authority-files", "target": "vocabulary" },
+      
+          { "source": "authority-files", "target": "files" },
+      
+          { "source": "thesaurus", "target": "authority-files" },
+      
+          { "source": "thesaurus", "target": "indexing" },
+      
+          { "source": "thesaurus", "target": "vocabulary" },
+      
+          { "source": "thesaurus", "target": "files" },
+      
+          { "source": "vocabulary", "target": "authority-files" },
+      
+          { "source": "vocabulary", "target": "indexing" },
+      
+          { "source": "vocabulary", "target": "thesaurus" },
+      
+          { "source": "vocabulary", "target": "files" },
+      
+          { "source": "files", "target": "authority-files" },
+      
+          { "source": "files", "target": "indexing" },
+      
+          { "source": "files", "target": "thesaurus" },
+      
+          { "source": "files", "target": "vocabulary" },
+      
+          { "source": "taxonomy", "target": "ontology" },
+      
+          { "source": "taxonomy", "target": "Semantic-Web" },
+      
+          { "source": "taxonomy", "target": "information-systems" },
+      
+          { "source": "taxonomy", "target": "companies" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "Floridi", "size": 70, "score": 0 , "title": "Floridi", "type": "circle"},
+        {"id": "authority-files", "size": 70, "score": 0 , "title": "authority-files", "type": "circle"},
 
       
 
-        {"id": "Internet", "size": 70, "score": 0 , "title": "Internet", "type": "circle"},
+        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "computer", "size": 70, "score": 0 , "title": "computer", "type": "circle"},
+        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "indexing", "size": 70, "score": 0 , "title": "indexing", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
+        {"id": "taxonomy", "size": 70, "score": 0 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "social-networks", "size": 140, "score": 0.5 , "title": "social-networks", "type": "circle"},
+        {"id": "indexing", "size": 140, "score": 0.5 , "title": "indexing", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "ideology", "size": 5, "score": 0.4 , "title": "ideology", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "Uniform-Resource-Identifiers", "size": 5, "score": 0.4 , "title": "Uniform-Resource-Identifiers", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "Resource-Identifiers", "size": 5, "score": 0.4 , "title": "Resource-Identifiers", "type": "circle"},
-
-      
-
-        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
-
-      
-
-        {"id": "symbols", "size": 5, "score": 0.4 , "title": "symbols", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
-
-      
-
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
-
-      
-
-        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
-
-      
-
-        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
-
-      
-
-        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
 
        
 
@@ -1002,7 +939,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1153,7 +1090,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -623,7 +604,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -685,13 +666,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -733,126 +714,142 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "dataset", "target": "database" },
+          { "source": "definition", "target": "form" },
       
-          { "source": "dataset", "target": "complexity" },
+          { "source": "definition", "target": "relation" },
       
-          { "source": "dataset", "target": "LOD-cloud" },
+          { "source": "definition", "target": "computer-science" },
       
-          { "source": "dataset", "target": "ontology" },
+          { "source": "definition", "target": "cultural-heritage" },
       
-          { "source": "dataset", "target": "cloud" },
+          { "source": "definition", "target": "project" },
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "form", "target": "relation" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "form", "target": "definition" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "form", "target": "activity" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "form", "target": "work" },
       
-          { "source": "complexity", "target": "dataset" },
+          { "source": "relation", "target": "world" },
       
-          { "source": "complexity", "target": "network" },
+          { "source": "relation", "target": "real-world" },
       
-          { "source": "complexity", "target": "science" },
+          { "source": "relation", "target": "relationship" },
       
-          { "source": "complexity", "target": "emergence" },
+          { "source": "relation", "target": "properties" },
       
-          { "source": "LOD-cloud", "target": "ontology" },
+          { "source": "computer-science", "target": "machine" },
       
-          { "source": "LOD-cloud", "target": "dataset" },
+          { "source": "computer-science", "target": "computer-program" },
       
-          { "source": "LOD-cloud", "target": "cloud" },
+          { "source": "computer-science", "target": "natural-language-processing" },
       
-          { "source": "LOD-cloud", "target": "domain-specific-ontology" },
+          { "source": "computer-science", "target": "Simple-Event-Model" },
       
-          { "source": "ontology", "target": "use-cases" },
+          { "source": "cultural-heritage", "target": "computer-science" },
       
-          { "source": "ontology", "target": "data-model" },
+          { "source": "cultural-heritage", "target": "definition" },
       
-          { "source": "ontology", "target": "architecture" },
+          { "source": "cultural-heritage", "target": "project" },
       
-          { "source": "ontology", "target": "requirements" },
+          { "source": "cultural-heritage", "target": "heritage" },
       
-          { "source": "cloud", "target": "LOD-cloud" },
+          { "source": "project", "target": "product-owners" },
       
-          { "source": "cloud", "target": "ontology" },
+          { "source": "project", "target": "owners" },
       
-          { "source": "cloud", "target": "dataset" },
+          { "source": "project", "target": "business" },
       
-          { "source": "cloud", "target": "domain-specific-ontology" },
+          { "source": "project", "target": "product-backlog" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
+        {"id": "form", "size": 70, "score": 0 , "title": "form", "type": "circle"},
 
       
 
-        {"id": "complexity", "size": 70, "score": 0 , "title": "complexity", "type": "circle"},
+        {"id": "relation", "size": 70, "score": 0 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "LOD-cloud", "size": 70, "score": 0 , "title": "LOD-cloud", "type": "circle"},
+        {"id": "computer-science", "size": 70, "score": 0 , "title": "computer-science", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "cultural-heritage", "size": 70, "score": 0 , "title": "cultural-heritage", "type": "circle"},
 
       
 
-        {"id": "cloud", "size": 70, "score": 0 , "title": "cloud", "type": "circle"},
+        {"id": "project", "size": 70, "score": 0 , "title": "project", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 140, "score": 0.5 , "title": "dataset", "type": "circle"},
+        {"id": "definition", "size": 140, "score": 0.5 , "title": "definition", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "activity", "size": 5, "score": 0.4 , "title": "activity", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "work", "size": 5, "score": 0.4 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
 
       
 
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
 
       
 
-        {"id": "emergence", "size": 5, "score": 0.4 , "title": "emergence", "type": "circle"},
+        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
 
       
 
-        {"id": "domain-specific-ontology", "size": 5, "score": 0.4 , "title": "domain-specific-ontology", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
+        {"id": "computer-program", "size": 5, "score": 0.4 , "title": "computer-program", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
+        {"id": "natural-language-processing", "size": 5, "score": 0.4 , "title": "natural-language-processing", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+        {"id": "Simple-Event-Model", "size": 5, "score": 0.4 , "title": "Simple-Event-Model", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
+        {"id": "heritage", "size": 5, "score": 0.4 , "title": "heritage", "type": "circle"},
+
+      
+
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+
+      
+
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
+
+      
+
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+
+      
+
+        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
 
        
 
@@ -989,7 +986,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1140,7 +1137,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

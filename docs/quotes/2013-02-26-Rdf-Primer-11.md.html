@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -622,7 +603,7 @@ Also, using URIrefs to identify properties enables the properties to be treated 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -684,13 +665,13 @@ Also, using URIrefs to identify properties enables the properties to be treated 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -732,110 +713,158 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "number", "target": "impact" },
+          { "source": "strings", "target": "graph" },
       
-          { "source": "number", "target": "manuscript" },
+          { "source": "strings", "target": "triples" },
       
-          { "source": "number", "target": "interaction" },
+          { "source": "strings", "target": "representation" },
       
-          { "source": "number", "target": "content" },
+          { "source": "strings", "target": "statements" },
       
-          { "source": "number", "target": "data" },
+          { "source": "strings", "target": "properties" },
       
-          { "source": "impact", "target": "use" },
+          { "source": "graph", "target": "knowledge-graph" },
       
-          { "source": "impact", "target": "assumption" },
+          { "source": "graph", "target": "data-analytics" },
       
-          { "source": "impact", "target": "citations" },
+          { "source": "graph", "target": "analytics" },
       
-          { "source": "impact", "target": "attributes" },
+          { "source": "graph", "target": "semantics" },
       
-          { "source": "manuscript", "target": "impact" },
+          { "source": "triples", "target": "nanopublications" },
       
-          { "source": "manuscript", "target": "number" },
+          { "source": "triples", "target": "graph" },
       
-          { "source": "manuscript", "target": "interaction" },
+          { "source": "triples", "target": "language" },
       
-          { "source": "manuscript", "target": "content" },
+          { "source": "triples", "target": "documents" },
       
-          { "source": "interaction", "target": "impact" },
+          { "source": "representation", "target": "concept" },
       
-          { "source": "interaction", "target": "number" },
+          { "source": "representation", "target": "meaning" },
       
-          { "source": "interaction", "target": "manuscript" },
+          { "source": "representation", "target": "knowledge-representation" },
       
-          { "source": "interaction", "target": "content" },
+          { "source": "representation", "target": "terms" },
       
-          { "source": "content", "target": "impact" },
+          { "source": "statements", "target": "questions" },
       
-          { "source": "content", "target": "number" },
+          { "source": "statements", "target": "validity" },
       
-          { "source": "content", "target": "manuscript" },
+          { "source": "statements", "target": "reference" },
       
-          { "source": "content", "target": "interaction" },
+          { "source": "statements", "target": "observer" },
       
-          { "source": "data", "target": "information" },
+          { "source": "properties", "target": "network" },
       
-          { "source": "data", "target": "information-systems" },
+          { "source": "properties", "target": "instances" },
       
-          { "source": "data", "target": "communication" },
+          { "source": "properties", "target": "range" },
       
-          { "source": "data", "target": "number" },
+          { "source": "properties", "target": "class" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "impact", "size": 70, "score": 0 , "title": "impact", "type": "circle"},
+        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "manuscript", "size": 70, "score": 0 , "title": "manuscript", "type": "circle"},
+        {"id": "triples", "size": 70, "score": 0 , "title": "triples", "type": "circle"},
 
       
 
-        {"id": "interaction", "size": 70, "score": 0 , "title": "interaction", "type": "circle"},
+        {"id": "representation", "size": 70, "score": 0 , "title": "representation", "type": "circle"},
 
       
 
-        {"id": "content", "size": 70, "score": 0 , "title": "content", "type": "circle"},
+        {"id": "statements", "size": 70, "score": 0 , "title": "statements", "type": "circle"},
 
       
 
-        {"id": "data", "size": 70, "score": 0 , "title": "data", "type": "circle"},
+        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
 
       
 
-        {"id": "number", "size": 140, "score": 0.5 , "title": "number", "type": "circle"},
+        {"id": "strings", "size": 140, "score": 0.5 , "title": "strings", "type": "circle"},
 
       
 
-        {"id": "use", "size": 5, "score": 0.4 , "title": "use", "type": "circle"},
+        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
 
       
 
-        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
+        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
 
       
 
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+        {"id": "analytics", "size": 5, "score": 0.4 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
+        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
+        {"id": "documents", "size": 5, "score": 0.4 , "title": "documents", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+
+      
+
+        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
+
+      
+
+        {"id": "knowledge-representation", "size": 5, "score": 0.4 , "title": "knowledge-representation", "type": "circle"},
+
+      
+
+        {"id": "terms", "size": 5, "score": 0.4 , "title": "terms", "type": "circle"},
+
+      
+
+        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
+
+      
+
+        {"id": "validity", "size": 5, "score": 0.4 , "title": "validity", "type": "circle"},
+
+      
+
+        {"id": "reference", "size": 5, "score": 0.4 , "title": "reference", "type": "circle"},
+
+      
+
+        {"id": "observer", "size": 5, "score": 0.4 , "title": "observer", "type": "circle"},
+
+      
+
+        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
+
+      
+
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
+
+      
+
+        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
+
+      
+
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
        
 
@@ -972,7 +1001,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1123,7 +1152,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

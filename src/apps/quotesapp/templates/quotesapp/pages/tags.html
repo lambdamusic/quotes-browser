@@ -43,29 +43,45 @@
 
 		<div class="row" style="margin-top: 30px;">
 
-			<div class="col-md-6" >
+			{% comment %} **** D3 CHART ***** {% endcomment %}
+
+			<div class="col-md-12" style="margin-bottom: 30px;">
+		
+				<span class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</span>
+				
+				<div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
+		
+				</div>
+			
+			</div>
+
+			<div class="col-md-8" style="margin-top: 50px;">
+
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >This keyword includes {{tot_quotes}} quote{{ tot_quotes|pluralize }} from {{tot_sources}} source{{ tot_sources|pluralize }}:</p>
 
 				{% for obj in return_items %}
-
-				
 				
 					{% ifchanged obj.source %}  
 					{% if not forloop.first %}</fieldset><br/><br/>{% endif %}
 					<fieldset class="border p-2">
-						<legend class="w-auto">{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}
+						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}
 							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
 							{% else %}<span class="text-muted" >{{obj.source}}</span>{% endif %}</legend>
 
 					{% endifchanged %}
 						
 
-					<li style="margin-bottom: 10px;">
+					<li class="quotes-list">
 						<!-- <a style="font-size: 120%;" href="/quotes/{{obj.filename}}">{{obj.title}}</a> -->
-						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.filename %}">{{obj.title}}</a>
+						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.filename %}"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;{{obj.title}}</a>
 						<br />
 
-						{% for tag in obj.tags %}
-							<a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag}}">#{{tag}}</a>&nbsp;
+						{% for tag2 in obj.tags %}
+							{% ifequal tag tag2 %}
+							<span class="text-muted" style="font-weight: bold;">#{{tag2}}</span>&nbsp;
+							{% else %}
+							<a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag2}}">#{{tag2}}</a>&nbsp;
+							{% endifequal %}
 						{% endfor %}
 					
 					
@@ -76,17 +92,7 @@
 			</div>
 
 
-			{% comment %} **** D3 CHART ***** {% endcomment %}
 
-			<div class="col-md-6" style="margin-bottom: 30px;">
-		
-				<span class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</span>
-				
-				<div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
-		
-				</div>
-			
-			</div>
 
 		</div>
 

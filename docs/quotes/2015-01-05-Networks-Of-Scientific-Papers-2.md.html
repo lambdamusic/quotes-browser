@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -615,7 +596,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -677,13 +658,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -725,16 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "topic", "target": "work" },
-      
-          { "source": "topic", "target": "space" },
-      
-          { "source": "topic", "target": "Court" },
-      
-          { "source": "topic", "target": "law" },
-      
-          { "source": "topic", "target": "documentation" },
-      
           { "source": "work", "target": "citations" },
       
           { "source": "work", "target": "tradition" },
@@ -743,120 +714,134 @@ var data_local_dynamic = {
       
           { "source": "work", "target": "data" },
       
-          { "source": "space", "target": "career" },
+          { "source": "work", "target": "technology" },
       
-          { "source": "space", "target": "people" },
+          { "source": "citations", "target": "attributes" },
       
-          { "source": "space", "target": "idea" },
+          { "source": "citations", "target": "evidence" },
       
-          { "source": "space", "target": "topic" },
+          { "source": "citations", "target": "impact" },
       
-          { "source": "Court", "target": "England" },
+          { "source": "citations", "target": "evaluation" },
       
-          { "source": "Court", "target": "countries" },
+          { "source": "tradition", "target": "citations" },
       
-          { "source": "Court", "target": "topic" },
+          { "source": "tradition", "target": "work" },
       
-          { "source": "Court", "target": "law" },
+          { "source": "tradition", "target": "Calvinism" },
       
-          { "source": "law", "target": "rights" },
+          { "source": "tradition", "target": "medium" },
       
-          { "source": "law", "target": "development" },
+          { "source": "number", "target": "impact" },
       
-          { "source": "law", "target": "coding" },
+          { "source": "number", "target": "manuscript" },
       
-          { "source": "law", "target": "physics" },
+          { "source": "number", "target": "interaction" },
       
-          { "source": "documentation", "target": "topic" },
+          { "source": "number", "target": "content" },
       
-          { "source": "documentation", "target": "Court" },
+          { "source": "data", "target": "information" },
       
-          { "source": "documentation", "target": "law" },
+          { "source": "data", "target": "information-systems" },
       
-          { "source": "documentation", "target": "cultural-period" },
+          { "source": "data", "target": "communication" },
+      
+          { "source": "data", "target": "number" },
+      
+          { "source": "technology", "target": "computer-systems" },
+      
+          { "source": "technology", "target": "work" },
+      
+          { "source": "technology", "target": "semantic-enrichment" },
+      
+          { "source": "technology", "target": "users" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "work", "size": 70, "score": 0 , "title": "work", "type": "circle"},
+        {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "space", "size": 70, "score": 0 , "title": "space", "type": "circle"},
+        {"id": "tradition", "size": 70, "score": 0 , "title": "tradition", "type": "circle"},
 
       
 
-        {"id": "Court", "size": 70, "score": 0 , "title": "Court", "type": "circle"},
+        {"id": "number", "size": 70, "score": 0 , "title": "number", "type": "circle"},
 
       
 
-        {"id": "law", "size": 70, "score": 0 , "title": "law", "type": "circle"},
+        {"id": "data", "size": 70, "score": 0 , "title": "data", "type": "circle"},
 
       
 
-        {"id": "documentation", "size": 70, "score": 0 , "title": "documentation", "type": "circle"},
+        {"id": "technology", "size": 70, "score": 0 , "title": "technology", "type": "circle"},
 
       
 
-        {"id": "topic", "size": 140, "score": 0.5 , "title": "topic", "type": "circle"},
+        {"id": "work", "size": 140, "score": 0.5 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
 
       
 
-        {"id": "tradition", "size": 5, "score": 0.4 , "title": "tradition", "type": "circle"},
+        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
 
       
 
-        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
+        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
 
       
 
-        {"id": "career", "size": 5, "score": 0.4 , "title": "career", "type": "circle"},
+        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "medium", "size": 5, "score": 0.4 , "title": "medium", "type": "circle"},
 
       
 
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+        {"id": "manuscript", "size": 5, "score": 0.4 , "title": "manuscript", "type": "circle"},
 
       
 
-        {"id": "England", "size": 5, "score": 0.4 , "title": "England", "type": "circle"},
+        {"id": "interaction", "size": 5, "score": 0.4 , "title": "interaction", "type": "circle"},
 
       
 
-        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "rights", "size": 5, "score": 0.4 , "title": "rights", "type": "circle"},
+        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
 
       
 
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
+        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
 
       
 
-        {"id": "physics", "size": 5, "score": 0.4 , "title": "physics", "type": "circle"},
+        {"id": "computer-systems", "size": 5, "score": 0.4 , "title": "computer-systems", "type": "circle"},
 
       
 
-        {"id": "cultural-period", "size": 5, "score": 0.4 , "title": "cultural-period", "type": "circle"},
+        {"id": "semantic-enrichment", "size": 5, "score": 0.4 , "title": "semantic-enrichment", "type": "circle"},
+
+      
+
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
        
 
@@ -993,7 +978,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1144,7 +1129,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

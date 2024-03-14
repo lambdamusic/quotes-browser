@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -617,7 +598,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -679,13 +660,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -727,6 +708,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "computer-code", "target": "code" },
+      
+          { "source": "computer-code", "target": "instruction" },
+      
+          { "source": "computer-code", "target": "artifacts" },
+      
+          { "source": "computer-code", "target": "computer-program" },
+      
+          { "source": "computer-code", "target": "program" },
+      
           { "source": "code", "target": "developers" },
       
           { "source": "code", "target": "algorithm" },
@@ -735,146 +726,136 @@ var data_local_dynamic = {
       
           { "source": "code", "target": "prototype" },
       
-          { "source": "code", "target": "objects" },
+          { "source": "instruction", "target": "students" },
       
-          { "source": "developers", "target": "algorithm" },
+          { "source": "instruction", "target": "learning" },
       
-          { "source": "developers", "target": "code" },
+          { "source": "instruction", "target": "questions" },
       
-          { "source": "developers", "target": "Scrum" },
+          { "source": "instruction", "target": "things" },
       
-          { "source": "developers", "target": "user-testing" },
+          { "source": "artifacts", "target": "buildings" },
       
-          { "source": "algorithm", "target": "server" },
+          { "source": "artifacts", "target": "road" },
       
-          { "source": "algorithm", "target": "metadata" },
+          { "source": "artifacts", "target": "universe" },
       
-          { "source": "algorithm", "target": "words" },
+          { "source": "artifacts", "target": "code" },
       
-          { "source": "algorithm", "target": "readers" },
+          { "source": "computer-program", "target": "machine" },
       
-          { "source": "use-cases", "target": "ontology" },
+          { "source": "computer-program", "target": "natural-language-processing" },
       
-          { "source": "use-cases", "target": "data-model" },
+          { "source": "computer-program", "target": "computer-science" },
       
-          { "source": "use-cases", "target": "architecture" },
+          { "source": "computer-program", "target": "code" },
       
-          { "source": "use-cases", "target": "requirements" },
+          { "source": "program", "target": "episodes" },
       
-          { "source": "prototype", "target": "users" },
+          { "source": "program", "target": "events" },
       
-          { "source": "prototype", "target": "user-prototypes" },
+          { "source": "program", "target": "duration" },
       
-          { "source": "prototype", "target": "bike" },
-      
-          { "source": "prototype", "target": "search-results" },
-      
-          { "source": "objects", "target": "class" },
-      
-          { "source": "objects", "target": "real-world" },
-      
-          { "source": "objects", "target": "instances" },
-      
-          { "source": "objects", "target": "types" },
+          { "source": "program", "target": "same-episode" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "developers", "size": 70, "score": 0 , "title": "developers", "type": "circle"},
+        {"id": "code", "size": 70, "score": 0 , "title": "code", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
+        {"id": "instruction", "size": 70, "score": 0 , "title": "instruction", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
+        {"id": "artifacts", "size": 70, "score": 0 , "title": "artifacts", "type": "circle"},
 
       
 
-        {"id": "prototype", "size": 70, "score": 0 , "title": "prototype", "type": "circle"},
+        {"id": "computer-program", "size": 70, "score": 0 , "title": "computer-program", "type": "circle"},
 
       
 
-        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+        {"id": "program", "size": 70, "score": 0 , "title": "program", "type": "circle"},
 
       
 
-        {"id": "code", "size": 140, "score": 0.5 , "title": "code", "type": "circle"},
+        {"id": "computer-code", "size": 140, "score": 0.5 , "title": "computer-code", "type": "circle"},
 
       
 
-        {"id": "Scrum", "size": 5, "score": 0.4 , "title": "Scrum", "type": "circle"},
+        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
 
       
 
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "prototype", "size": 5, "score": 0.4 , "title": "prototype", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "students", "size": 5, "score": 0.4 , "title": "students", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+        {"id": "buildings", "size": 5, "score": 0.4 , "title": "buildings", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
+        {"id": "road", "size": 5, "score": 0.4 , "title": "road", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "universe", "size": 5, "score": 0.4 , "title": "universe", "type": "circle"},
 
       
 
-        {"id": "user-prototypes", "size": 5, "score": 0.4 , "title": "user-prototypes", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "bike", "size": 5, "score": 0.4 , "title": "bike", "type": "circle"},
+        {"id": "natural-language-processing", "size": 5, "score": 0.4 , "title": "natural-language-processing", "type": "circle"},
 
       
 
-        {"id": "search-results", "size": 5, "score": 0.4 , "title": "search-results", "type": "circle"},
+        {"id": "computer-science", "size": 5, "score": 0.4 , "title": "computer-science", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "episodes", "size": 5, "score": 0.4 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
+        {"id": "duration", "size": 5, "score": 0.4 , "title": "duration", "type": "circle"},
 
       
 
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+        {"id": "same-episode", "size": 5, "score": 0.4 , "title": "same-episode", "type": "circle"},
 
        
 
@@ -1011,7 +992,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1162,7 +1143,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();

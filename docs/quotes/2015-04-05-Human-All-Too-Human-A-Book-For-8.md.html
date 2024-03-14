@@ -124,35 +124,6 @@
     }
 
 
-    .thumb-div {
-      padding: 20px;
-
-    }
-
-    .thumbnail{
-      
-
-      
-
-    }
-
-    .thumb-img {
-      height: 200px;
-
-    }
-
-    .thumb-title b {
-      font-weight: bold;
-      color: black;
-
-    }
-
-    div.pubitem {
-      margin-top: 15px;
-    }
-
-
-
     a.project-title {
       color: black;
       font-weight: bold;
@@ -195,16 +166,6 @@
     .text-black {
       color: black;
     }
-
-    a.sounds-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    img.project-screenshots {
-      margin-botton: 30px;
-    }
-
 
      /* modal google search */ 
 
@@ -332,6 +293,26 @@
       color: rgb(62, 61, 61);
     }
 
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
 
 </style>
 
@@ -455,9 +436,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <li >
           <a href="../tags/index.html">Tags</a></li>
 
-        <li >
-            <a href="../index.html">Random</a></li>
-          
+        
+        
+           
 
         <li 
         
@@ -621,7 +602,7 @@ Astrology presupposes that the heavenly bodies are regulated in their movements 
 
           <p class="-col-md-6" style="margin-bottom: 50px; margin-top: 30px;">
             <hr>
-            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double click to view:</p>
+            <p class="text-muted" style="color: #cbcbcb;">Top related keywords - double-click to view:</p>
             
             <div id="graph_div" class="-col-md-12" style="min-height: 500px; border: lightgray 0.1px solid; overflow: hidden;">       
         
@@ -683,13 +664,13 @@ Astrology presupposes that the heavenly bodies are regulated in their movements 
   <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
   <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
   <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://www.mendeley.com/profiles/michele-pasin/" target="_blank">Mendeley</a> |
   <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
   <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
   <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
   <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
   <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a>
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
       
       </p>
     
@@ -731,6 +712,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "cosmos", "target": "things" },
+      
+          { "source": "cosmos", "target": "astrology" },
+      
+          { "source": "cosmos", "target": "soul" },
+      
+          { "source": "cosmos", "target": "language" },
+      
+          { "source": "cosmos", "target": "men" },
+      
           { "source": "things", "target": "industrial-revolution" },
       
           { "source": "things", "target": "bits" },
@@ -739,102 +730,120 @@ var data_local_dynamic = {
       
           { "source": "things", "target": "machine" },
       
-          { "source": "things", "target": "manufacturing" },
+          { "source": "astrology", "target": "things" },
       
-          { "source": "industrial-revolution", "target": "things" },
+          { "source": "astrology", "target": "soul" },
       
-          { "source": "industrial-revolution", "target": "bits" },
+          { "source": "astrology", "target": "cosmos" },
       
-          { "source": "industrial-revolution", "target": "services" },
+          { "source": "astrology", "target": "truth" },
       
-          { "source": "industrial-revolution", "target": "energy" },
+          { "source": "soul", "target": "things" },
       
-          { "source": "bits", "target": "things" },
+          { "source": "soul", "target": "astrology" },
       
-          { "source": "bits", "target": "industrial-revolution" },
+          { "source": "soul", "target": "cosmos" },
       
-          { "source": "bits", "target": "services" },
+          { "source": "soul", "target": "types" },
       
-          { "source": "bits", "target": "ontology" },
+          { "source": "language", "target": "words" },
       
-          { "source": "services", "target": "things" },
+          { "source": "language", "target": "Sapir-Whorf-hypothesis" },
       
-          { "source": "services", "target": "industrial-revolution" },
+          { "source": "language", "target": "idea" },
       
-          { "source": "services", "target": "bits" },
+          { "source": "language", "target": "different-languages" },
       
-          { "source": "services", "target": "metadata-model" },
+          { "source": "men", "target": "phrases" },
       
-          { "source": "machine", "target": "things" },
+          { "source": "men", "target": "sleep" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "men", "target": "living" },
       
-          { "source": "machine", "target": "data-citation" },
-      
-          { "source": "machine", "target": "metadata" },
-      
-          { "source": "manufacturing", "target": "machine" },
-      
-          { "source": "manufacturing", "target": "things" },
-      
-          { "source": "manufacturing", "target": "process" },
-      
-          { "source": "manufacturing", "target": "elements" },
+          { "source": "men", "target": "years" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "industrial-revolution", "size": 70, "score": 0 , "title": "industrial-revolution", "type": "circle"},
+        {"id": "things", "size": 70, "score": 0 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "bits", "size": 70, "score": 0 , "title": "bits", "type": "circle"},
+        {"id": "astrology", "size": 70, "score": 0 , "title": "astrology", "type": "circle"},
 
       
 
-        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
+        {"id": "soul", "size": 70, "score": 0 , "title": "soul", "type": "circle"},
 
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "language", "size": 70, "score": 0 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "manufacturing", "size": 70, "score": 0 , "title": "manufacturing", "type": "circle"},
+        {"id": "men", "size": 70, "score": 0 , "title": "men", "type": "circle"},
 
       
 
-        {"id": "things", "size": 140, "score": 0.5 , "title": "things", "type": "circle"},
+        {"id": "cosmos", "size": 140, "score": 0.5 , "title": "cosmos", "type": "circle"},
 
       
 
-        {"id": "energy", "size": 5, "score": 0.4 , "title": "energy", "type": "circle"},
+        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
 
       
 
-        {"id": "metadata-model", "size": 5, "score": 0.4 , "title": "metadata-model", "type": "circle"},
+        {"id": "services", "size": 5, "score": 0.4 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "truth", "size": 5, "score": 0.4 , "title": "truth", "type": "circle"},
 
       
 
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
 
       
 
-        {"id": "elements", "size": 5, "score": 0.4 , "title": "elements", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+
+      
+
+        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
+
+      
+
+        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+
+      
+
+        {"id": "different-languages", "size": 5, "score": 0.4 , "title": "different-languages", "type": "circle"},
+
+      
+
+        {"id": "phrases", "size": 5, "score": 0.4 , "title": "phrases", "type": "circle"},
+
+      
+
+        {"id": "sleep", "size": 5, "score": 0.4 , "title": "sleep", "type": "circle"},
+
+      
+
+        {"id": "living", "size": 5, "score": 0.4 , "title": "living", "type": "circle"},
+
+      
+
+        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
 
        
 
@@ -971,7 +980,7 @@ svg.style("cursor","move");
 
     node.on("dblclick", function(d) { d3.event.stopPropagation();
             if (window.location.host.includes("michelepasin.org")) {
-                window.location.href = "https://quotes.michelepasin.org/quotes/index.html%3Ftag=" + d.id + ".html";
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
             } else {
                 window.location.href = "/tags/?tag=" + d.id;
             }
@@ -1122,7 +1131,7 @@ svg.style("cursor","move");
         });
         
     svg.call(zoom);	  
-    svg.attr("transform","scale(1,1)");
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
         
     resize();
     //window.focus();
