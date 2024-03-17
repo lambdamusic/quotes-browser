@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>A thesaurus, as used in... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-02-05-About-Taxonomies-Controlled-Vocabularies-3.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -711,16 +707,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "note", "target": "thesaurus" },
-      
-          { "source": "note", "target": "vocabulary" },
-      
-          { "source": "note", "target": "information-science" },
-      
-          { "source": "note", "target": "items" },
-      
-          { "source": "note", "target": "research" },
-      
           { "source": "thesaurus", "target": "authority-files" },
       
           { "source": "thesaurus", "target": "indexing" },
@@ -728,6 +714,24 @@ var data_local_dynamic = {
           { "source": "thesaurus", "target": "vocabulary" },
       
           { "source": "thesaurus", "target": "files" },
+      
+          { "source": "thesaurus", "target": "taxonomy" },
+      
+          { "source": "authority-files", "target": "indexing" },
+      
+          { "source": "authority-files", "target": "thesaurus" },
+      
+          { "source": "authority-files", "target": "vocabulary" },
+      
+          { "source": "authority-files", "target": "files" },
+      
+          { "source": "indexing", "target": "authority-files" },
+      
+          { "source": "indexing", "target": "thesaurus" },
+      
+          { "source": "indexing", "target": "vocabulary" },
+      
+          { "source": "indexing", "target": "files" },
       
           { "source": "vocabulary", "target": "authority-files" },
       
@@ -737,36 +741,32 @@ var data_local_dynamic = {
       
           { "source": "vocabulary", "target": "files" },
       
-          { "source": "information-science", "target": "thesaurus" },
+          { "source": "files", "target": "authority-files" },
       
-          { "source": "information-science", "target": "vocabulary" },
+          { "source": "files", "target": "indexing" },
       
-          { "source": "information-science", "target": "note" },
+          { "source": "files", "target": "thesaurus" },
       
-          { "source": "information-science", "target": "users" },
+          { "source": "files", "target": "vocabulary" },
       
-          { "source": "items", "target": "traits" },
+          { "source": "taxonomy", "target": "ontology" },
       
-          { "source": "items", "target": "class" },
+          { "source": "taxonomy", "target": "Semantic-Web" },
       
-          { "source": "items", "target": "categories" },
+          { "source": "taxonomy", "target": "information-systems" },
       
-          { "source": "items", "target": "criteria" },
-      
-          { "source": "research", "target": "historical-research" },
-      
-          { "source": "research", "target": "development" },
-      
-          { "source": "research", "target": "role" },
-      
-          { "source": "research", "target": "justice" },
+          { "source": "taxonomy", "target": "companies" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
+        {"id": "authority-files", "size": 70, "score": 0 , "title": "authority-files", "type": "circle"},
+
+      
+
+        {"id": "indexing", "size": 70, "score": 0 , "title": "indexing", "type": "circle"},
 
       
 
@@ -774,67 +774,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "information-science", "size": 70, "score": 0 , "title": "information-science", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "items", "size": 70, "score": 0 , "title": "items", "type": "circle"},
+        {"id": "taxonomy", "size": 70, "score": 0 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "research", "size": 70, "score": 0 , "title": "research", "type": "circle"},
+        {"id": "thesaurus", "size": 140, "score": 0.5 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "note", "size": 140, "score": 0.5 , "title": "note", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
-
-      
-
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
-
-      
-
-        {"id": "traits", "size": 5, "score": 0.4 , "title": "traits", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
-
-      
-
-        {"id": "categories", "size": 5, "score": 0.4 , "title": "categories", "type": "circle"},
-
-      
-
-        {"id": "criteria", "size": 5, "score": 0.4 , "title": "criteria", "type": "circle"},
-
-      
-
-        {"id": "historical-research", "size": 5, "score": 0.4 , "title": "historical-research", "type": "circle"},
-
-      
-
-        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
-
-      
-
-        {"id": "role", "size": 5, "score": 0.4 , "title": "role", "type": "circle"},
-
-      
-
-        {"id": "justice", "size": 5, "score": 0.4 , "title": "justice", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
 
        
 

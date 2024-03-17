@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Open access can lead to a proliferation of predatory publishers | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-10-28-Naturebranded-Journal-Goes-Open-Accessonly-Can-We-3.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,32 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "publishing-houses", "target": "publishing" },
-      
-          { "source": "publishing-houses", "target": "profit" },
-      
-          { "source": "publishing-houses", "target": "article" },
-      
-          { "source": "publishing-houses", "target": "logic" },
-      
-          { "source": "publishing-houses", "target": "science" },
-      
-          { "source": "publishing", "target": "article" },
-      
-          { "source": "publishing", "target": "web-server" },
-      
-          { "source": "publishing", "target": "academic-publishing" },
-      
-          { "source": "publishing", "target": "server" },
-      
-          { "source": "profit", "target": "publishing" },
-      
-          { "source": "profit", "target": "publishing-houses" },
-      
-          { "source": "profit", "target": "article" },
-      
-          { "source": "profit", "target": "choice" },
-      
           { "source": "article", "target": "hierarchy" },
       
           { "source": "article", "target": "social-sciences" },
@@ -744,13 +714,23 @@ var data_local_dynamic = {
       
           { "source": "article", "target": "concept" },
       
-          { "source": "logic", "target": "science" },
+          { "source": "article", "target": "Obama" },
       
-          { "source": "logic", "target": "things" },
+          { "source": "hierarchy", "target": "article" },
       
-          { "source": "logic", "target": "assumption" },
+          { "source": "hierarchy", "target": "social-sciences" },
       
-          { "source": "logic", "target": "words" },
+          { "source": "hierarchy", "target": "science" },
+      
+          { "source": "hierarchy", "target": "nodes" },
+      
+          { "source": "social-sciences", "target": "article" },
+      
+          { "source": "social-sciences", "target": "hierarchy" },
+      
+          { "source": "social-sciences", "target": "science" },
+      
+          { "source": "social-sciences", "target": "journals" },
       
           { "source": "science", "target": "article" },
       
@@ -759,25 +739,31 @@ var data_local_dynamic = {
           { "source": "science", "target": "social-sciences" },
       
           { "source": "science", "target": "publications" },
+      
+          { "source": "concept", "target": "article" },
+      
+          { "source": "concept", "target": "Obama" },
+      
+          { "source": "concept", "target": "information-science" },
+      
+          { "source": "concept", "target": "users" },
+      
+          { "source": "Obama", "target": "article" },
+      
+          { "source": "Obama", "target": "concept" },
+      
+          { "source": "Obama", "target": "decisions" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "profit", "size": 70, "score": 0 , "title": "profit", "type": "circle"},
-
-      
-
-        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
-
-      
-
-        {"id": "logic", "size": 70, "score": 0 , "title": "logic", "type": "circle"},
+        {"id": "social-sciences", "size": 70, "score": 0 , "title": "social-sciences", "type": "circle"},
 
       
 
@@ -785,51 +771,39 @@ var data_local_dynamic = {
 
       
 
-        {"id": "publishing-houses", "size": 140, "score": 0.5 , "title": "publishing-houses", "type": "circle"},
+        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "web-server", "size": 5, "score": 0.4 , "title": "web-server", "type": "circle"},
+        {"id": "Obama", "size": 70, "score": 0 , "title": "Obama", "type": "circle"},
 
       
 
-        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
+        {"id": "article", "size": 140, "score": 0.5 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+        {"id": "nodes", "size": 5, "score": 0.4 , "title": "nodes", "type": "circle"},
 
       
 
-        {"id": "choice", "size": 5, "score": 0.4 , "title": "choice", "type": "circle"},
-
-      
-
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
-
-      
-
-        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
-
-      
-
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
-
-      
-
-        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
-
-      
-
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
 
       
 
         {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+
+      
+
+        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
+
+      
+
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+
+      
+
+        {"id": "decisions", "size": 5, "score": 0.4 , "title": "decisions", "type": "circle"},
 
        
 

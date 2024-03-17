@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>There are significant differences in... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-04-23-Annotationproperty-Vs-Dataproperty-Answers-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -717,15 +713,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "semantics", "target": "annotation-properties" },
+          { "source": "blank-nodes", "target": "annotation-properties" },
       
-          { "source": "semantics", "target": "data-properties" },
+          { "source": "blank-nodes", "target": "data-properties" },
       
-          { "source": "semantics", "target": "blank-nodes" },
+          { "source": "blank-nodes", "target": "OWL-DL" },
       
-          { "source": "semantics", "target": "OWL-DL" },
+          { "source": "blank-nodes", "target": "reasoner" },
       
-          { "source": "semantics", "target": "reasoner" },
+          { "source": "blank-nodes", "target": "semantics" },
       
           { "source": "annotation-properties", "target": "OWL-DL" },
       
@@ -743,14 +739,6 @@ var data_local_dynamic = {
       
           { "source": "data-properties", "target": "reasoner" },
       
-          { "source": "blank-nodes", "target": "annotation-properties" },
-      
-          { "source": "blank-nodes", "target": "data-properties" },
-      
-          { "source": "blank-nodes", "target": "OWL-DL" },
-      
-          { "source": "blank-nodes", "target": "reasoner" },
-      
           { "source": "OWL-DL", "target": "annotation-properties" },
       
           { "source": "OWL-DL", "target": "data-values" },
@@ -766,6 +754,14 @@ var data_local_dynamic = {
           { "source": "reasoner", "target": "blank-nodes" },
       
           { "source": "reasoner", "target": "OWL-DL" },
+      
+          { "source": "semantics", "target": "annotation-properties" },
+      
+          { "source": "semantics", "target": "data-properties" },
+      
+          { "source": "semantics", "target": "blank-nodes" },
+      
+          { "source": "semantics", "target": "OWL-DL" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -780,10 +776,6 @@ var data_local_dynamic = {
 
       
 
-        {"id": "blank-nodes", "size": 70, "score": 0 , "title": "blank-nodes", "type": "circle"},
-
-      
-
         {"id": "OWL-DL", "size": 70, "score": 0 , "title": "OWL-DL", "type": "circle"},
 
       
@@ -792,7 +784,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "semantics", "size": 140, "score": 0.5 , "title": "semantics", "type": "circle"},
+        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
+
+      
+
+        {"id": "blank-nodes", "size": 140, "score": 0.5 , "title": "blank-nodes", "type": "circle"},
 
       
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Interactive Fiction (or IF for... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-A-Beginners-Guide-To-Playing-Interactive-Fiction-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -712,16 +708,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "character", "target": "story" },
-      
-          { "source": "character", "target": "text" },
-      
-          { "source": "character", "target": "game" },
-      
-          { "source": "character", "target": "interactive-fiction" },
-      
-          { "source": "character", "target": "motif" },
-      
           { "source": "story", "target": "text" },
       
           { "source": "story", "target": "game" },
@@ -729,6 +715,8 @@ var data_local_dynamic = {
           { "source": "story", "target": "character" },
       
           { "source": "story", "target": "interactive-fiction" },
+      
+          { "source": "story", "target": "cases" },
       
           { "source": "text", "target": "story" },
       
@@ -746,6 +734,14 @@ var data_local_dynamic = {
       
           { "source": "game", "target": "interactive-fiction" },
       
+          { "source": "character", "target": "story" },
+      
+          { "source": "character", "target": "text" },
+      
+          { "source": "character", "target": "game" },
+      
+          { "source": "character", "target": "interactive-fiction" },
+      
           { "source": "interactive-fiction", "target": "story" },
       
           { "source": "interactive-fiction", "target": "text" },
@@ -754,21 +750,17 @@ var data_local_dynamic = {
       
           { "source": "interactive-fiction", "target": "character" },
       
-          { "source": "motif", "target": "character" },
+          { "source": "cases", "target": "title" },
       
-          { "source": "motif", "target": "maturity" },
+          { "source": "cases", "target": "content" },
       
-          { "source": "motif", "target": "lines" },
+          { "source": "cases", "target": "story" },
       
-          { "source": "motif", "target": "course" },
+          { "source": "cases", "target": "occurrence" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
-      
-
-        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
-
       
 
         {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
@@ -779,27 +771,31 @@ var data_local_dynamic = {
 
       
 
+        {"id": "character", "size": 70, "score": 0 , "title": "character", "type": "circle"},
+
+      
+
         {"id": "interactive-fiction", "size": 70, "score": 0 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "motif", "size": 70, "score": 0 , "title": "motif", "type": "circle"},
+        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "character", "size": 140, "score": 0.5 , "title": "character", "type": "circle"},
+        {"id": "story", "size": 140, "score": 0.5 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "maturity", "size": 5, "score": 0.4 , "title": "maturity", "type": "circle"},
+        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "lines", "size": 5, "score": 0.4 , "title": "lines", "type": "circle"},
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "course", "size": 5, "score": 0.4 , "title": "course", "type": "circle"},
+        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
 
        
 

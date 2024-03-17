@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>RDFS and OWL are languages... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Help-Topbraid-Composer-Fe-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -722,15 +718,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "schema", "target": "ontology" },
+          { "source": "XML-schema", "target": "ontology" },
       
-          { "source": "schema", "target": "ethics" },
+          { "source": "XML-schema", "target": "business-rules" },
       
-          { "source": "schema", "target": "philosophy" },
+          { "source": "XML-schema", "target": "schema" },
       
-          { "source": "schema", "target": "fact" },
+          { "source": "XML-schema", "target": "RDFS" },
       
-          { "source": "schema", "target": "architecture" },
+          { "source": "XML-schema", "target": "web-services" },
       
           { "source": "ontology", "target": "use-cases" },
       
@@ -740,37 +736,37 @@ var data_local_dynamic = {
       
           { "source": "ontology", "target": "requirements" },
       
-          { "source": "ethics", "target": "ontology" },
+          { "source": "business-rules", "target": "ontology" },
       
-          { "source": "ethics", "target": "philosophy" },
+          { "source": "business-rules", "target": "XML-schema" },
       
-          { "source": "ethics", "target": "schema" },
+          { "source": "business-rules", "target": "schema" },
       
-          { "source": "ethics", "target": "fact" },
+          { "source": "business-rules", "target": "RDFS" },
       
-          { "source": "philosophy", "target": "ontology" },
+          { "source": "schema", "target": "ontology" },
       
-          { "source": "philosophy", "target": "ethics" },
+          { "source": "schema", "target": "ethics" },
       
-          { "source": "philosophy", "target": "schema" },
+          { "source": "schema", "target": "philosophy" },
       
-          { "source": "philosophy", "target": "fact" },
+          { "source": "schema", "target": "fact" },
       
-          { "source": "fact", "target": "ontology" },
+          { "source": "RDFS", "target": "ontology" },
       
-          { "source": "fact", "target": "ethics" },
+          { "source": "RDFS", "target": "business-rules" },
       
-          { "source": "fact", "target": "philosophy" },
+          { "source": "RDFS", "target": "XML-schema" },
       
-          { "source": "fact", "target": "schema" },
+          { "source": "RDFS", "target": "schema" },
       
-          { "source": "architecture", "target": "ontology" },
+          { "source": "web-services", "target": "data-elements" },
       
-          { "source": "architecture", "target": "use-cases" },
+          { "source": "web-services", "target": "Semantic-Web-technologies" },
       
-          { "source": "architecture", "target": "data-model" },
+          { "source": "web-services", "target": "Web-technologies" },
       
-          { "source": "architecture", "target": "requirements" },
+          { "source": "web-services", "target": "business-rules" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -781,23 +777,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "ethics", "size": 70, "score": 0 , "title": "ethics", "type": "circle"},
+        {"id": "business-rules", "size": 70, "score": 0 , "title": "business-rules", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
+        {"id": "schema", "size": 70, "score": 0 , "title": "schema", "type": "circle"},
 
       
 
-        {"id": "fact", "size": 70, "score": 0 , "title": "fact", "type": "circle"},
+        {"id": "RDFS", "size": 70, "score": 0 , "title": "RDFS", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
+        {"id": "web-services", "size": 70, "score": 0 , "title": "web-services", "type": "circle"},
 
       
 
-        {"id": "schema", "size": 140, "score": 0.5 , "title": "schema", "type": "circle"},
+        {"id": "XML-schema", "size": 140, "score": 0.5 , "title": "XML-schema", "type": "circle"},
 
       
 
@@ -809,7 +805,35 @@ var data_local_dynamic = {
 
       
 
+        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
+
+      
+
         {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
+
+      
+
+        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
+
+      
+
+        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+
+      
+
+        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
+
+      
+
+        {"id": "data-elements", "size": 5, "score": 0.4 , "title": "data-elements", "type": "circle"},
+
+      
+
+        {"id": "Semantic-Web-technologies", "size": 5, "score": 0.4 , "title": "Semantic-Web-technologies", "type": "circle"},
+
+      
+
+        {"id": "Web-technologies", "size": 5, "score": 0.4 , "title": "Web-technologies", "type": "circle"},
 
        
 

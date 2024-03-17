@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Fruttosio VS Glucosio | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2022-05-29-zuccheri-3.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "eating", "target": "zuccheri" },
+      
+          { "source": "eating", "target": "health" },
+      
+          { "source": "eating", "target": "fruttosio" },
+      
+          { "source": "eating", "target": "food" },
+      
+          { "source": "eating", "target": "kids" },
+      
           { "source": "zuccheri", "target": "health" },
       
           { "source": "zuccheri", "target": "fruttosio" },
@@ -717,8 +723,6 @@ var data_local_dynamic = {
           { "source": "zuccheri", "target": "eating" },
       
           { "source": "zuccheri", "target": "saccarosio" },
-      
-          { "source": "zuccheri", "target": "carboidrati" },
       
           { "source": "health", "target": "zuccheri" },
       
@@ -734,29 +738,27 @@ var data_local_dynamic = {
       
           { "source": "fruttosio", "target": "eating" },
       
-          { "source": "eating", "target": "zuccheri" },
+          { "source": "food", "target": "group" },
       
-          { "source": "eating", "target": "health" },
+          { "source": "food", "target": "kids" },
       
-          { "source": "eating", "target": "fruttosio" },
+          { "source": "food", "target": "children" },
       
-          { "source": "eating", "target": "food" },
+          { "source": "food", "target": "eating" },
       
-          { "source": "saccarosio", "target": "zuccheri" },
+          { "source": "kids", "target": "food" },
       
-          { "source": "saccarosio", "target": "health" },
+          { "source": "kids", "target": "children" },
       
-          { "source": "saccarosio", "target": "eating" },
-      
-          { "source": "carboidrati", "target": "zuccheri" },
-      
-          { "source": "carboidrati", "target": "health" },
-      
-          { "source": "carboidrati", "target": "eating" },
+          { "source": "kids", "target": "eating" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "zuccheri", "size": 70, "score": 0 , "title": "zuccheri", "type": "circle"},
+
       
 
         {"id": "health", "size": 70, "score": 0 , "title": "health", "type": "circle"},
@@ -767,19 +769,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "eating", "size": 70, "score": 0 , "title": "eating", "type": "circle"},
+        {"id": "food", "size": 70, "score": 0 , "title": "food", "type": "circle"},
 
       
 
-        {"id": "saccarosio", "size": 70, "score": 0 , "title": "saccarosio", "type": "circle"},
+        {"id": "kids", "size": 70, "score": 0 , "title": "kids", "type": "circle"},
 
       
 
-        {"id": "carboidrati", "size": 70, "score": 0 , "title": "carboidrati", "type": "circle"},
+        {"id": "eating", "size": 140, "score": 0.5 , "title": "eating", "type": "circle"},
 
       
 
-        {"id": "zuccheri", "size": 140, "score": 0.5 , "title": "zuccheri", "type": "circle"},
+        {"id": "saccarosio", "size": 5, "score": 0.4 , "title": "saccarosio", "type": "circle"},
 
       
 
@@ -787,7 +789,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "food", "size": 5, "score": 0.4 , "title": "food", "type": "circle"},
+        {"id": "group", "size": 5, "score": 0.4 , "title": "group", "type": "circle"},
+
+      
+
+        {"id": "children", "size": 5, "score": 0.4 , "title": "children", "type": "circle"},
 
        
 

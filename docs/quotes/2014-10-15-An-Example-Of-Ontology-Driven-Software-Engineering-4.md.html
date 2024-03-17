@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Full text search via a triplestore | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-10-15-An-Example-Of-Ontology-Driven-Software-Engineering-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -706,12 +702,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "API", "target": "JSON" },
-      
-          { "source": "API", "target": "citation-graph" },
-      
-          { "source": "API", "target": "graph" },
-      
           { "source": "JSON", "target": "API" },
       
           { "source": "JSON", "target": "XML" },
@@ -720,70 +710,112 @@ var data_local_dynamic = {
       
           { "source": "JSON", "target": "URL" },
       
-          { "source": "citation-graph", "target": "graph" },
+          { "source": "JSON", "target": "content-negotiation" },
       
-          { "source": "citation-graph", "target": "API" },
+          { "source": "API", "target": "JSON" },
       
-          { "source": "citation-graph", "target": "database" },
+          { "source": "API", "target": "citation-graph" },
       
-          { "source": "graph", "target": "knowledge-graph" },
+          { "source": "API", "target": "graph" },
       
-          { "source": "graph", "target": "data-analytics" },
+          { "source": "XML", "target": "JSON" },
       
-          { "source": "graph", "target": "analytics" },
+          { "source": "XML", "target": "representation" },
       
-          { "source": "graph", "target": "semantics" },
+          { "source": "XML", "target": "URL" },
+      
+          { "source": "XML", "target": "content-negotiation" },
+      
+          { "source": "representation", "target": "concept" },
+      
+          { "source": "representation", "target": "meaning" },
+      
+          { "source": "representation", "target": "knowledge-representation" },
+      
+          { "source": "representation", "target": "terms" },
+      
+          { "source": "URL", "target": "JSON" },
+      
+          { "source": "URL", "target": "XML" },
+      
+          { "source": "URL", "target": "representation" },
+      
+          { "source": "URL", "target": "content-negotiation" },
+      
+          { "source": "content-negotiation", "target": "web-documents" },
+      
+          { "source": "content-negotiation", "target": "server" },
+      
+          { "source": "content-negotiation", "target": "format" },
+      
+          { "source": "content-negotiation", "target": "documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "JSON", "size": 70, "score": 0 , "title": "JSON", "type": "circle"},
+        {"id": "API", "size": 70, "score": 0 , "title": "API", "type": "circle"},
 
       
 
-        {"id": "citation-graph", "size": 70, "score": 0 , "title": "citation-graph", "type": "circle"},
+        {"id": "XML", "size": 70, "score": 0 , "title": "XML", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
+        {"id": "representation", "size": 70, "score": 0 , "title": "representation", "type": "circle"},
 
       
 
-        {"id": "API", "size": 140, "score": 0.5 , "title": "API", "type": "circle"},
+        {"id": "URL", "size": 70, "score": 0 , "title": "URL", "type": "circle"},
 
       
 
-        {"id": "XML", "size": 5, "score": 0.4 , "title": "XML", "type": "circle"},
+        {"id": "content-negotiation", "size": 70, "score": 0 , "title": "content-negotiation", "type": "circle"},
 
       
 
-        {"id": "representation", "size": 5, "score": 0.4 , "title": "representation", "type": "circle"},
+        {"id": "JSON", "size": 140, "score": 0.5 , "title": "JSON", "type": "circle"},
 
       
 
-        {"id": "URL", "size": 5, "score": 0.4 , "title": "URL", "type": "circle"},
+        {"id": "citation-graph", "size": 5, "score": 0.4 , "title": "citation-graph", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
+        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 5, "score": 0.4 , "title": "analytics", "type": "circle"},
+        {"id": "knowledge-representation", "size": 5, "score": 0.4 , "title": "knowledge-representation", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
+        {"id": "terms", "size": 5, "score": 0.4 , "title": "terms", "type": "circle"},
+
+      
+
+        {"id": "web-documents", "size": 5, "score": 0.4 , "title": "web-documents", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+
+      
+
+        {"id": "format", "size": 5, "score": 0.4 , "title": "format", "type": "circle"},
+
+      
+
+        {"id": "documents", "size": 5, "score": 0.4 , "title": "documents", "type": "circle"},
 
        
 

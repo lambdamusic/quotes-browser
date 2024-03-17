@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>the phrase &quot;dynamic semantic publishing&quot;... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-03-26-2-What-Is-Dynamic-Semantic-Publishing-Quora-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -717,15 +713,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "metadata", "target": "RDF-databases" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "metadata", "target": "platform" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "metadata", "target": "database" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "metadata", "target": "server" },
       
-          { "source": "database", "target": "months" },
+          { "source": "metadata", "target": "algorithm" },
       
           { "source": "RDF-databases", "target": "metadata" },
       
@@ -735,14 +731,6 @@ var data_local_dynamic = {
       
           { "source": "RDF-databases", "target": "triple-stores" },
       
-          { "source": "metadata", "target": "RDF-databases" },
-      
-          { "source": "metadata", "target": "platform" },
-      
-          { "source": "metadata", "target": "database" },
-      
-          { "source": "metadata", "target": "server" },
-      
           { "source": "platform", "target": "RDF-databases" },
       
           { "source": "platform", "target": "metadata" },
@@ -751,21 +739,29 @@ var data_local_dynamic = {
       
           { "source": "platform", "target": "thesaurus" },
       
-          { "source": "dataset", "target": "database" },
+          { "source": "database", "target": "RDF-databases" },
       
-          { "source": "dataset", "target": "complexity" },
+          { "source": "database", "target": "metadata" },
       
-          { "source": "dataset", "target": "LOD-cloud" },
+          { "source": "database", "target": "platform" },
       
-          { "source": "dataset", "target": "ontology" },
+          { "source": "database", "target": "dataset" },
       
-          { "source": "months", "target": "database" },
+          { "source": "server", "target": "metadata" },
       
-          { "source": "months", "target": "publications" },
+          { "source": "server", "target": "algorithm" },
       
-          { "source": "months", "target": "journals" },
+          { "source": "server", "target": "publishing" },
       
-          { "source": "months", "target": "access" },
+          { "source": "server", "target": "article" },
+      
+          { "source": "algorithm", "target": "server" },
+      
+          { "source": "algorithm", "target": "metadata" },
+      
+          { "source": "algorithm", "target": "words" },
+      
+          { "source": "algorithm", "target": "readers" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -776,23 +772,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
-
-      
-
         {"id": "platform", "size": 70, "score": 0 , "title": "platform", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 70, "score": 0 , "title": "dataset", "type": "circle"},
+        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
 
       
 
-        {"id": "months", "size": 70, "score": 0 , "title": "months", "type": "circle"},
+        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "database", "size": 140, "score": 0.5 , "title": "database", "type": "circle"},
+        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
+
+      
+
+        {"id": "metadata", "size": 140, "score": 0.5 , "title": "metadata", "type": "circle"},
 
       
 
@@ -800,35 +796,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
         {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "complexity", "size": 5, "score": 0.4 , "title": "complexity", "type": "circle"},
+        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
 
       
 
-        {"id": "LOD-cloud", "size": 5, "score": 0.4 , "title": "LOD-cloud", "type": "circle"},
+        {"id": "publishing", "size": 5, "score": 0.4 , "title": "publishing", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
-
-      
-
-        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
+        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
 
        
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Extension of a class | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Cidoccrm-Version-424-Reference-Document-9.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,24 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "extension", "target": "instances" },
-      
-          { "source": "extension", "target": "set" },
-      
-          { "source": "extension", "target": "information-systems" },
-      
-          { "source": "extension", "target": "universe" },
-      
-          { "source": "extension", "target": "class" },
-      
-          { "source": "instances", "target": "cases" },
-      
-          { "source": "instances", "target": "occurrence" },
-      
-          { "source": "instances", "target": "events" },
-      
-          { "source": "instances", "target": "class" },
-      
           { "source": "set", "target": "reasoning" },
       
           { "source": "set", "target": "knowledge-representation" },
@@ -735,6 +713,24 @@ var data_local_dynamic = {
           { "source": "set", "target": "information-systems" },
       
           { "source": "set", "target": "instances" },
+      
+          { "source": "set", "target": "extension" },
+      
+          { "source": "reasoning", "target": "knowledge-representation" },
+      
+          { "source": "reasoning", "target": "set" },
+      
+          { "source": "reasoning", "target": "information-systems" },
+      
+          { "source": "reasoning", "target": "argument" },
+      
+          { "source": "knowledge-representation", "target": "reasoning" },
+      
+          { "source": "knowledge-representation", "target": "set" },
+      
+          { "source": "knowledge-representation", "target": "information-systems" },
+      
+          { "source": "knowledge-representation", "target": "concept" },
       
           { "source": "information-systems", "target": "ontology" },
       
@@ -744,32 +740,32 @@ var data_local_dynamic = {
       
           { "source": "information-systems", "target": "taxonomy" },
       
-          { "source": "universe", "target": "theory" },
+          { "source": "instances", "target": "cases" },
       
-          { "source": "universe", "target": "class" },
+          { "source": "instances", "target": "occurrence" },
       
-          { "source": "universe", "target": "extension" },
+          { "source": "instances", "target": "events" },
       
-          { "source": "universe", "target": "properties" },
+          { "source": "instances", "target": "class" },
       
-          { "source": "class", "target": "cases" },
+          { "source": "extension", "target": "instances" },
       
-          { "source": "class", "target": "occurrence" },
+          { "source": "extension", "target": "set" },
       
-          { "source": "class", "target": "events" },
+          { "source": "extension", "target": "information-systems" },
       
-          { "source": "class", "target": "instances" },
+          { "source": "extension", "target": "universe" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
+        {"id": "reasoning", "size": 70, "score": 0 , "title": "reasoning", "type": "circle"},
 
       
 
-        {"id": "set", "size": 70, "score": 0 , "title": "set", "type": "circle"},
+        {"id": "knowledge-representation", "size": 70, "score": 0 , "title": "knowledge-representation", "type": "circle"},
 
       
 
@@ -777,35 +773,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "universe", "size": 70, "score": 0 , "title": "universe", "type": "circle"},
+        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
+        {"id": "extension", "size": 70, "score": 0 , "title": "extension", "type": "circle"},
 
       
 
-        {"id": "extension", "size": 140, "score": 0.5 , "title": "extension", "type": "circle"},
+        {"id": "set", "size": 140, "score": 0.5 , "title": "set", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+        {"id": "argument", "size": 5, "score": 0.4 , "title": "argument", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
-
-      
-
-        {"id": "reasoning", "size": 5, "score": 0.4 , "title": "reasoning", "type": "circle"},
-
-      
-
-        {"id": "knowledge-representation", "size": 5, "score": 0.4 , "title": "knowledge-representation", "type": "circle"},
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
@@ -825,11 +809,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "theory", "size": 5, "score": 0.4 , "title": "theory", "type": "circle"},
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
+        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+
+      
+
+        {"id": "universe", "size": 5, "score": 0.4 , "title": "universe", "type": "circle"},
 
        
 

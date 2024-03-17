@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Purpose of a digital library:  much more than search engine portals | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-01-08-What-Is-A-Digital-Library-Anymore-Anyway-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,15 +704,31 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "resources", "target": "services" },
+          { "source": "digital-libraries", "target": "raw-data" },
       
-          { "source": "resources", "target": "metadata-model" },
+          { "source": "digital-libraries", "target": "access" },
       
-          { "source": "resources", "target": "digital-libraries" },
+          { "source": "digital-libraries", "target": "services" },
       
-          { "source": "resources", "target": "raw-data" },
+          { "source": "digital-libraries", "target": "metadata-model" },
       
-          { "source": "resources", "target": "information-resources" },
+          { "source": "digital-libraries", "target": "resources" },
+      
+          { "source": "raw-data", "target": "digital-libraries" },
+      
+          { "source": "raw-data", "target": "access" },
+      
+          { "source": "raw-data", "target": "services" },
+      
+          { "source": "raw-data", "target": "metadata-model" },
+      
+          { "source": "access", "target": "humans" },
+      
+          { "source": "access", "target": "need" },
+      
+          { "source": "access", "target": "publications" },
+      
+          { "source": "access", "target": "situation" },
       
           { "source": "services", "target": "things" },
       
@@ -734,33 +746,25 @@ var data_local_dynamic = {
       
           { "source": "metadata-model", "target": "raw-data" },
       
-          { "source": "digital-libraries", "target": "raw-data" },
+          { "source": "resources", "target": "services" },
       
-          { "source": "digital-libraries", "target": "access" },
+          { "source": "resources", "target": "metadata-model" },
       
-          { "source": "digital-libraries", "target": "services" },
+          { "source": "resources", "target": "digital-libraries" },
       
-          { "source": "digital-libraries", "target": "metadata-model" },
-      
-          { "source": "raw-data", "target": "digital-libraries" },
-      
-          { "source": "raw-data", "target": "access" },
-      
-          { "source": "raw-data", "target": "services" },
-      
-          { "source": "raw-data", "target": "metadata-model" },
-      
-          { "source": "information-resources", "target": "URI" },
-      
-          { "source": "information-resources", "target": "server" },
-      
-          { "source": "information-resources", "target": "clients" },
-      
-          { "source": "information-resources", "target": "resources" },
+          { "source": "resources", "target": "raw-data" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
+
+      
+
+        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
+
       
 
         {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
@@ -771,19 +775,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "digital-libraries", "size": 70, "score": 0 , "title": "digital-libraries", "type": "circle"},
+        {"id": "resources", "size": 70, "score": 0 , "title": "resources", "type": "circle"},
 
       
 
-        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
+        {"id": "digital-libraries", "size": 140, "score": 0.5 , "title": "digital-libraries", "type": "circle"},
 
       
 
-        {"id": "information-resources", "size": 70, "score": 0 , "title": "information-resources", "type": "circle"},
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
 
       
 
-        {"id": "resources", "size": 140, "score": 0.5 , "title": "resources", "type": "circle"},
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
+
+      
+
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+
+      
+
+        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
 
       
 
@@ -796,22 +808,6 @@ var data_local_dynamic = {
       
 
         {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
-
-      
-
-        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
-
-      
-
-        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
-        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
 
        
 

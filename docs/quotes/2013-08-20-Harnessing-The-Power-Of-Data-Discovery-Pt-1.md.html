@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Graph database vs relational database | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-08-20-Harnessing-The-Power-Of-Data-Discovery-Pt-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -721,90 +717,102 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "nodes", "target": "hierarchy" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "nodes", "target": "vocabulary" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "nodes", "target": "taxonomy" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "nodes", "target": "impact" },
       
-          { "source": "database", "target": "months" },
+          { "source": "nodes", "target": "measures" },
       
-          { "source": "RDF-databases", "target": "metadata" },
+          { "source": "hierarchy", "target": "article" },
       
-          { "source": "RDF-databases", "target": "platform" },
+          { "source": "hierarchy", "target": "social-sciences" },
       
-          { "source": "RDF-databases", "target": "database" },
+          { "source": "hierarchy", "target": "science" },
       
-          { "source": "RDF-databases", "target": "triple-stores" },
+          { "source": "hierarchy", "target": "nodes" },
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "vocabulary", "target": "authority-files" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "vocabulary", "target": "indexing" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "vocabulary", "target": "thesaurus" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "vocabulary", "target": "files" },
       
-          { "source": "platform", "target": "RDF-databases" },
+          { "source": "taxonomy", "target": "ontology" },
       
-          { "source": "platform", "target": "metadata" },
+          { "source": "taxonomy", "target": "Semantic-Web" },
       
-          { "source": "platform", "target": "database" },
+          { "source": "taxonomy", "target": "information-systems" },
       
-          { "source": "platform", "target": "thesaurus" },
+          { "source": "taxonomy", "target": "companies" },
       
-          { "source": "dataset", "target": "database" },
+          { "source": "impact", "target": "use" },
       
-          { "source": "dataset", "target": "complexity" },
+          { "source": "impact", "target": "assumption" },
       
-          { "source": "dataset", "target": "LOD-cloud" },
+          { "source": "impact", "target": "citations" },
       
-          { "source": "dataset", "target": "ontology" },
+          { "source": "impact", "target": "attributes" },
       
-          { "source": "months", "target": "database" },
+          { "source": "measures", "target": "citations" },
       
-          { "source": "months", "target": "publications" },
+          { "source": "measures", "target": "evaluation" },
       
-          { "source": "months", "target": "journals" },
+          { "source": "measures", "target": "analysis" },
       
-          { "source": "months", "target": "access" },
+          { "source": "measures", "target": "attention" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "RDF-databases", "size": 70, "score": 0 , "title": "RDF-databases", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 70, "score": 0 , "title": "platform", "type": "circle"},
+        {"id": "taxonomy", "size": 70, "score": 0 , "title": "taxonomy", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 70, "score": 0 , "title": "dataset", "type": "circle"},
+        {"id": "impact", "size": 70, "score": 0 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "months", "size": 70, "score": 0 , "title": "months", "type": "circle"},
+        {"id": "measures", "size": 70, "score": 0 , "title": "measures", "type": "circle"},
 
       
 
-        {"id": "database", "size": 140, "score": 0.5 , "title": "database", "type": "circle"},
+        {"id": "nodes", "size": 140, "score": 0.5 , "title": "nodes", "type": "circle"},
 
       
 
-        {"id": "triple-stores", "size": 5, "score": 0.4 , "title": "triple-stores", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
+
+      
+
+        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
 
       
 
@@ -812,11 +820,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "complexity", "size": 5, "score": 0.4 , "title": "complexity", "type": "circle"},
-
-      
-
-        {"id": "LOD-cloud", "size": 5, "score": 0.4 , "title": "LOD-cloud", "type": "circle"},
+        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
 
       
 
@@ -824,15 +828,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
 
       
 
-        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
+        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
+
+      
+
+        {"id": "use", "size": 5, "score": 0.4 , "title": "use", "type": "circle"},
+
+      
+
+        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
+
+      
+
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+
+      
+
+        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
+
+      
+
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
+
+      
+
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
+
+      
+
+        {"id": "attention", "size": 5, "score": 0.4 , "title": "attention", "type": "circle"},
 
        
 

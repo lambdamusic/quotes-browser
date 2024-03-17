@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>How URIs identifying information and non-information resources are dereferenced | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-04-Making-Uris-Dereferenceable-Ontogenealogy-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -722,45 +718,47 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "clients", "target": "action" },
+          { "source": "resources", "target": "services" },
       
-          { "source": "clients", "target": "method" },
+          { "source": "resources", "target": "metadata-model" },
       
-          { "source": "clients", "target": "investment" },
+          { "source": "resources", "target": "digital-libraries" },
       
-          { "source": "clients", "target": "goal" },
+          { "source": "resources", "target": "raw-data" },
       
-          { "source": "clients", "target": "information-resources" },
+          { "source": "resources", "target": "information-resources" },
       
-          { "source": "action", "target": "clients" },
+          { "source": "services", "target": "things" },
       
-          { "source": "action", "target": "method" },
+          { "source": "services", "target": "industrial-revolution" },
       
-          { "source": "action", "target": "people" },
+          { "source": "services", "target": "bits" },
       
-          { "source": "action", "target": "persons" },
+          { "source": "services", "target": "metadata-model" },
       
-          { "source": "method", "target": "action" },
+          { "source": "metadata-model", "target": "services" },
       
-          { "source": "method", "target": "clients" },
+          { "source": "metadata-model", "target": "digital-libraries" },
       
-          { "source": "method", "target": "user-testing" },
+          { "source": "metadata-model", "target": "resources" },
       
-          { "source": "method", "target": "developers" },
+          { "source": "metadata-model", "target": "raw-data" },
       
-          { "source": "investment", "target": "clients" },
+          { "source": "digital-libraries", "target": "raw-data" },
       
-          { "source": "investment", "target": "goal" },
+          { "source": "digital-libraries", "target": "access" },
       
-          { "source": "investment", "target": "money" },
+          { "source": "digital-libraries", "target": "services" },
       
-          { "source": "goal", "target": "team" },
+          { "source": "digital-libraries", "target": "metadata-model" },
       
-          { "source": "goal", "target": "link" },
+          { "source": "raw-data", "target": "digital-libraries" },
       
-          { "source": "goal", "target": "owners" },
+          { "source": "raw-data", "target": "access" },
       
-          { "source": "goal", "target": "product-owners" },
+          { "source": "raw-data", "target": "services" },
+      
+          { "source": "raw-data", "target": "metadata-model" },
       
           { "source": "information-resources", "target": "URI" },
       
@@ -775,19 +773,19 @@ var data_local_dynamic = {
   "nodes": [
       
 
-        {"id": "action", "size": 70, "score": 0 , "title": "action", "type": "circle"},
+        {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "method", "size": 70, "score": 0 , "title": "method", "type": "circle"},
+        {"id": "metadata-model", "size": 70, "score": 0 , "title": "metadata-model", "type": "circle"},
 
       
 
-        {"id": "investment", "size": 70, "score": 0 , "title": "investment", "type": "circle"},
+        {"id": "digital-libraries", "size": 70, "score": 0 , "title": "digital-libraries", "type": "circle"},
 
       
 
-        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
+        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
 
       
 
@@ -795,43 +793,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "clients", "size": 140, "score": 0.5 , "title": "clients", "type": "circle"},
+        {"id": "resources", "size": 140, "score": 0.5 , "title": "resources", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
+        {"id": "industrial-revolution", "size": 5, "score": 0.4 , "title": "industrial-revolution", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
 
       
 
-        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
-
-      
-
-        {"id": "money", "size": 5, "score": 0.4 , "title": "money", "type": "circle"},
-
-      
-
-        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
-
-      
-
-        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
-
-      
-
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
-
-      
-
-        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
 
       
 
@@ -843,7 +821,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
+        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
 
        
 

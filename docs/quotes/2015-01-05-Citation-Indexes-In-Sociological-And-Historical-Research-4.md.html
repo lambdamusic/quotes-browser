@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Quantitative measure of scientific impact | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-01-05-Citation-Indexes-In-Sociological-And-Historical-Research-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,15 +704,31 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "measures", "target": "citations" },
+          { "source": "impact", "target": "use" },
       
-          { "source": "measures", "target": "evaluation" },
+          { "source": "impact", "target": "assumption" },
       
-          { "source": "measures", "target": "analysis" },
+          { "source": "impact", "target": "citations" },
       
-          { "source": "measures", "target": "attention" },
+          { "source": "impact", "target": "attributes" },
       
-          { "source": "measures", "target": "impact" },
+          { "source": "impact", "target": "evidence" },
+      
+          { "source": "use", "target": "assumption" },
+      
+          { "source": "use", "target": "impact" },
+      
+          { "source": "use", "target": "drugs" },
+      
+          { "source": "use", "target": "sound" },
+      
+          { "source": "assumption", "target": "use" },
+      
+          { "source": "assumption", "target": "impact" },
+      
+          { "source": "assumption", "target": "inference" },
+      
+          { "source": "assumption", "target": "concept" },
       
           { "source": "citations", "target": "attributes" },
       
@@ -726,80 +738,76 @@ var data_local_dynamic = {
       
           { "source": "citations", "target": "evaluation" },
       
-          { "source": "evaluation", "target": "citations" },
+          { "source": "attributes", "target": "citations" },
       
-          { "source": "evaluation", "target": "measures" },
+          { "source": "attributes", "target": "evidence" },
       
-          { "source": "evaluation", "target": "analysis" },
+          { "source": "attributes", "target": "impact" },
       
-          { "source": "evaluation", "target": "attention" },
+          { "source": "attributes", "target": "users" },
       
-          { "source": "analysis", "target": "citations" },
+          { "source": "evidence", "target": "citations" },
       
-          { "source": "analysis", "target": "evaluation" },
+          { "source": "evidence", "target": "attributes" },
       
-          { "source": "analysis", "target": "measures" },
+          { "source": "evidence", "target": "impact" },
       
-          { "source": "analysis", "target": "attention" },
-      
-          { "source": "attention", "target": "citations" },
-      
-          { "source": "attention", "target": "evaluation" },
-      
-          { "source": "attention", "target": "measures" },
-      
-          { "source": "attention", "target": "analysis" },
-      
-          { "source": "impact", "target": "use" },
-      
-          { "source": "impact", "target": "assumption" },
-      
-          { "source": "impact", "target": "citations" },
-      
-          { "source": "impact", "target": "attributes" },
+          { "source": "evidence", "target": "cause" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "use", "size": 70, "score": 0 , "title": "use", "type": "circle"},
+
+      
+
+        {"id": "assumption", "size": 70, "score": 0 , "title": "assumption", "type": "circle"},
+
+      
+
         {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "evaluation", "size": 70, "score": 0 , "title": "evaluation", "type": "circle"},
+        {"id": "attributes", "size": 70, "score": 0 , "title": "attributes", "type": "circle"},
 
       
 
-        {"id": "analysis", "size": 70, "score": 0 , "title": "analysis", "type": "circle"},
+        {"id": "evidence", "size": 70, "score": 0 , "title": "evidence", "type": "circle"},
 
       
 
-        {"id": "attention", "size": 70, "score": 0 , "title": "attention", "type": "circle"},
+        {"id": "impact", "size": 140, "score": 0.5 , "title": "impact", "type": "circle"},
 
       
 
-        {"id": "impact", "size": 70, "score": 0 , "title": "impact", "type": "circle"},
+        {"id": "drugs", "size": 5, "score": 0.4 , "title": "drugs", "type": "circle"},
 
       
 
-        {"id": "measures", "size": 140, "score": 0.5 , "title": "measures", "type": "circle"},
+        {"id": "sound", "size": 5, "score": 0.4 , "title": "sound", "type": "circle"},
 
       
 
-        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
+        {"id": "inference", "size": 5, "score": 0.4 , "title": "inference", "type": "circle"},
 
       
 
-        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "use", "size": 5, "score": 0.4 , "title": "use", "type": "circle"},
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
 
       
 
-        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+
+      
+
+        {"id": "cause", "size": 5, "score": 0.4 , "title": "cause", "type": "circle"},
 
        
 

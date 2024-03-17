@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Responsibility assignment matrix (raci) | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-09-20-Responsibility-Assignment-Matrix-wikipedia-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -709,98 +705,122 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "project", "target": "product-owners" },
+          { "source": "role", "target": "team" },
       
-          { "source": "project", "target": "owners" },
+          { "source": "role", "target": "persons" },
       
-          { "source": "project", "target": "business" },
+          { "source": "role", "target": "benefits" },
       
-          { "source": "project", "target": "product-backlog" },
+          { "source": "role", "target": "historical-research" },
       
-          { "source": "project", "target": "information" },
+          { "source": "role", "target": "development" },
       
-          { "source": "product-owners", "target": "owners" },
+          { "source": "team", "target": "goal" },
       
-          { "source": "product-owners", "target": "project" },
+          { "source": "team", "target": "link" },
       
-          { "source": "product-owners", "target": "business" },
+          { "source": "team", "target": "owners" },
       
-          { "source": "product-owners", "target": "product-backlog" },
+          { "source": "team", "target": "product-owners" },
       
-          { "source": "owners", "target": "product-owners" },
+          { "source": "persons", "target": "team" },
       
-          { "source": "owners", "target": "project" },
+          { "source": "persons", "target": "role" },
       
-          { "source": "owners", "target": "business" },
+          { "source": "persons", "target": "benefits" },
       
-          { "source": "owners", "target": "product-backlog" },
+          { "source": "persons", "target": "humans" },
       
-          { "source": "business", "target": "product-owners" },
+          { "source": "benefits", "target": "team" },
       
-          { "source": "business", "target": "owners" },
+          { "source": "benefits", "target": "role" },
       
-          { "source": "business", "target": "project" },
+          { "source": "benefits", "target": "persons" },
       
-          { "source": "business", "target": "product-backlog" },
+          { "source": "benefits", "target": "men" },
       
-          { "source": "product-backlog", "target": "product-owners" },
+          { "source": "historical-research", "target": "development" },
       
-          { "source": "product-backlog", "target": "owners" },
+          { "source": "historical-research", "target": "research" },
       
-          { "source": "product-backlog", "target": "project" },
+          { "source": "historical-research", "target": "role" },
       
-          { "source": "product-backlog", "target": "business" },
+          { "source": "historical-research", "target": "Garfield" },
       
-          { "source": "information", "target": "nanopublications" },
+          { "source": "development", "target": "law" },
       
-          { "source": "information", "target": "metadata" },
+          { "source": "development", "target": "coding" },
       
-          { "source": "information", "target": "contextual-information" },
+          { "source": "development", "target": "historical-research" },
       
-          { "source": "information", "target": "collection-objects" },
+          { "source": "development", "target": "research" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
+        {"id": "team", "size": 70, "score": 0 , "title": "team", "type": "circle"},
 
       
 
-        {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
+        {"id": "persons", "size": 70, "score": 0 , "title": "persons", "type": "circle"},
 
       
 
-        {"id": "business", "size": 70, "score": 0 , "title": "business", "type": "circle"},
+        {"id": "benefits", "size": 70, "score": 0 , "title": "benefits", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 70, "score": 0 , "title": "product-backlog", "type": "circle"},
+        {"id": "historical-research", "size": 70, "score": 0 , "title": "historical-research", "type": "circle"},
 
       
 
-        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
+        {"id": "development", "size": 70, "score": 0 , "title": "development", "type": "circle"},
 
       
 
-        {"id": "project", "size": 140, "score": 0.5 , "title": "project", "type": "circle"},
+        {"id": "role", "size": 140, "score": 0.5 , "title": "role", "type": "circle"},
 
       
 
-        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
+        {"id": "goal", "size": 5, "score": 0.4 , "title": "goal", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
 
       
 
-        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+
+      
+
+        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
+
+      
+
+        {"id": "men", "size": 5, "score": 0.4 , "title": "men", "type": "circle"},
+
+      
+
+        {"id": "research", "size": 5, "score": 0.4 , "title": "research", "type": "circle"},
+
+      
+
+        {"id": "Garfield", "size": 5, "score": 0.4 , "title": "Garfield", "type": "circle"},
+
+      
+
+        {"id": "law", "size": 5, "score": 0.4 , "title": "law", "type": "circle"},
+
+      
+
+        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
 
        
 

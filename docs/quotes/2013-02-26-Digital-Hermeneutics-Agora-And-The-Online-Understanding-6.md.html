@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>..the basic event-event relations that... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Digital-Hermeneutics-Agora-And-The-Online-Understanding-6.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,47 +709,31 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "relation", "target": "world" },
+          { "source": "events", "target": "cases" },
       
-          { "source": "relation", "target": "real-world" },
+          { "source": "events", "target": "occurrence" },
       
-          { "source": "relation", "target": "relationship" },
+          { "source": "events", "target": "instances" },
       
-          { "source": "relation", "target": "properties" },
+          { "source": "events", "target": "class" },
       
-          { "source": "relation", "target": "instances" },
+          { "source": "events", "target": "episodes" },
       
-          { "source": "world", "target": "relation" },
+          { "source": "cases", "target": "title" },
       
-          { "source": "world", "target": "real-world" },
+          { "source": "cases", "target": "content" },
       
-          { "source": "world", "target": "relationship" },
+          { "source": "cases", "target": "story" },
       
-          { "source": "world", "target": "Calvinism" },
+          { "source": "cases", "target": "occurrence" },
       
-          { "source": "real-world", "target": "relation" },
+          { "source": "occurrence", "target": "cases" },
       
-          { "source": "real-world", "target": "world" },
+          { "source": "occurrence", "target": "events" },
       
-          { "source": "real-world", "target": "relationship" },
+          { "source": "occurrence", "target": "instances" },
       
-          { "source": "real-world", "target": "class" },
-      
-          { "source": "relationship", "target": "verbs" },
-      
-          { "source": "relationship", "target": "attitudes" },
-      
-          { "source": "relationship", "target": "period" },
-      
-          { "source": "relationship", "target": "relation" },
-      
-          { "source": "properties", "target": "network" },
-      
-          { "source": "properties", "target": "instances" },
-      
-          { "source": "properties", "target": "range" },
-      
-          { "source": "properties", "target": "class" },
+          { "source": "occurrence", "target": "class" },
       
           { "source": "instances", "target": "cases" },
       
@@ -762,25 +742,33 @@ var data_local_dynamic = {
           { "source": "instances", "target": "events" },
       
           { "source": "instances", "target": "class" },
+      
+          { "source": "class", "target": "cases" },
+      
+          { "source": "class", "target": "occurrence" },
+      
+          { "source": "class", "target": "events" },
+      
+          { "source": "class", "target": "instances" },
+      
+          { "source": "episodes", "target": "orphans" },
+      
+          { "source": "episodes", "target": "series" },
+      
+          { "source": "episodes", "target": "years" },
+      
+          { "source": "episodes", "target": "time" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "world", "size": 70, "score": 0 , "title": "world", "type": "circle"},
+        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "real-world", "size": 70, "score": 0 , "title": "real-world", "type": "circle"},
-
-      
-
-        {"id": "relationship", "size": 70, "score": 0 , "title": "relationship", "type": "circle"},
-
-      
-
-        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
@@ -788,47 +776,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "relation", "size": 140, "score": 0.5 , "title": "relation", "type": "circle"},
+        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
+        {"id": "episodes", "size": 70, "score": 0 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "events", "size": 140, "score": 0.5 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "verbs", "size": 5, "score": 0.4 , "title": "verbs", "type": "circle"},
+        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "attitudes", "size": 5, "score": 0.4 , "title": "attitudes", "type": "circle"},
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "period", "size": 5, "score": 0.4 , "title": "period", "type": "circle"},
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
+        {"id": "orphans", "size": 5, "score": 0.4 , "title": "orphans", "type": "circle"},
 
       
 
-        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
+        {"id": "series", "size": 5, "score": 0.4 , "title": "series", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+        {"id": "time", "size": 5, "score": 0.4 , "title": "time", "type": "circle"},
 
        
 

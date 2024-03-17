@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Collaborative topic modeling applied to the new york times | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-08-12-Building-The-Next-New-York-Times-Recommendation-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -718,31 +714,31 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "algorithm", "target": "server" },
+          { "source": "readers", "target": "text" },
       
-          { "source": "algorithm", "target": "metadata" },
+          { "source": "readers", "target": "book" },
       
-          { "source": "algorithm", "target": "words" },
+          { "source": "readers", "target": "words" },
       
-          { "source": "algorithm", "target": "readers" },
+          { "source": "readers", "target": "algorithm" },
       
-          { "source": "algorithm", "target": "nodes" },
+          { "source": "readers", "target": "digital-media" },
       
-          { "source": "server", "target": "metadata" },
+          { "source": "text", "target": "story" },
       
-          { "source": "server", "target": "algorithm" },
+          { "source": "text", "target": "game" },
       
-          { "source": "server", "target": "publishing" },
+          { "source": "text", "target": "character" },
       
-          { "source": "server", "target": "article" },
+          { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "book", "target": "news" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "book", "target": "journals" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "book", "target": "nature" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "book", "target": "text" },
       
           { "source": "words", "target": "language" },
       
@@ -752,32 +748,32 @@ var data_local_dynamic = {
       
           { "source": "words", "target": "algorithm" },
       
-          { "source": "readers", "target": "text" },
+          { "source": "algorithm", "target": "server" },
       
-          { "source": "readers", "target": "book" },
+          { "source": "algorithm", "target": "metadata" },
       
-          { "source": "readers", "target": "words" },
+          { "source": "algorithm", "target": "words" },
       
-          { "source": "readers", "target": "algorithm" },
+          { "source": "algorithm", "target": "readers" },
       
-          { "source": "nodes", "target": "hierarchy" },
+          { "source": "digital-media", "target": "culture" },
       
-          { "source": "nodes", "target": "vocabulary" },
+          { "source": "digital-media", "target": "communication" },
       
-          { "source": "nodes", "target": "taxonomy" },
+          { "source": "digital-media", "target": "readers" },
       
-          { "source": "nodes", "target": "impact" },
+          { "source": "digital-media", "target": "humanity" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
+        {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
 
       
 
@@ -785,35 +781,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "readers", "size": 70, "score": 0 , "title": "readers", "type": "circle"},
+        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
 
       
 
-        {"id": "nodes", "size": 70, "score": 0 , "title": "nodes", "type": "circle"},
+        {"id": "digital-media", "size": 70, "score": 0 , "title": "digital-media", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 140, "score": 0.5 , "title": "algorithm", "type": "circle"},
+        {"id": "readers", "size": 140, "score": 0.5 , "title": "readers", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 5, "score": 0.4 , "title": "publishing", "type": "circle"},
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "character", "size": 5, "score": 0.4 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "interactive-fiction", "size": 5, "score": 0.4 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
+
+      
+
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+
+      
+
+        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
 
       
 
@@ -825,27 +829,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+        {"id": "culture", "size": 5, "score": 0.4 , "title": "culture", "type": "circle"},
 
       
 
-        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
+        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
 
       
 
-        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
-
-      
-
-        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
+        {"id": "humanity", "size": 5, "score": 0.4 , "title": "humanity", "type": "circle"},
 
        
 

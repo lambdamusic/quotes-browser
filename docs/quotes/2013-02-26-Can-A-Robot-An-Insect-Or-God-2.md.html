@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Looking at the results from... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Can-A-Robot-An-Insect-Or-God-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,22 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "theory", "target": "cognitive-processes" },
+      
+          { "source": "theory", "target": "intuition" },
+      
+          { "source": "theory", "target": "psychological-state" },
+      
+          { "source": "theory", "target": "physics" },
+      
+          { "source": "theory", "target": "law" },
+      
+          { "source": "cognitive-processes", "target": "intuition" },
+      
+          { "source": "cognitive-processes", "target": "psychological-state" },
+      
+          { "source": "cognitive-processes", "target": "theory" },
+      
           { "source": "intuition", "target": "cognitive-processes" },
       
           { "source": "intuition", "target": "psychological-state" },
@@ -717,14 +729,6 @@ var data_local_dynamic = {
           { "source": "intuition", "target": "theory" },
       
           { "source": "intuition", "target": "philosophers" },
-      
-          { "source": "intuition", "target": "consciousness" },
-      
-          { "source": "cognitive-processes", "target": "intuition" },
-      
-          { "source": "cognitive-processes", "target": "psychological-state" },
-      
-          { "source": "cognitive-processes", "target": "theory" },
       
           { "source": "psychological-state", "target": "cognitive-processes" },
       
@@ -734,29 +738,21 @@ var data_local_dynamic = {
       
           { "source": "psychological-state", "target": "human-mind" },
       
-          { "source": "theory", "target": "cognitive-processes" },
+          { "source": "physics", "target": "theory" },
       
-          { "source": "theory", "target": "intuition" },
+          { "source": "physics", "target": "law" },
       
-          { "source": "theory", "target": "psychological-state" },
+          { "source": "physics", "target": "system" },
       
-          { "source": "theory", "target": "physics" },
+          { "source": "physics", "target": "field" },
       
-          { "source": "philosophers", "target": "intuition" },
+          { "source": "law", "target": "rights" },
       
-          { "source": "philosophers", "target": "consciousness" },
+          { "source": "law", "target": "development" },
       
-          { "source": "philosophers", "target": "people" },
+          { "source": "law", "target": "coding" },
       
-          { "source": "philosophers", "target": "philosophical-problems" },
-      
-          { "source": "consciousness", "target": "philosophers" },
-      
-          { "source": "consciousness", "target": "intuition" },
-      
-          { "source": "consciousness", "target": "people" },
-      
-          { "source": "consciousness", "target": "subjective-experience" },
+          { "source": "law", "target": "physics" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -767,23 +763,27 @@ var data_local_dynamic = {
 
       
 
+        {"id": "intuition", "size": 70, "score": 0 , "title": "intuition", "type": "circle"},
+
+      
+
         {"id": "psychological-state", "size": 70, "score": 0 , "title": "psychological-state", "type": "circle"},
 
       
 
-        {"id": "theory", "size": 70, "score": 0 , "title": "theory", "type": "circle"},
+        {"id": "physics", "size": 70, "score": 0 , "title": "physics", "type": "circle"},
 
       
 
-        {"id": "philosophers", "size": 70, "score": 0 , "title": "philosophers", "type": "circle"},
+        {"id": "law", "size": 70, "score": 0 , "title": "law", "type": "circle"},
 
       
 
-        {"id": "consciousness", "size": 70, "score": 0 , "title": "consciousness", "type": "circle"},
+        {"id": "theory", "size": 140, "score": 0.5 , "title": "theory", "type": "circle"},
 
       
 
-        {"id": "intuition", "size": 140, "score": 0.5 , "title": "intuition", "type": "circle"},
+        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
 
       
 
@@ -791,19 +791,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "physics", "size": 5, "score": 0.4 , "title": "physics", "type": "circle"},
+        {"id": "system", "size": 5, "score": 0.4 , "title": "system", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "field", "size": 5, "score": 0.4 , "title": "field", "type": "circle"},
 
       
 
-        {"id": "philosophical-problems", "size": 5, "score": 0.4 , "title": "philosophical-problems", "type": "circle"},
+        {"id": "rights", "size": 5, "score": 0.4 , "title": "rights", "type": "circle"},
 
       
 
-        {"id": "subjective-experience", "size": 5, "score": 0.4 , "title": "subjective-experience", "type": "circle"},
+        {"id": "development", "size": 5, "score": 0.4 , "title": "development", "type": "circle"},
+
+      
+
+        {"id": "coding", "size": 5, "score": 0.4 , "title": "coding", "type": "circle"},
 
        
 

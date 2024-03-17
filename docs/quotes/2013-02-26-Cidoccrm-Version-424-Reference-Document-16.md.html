@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>The domain is the class... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Cidoccrm-Version-424-Reference-Document-16.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -712,46 +708,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "values", "target": "publications" },
-      
-          { "source": "values", "target": "hypothesis" },
-      
-          { "source": "values", "target": "distance" },
-      
-          { "source": "values", "target": "properties" },
-      
-          { "source": "values", "target": "instances" },
-      
-          { "source": "publications", "target": "hypothesis" },
-      
-          { "source": "publications", "target": "values" },
-      
-          { "source": "publications", "target": "distance" },
-      
-          { "source": "publications", "target": "area" },
-      
-          { "source": "hypothesis", "target": "experiments" },
-      
-          { "source": "hypothesis", "target": "constructs" },
-      
-          { "source": "hypothesis", "target": "process" },
-      
-          { "source": "hypothesis", "target": "publications" },
-      
-          { "source": "distance", "target": "publications" },
-      
-          { "source": "distance", "target": "hypothesis" },
-      
-          { "source": "distance", "target": "values" },
-      
-          { "source": "properties", "target": "network" },
-      
-          { "source": "properties", "target": "instances" },
-      
-          { "source": "properties", "target": "range" },
-      
-          { "source": "properties", "target": "class" },
-      
           { "source": "instances", "target": "cases" },
       
           { "source": "instances", "target": "occurrence" },
@@ -759,73 +715,95 @@ var data_local_dynamic = {
           { "source": "instances", "target": "events" },
       
           { "source": "instances", "target": "class" },
+      
+          { "source": "instances", "target": "objects" },
+      
+          { "source": "cases", "target": "title" },
+      
+          { "source": "cases", "target": "content" },
+      
+          { "source": "cases", "target": "story" },
+      
+          { "source": "cases", "target": "occurrence" },
+      
+          { "source": "occurrence", "target": "cases" },
+      
+          { "source": "occurrence", "target": "events" },
+      
+          { "source": "occurrence", "target": "instances" },
+      
+          { "source": "occurrence", "target": "class" },
+      
+          { "source": "events", "target": "cases" },
+      
+          { "source": "events", "target": "occurrence" },
+      
+          { "source": "events", "target": "instances" },
+      
+          { "source": "events", "target": "class" },
+      
+          { "source": "class", "target": "cases" },
+      
+          { "source": "class", "target": "occurrence" },
+      
+          { "source": "class", "target": "events" },
+      
+          { "source": "class", "target": "instances" },
+      
+          { "source": "objects", "target": "class" },
+      
+          { "source": "objects", "target": "real-world" },
+      
+          { "source": "objects", "target": "instances" },
+      
+          { "source": "objects", "target": "types" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "publications", "size": 70, "score": 0 , "title": "publications", "type": "circle"},
+        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "hypothesis", "size": 70, "score": 0 , "title": "hypothesis", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "distance", "size": 70, "score": 0 , "title": "distance", "type": "circle"},
+        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
+        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
+        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
 
       
 
-        {"id": "values", "size": 140, "score": 0.5 , "title": "values", "type": "circle"},
+        {"id": "instances", "size": 140, "score": 0.5 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "area", "size": 5, "score": 0.4 , "title": "area", "type": "circle"},
+        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "experiments", "size": 5, "score": 0.4 , "title": "experiments", "type": "circle"},
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "constructs", "size": 5, "score": 0.4 , "title": "constructs", "type": "circle"},
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
-
-      
-
-        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
-
-      
-
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
 
        
 

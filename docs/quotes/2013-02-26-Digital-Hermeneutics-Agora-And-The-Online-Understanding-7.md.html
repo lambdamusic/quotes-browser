@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>We distinguish three types of... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Digital-Hermeneutics-Agora-And-The-Online-Understanding-7.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -715,15 +711,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "war", "target": "historical-events" },
+          { "source": "historical-context", "target": "historical-events" },
       
-          { "source": "war", "target": "historical-context" },
+          { "source": "historical-context", "target": "war" },
       
-          { "source": "war", "target": "book" },
+          { "source": "historical-context", "target": "book" },
       
-          { "source": "war", "target": "Simple-Event-Model" },
+          { "source": "historical-context", "target": "Simple-Event-Model" },
       
-          { "source": "war", "target": "museum-collections" },
+          { "source": "historical-context", "target": "narratives" },
       
           { "source": "historical-events", "target": "historical-context" },
       
@@ -733,13 +729,13 @@ var data_local_dynamic = {
       
           { "source": "historical-events", "target": "Simple-Event-Model" },
       
-          { "source": "historical-context", "target": "historical-events" },
+          { "source": "war", "target": "historical-events" },
       
-          { "source": "historical-context", "target": "war" },
+          { "source": "war", "target": "historical-context" },
       
-          { "source": "historical-context", "target": "book" },
+          { "source": "war", "target": "book" },
       
-          { "source": "historical-context", "target": "Simple-Event-Model" },
+          { "source": "war", "target": "Simple-Event-Model" },
       
           { "source": "book", "target": "news" },
       
@@ -757,13 +753,13 @@ var data_local_dynamic = {
       
           { "source": "Simple-Event-Model", "target": "book" },
       
-          { "source": "museum-collections", "target": "historical-events" },
+          { "source": "narratives", "target": "historical-events" },
       
-          { "source": "museum-collections", "target": "historical-context" },
+          { "source": "narratives", "target": "historical-context" },
       
-          { "source": "museum-collections", "target": "objects" },
+          { "source": "narratives", "target": "collection-objects" },
       
-          { "source": "museum-collections", "target": "war" },
+          { "source": "narratives", "target": "meaning" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -774,7 +770,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "historical-context", "size": 70, "score": 0 , "title": "historical-context", "type": "circle"},
+        {"id": "war", "size": 70, "score": 0 , "title": "war", "type": "circle"},
 
       
 
@@ -786,11 +782,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "museum-collections", "size": 70, "score": 0 , "title": "museum-collections", "type": "circle"},
+        {"id": "narratives", "size": 70, "score": 0 , "title": "narratives", "type": "circle"},
 
       
 
-        {"id": "war", "size": 140, "score": 0.5 , "title": "war", "type": "circle"},
+        {"id": "historical-context", "size": 140, "score": 0.5 , "title": "historical-context", "type": "circle"},
 
       
 
@@ -810,7 +806,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "objects", "size": 5, "score": 0.4 , "title": "objects", "type": "circle"},
+        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
+
+      
+
+        {"id": "meaning", "size": 5, "score": 0.4 , "title": "meaning", "type": "circle"},
 
        
 

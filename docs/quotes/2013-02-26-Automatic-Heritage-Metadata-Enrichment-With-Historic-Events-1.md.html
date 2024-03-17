@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Most digitized and online available... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Automatic-Heritage-Metadata-Enrichment-With-Historic-Events-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,23 +709,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "information", "target": "nanopublications" },
+          { "source": "collection", "target": "metadata" },
       
-          { "source": "information", "target": "metadata" },
+          { "source": "collection", "target": "collection-objects" },
       
-          { "source": "information", "target": "contextual-information" },
+          { "source": "collection", "target": "objects" },
       
-          { "source": "information", "target": "collection-objects" },
+          { "source": "collection", "target": "information" },
       
-          { "source": "information", "target": "objects" },
-      
-          { "source": "nanopublications", "target": "metadata" },
-      
-          { "source": "nanopublications", "target": "information" },
-      
-          { "source": "nanopublications", "target": "contextual-information" },
-      
-          { "source": "nanopublications", "target": "graph" },
+          { "source": "collection", "target": "broadcast" },
       
           { "source": "metadata", "target": "RDF-databases" },
       
@@ -738,14 +726,6 @@ var data_local_dynamic = {
           { "source": "metadata", "target": "database" },
       
           { "source": "metadata", "target": "server" },
-      
-          { "source": "contextual-information", "target": "nanopublications" },
-      
-          { "source": "contextual-information", "target": "metadata" },
-      
-          { "source": "contextual-information", "target": "information" },
-      
-          { "source": "contextual-information", "target": "data-sets" },
       
           { "source": "collection-objects", "target": "metadata" },
       
@@ -762,21 +742,29 @@ var data_local_dynamic = {
           { "source": "objects", "target": "instances" },
       
           { "source": "objects", "target": "types" },
+      
+          { "source": "information", "target": "nanopublications" },
+      
+          { "source": "information", "target": "metadata" },
+      
+          { "source": "information", "target": "contextual-information" },
+      
+          { "source": "information", "target": "collection-objects" },
+      
+          { "source": "broadcast", "target": "themes" },
+      
+          { "source": "broadcast", "target": "collection" },
+      
+          { "source": "broadcast", "target": "media-assets" },
+      
+          { "source": "broadcast", "target": "story" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "nanopublications", "size": 70, "score": 0 , "title": "nanopublications", "type": "circle"},
-
-      
-
         {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
-
-      
-
-        {"id": "contextual-information", "size": 70, "score": 0 , "title": "contextual-information", "type": "circle"},
 
       
 
@@ -788,11 +776,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "information", "size": 140, "score": 0.5 , "title": "information", "type": "circle"},
+        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
+        {"id": "broadcast", "size": 70, "score": 0 , "title": "broadcast", "type": "circle"},
+
+      
+
+        {"id": "collection", "size": 140, "score": 0.5 , "title": "collection", "type": "circle"},
 
       
 
@@ -812,14 +804,6 @@ var data_local_dynamic = {
 
       
 
-        {"id": "data-sets", "size": 5, "score": 0.4 , "title": "data-sets", "type": "circle"},
-
-      
-
-        {"id": "collection", "size": 5, "score": 0.4 , "title": "collection", "type": "circle"},
-
-      
-
         {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
       
@@ -833,6 +817,26 @@ var data_local_dynamic = {
       
 
         {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+
+      
+
+        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
+
+      
+
+        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
+
+      
+
+        {"id": "themes", "size": 5, "score": 0.4 , "title": "themes", "type": "circle"},
+
+      
+
+        {"id": "media-assets", "size": 5, "score": 0.4 , "title": "media-assets", "type": "circle"},
+
+      
+
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
        
 

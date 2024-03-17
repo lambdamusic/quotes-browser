@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Data citation | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-02-24-Bulletin-Februarymarch-2015-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,22 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "data-discovery", "target": "data-citation" },
-      
-          { "source": "data-discovery", "target": "publishing" },
-      
-          { "source": "data-discovery", "target": "analytics" },
-      
-          { "source": "data-discovery", "target": "access" },
-      
-          { "source": "data-citation", "target": "publishing" },
-      
-          { "source": "data-citation", "target": "data-discovery" },
-      
-          { "source": "data-citation", "target": "metadata" },
-      
-          { "source": "data-citation", "target": "interoperability" },
-      
           { "source": "publishing", "target": "article" },
       
           { "source": "publishing", "target": "web-server" },
@@ -734,44 +714,90 @@ var data_local_dynamic = {
       
           { "source": "publishing", "target": "server" },
       
-          { "source": "analytics", "target": "knowledge-graph" },
+          { "source": "publishing", "target": "data-citation" },
       
-          { "source": "analytics", "target": "data-analytics" },
+          { "source": "article", "target": "hierarchy" },
       
-          { "source": "analytics", "target": "graph" },
+          { "source": "article", "target": "social-sciences" },
       
-          { "source": "analytics", "target": "Semantic-Web" },
+          { "source": "article", "target": "science" },
       
-          { "source": "access", "target": "humans" },
+          { "source": "article", "target": "concept" },
       
-          { "source": "access", "target": "need" },
+          { "source": "web-server", "target": "publishing" },
       
-          { "source": "access", "target": "publications" },
+          { "source": "web-server", "target": "article" },
       
-          { "source": "access", "target": "situation" },
+          { "source": "web-server", "target": "academic-publishing" },
+      
+          { "source": "web-server", "target": "server" },
+      
+          { "source": "academic-publishing", "target": "publishing" },
+      
+          { "source": "academic-publishing", "target": "article" },
+      
+          { "source": "academic-publishing", "target": "web-server" },
+      
+          { "source": "academic-publishing", "target": "server" },
+      
+          { "source": "server", "target": "metadata" },
+      
+          { "source": "server", "target": "algorithm" },
+      
+          { "source": "server", "target": "publishing" },
+      
+          { "source": "server", "target": "article" },
+      
+          { "source": "data-citation", "target": "publishing" },
+      
+          { "source": "data-citation", "target": "data-discovery" },
+      
+          { "source": "data-citation", "target": "metadata" },
+      
+          { "source": "data-citation", "target": "interoperability" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "web-server", "size": 70, "score": 0 , "title": "web-server", "type": "circle"},
+
+      
+
+        {"id": "academic-publishing", "size": 70, "score": 0 , "title": "academic-publishing", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
+
+      
+
         {"id": "data-citation", "size": 70, "score": 0 , "title": "data-citation", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 70, "score": 0 , "title": "publishing", "type": "circle"},
+        {"id": "publishing", "size": 140, "score": 0.5 , "title": "publishing", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
 
       
 
-        {"id": "data-discovery", "size": 140, "score": 0.5 , "title": "data-discovery", "type": "circle"},
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
@@ -779,55 +805,15 @@ var data_local_dynamic = {
 
       
 
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+
+      
+
+        {"id": "data-discovery", "size": 5, "score": 0.4 , "title": "data-discovery", "type": "circle"},
+
+      
+
         {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
-
-      
-
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
-
-      
-
-        {"id": "web-server", "size": 5, "score": 0.4 , "title": "web-server", "type": "circle"},
-
-      
-
-        {"id": "academic-publishing", "size": 5, "score": 0.4 , "title": "academic-publishing", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
-        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
-
-      
-
-        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
-
-      
-
-        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
-
-      
-
-        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
-
-      
-
-        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
-
-      
-
-        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
-
-      
-
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
-
-      
-
-        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
 
        
 

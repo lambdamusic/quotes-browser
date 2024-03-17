@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Who blinks first | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-02-06-Re-Blink-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,90 +706,94 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "business", "target": "product-owners" },
+          { "source": "game", "target": "story" },
       
-          { "source": "business", "target": "owners" },
+          { "source": "game", "target": "text" },
       
-          { "source": "business", "target": "project" },
+          { "source": "game", "target": "character" },
       
-          { "source": "business", "target": "product-backlog" },
+          { "source": "game", "target": "interactive-fiction" },
       
-          { "source": "business", "target": "team" },
+          { "source": "game", "target": "customers" },
       
-          { "source": "product-owners", "target": "owners" },
+          { "source": "story", "target": "text" },
       
-          { "source": "product-owners", "target": "project" },
+          { "source": "story", "target": "game" },
       
-          { "source": "product-owners", "target": "business" },
+          { "source": "story", "target": "character" },
       
-          { "source": "product-owners", "target": "product-backlog" },
+          { "source": "story", "target": "interactive-fiction" },
       
-          { "source": "owners", "target": "product-owners" },
+          { "source": "text", "target": "story" },
       
-          { "source": "owners", "target": "project" },
+          { "source": "text", "target": "game" },
       
-          { "source": "owners", "target": "business" },
+          { "source": "text", "target": "character" },
       
-          { "source": "owners", "target": "product-backlog" },
+          { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "project", "target": "product-owners" },
+          { "source": "character", "target": "story" },
       
-          { "source": "project", "target": "owners" },
+          { "source": "character", "target": "text" },
       
-          { "source": "project", "target": "business" },
+          { "source": "character", "target": "game" },
       
-          { "source": "project", "target": "product-backlog" },
+          { "source": "character", "target": "interactive-fiction" },
       
-          { "source": "product-backlog", "target": "product-owners" },
+          { "source": "interactive-fiction", "target": "story" },
       
-          { "source": "product-backlog", "target": "owners" },
+          { "source": "interactive-fiction", "target": "text" },
       
-          { "source": "product-backlog", "target": "project" },
+          { "source": "interactive-fiction", "target": "game" },
       
-          { "source": "product-backlog", "target": "business" },
+          { "source": "interactive-fiction", "target": "character" },
       
-          { "source": "team", "target": "goal" },
+          { "source": "customers", "target": "game" },
       
-          { "source": "team", "target": "link" },
+          { "source": "customers", "target": "features" },
       
-          { "source": "team", "target": "owners" },
+          { "source": "customers", "target": "schedule" },
       
-          { "source": "team", "target": "product-owners" },
+          { "source": "customers", "target": "services" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
+        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
+        {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "project", "size": 70, "score": 0 , "title": "project", "type": "circle"},
+        {"id": "character", "size": 70, "score": 0 , "title": "character", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 70, "score": 0 , "title": "product-backlog", "type": "circle"},
+        {"id": "interactive-fiction", "size": 70, "score": 0 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "team", "size": 70, "score": 0 , "title": "team", "type": "circle"},
+        {"id": "customers", "size": 70, "score": 0 , "title": "customers", "type": "circle"},
 
       
 
-        {"id": "business", "size": 140, "score": 0.5 , "title": "business", "type": "circle"},
+        {"id": "game", "size": 140, "score": 0.5 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "goal", "size": 5, "score": 0.4 , "title": "goal", "type": "circle"},
+        {"id": "features", "size": 5, "score": 0.4 , "title": "features", "type": "circle"},
 
       
 
-        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
+        {"id": "schedule", "size": 5, "score": 0.4 , "title": "schedule", "type": "circle"},
+
+      
+
+        {"id": "services", "size": 5, "score": 0.4 , "title": "services", "type": "circle"},
 
        
 

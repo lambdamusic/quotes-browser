@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Joint declaration of data citation principles | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-02-24-Bulletin-Februarymarch-2015-3.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -720,15 +716,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "interoperability", "target": "data-citation" },
+          { "source": "data-repository", "target": "data-citation" },
       
-          { "source": "interoperability", "target": "metadata" },
+          { "source": "data-repository", "target": "metadata" },
       
-          { "source": "interoperability", "target": "machine" },
+          { "source": "data-repository", "target": "interoperability" },
       
-          { "source": "interoperability", "target": "data-repository" },
+          { "source": "data-repository", "target": "machine" },
       
-          { "source": "interoperability", "target": "different-information-systems" },
+          { "source": "data-repository", "target": "software" },
       
           { "source": "data-citation", "target": "publishing" },
       
@@ -746,6 +742,14 @@ var data_local_dynamic = {
       
           { "source": "metadata", "target": "server" },
       
+          { "source": "interoperability", "target": "data-citation" },
+      
+          { "source": "interoperability", "target": "metadata" },
+      
+          { "source": "interoperability", "target": "machine" },
+      
+          { "source": "interoperability", "target": "data-repository" },
+      
           { "source": "machine", "target": "things" },
       
           { "source": "machine", "target": "manufacturing" },
@@ -754,21 +758,13 @@ var data_local_dynamic = {
       
           { "source": "machine", "target": "metadata" },
       
-          { "source": "data-repository", "target": "data-citation" },
+          { "source": "software", "target": "disambiguation" },
       
-          { "source": "data-repository", "target": "metadata" },
+          { "source": "software", "target": "entities" },
       
-          { "source": "data-repository", "target": "interoperability" },
+          { "source": "software", "target": "ontology" },
       
-          { "source": "data-repository", "target": "machine" },
-      
-          { "source": "different-information-systems", "target": "system" },
-      
-          { "source": "different-information-systems", "target": "information-systems" },
-      
-          { "source": "different-information-systems", "target": "interoperability" },
-      
-          { "source": "different-information-systems", "target": "capability" },
+          { "source": "software", "target": "gazetteers" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -783,19 +779,19 @@ var data_local_dynamic = {
 
       
 
+        {"id": "interoperability", "size": 70, "score": 0 , "title": "interoperability", "type": "circle"},
+
+      
+
         {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
 
       
 
-        {"id": "data-repository", "size": 70, "score": 0 , "title": "data-repository", "type": "circle"},
+        {"id": "software", "size": 70, "score": 0 , "title": "software", "type": "circle"},
 
       
 
-        {"id": "different-information-systems", "size": 70, "score": 0 , "title": "different-information-systems", "type": "circle"},
-
-      
-
-        {"id": "interoperability", "size": 140, "score": 0.5 , "title": "interoperability", "type": "circle"},
+        {"id": "data-repository", "size": 140, "score": 0.5 , "title": "data-repository", "type": "circle"},
 
       
 
@@ -831,15 +827,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "system", "size": 5, "score": 0.4 , "title": "system", "type": "circle"},
+        {"id": "disambiguation", "size": 5, "score": 0.4 , "title": "disambiguation", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "entities", "size": 5, "score": 0.4 , "title": "entities", "type": "circle"},
 
       
 
-        {"id": "capability", "size": 5, "score": 0.4 , "title": "capability", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+
+      
+
+        {"id": "gazetteers", "size": 5, "score": 0.4 , "title": "gazetteers", "type": "circle"},
 
        
 

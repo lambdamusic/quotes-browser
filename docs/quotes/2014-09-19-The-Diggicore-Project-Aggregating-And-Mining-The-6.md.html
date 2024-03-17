@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>..the problem of building a... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-19-The-Diggicore-Project-Aggregating-And-Mining-The-6.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,12 +704,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "citation-graph", "target": "graph" },
-      
-          { "source": "citation-graph", "target": "API" },
-      
-          { "source": "citation-graph", "target": "database" },
-      
           { "source": "graph", "target": "knowledge-graph" },
       
           { "source": "graph", "target": "data-analytics" },
@@ -722,62 +712,102 @@ var data_local_dynamic = {
       
           { "source": "graph", "target": "semantics" },
       
-          { "source": "API", "target": "JSON" },
+          { "source": "graph", "target": "specification" },
       
-          { "source": "API", "target": "citation-graph" },
+          { "source": "knowledge-graph", "target": "data-analytics" },
       
-          { "source": "API", "target": "graph" },
+          { "source": "knowledge-graph", "target": "analytics" },
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "knowledge-graph", "target": "graph" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "knowledge-graph", "target": "search-engines" },
       
-          { "source": "database", "target": "platform" },
+          { "source": "data-analytics", "target": "knowledge-graph" },
       
-          { "source": "database", "target": "dataset" },
+          { "source": "data-analytics", "target": "analytics" },
+      
+          { "source": "data-analytics", "target": "graph" },
+      
+          { "source": "data-analytics", "target": "transactions" },
+      
+          { "source": "analytics", "target": "knowledge-graph" },
+      
+          { "source": "analytics", "target": "data-analytics" },
+      
+          { "source": "analytics", "target": "graph" },
+      
+          { "source": "analytics", "target": "Semantic-Web" },
+      
+          { "source": "semantics", "target": "annotation-properties" },
+      
+          { "source": "semantics", "target": "data-properties" },
+      
+          { "source": "semantics", "target": "blank-nodes" },
+      
+          { "source": "semantics", "target": "OWL-DL" },
+      
+          { "source": "specification", "target": "graph" },
+      
+          { "source": "specification", "target": "semantics" },
+      
+          { "source": "specification", "target": "metadata" },
+      
+          { "source": "specification", "target": "things" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
+        {"id": "knowledge-graph", "size": 70, "score": 0 , "title": "knowledge-graph", "type": "circle"},
 
       
 
-        {"id": "API", "size": 70, "score": 0 , "title": "API", "type": "circle"},
+        {"id": "data-analytics", "size": 70, "score": 0 , "title": "data-analytics", "type": "circle"},
 
       
 
-        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
+        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "citation-graph", "size": 140, "score": 0.5 , "title": "citation-graph", "type": "circle"},
+        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
+        {"id": "specification", "size": 70, "score": 0 , "title": "specification", "type": "circle"},
 
       
 
-        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
+        {"id": "graph", "size": 140, "score": 0.5 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 5, "score": 0.4 , "title": "analytics", "type": "circle"},
+        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
+        {"id": "transactions", "size": 5, "score": 0.4 , "title": "transactions", "type": "circle"},
 
       
 
-        {"id": "JSON", "size": 5, "score": 0.4 , "title": "JSON", "type": "circle"},
+        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "annotation-properties", "size": 5, "score": 0.4 , "title": "annotation-properties", "type": "circle"},
+
+      
+
+        {"id": "data-properties", "size": 5, "score": 0.4 , "title": "data-properties", "type": "circle"},
+
+      
+
+        {"id": "blank-nodes", "size": 5, "score": 0.4 , "title": "blank-nodes", "type": "circle"},
+
+      
+
+        {"id": "OWL-DL", "size": 5, "score": 0.4 , "title": "OWL-DL", "type": "circle"},
 
       
 
@@ -785,11 +815,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
-
-      
-
-        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
+        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
 
        
 

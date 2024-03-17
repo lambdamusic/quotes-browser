@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Controlled experimentation (hci research method) | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-06-04-Improving-The-Human-Factors-Aspect-Of-Database-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,15 +706,39 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "performance", "target": "task" },
+          { "source": "factors", "target": "years" },
       
-          { "source": "performance", "target": "factors" },
+          { "source": "factors", "target": "article" },
       
-          { "source": "performance", "target": "results" },
+          { "source": "factors", "target": "citations" },
       
-          { "source": "performance", "target": "ability" },
+          { "source": "factors", "target": "task" },
       
-          { "source": "performance", "target": "system" },
+          { "source": "factors", "target": "performance" },
+      
+          { "source": "years", "target": "factors" },
+      
+          { "source": "years", "target": "article" },
+      
+          { "source": "years", "target": "citations" },
+      
+          { "source": "years", "target": "episodes" },
+      
+          { "source": "article", "target": "hierarchy" },
+      
+          { "source": "article", "target": "social-sciences" },
+      
+          { "source": "article", "target": "science" },
+      
+          { "source": "article", "target": "concept" },
+      
+          { "source": "citations", "target": "attributes" },
+      
+          { "source": "citations", "target": "evidence" },
+      
+          { "source": "citations", "target": "impact" },
+      
+          { "source": "citations", "target": "evaluation" },
       
           { "source": "task", "target": "comprehension" },
       
@@ -728,64 +748,76 @@ var data_local_dynamic = {
       
           { "source": "task", "target": "learning" },
       
-          { "source": "factors", "target": "years" },
+          { "source": "performance", "target": "task" },
       
-          { "source": "factors", "target": "article" },
+          { "source": "performance", "target": "factors" },
       
-          { "source": "factors", "target": "citations" },
+          { "source": "performance", "target": "results" },
       
-          { "source": "factors", "target": "task" },
-      
-          { "source": "results", "target": "changes" },
-      
-          { "source": "results", "target": "high-impact" },
-      
-          { "source": "results", "target": "domain" },
-      
-          { "source": "results", "target": "task" },
-      
-          { "source": "ability", "target": "team-members" },
-      
-          { "source": "ability", "target": "task" },
-      
-          { "source": "ability", "target": "managers" },
-      
-          { "source": "ability", "target": "aspects" },
-      
-          { "source": "system", "target": "different-information-systems" },
-      
-          { "source": "system", "target": "information-systems" },
-      
-          { "source": "system", "target": "interoperability" },
-      
-          { "source": "system", "target": "capability" },
+          { "source": "performance", "target": "ability" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "years", "size": 70, "score": 0 , "title": "years", "type": "circle"},
+
+      
+
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
+
+      
+
         {"id": "task", "size": 70, "score": 0 , "title": "task", "type": "circle"},
 
       
 
-        {"id": "factors", "size": 70, "score": 0 , "title": "factors", "type": "circle"},
+        {"id": "performance", "size": 70, "score": 0 , "title": "performance", "type": "circle"},
 
       
 
-        {"id": "results", "size": 70, "score": 0 , "title": "results", "type": "circle"},
+        {"id": "factors", "size": 140, "score": 0.5 , "title": "factors", "type": "circle"},
 
       
 
-        {"id": "ability", "size": 70, "score": 0 , "title": "ability", "type": "circle"},
+        {"id": "episodes", "size": 5, "score": 0.4 , "title": "episodes", "type": "circle"},
 
       
 
-        {"id": "system", "size": 70, "score": 0 , "title": "system", "type": "circle"},
+        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "performance", "size": 140, "score": 0.5 , "title": "performance", "type": "circle"},
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
+
+      
+
+        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
+
+      
+
+        {"id": "evidence", "size": 5, "score": 0.4 , "title": "evidence", "type": "circle"},
+
+      
+
+        {"id": "impact", "size": 5, "score": 0.4 , "title": "impact", "type": "circle"},
+
+      
+
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
 
       
 
@@ -805,55 +837,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "years", "size": 5, "score": 0.4 , "title": "years", "type": "circle"},
+        {"id": "results", "size": 5, "score": 0.4 , "title": "results", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
-
-      
-
-        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
-
-      
-
-        {"id": "changes", "size": 5, "score": 0.4 , "title": "changes", "type": "circle"},
-
-      
-
-        {"id": "high-impact", "size": 5, "score": 0.4 , "title": "high-impact", "type": "circle"},
-
-      
-
-        {"id": "domain", "size": 5, "score": 0.4 , "title": "domain", "type": "circle"},
-
-      
-
-        {"id": "team-members", "size": 5, "score": 0.4 , "title": "team-members", "type": "circle"},
-
-      
-
-        {"id": "managers", "size": 5, "score": 0.4 , "title": "managers", "type": "circle"},
-
-      
-
-        {"id": "aspects", "size": 5, "score": 0.4 , "title": "aspects", "type": "circle"},
-
-      
-
-        {"id": "different-information-systems", "size": 5, "score": 0.4 , "title": "different-information-systems", "type": "circle"},
-
-      
-
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
-
-      
-
-        {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
-
-      
-
-        {"id": "capability", "size": 5, "score": 0.4 , "title": "capability", "type": "circle"},
+        {"id": "ability", "size": 5, "score": 0.4 , "title": "ability", "type": "circle"},
 
        
 

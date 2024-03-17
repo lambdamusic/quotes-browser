@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Everything in the factories of... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-A-Third-Industrial-Revolution-The-Economist-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -712,6 +708,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "bits", "target": "things" },
+      
+          { "source": "bits", "target": "industrial-revolution" },
+      
+          { "source": "bits", "target": "services" },
+      
+          { "source": "bits", "target": "ontology" },
+      
+          { "source": "bits", "target": "digital-hermeneutics" },
+      
           { "source": "things", "target": "industrial-revolution" },
       
           { "source": "things", "target": "bits" },
@@ -719,8 +725,6 @@ var data_local_dynamic = {
           { "source": "things", "target": "services" },
       
           { "source": "things", "target": "machine" },
-      
-          { "source": "things", "target": "manufacturing" },
       
           { "source": "industrial-revolution", "target": "things" },
       
@@ -730,14 +734,6 @@ var data_local_dynamic = {
       
           { "source": "industrial-revolution", "target": "energy" },
       
-          { "source": "bits", "target": "things" },
-      
-          { "source": "bits", "target": "industrial-revolution" },
-      
-          { "source": "bits", "target": "services" },
-      
-          { "source": "bits", "target": "ontology" },
-      
           { "source": "services", "target": "things" },
       
           { "source": "services", "target": "industrial-revolution" },
@@ -746,32 +742,32 @@ var data_local_dynamic = {
       
           { "source": "services", "target": "metadata-model" },
       
-          { "source": "machine", "target": "things" },
+          { "source": "ontology", "target": "use-cases" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "ontology", "target": "data-model" },
       
-          { "source": "machine", "target": "data-citation" },
+          { "source": "ontology", "target": "architecture" },
       
-          { "source": "machine", "target": "metadata" },
+          { "source": "ontology", "target": "requirements" },
       
-          { "source": "manufacturing", "target": "machine" },
+          { "source": "digital-hermeneutics", "target": "objects" },
       
-          { "source": "manufacturing", "target": "things" },
+          { "source": "digital-hermeneutics", "target": "events" },
       
-          { "source": "manufacturing", "target": "process" },
+          { "source": "digital-hermeneutics", "target": "hermeneutics" },
       
-          { "source": "manufacturing", "target": "elements" },
+          { "source": "digital-hermeneutics", "target": "Web-technologies" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "industrial-revolution", "size": 70, "score": 0 , "title": "industrial-revolution", "type": "circle"},
+        {"id": "things", "size": 70, "score": 0 , "title": "things", "type": "circle"},
 
       
 
-        {"id": "bits", "size": 70, "score": 0 , "title": "bits", "type": "circle"},
+        {"id": "industrial-revolution", "size": 70, "score": 0 , "title": "industrial-revolution", "type": "circle"},
 
       
 
@@ -779,15 +775,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "manufacturing", "size": 70, "score": 0 , "title": "manufacturing", "type": "circle"},
+        {"id": "digital-hermeneutics", "size": 70, "score": 0 , "title": "digital-hermeneutics", "type": "circle"},
 
       
 
-        {"id": "things", "size": 140, "score": 0.5 , "title": "things", "type": "circle"},
+        {"id": "bits", "size": 140, "score": 0.5 , "title": "bits", "type": "circle"},
+
+      
+
+        {"id": "machine", "size": 5, "score": 0.4 , "title": "machine", "type": "circle"},
 
       
 
@@ -795,27 +795,39 @@ var data_local_dynamic = {
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
-
-      
-
         {"id": "metadata-model", "size": 5, "score": 0.4 , "title": "metadata-model", "type": "circle"},
 
       
 
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
+        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
 
       
 
-        {"id": "process", "size": 5, "score": 0.4 , "title": "process", "type": "circle"},
+        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "elements", "size": 5, "score": 0.4 , "title": "elements", "type": "circle"},
+        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
+
+      
+
+        {"id": "objects", "size": 5, "score": 0.4 , "title": "objects", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "hermeneutics", "size": 5, "score": 0.4 , "title": "hermeneutics", "type": "circle"},
+
+      
+
+        {"id": "Web-technologies", "size": 5, "score": 0.4 , "title": "Web-technologies", "type": "circle"},
 
        
 

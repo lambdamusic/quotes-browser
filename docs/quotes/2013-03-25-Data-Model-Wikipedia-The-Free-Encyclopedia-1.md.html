@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Data model | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-03-25-Data-Model-Wikipedia-The-Free-Encyclopedia-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,122 +710,82 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "objects", "target": "class" },
+          { "source": "data-model", "target": "ontology" },
       
-          { "source": "objects", "target": "real-world" },
+          { "source": "data-model", "target": "use-cases" },
       
-          { "source": "objects", "target": "instances" },
+          { "source": "data-model", "target": "architecture" },
       
-          { "source": "objects", "target": "types" },
+          { "source": "data-model", "target": "requirements" },
       
-          { "source": "objects", "target": "metadata" },
+          { "source": "data-model", "target": "domain-specific-ontology" },
       
-          { "source": "class", "target": "cases" },
+          { "source": "ontology", "target": "use-cases" },
       
-          { "source": "class", "target": "occurrence" },
+          { "source": "ontology", "target": "data-model" },
       
-          { "source": "class", "target": "events" },
+          { "source": "ontology", "target": "architecture" },
       
-          { "source": "class", "target": "instances" },
+          { "source": "ontology", "target": "requirements" },
       
-          { "source": "real-world", "target": "relation" },
+          { "source": "use-cases", "target": "ontology" },
       
-          { "source": "real-world", "target": "world" },
+          { "source": "use-cases", "target": "data-model" },
       
-          { "source": "real-world", "target": "relationship" },
+          { "source": "use-cases", "target": "architecture" },
       
-          { "source": "real-world", "target": "class" },
+          { "source": "use-cases", "target": "requirements" },
       
-          { "source": "instances", "target": "cases" },
+          { "source": "architecture", "target": "ontology" },
       
-          { "source": "instances", "target": "occurrence" },
+          { "source": "architecture", "target": "use-cases" },
       
-          { "source": "instances", "target": "events" },
+          { "source": "architecture", "target": "data-model" },
       
-          { "source": "instances", "target": "class" },
+          { "source": "architecture", "target": "requirements" },
       
-          { "source": "types", "target": "class" },
+          { "source": "requirements", "target": "ontology" },
       
-          { "source": "types", "target": "objects" },
+          { "source": "requirements", "target": "use-cases" },
       
-          { "source": "types", "target": "real-world" },
+          { "source": "requirements", "target": "data-model" },
       
-          { "source": "types", "target": "instances" },
+          { "source": "requirements", "target": "architecture" },
       
-          { "source": "metadata", "target": "RDF-databases" },
+          { "source": "domain-specific-ontology", "target": "ontology" },
       
-          { "source": "metadata", "target": "platform" },
+          { "source": "domain-specific-ontology", "target": "use-cases" },
       
-          { "source": "metadata", "target": "database" },
+          { "source": "domain-specific-ontology", "target": "data-model" },
       
-          { "source": "metadata", "target": "server" },
+          { "source": "domain-specific-ontology", "target": "architecture" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
+        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "real-world", "size": 70, "score": 0 , "title": "real-world", "type": "circle"},
+        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
+        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "types", "size": 70, "score": 0 , "title": "types", "type": "circle"},
+        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "domain-specific-ontology", "size": 70, "score": 0 , "title": "domain-specific-ontology", "type": "circle"},
 
       
 
-        {"id": "objects", "size": 140, "score": 0.5 , "title": "objects", "type": "circle"},
-
-      
-
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
-
-      
-
-        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
-
-      
-
-        {"id": "world", "size": 5, "score": 0.4 , "title": "world", "type": "circle"},
-
-      
-
-        {"id": "relationship", "size": 5, "score": 0.4 , "title": "relationship", "type": "circle"},
-
-      
-
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
-
-      
-
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
-
-      
-
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+        {"id": "data-model", "size": 140, "score": 0.5 , "title": "data-model", "type": "circle"},
 
        
 

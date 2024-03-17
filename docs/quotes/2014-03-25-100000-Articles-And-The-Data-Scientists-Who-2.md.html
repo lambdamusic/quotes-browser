@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Plos taxonomy | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-03-25-100000-Articles-And-The-Data-Scientists-Who-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,6 +709,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "social-sciences", "target": "article" },
+      
+          { "source": "social-sciences", "target": "hierarchy" },
+      
+          { "source": "social-sciences", "target": "science" },
+      
+          { "source": "social-sciences", "target": "journals" },
+      
+          { "source": "social-sciences", "target": "humanity" },
+      
           { "source": "article", "target": "hierarchy" },
       
           { "source": "article", "target": "social-sciences" },
@@ -720,8 +726,6 @@ var data_local_dynamic = {
           { "source": "article", "target": "science" },
       
           { "source": "article", "target": "concept" },
-      
-          { "source": "article", "target": "Obama" },
       
           { "source": "hierarchy", "target": "article" },
       
@@ -731,14 +735,6 @@ var data_local_dynamic = {
       
           { "source": "hierarchy", "target": "nodes" },
       
-          { "source": "social-sciences", "target": "article" },
-      
-          { "source": "social-sciences", "target": "hierarchy" },
-      
-          { "source": "social-sciences", "target": "science" },
-      
-          { "source": "social-sciences", "target": "journals" },
-      
           { "source": "science", "target": "article" },
       
           { "source": "science", "target": "hierarchy" },
@@ -747,30 +743,32 @@ var data_local_dynamic = {
       
           { "source": "science", "target": "publications" },
       
-          { "source": "concept", "target": "article" },
+          { "source": "journals", "target": "news" },
       
-          { "source": "concept", "target": "Obama" },
+          { "source": "journals", "target": "book" },
       
-          { "source": "concept", "target": "information-science" },
+          { "source": "journals", "target": "nature" },
       
-          { "source": "concept", "target": "users" },
+          { "source": "journals", "target": "database" },
       
-          { "source": "Obama", "target": "article" },
+          { "source": "humanity", "target": "music" },
       
-          { "source": "Obama", "target": "concept" },
+          { "source": "humanity", "target": "science" },
       
-          { "source": "Obama", "target": "decisions" },
+          { "source": "humanity", "target": "journals" },
+      
+          { "source": "humanity", "target": "social-sciences" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
+        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "social-sciences", "size": 70, "score": 0 , "title": "social-sciences", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
 
       
 
@@ -778,15 +776,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
+        {"id": "journals", "size": 70, "score": 0 , "title": "journals", "type": "circle"},
 
       
 
-        {"id": "Obama", "size": 70, "score": 0 , "title": "Obama", "type": "circle"},
+        {"id": "humanity", "size": 70, "score": 0 , "title": "humanity", "type": "circle"},
 
       
 
-        {"id": "article", "size": 140, "score": 0.5 , "title": "article", "type": "circle"},
+        {"id": "social-sciences", "size": 140, "score": 0.5 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
 
       
 
@@ -794,23 +796,27 @@ var data_local_dynamic = {
 
       
 
-        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
-
-      
-
         {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
       
 
-        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
+        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
 
       
 
-        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "decisions", "size": 5, "score": 0.4 , "title": "decisions", "type": "circle"},
+        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+
+      
+
+        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+
+      
+
+        {"id": "music", "size": 5, "score": 0.4 , "title": "music", "type": "circle"},
 
        
 

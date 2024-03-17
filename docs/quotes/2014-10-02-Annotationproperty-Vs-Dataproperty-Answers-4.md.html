@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>There are significant differences in... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-10-02-Annotationproperty-Vs-Dataproperty-Answers-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -717,6 +713,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "blank-nodes", "target": "annotation-properties" },
+      
+          { "source": "blank-nodes", "target": "data-properties" },
+      
+          { "source": "blank-nodes", "target": "OWL-DL" },
+      
+          { "source": "blank-nodes", "target": "reasoner" },
+      
+          { "source": "blank-nodes", "target": "semantics" },
+      
           { "source": "annotation-properties", "target": "OWL-DL" },
       
           { "source": "annotation-properties", "target": "data-values" },
@@ -725,7 +731,13 @@ var data_local_dynamic = {
       
           { "source": "annotation-properties", "target": "instances" },
       
-          { "source": "annotation-properties", "target": "datatype-properties" },
+          { "source": "data-properties", "target": "annotation-properties" },
+      
+          { "source": "data-properties", "target": "blank-nodes" },
+      
+          { "source": "data-properties", "target": "OWL-DL" },
+      
+          { "source": "data-properties", "target": "reasoner" },
       
           { "source": "OWL-DL", "target": "annotation-properties" },
       
@@ -735,96 +747,60 @@ var data_local_dynamic = {
       
           { "source": "OWL-DL", "target": "instances" },
       
-          { "source": "data-values", "target": "OWL-DL" },
+          { "source": "reasoner", "target": "annotation-properties" },
       
-          { "source": "data-values", "target": "annotation-properties" },
+          { "source": "reasoner", "target": "data-properties" },
       
-          { "source": "data-values", "target": "ontology" },
+          { "source": "reasoner", "target": "blank-nodes" },
       
-          { "source": "data-values", "target": "instances" },
+          { "source": "reasoner", "target": "OWL-DL" },
       
-          { "source": "ontology", "target": "use-cases" },
+          { "source": "semantics", "target": "annotation-properties" },
       
-          { "source": "ontology", "target": "data-model" },
+          { "source": "semantics", "target": "data-properties" },
       
-          { "source": "ontology", "target": "architecture" },
+          { "source": "semantics", "target": "blank-nodes" },
       
-          { "source": "ontology", "target": "requirements" },
-      
-          { "source": "instances", "target": "cases" },
-      
-          { "source": "instances", "target": "occurrence" },
-      
-          { "source": "instances", "target": "events" },
-      
-          { "source": "instances", "target": "class" },
-      
-          { "source": "datatype-properties", "target": "OWL-DL" },
-      
-          { "source": "datatype-properties", "target": "annotation-properties" },
-      
-          { "source": "datatype-properties", "target": "data-values" },
-      
-          { "source": "datatype-properties", "target": "ontology" },
+          { "source": "semantics", "target": "OWL-DL" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "annotation-properties", "size": 70, "score": 0 , "title": "annotation-properties", "type": "circle"},
+
+      
+
+        {"id": "data-properties", "size": 70, "score": 0 , "title": "data-properties", "type": "circle"},
+
+      
+
         {"id": "OWL-DL", "size": 70, "score": 0 , "title": "OWL-DL", "type": "circle"},
 
       
 
-        {"id": "data-values", "size": 70, "score": 0 , "title": "data-values", "type": "circle"},
+        {"id": "reasoner", "size": 70, "score": 0 , "title": "reasoner", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 70, "score": 0 , "title": "ontology", "type": "circle"},
+        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
+        {"id": "blank-nodes", "size": 140, "score": 0.5 , "title": "blank-nodes", "type": "circle"},
 
       
 
-        {"id": "datatype-properties", "size": 70, "score": 0 , "title": "datatype-properties", "type": "circle"},
+        {"id": "data-values", "size": 5, "score": 0.4 , "title": "data-values", "type": "circle"},
 
       
 
-        {"id": "annotation-properties", "size": 140, "score": 0.5 , "title": "annotation-properties", "type": "circle"},
+        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
 
       
 
-        {"id": "use-cases", "size": 5, "score": 0.4 , "title": "use-cases", "type": "circle"},
-
-      
-
-        {"id": "data-model", "size": 5, "score": 0.4 , "title": "data-model", "type": "circle"},
-
-      
-
-        {"id": "architecture", "size": 5, "score": 0.4 , "title": "architecture", "type": "circle"},
-
-      
-
-        {"id": "requirements", "size": 5, "score": 0.4 , "title": "requirements", "type": "circle"},
-
-      
-
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
 
        
 

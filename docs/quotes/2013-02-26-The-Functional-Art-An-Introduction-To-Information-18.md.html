@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Exaptations | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-The-Functional-Art-An-Introduction-To-Information-18.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -715,15 +711,19 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "sharing", "target": "technology" },
+          { "source": "virtual-world", "target": "path" },
       
-          { "source": "sharing", "target": "virtual-world" },
+          { "source": "virtual-world", "target": "technology" },
       
-          { "source": "sharing", "target": "Internet" },
+          { "source": "virtual-world", "target": "Internet" },
       
-          { "source": "sharing", "target": "printing-press" },
+          { "source": "virtual-world", "target": "printing-press" },
       
-          { "source": "sharing", "target": "machine" },
+          { "source": "virtual-world", "target": "sharing" },
+      
+          { "source": "path", "target": "virtual-world" },
+      
+          { "source": "path", "target": "objectivity" },
       
           { "source": "technology", "target": "computer-systems" },
       
@@ -732,14 +732,6 @@ var data_local_dynamic = {
           { "source": "technology", "target": "semantic-enrichment" },
       
           { "source": "technology", "target": "users" },
-      
-          { "source": "virtual-world", "target": "path" },
-      
-          { "source": "virtual-world", "target": "technology" },
-      
-          { "source": "virtual-world", "target": "Internet" },
-      
-          { "source": "virtual-world", "target": "printing-press" },
       
           { "source": "Internet", "target": "book" },
       
@@ -757,24 +749,24 @@ var data_local_dynamic = {
       
           { "source": "printing-press", "target": "virtual-world" },
       
-          { "source": "machine", "target": "things" },
+          { "source": "sharing", "target": "technology" },
       
-          { "source": "machine", "target": "manufacturing" },
+          { "source": "sharing", "target": "virtual-world" },
       
-          { "source": "machine", "target": "data-citation" },
+          { "source": "sharing", "target": "Internet" },
       
-          { "source": "machine", "target": "metadata" },
+          { "source": "sharing", "target": "printing-press" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "technology", "size": 70, "score": 0 , "title": "technology", "type": "circle"},
+        {"id": "path", "size": 70, "score": 0 , "title": "path", "type": "circle"},
 
       
 
-        {"id": "virtual-world", "size": 70, "score": 0 , "title": "virtual-world", "type": "circle"},
+        {"id": "technology", "size": 70, "score": 0 , "title": "technology", "type": "circle"},
 
       
 
@@ -786,11 +778,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "machine", "size": 70, "score": 0 , "title": "machine", "type": "circle"},
+        {"id": "sharing", "size": 70, "score": 0 , "title": "sharing", "type": "circle"},
 
       
 
-        {"id": "sharing", "size": 140, "score": 0.5 , "title": "sharing", "type": "circle"},
+        {"id": "virtual-world", "size": 140, "score": 0.5 , "title": "virtual-world", "type": "circle"},
+
+      
+
+        {"id": "objectivity", "size": 5, "score": 0.4 , "title": "objectivity", "type": "circle"},
 
       
 
@@ -807,10 +803,6 @@ var data_local_dynamic = {
       
 
         {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
-
-      
-
-        {"id": "path", "size": 5, "score": 0.4 , "title": "path", "type": "circle"},
 
       
 
@@ -831,22 +823,6 @@ var data_local_dynamic = {
       
 
         {"id": "manuscript", "size": 5, "score": 0.4 , "title": "manuscript", "type": "circle"},
-
-      
-
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
-
-      
-
-        {"id": "manufacturing", "size": 5, "score": 0.4 , "title": "manufacturing", "type": "circle"},
-
-      
-
-        {"id": "data-citation", "size": 5, "score": 0.4 , "title": "data-citation", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
        
 

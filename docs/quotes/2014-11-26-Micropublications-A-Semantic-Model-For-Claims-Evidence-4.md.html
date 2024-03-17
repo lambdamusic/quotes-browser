@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Limitations of statement-based models | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-11-26-Micropublications-A-Semantic-Model-For-Claims-Evidence-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "literature", "target": "statements" },
+      
+          { "source": "literature", "target": "natural-language" },
+      
+          { "source": "literature", "target": "database" },
+      
+          { "source": "literature", "target": "scholarly-communication" },
+      
+          { "source": "literature", "target": "reading" },
+      
           { "source": "statements", "target": "questions" },
       
           { "source": "statements", "target": "validity" },
@@ -718,118 +724,144 @@ var data_local_dynamic = {
       
           { "source": "statements", "target": "observer" },
       
-          { "source": "statements", "target": "distinction" },
+          { "source": "natural-language", "target": "graph" },
       
-          { "source": "questions", "target": "statements" },
+          { "source": "natural-language", "target": "language" },
       
-          { "source": "questions", "target": "students" },
+          { "source": "natural-language", "target": "framework" },
       
-          { "source": "questions", "target": "learning" },
+          { "source": "natural-language", "target": "assertion" },
       
-          { "source": "questions", "target": "instruction" },
+          { "source": "database", "target": "RDF-databases" },
       
-          { "source": "validity", "target": "statements" },
+          { "source": "database", "target": "metadata" },
       
-          { "source": "validity", "target": "reference" },
+          { "source": "database", "target": "platform" },
       
-          { "source": "validity", "target": "observer" },
+          { "source": "database", "target": "dataset" },
       
-          { "source": "validity", "target": "distinction" },
+          { "source": "scholarly-communication", "target": "communication" },
       
-          { "source": "reference", "target": "properties" },
+          { "source": "scholarly-communication", "target": "cost" },
       
-          { "source": "reference", "target": "class" },
+          { "source": "scholarly-communication", "target": "article" },
       
-          { "source": "reference", "target": "slots" },
+          { "source": "scholarly-communication", "target": "journals" },
       
-          { "source": "reference", "target": "range" },
+          { "source": "reading", "target": "fiction" },
       
-          { "source": "observer", "target": "validity" },
+          { "source": "reading", "target": "wives" },
       
-          { "source": "observer", "target": "statements" },
+          { "source": "reading", "target": "digital-humanities" },
       
-          { "source": "observer", "target": "reference" },
-      
-          { "source": "observer", "target": "distinction" },
-      
-          { "source": "distinction", "target": "notice" },
-      
-          { "source": "distinction", "target": "philosophers" },
-      
-          { "source": "distinction", "target": "idea" },
-      
-          { "source": "distinction", "target": "relation" },
+          { "source": "reading", "target": "humanity" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "questions", "size": 70, "score": 0 , "title": "questions", "type": "circle"},
+        {"id": "statements", "size": 70, "score": 0 , "title": "statements", "type": "circle"},
 
       
 
-        {"id": "validity", "size": 70, "score": 0 , "title": "validity", "type": "circle"},
+        {"id": "natural-language", "size": 70, "score": 0 , "title": "natural-language", "type": "circle"},
 
       
 
-        {"id": "reference", "size": 70, "score": 0 , "title": "reference", "type": "circle"},
+        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
 
       
 
-        {"id": "observer", "size": 70, "score": 0 , "title": "observer", "type": "circle"},
+        {"id": "scholarly-communication", "size": 70, "score": 0 , "title": "scholarly-communication", "type": "circle"},
 
       
 
-        {"id": "distinction", "size": 70, "score": 0 , "title": "distinction", "type": "circle"},
+        {"id": "reading", "size": 70, "score": 0 , "title": "reading", "type": "circle"},
 
       
 
-        {"id": "statements", "size": 140, "score": 0.5 , "title": "statements", "type": "circle"},
+        {"id": "literature", "size": 140, "score": 0.5 , "title": "literature", "type": "circle"},
 
       
 
-        {"id": "students", "size": 5, "score": 0.4 , "title": "students", "type": "circle"},
+        {"id": "questions", "size": 5, "score": 0.4 , "title": "questions", "type": "circle"},
 
       
 
-        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
+        {"id": "validity", "size": 5, "score": 0.4 , "title": "validity", "type": "circle"},
 
       
 
-        {"id": "instruction", "size": 5, "score": 0.4 , "title": "instruction", "type": "circle"},
+        {"id": "reference", "size": 5, "score": 0.4 , "title": "reference", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
+        {"id": "observer", "size": 5, "score": 0.4 , "title": "observer", "type": "circle"},
 
       
 
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "slots", "size": 5, "score": 0.4 , "title": "slots", "type": "circle"},
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
 
       
 
-        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
+        {"id": "framework", "size": 5, "score": 0.4 , "title": "framework", "type": "circle"},
 
       
 
-        {"id": "notice", "size": 5, "score": 0.4 , "title": "notice", "type": "circle"},
+        {"id": "assertion", "size": 5, "score": 0.4 , "title": "assertion", "type": "circle"},
 
       
 
-        {"id": "philosophers", "size": 5, "score": 0.4 , "title": "philosophers", "type": "circle"},
+        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
 
       
 
-        {"id": "idea", "size": 5, "score": 0.4 , "title": "idea", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
+        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+
+      
+
+        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
+
+      
+
+        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
+
+      
+
+        {"id": "cost", "size": 5, "score": 0.4 , "title": "cost", "type": "circle"},
+
+      
+
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+
+      
+
+        {"id": "fiction", "size": 5, "score": 0.4 , "title": "fiction", "type": "circle"},
+
+      
+
+        {"id": "wives", "size": 5, "score": 0.4 , "title": "wives", "type": "circle"},
+
+      
+
+        {"id": "digital-humanities", "size": 5, "score": 0.4 , "title": "digital-humanities", "type": "circle"},
+
+      
+
+        {"id": "humanity", "size": 5, "score": 0.4 , "title": "humanity", "type": "circle"},
 
        
 

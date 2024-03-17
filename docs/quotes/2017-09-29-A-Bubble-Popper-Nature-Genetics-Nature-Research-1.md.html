@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>A bubble popper (semantic assertions) | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2017-09-29-A-Bubble-Popper-Nature-Genetics-Nature-Research-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,15 +706,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "hypothesis", "target": "experiments" },
+          { "source": "constructs", "target": "experiments" },
       
-          { "source": "hypothesis", "target": "constructs" },
+          { "source": "constructs", "target": "hypothesis" },
       
-          { "source": "hypothesis", "target": "process" },
+          { "source": "constructs", "target": "process" },
       
-          { "source": "hypothesis", "target": "publications" },
+          { "source": "constructs", "target": "association" },
       
-          { "source": "hypothesis", "target": "values" },
+          { "source": "constructs", "target": "occurrence" },
       
           { "source": "experiments", "target": "constructs" },
       
@@ -728,13 +724,13 @@ var data_local_dynamic = {
       
           { "source": "experiments", "target": "thought-experiment" },
       
-          { "source": "constructs", "target": "experiments" },
+          { "source": "hypothesis", "target": "experiments" },
       
-          { "source": "constructs", "target": "hypothesis" },
+          { "source": "hypothesis", "target": "constructs" },
       
-          { "source": "constructs", "target": "process" },
+          { "source": "hypothesis", "target": "process" },
       
-          { "source": "constructs", "target": "association" },
+          { "source": "hypothesis", "target": "publications" },
       
           { "source": "process", "target": "experiments" },
       
@@ -744,21 +740,21 @@ var data_local_dynamic = {
       
           { "source": "process", "target": "bridge" },
       
-          { "source": "publications", "target": "hypothesis" },
+          { "source": "association", "target": "foot" },
       
-          { "source": "publications", "target": "values" },
+          { "source": "association", "target": "nail" },
       
-          { "source": "publications", "target": "distance" },
+          { "source": "association", "target": "malaria" },
       
-          { "source": "publications", "target": "area" },
+          { "source": "association", "target": "patterns" },
       
-          { "source": "values", "target": "publications" },
+          { "source": "occurrence", "target": "cases" },
       
-          { "source": "values", "target": "hypothesis" },
+          { "source": "occurrence", "target": "events" },
       
-          { "source": "values", "target": "distance" },
+          { "source": "occurrence", "target": "instances" },
       
-          { "source": "values", "target": "properties" },
+          { "source": "occurrence", "target": "class" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -769,7 +765,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "constructs", "size": 70, "score": 0 , "title": "constructs", "type": "circle"},
+        {"id": "hypothesis", "size": 70, "score": 0 , "title": "hypothesis", "type": "circle"},
 
       
 
@@ -777,15 +773,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "publications", "size": 70, "score": 0 , "title": "publications", "type": "circle"},
+        {"id": "association", "size": 70, "score": 0 , "title": "association", "type": "circle"},
 
       
 
-        {"id": "values", "size": 70, "score": 0 , "title": "values", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "hypothesis", "size": 140, "score": 0.5 , "title": "hypothesis", "type": "circle"},
+        {"id": "constructs", "size": 140, "score": 0.5 , "title": "constructs", "type": "circle"},
 
       
 
@@ -793,7 +789,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "association", "size": 5, "score": 0.4 , "title": "association", "type": "circle"},
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
       
 
@@ -801,15 +797,35 @@ var data_local_dynamic = {
 
       
 
-        {"id": "distance", "size": 5, "score": 0.4 , "title": "distance", "type": "circle"},
+        {"id": "foot", "size": 5, "score": 0.4 , "title": "foot", "type": "circle"},
 
       
 
-        {"id": "area", "size": 5, "score": 0.4 , "title": "area", "type": "circle"},
+        {"id": "nail", "size": 5, "score": 0.4 , "title": "nail", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
+        {"id": "malaria", "size": 5, "score": 0.4 , "title": "malaria", "type": "circle"},
+
+      
+
+        {"id": "patterns", "size": 5, "score": 0.4 , "title": "patterns", "type": "circle"},
+
+      
+
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
+
+      
+
+        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
 
        
 

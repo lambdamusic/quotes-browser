@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>The RDF/ Ontology model is pervasive throughout the technical stack | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-10-15-An-Example-Of-Ontology-Driven-Software-Engineering-6.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,14 +704,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "bottom", "target": "model" },
-      
-          { "source": "bottom", "target": "design" },
-      
-          { "source": "bottom", "target": "office" },
-      
-          { "source": "bottom", "target": "one" },
-      
           { "source": "model", "target": "design" },
       
           { "source": "model", "target": "bottom" },
@@ -723,6 +711,8 @@ var data_local_dynamic = {
           { "source": "model", "target": "theory" },
       
           { "source": "model", "target": "noise" },
+      
+          { "source": "model", "target": "data-sets" },
       
           { "source": "design", "target": "model" },
       
@@ -732,52 +722,64 @@ var data_local_dynamic = {
       
           { "source": "design", "target": "visual-design" },
       
-          { "source": "office", "target": "one" },
+          { "source": "bottom", "target": "model" },
       
-          { "source": "office", "target": "bottom" },
+          { "source": "bottom", "target": "design" },
       
-          { "source": "office", "target": "responsibility" },
+          { "source": "bottom", "target": "office" },
       
-          { "source": "office", "target": "values" },
+          { "source": "bottom", "target": "one" },
       
-          { "source": "one", "target": "outcomes" },
+          { "source": "theory", "target": "cognitive-processes" },
       
-          { "source": "one", "target": "people" },
+          { "source": "theory", "target": "intuition" },
       
-          { "source": "one", "target": "countries" },
+          { "source": "theory", "target": "psychological-state" },
       
-          { "source": "one", "target": "euro" },
+          { "source": "theory", "target": "physics" },
+      
+          { "source": "noise", "target": "product-owners" },
+      
+          { "source": "noise", "target": "owners" },
+      
+          { "source": "noise", "target": "business" },
+      
+          { "source": "noise", "target": "team" },
+      
+          { "source": "data-sets", "target": "researchers" },
+      
+          { "source": "data-sets", "target": "information" },
+      
+          { "source": "data-sets", "target": "set" },
+      
+          { "source": "data-sets", "target": "contextual-information" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "model", "size": 70, "score": 0 , "title": "model", "type": "circle"},
-
-      
-
         {"id": "design", "size": 70, "score": 0 , "title": "design", "type": "circle"},
 
       
 
-        {"id": "office", "size": 70, "score": 0 , "title": "office", "type": "circle"},
+        {"id": "bottom", "size": 70, "score": 0 , "title": "bottom", "type": "circle"},
 
       
 
-        {"id": "one", "size": 70, "score": 0 , "title": "one", "type": "circle"},
+        {"id": "theory", "size": 70, "score": 0 , "title": "theory", "type": "circle"},
 
       
 
-        {"id": "bottom", "size": 140, "score": 0.5 , "title": "bottom", "type": "circle"},
+        {"id": "noise", "size": 70, "score": 0 , "title": "noise", "type": "circle"},
 
       
 
-        {"id": "theory", "size": 5, "score": 0.4 , "title": "theory", "type": "circle"},
+        {"id": "data-sets", "size": 70, "score": 0 , "title": "data-sets", "type": "circle"},
 
       
 
-        {"id": "noise", "size": 5, "score": 0.4 , "title": "noise", "type": "circle"},
+        {"id": "model", "size": 140, "score": 0.5 , "title": "model", "type": "circle"},
 
       
 
@@ -789,27 +791,59 @@ var data_local_dynamic = {
 
       
 
-        {"id": "responsibility", "size": 5, "score": 0.4 , "title": "responsibility", "type": "circle"},
+        {"id": "office", "size": 5, "score": 0.4 , "title": "office", "type": "circle"},
 
       
 
-        {"id": "values", "size": 5, "score": 0.4 , "title": "values", "type": "circle"},
+        {"id": "one", "size": 5, "score": 0.4 , "title": "one", "type": "circle"},
 
       
 
-        {"id": "outcomes", "size": 5, "score": 0.4 , "title": "outcomes", "type": "circle"},
+        {"id": "cognitive-processes", "size": 5, "score": 0.4 , "title": "cognitive-processes", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "intuition", "size": 5, "score": 0.4 , "title": "intuition", "type": "circle"},
 
       
 
-        {"id": "countries", "size": 5, "score": 0.4 , "title": "countries", "type": "circle"},
+        {"id": "psychological-state", "size": 5, "score": 0.4 , "title": "psychological-state", "type": "circle"},
 
       
 
-        {"id": "euro", "size": 5, "score": 0.4 , "title": "euro", "type": "circle"},
+        {"id": "physics", "size": 5, "score": 0.4 , "title": "physics", "type": "circle"},
+
+      
+
+        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
+
+      
+
+        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
+
+      
+
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+
+      
+
+        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
+
+      
+
+        {"id": "researchers", "size": 5, "score": 0.4 , "title": "researchers", "type": "circle"},
+
+      
+
+        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+
+      
+
+        {"id": "set", "size": 5, "score": 0.4 , "title": "set", "type": "circle"},
+
+      
+
+        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
 
        
 

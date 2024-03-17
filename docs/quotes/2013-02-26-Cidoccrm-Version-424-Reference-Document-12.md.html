@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Instance of a class | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Cidoccrm-Version-424-Reference-Document-12.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,6 +710,24 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "items", "target": "traits" },
+      
+          { "source": "items", "target": "class" },
+      
+          { "source": "items", "target": "categories" },
+      
+          { "source": "items", "target": "criteria" },
+      
+          { "source": "items", "target": "instances" },
+      
+          { "source": "traits", "target": "taxa" },
+      
+          { "source": "traits", "target": "class" },
+      
+          { "source": "traits", "target": "categories" },
+      
+          { "source": "traits", "target": "items" },
+      
           { "source": "class", "target": "cases" },
       
           { "source": "class", "target": "occurrence" },
@@ -722,31 +736,21 @@ var data_local_dynamic = {
       
           { "source": "class", "target": "instances" },
       
-          { "source": "class", "target": "objects" },
+          { "source": "categories", "target": "traits" },
       
-          { "source": "cases", "target": "title" },
+          { "source": "categories", "target": "class" },
       
-          { "source": "cases", "target": "content" },
+          { "source": "categories", "target": "items" },
       
-          { "source": "cases", "target": "story" },
+          { "source": "categories", "target": "criteria" },
       
-          { "source": "cases", "target": "occurrence" },
+          { "source": "criteria", "target": "traits" },
       
-          { "source": "occurrence", "target": "cases" },
+          { "source": "criteria", "target": "class" },
       
-          { "source": "occurrence", "target": "events" },
+          { "source": "criteria", "target": "categories" },
       
-          { "source": "occurrence", "target": "instances" },
-      
-          { "source": "occurrence", "target": "class" },
-      
-          { "source": "events", "target": "cases" },
-      
-          { "source": "events", "target": "occurrence" },
-      
-          { "source": "events", "target": "instances" },
-      
-          { "source": "events", "target": "class" },
+          { "source": "criteria", "target": "items" },
       
           { "source": "instances", "target": "cases" },
       
@@ -755,29 +759,25 @@ var data_local_dynamic = {
           { "source": "instances", "target": "events" },
       
           { "source": "instances", "target": "class" },
-      
-          { "source": "objects", "target": "class" },
-      
-          { "source": "objects", "target": "real-world" },
-      
-          { "source": "objects", "target": "instances" },
-      
-          { "source": "objects", "target": "types" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "traits", "size": 70, "score": 0 , "title": "traits", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
+        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
+        {"id": "categories", "size": 70, "score": 0 , "title": "categories", "type": "circle"},
+
+      
+
+        {"id": "criteria", "size": 70, "score": 0 , "title": "criteria", "type": "circle"},
 
       
 
@@ -785,31 +785,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+        {"id": "items", "size": 140, "score": 0.5 , "title": "items", "type": "circle"},
 
       
 
-        {"id": "class", "size": 140, "score": 0.5 , "title": "class", "type": "circle"},
+        {"id": "taxa", "size": 5, "score": 0.4 , "title": "taxa", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
-
-      
-
-        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
-
-      
-
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
 
        
 

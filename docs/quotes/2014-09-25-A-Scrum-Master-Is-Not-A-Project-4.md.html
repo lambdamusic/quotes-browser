@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>There is often a lot... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-25-A-Scrum-Master-Is-Not-A-Project-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,31 +710,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "team", "target": "goal" },
+          { "source": "product-owners", "target": "owners" },
       
-          { "source": "team", "target": "link" },
+          { "source": "product-owners", "target": "project" },
       
-          { "source": "team", "target": "owners" },
+          { "source": "product-owners", "target": "business" },
       
-          { "source": "team", "target": "product-owners" },
+          { "source": "product-owners", "target": "product-backlog" },
       
-          { "source": "team", "target": "business" },
-      
-          { "source": "goal", "target": "team" },
-      
-          { "source": "goal", "target": "link" },
-      
-          { "source": "goal", "target": "owners" },
-      
-          { "source": "goal", "target": "product-owners" },
-      
-          { "source": "link", "target": "team" },
-      
-          { "source": "link", "target": "goal" },
-      
-          { "source": "link", "target": "owners" },
-      
-          { "source": "link", "target": "product-owners" },
+          { "source": "product-owners", "target": "team" },
       
           { "source": "owners", "target": "product-owners" },
       
@@ -748,13 +728,13 @@ var data_local_dynamic = {
       
           { "source": "owners", "target": "product-backlog" },
       
-          { "source": "product-owners", "target": "owners" },
+          { "source": "project", "target": "product-owners" },
       
-          { "source": "product-owners", "target": "project" },
+          { "source": "project", "target": "owners" },
       
-          { "source": "product-owners", "target": "business" },
+          { "source": "project", "target": "business" },
       
-          { "source": "product-owners", "target": "product-backlog" },
+          { "source": "project", "target": "product-backlog" },
       
           { "source": "business", "target": "product-owners" },
       
@@ -763,25 +743,33 @@ var data_local_dynamic = {
           { "source": "business", "target": "project" },
       
           { "source": "business", "target": "product-backlog" },
+      
+          { "source": "product-backlog", "target": "product-owners" },
+      
+          { "source": "product-backlog", "target": "owners" },
+      
+          { "source": "product-backlog", "target": "project" },
+      
+          { "source": "product-backlog", "target": "business" },
+      
+          { "source": "team", "target": "goal" },
+      
+          { "source": "team", "target": "link" },
+      
+          { "source": "team", "target": "owners" },
+      
+          { "source": "team", "target": "product-owners" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
-
-      
-
-        {"id": "link", "size": 70, "score": 0 , "title": "link", "type": "circle"},
-
-      
-
         {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
+        {"id": "project", "size": 70, "score": 0 , "title": "project", "type": "circle"},
 
       
 
@@ -789,15 +777,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "team", "size": 140, "score": 0.5 , "title": "team", "type": "circle"},
+        {"id": "product-backlog", "size": 70, "score": 0 , "title": "product-backlog", "type": "circle"},
 
       
 
-        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
+        {"id": "team", "size": 70, "score": 0 , "title": "team", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
+        {"id": "product-owners", "size": 140, "score": 0.5 , "title": "product-owners", "type": "circle"},
+
+      
+
+        {"id": "goal", "size": 5, "score": 0.4 , "title": "goal", "type": "circle"},
+
+      
+
+        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
 
        
 

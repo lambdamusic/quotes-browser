@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Schema actions and Flux architecture | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2019-06-03-Api-Scipe-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "method", "target": "action" },
+      
+          { "source": "method", "target": "clients" },
+      
+          { "source": "method", "target": "user-testing" },
+      
+          { "source": "method", "target": "developers" },
+      
+          { "source": "method", "target": "persons" },
+      
           { "source": "action", "target": "clients" },
       
           { "source": "action", "target": "method" },
@@ -717,8 +723,6 @@ var data_local_dynamic = {
           { "source": "action", "target": "people" },
       
           { "source": "action", "target": "persons" },
-      
-          { "source": "action", "target": "choice" },
       
           { "source": "clients", "target": "action" },
       
@@ -728,21 +732,21 @@ var data_local_dynamic = {
       
           { "source": "clients", "target": "goal" },
       
-          { "source": "method", "target": "action" },
+          { "source": "user-testing", "target": "users" },
       
-          { "source": "method", "target": "clients" },
+          { "source": "user-testing", "target": "Google" },
       
-          { "source": "method", "target": "user-testing" },
+          { "source": "user-testing", "target": "search" },
       
-          { "source": "method", "target": "developers" },
+          { "source": "user-testing", "target": "version" },
       
-          { "source": "people", "target": "stage" },
+          { "source": "developers", "target": "algorithm" },
       
-          { "source": "people", "target": "words" },
+          { "source": "developers", "target": "code" },
       
-          { "source": "people", "target": "God" },
+          { "source": "developers", "target": "Scrum" },
       
-          { "source": "people", "target": "knowledge" },
+          { "source": "developers", "target": "user-testing" },
       
           { "source": "persons", "target": "team" },
       
@@ -751,29 +755,25 @@ var data_local_dynamic = {
           { "source": "persons", "target": "benefits" },
       
           { "source": "persons", "target": "humans" },
-      
-          { "source": "choice", "target": "drugs" },
-      
-          { "source": "choice", "target": "sound" },
-      
-          { "source": "choice", "target": "use" },
-      
-          { "source": "choice", "target": "people" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "action", "size": 70, "score": 0 , "title": "action", "type": "circle"},
+
+      
+
         {"id": "clients", "size": 70, "score": 0 , "title": "clients", "type": "circle"},
 
       
 
-        {"id": "method", "size": 70, "score": 0 , "title": "method", "type": "circle"},
+        {"id": "user-testing", "size": 70, "score": 0 , "title": "user-testing", "type": "circle"},
 
       
 
-        {"id": "people", "size": 70, "score": 0 , "title": "people", "type": "circle"},
+        {"id": "developers", "size": 70, "score": 0 , "title": "developers", "type": "circle"},
 
       
 
@@ -781,11 +781,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "choice", "size": 70, "score": 0 , "title": "choice", "type": "circle"},
+        {"id": "method", "size": 140, "score": 0.5 , "title": "method", "type": "circle"},
 
       
 
-        {"id": "action", "size": 140, "score": 0.5 , "title": "action", "type": "circle"},
+        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
 
       
 
@@ -797,27 +797,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
       
 
-        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
+        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
 
       
 
-        {"id": "stage", "size": 5, "score": 0.4 , "title": "stage", "type": "circle"},
+        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
 
       
 
-        {"id": "God", "size": 5, "score": 0.4 , "title": "God", "type": "circle"},
+        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
 
       
 
-        {"id": "knowledge", "size": 5, "score": 0.4 , "title": "knowledge", "type": "circle"},
+        {"id": "code", "size": 5, "score": 0.4 , "title": "code", "type": "circle"},
+
+      
+
+        {"id": "Scrum", "size": 5, "score": 0.4 , "title": "Scrum", "type": "circle"},
 
       
 
@@ -834,18 +838,6 @@ var data_local_dynamic = {
       
 
         {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
-
-      
-
-        {"id": "drugs", "size": 5, "score": 0.4 , "title": "drugs", "type": "circle"},
-
-      
-
-        {"id": "sound", "size": 5, "score": 0.4 , "title": "sound", "type": "circle"},
-
-      
-
-        {"id": "use", "size": 5, "score": 0.4 , "title": "use", "type": "circle"},
 
        
 

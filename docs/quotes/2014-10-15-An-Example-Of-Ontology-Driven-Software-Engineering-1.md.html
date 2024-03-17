@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Examples of rich semantic and geospatial aggregations queries | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-10-15-An-Example-Of-Ontology-Driven-Software-Engineering-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,16 +704,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "concept", "target": "article" },
-      
-          { "source": "concept", "target": "Obama" },
-      
-          { "source": "concept", "target": "information-science" },
-      
-          { "source": "concept", "target": "users" },
-      
-          { "source": "concept", "target": "domain-analysis" },
-      
           { "source": "article", "target": "hierarchy" },
       
           { "source": "article", "target": "social-sciences" },
@@ -726,42 +712,64 @@ var data_local_dynamic = {
       
           { "source": "article", "target": "concept" },
       
+          { "source": "article", "target": "Obama" },
+      
+          { "source": "hierarchy", "target": "article" },
+      
+          { "source": "hierarchy", "target": "social-sciences" },
+      
+          { "source": "hierarchy", "target": "science" },
+      
+          { "source": "hierarchy", "target": "nodes" },
+      
+          { "source": "social-sciences", "target": "article" },
+      
+          { "source": "social-sciences", "target": "hierarchy" },
+      
+          { "source": "social-sciences", "target": "science" },
+      
+          { "source": "social-sciences", "target": "journals" },
+      
+          { "source": "science", "target": "article" },
+      
+          { "source": "science", "target": "hierarchy" },
+      
+          { "source": "science", "target": "social-sciences" },
+      
+          { "source": "science", "target": "publications" },
+      
+          { "source": "concept", "target": "article" },
+      
+          { "source": "concept", "target": "Obama" },
+      
+          { "source": "concept", "target": "information-science" },
+      
+          { "source": "concept", "target": "users" },
+      
           { "source": "Obama", "target": "article" },
       
           { "source": "Obama", "target": "concept" },
       
           { "source": "Obama", "target": "decisions" },
-      
-          { "source": "information-science", "target": "thesaurus" },
-      
-          { "source": "information-science", "target": "vocabulary" },
-      
-          { "source": "information-science", "target": "note" },
-      
-          { "source": "information-science", "target": "users" },
-      
-          { "source": "users", "target": "user-testing" },
-      
-          { "source": "users", "target": "Google" },
-      
-          { "source": "users", "target": "search" },
-      
-          { "source": "users", "target": "version" },
-      
-          { "source": "domain-analysis", "target": "information-science" },
-      
-          { "source": "domain-analysis", "target": "users" },
-      
-          { "source": "domain-analysis", "target": "knowledge-organization-systems" },
-      
-          { "source": "domain-analysis", "target": "concept" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "article", "size": 70, "score": 0 , "title": "article", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
+
+      
+
+        {"id": "social-sciences", "size": 70, "score": 0 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "science", "size": 70, "score": 0 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
 
       
 
@@ -769,67 +777,31 @@ var data_local_dynamic = {
 
       
 
-        {"id": "information-science", "size": 70, "score": 0 , "title": "information-science", "type": "circle"},
+        {"id": "article", "size": 140, "score": 0.5 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "users", "size": 70, "score": 0 , "title": "users", "type": "circle"},
+        {"id": "nodes", "size": 5, "score": 0.4 , "title": "nodes", "type": "circle"},
 
       
 
-        {"id": "domain-analysis", "size": 70, "score": 0 , "title": "domain-analysis", "type": "circle"},
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
 
       
 
-        {"id": "concept", "size": 140, "score": 0.5 , "title": "concept", "type": "circle"},
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
 
       
 
-        {"id": "hierarchy", "size": 5, "score": 0.4 , "title": "hierarchy", "type": "circle"},
+        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
 
       
 
-        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
-
-      
-
-        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
       
 
         {"id": "decisions", "size": 5, "score": 0.4 , "title": "decisions", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
-
-      
-
-        {"id": "note", "size": 5, "score": 0.4 , "title": "note", "type": "circle"},
-
-      
-
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
-
-      
-
-        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
-
-      
-
-        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
-
-      
-
-        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
-
-      
-
-        {"id": "knowledge-organization-systems", "size": 5, "score": 0.4 , "title": "knowledge-organization-systems", "type": "circle"},
 
        
 

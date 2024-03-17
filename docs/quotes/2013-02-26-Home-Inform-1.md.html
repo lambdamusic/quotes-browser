@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Inform is a design system... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Home-Inform-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,16 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "interactive-fiction", "target": "story" },
+      
+          { "source": "interactive-fiction", "target": "text" },
+      
+          { "source": "interactive-fiction", "target": "game" },
+      
+          { "source": "interactive-fiction", "target": "character" },
+      
+          { "source": "interactive-fiction", "target": "fiction" },
+      
           { "source": "story", "target": "text" },
       
           { "source": "story", "target": "game" },
@@ -717,8 +723,6 @@ var data_local_dynamic = {
           { "source": "story", "target": "character" },
       
           { "source": "story", "target": "interactive-fiction" },
-      
-          { "source": "story", "target": "cases" },
       
           { "source": "text", "target": "story" },
       
@@ -744,25 +748,21 @@ var data_local_dynamic = {
       
           { "source": "character", "target": "interactive-fiction" },
       
-          { "source": "interactive-fiction", "target": "story" },
+          { "source": "fiction", "target": "facets" },
       
-          { "source": "interactive-fiction", "target": "text" },
+          { "source": "fiction", "target": "book" },
       
-          { "source": "interactive-fiction", "target": "game" },
+          { "source": "fiction", "target": "items" },
       
-          { "source": "interactive-fiction", "target": "character" },
-      
-          { "source": "cases", "target": "title" },
-      
-          { "source": "cases", "target": "content" },
-      
-          { "source": "cases", "target": "story" },
-      
-          { "source": "cases", "target": "occurrence" },
+          { "source": "fiction", "target": "interactive-fiction" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
+      
+
+        {"id": "story", "size": 70, "score": 0 , "title": "story", "type": "circle"},
+
       
 
         {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
@@ -777,27 +777,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "interactive-fiction", "size": 70, "score": 0 , "title": "interactive-fiction", "type": "circle"},
+        {"id": "fiction", "size": 70, "score": 0 , "title": "fiction", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "interactive-fiction", "size": 140, "score": 0.5 , "title": "interactive-fiction", "type": "circle"},
 
       
 
-        {"id": "story", "size": 140, "score": 0.5 , "title": "story", "type": "circle"},
+        {"id": "facets", "size": 5, "score": 0.4 , "title": "facets", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+        {"id": "items", "size": 5, "score": 0.4 , "title": "items", "type": "circle"},
 
        
 

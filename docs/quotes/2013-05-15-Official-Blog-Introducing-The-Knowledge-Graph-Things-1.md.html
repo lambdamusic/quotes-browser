@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Knowledge graph | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-05-15-Official-Blog-Introducing-The-Knowledge-Graph-Things-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,16 +709,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "graph", "target": "knowledge-graph" },
-      
-          { "source": "graph", "target": "data-analytics" },
-      
-          { "source": "graph", "target": "analytics" },
-      
-          { "source": "graph", "target": "semantics" },
-      
-          { "source": "graph", "target": "specification" },
-      
           { "source": "knowledge-graph", "target": "data-analytics" },
       
           { "source": "knowledge-graph", "target": "analytics" },
@@ -730,6 +716,8 @@ var data_local_dynamic = {
           { "source": "knowledge-graph", "target": "graph" },
       
           { "source": "knowledge-graph", "target": "search-engines" },
+      
+          { "source": "knowledge-graph", "target": "search-results" },
       
           { "source": "data-analytics", "target": "knowledge-graph" },
       
@@ -747,29 +735,33 @@ var data_local_dynamic = {
       
           { "source": "analytics", "target": "Semantic-Web" },
       
-          { "source": "semantics", "target": "annotation-properties" },
+          { "source": "graph", "target": "knowledge-graph" },
       
-          { "source": "semantics", "target": "data-properties" },
+          { "source": "graph", "target": "data-analytics" },
       
-          { "source": "semantics", "target": "blank-nodes" },
+          { "source": "graph", "target": "analytics" },
       
-          { "source": "semantics", "target": "OWL-DL" },
+          { "source": "graph", "target": "semantics" },
       
-          { "source": "specification", "target": "graph" },
+          { "source": "search-engines", "target": "Web-sites" },
       
-          { "source": "specification", "target": "semantics" },
+          { "source": "search-engines", "target": "browser" },
       
-          { "source": "specification", "target": "metadata" },
+          { "source": "search-engines", "target": "pages" },
       
-          { "source": "specification", "target": "things" },
+          { "source": "search-engines", "target": "real-world-objects" },
+      
+          { "source": "search-results", "target": "users" },
+      
+          { "source": "search-results", "target": "prototype" },
+      
+          { "source": "search-results", "target": "user-prototypes" },
+      
+          { "source": "search-results", "target": "bike" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
-      
-
-        {"id": "knowledge-graph", "size": 70, "score": 0 , "title": "knowledge-graph", "type": "circle"},
-
       
 
         {"id": "data-analytics", "size": 70, "score": 0 , "title": "data-analytics", "type": "circle"},
@@ -780,19 +772,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
+        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "specification", "size": 70, "score": 0 , "title": "specification", "type": "circle"},
+        {"id": "search-engines", "size": 70, "score": 0 , "title": "search-engines", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 140, "score": 0.5 , "title": "graph", "type": "circle"},
+        {"id": "search-results", "size": 70, "score": 0 , "title": "search-results", "type": "circle"},
 
       
 
-        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
+        {"id": "knowledge-graph", "size": 140, "score": 0.5 , "title": "knowledge-graph", "type": "circle"},
 
       
 
@@ -804,27 +796,39 @@ var data_local_dynamic = {
 
       
 
-        {"id": "annotation-properties", "size": 5, "score": 0.4 , "title": "annotation-properties", "type": "circle"},
+        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "data-properties", "size": 5, "score": 0.4 , "title": "data-properties", "type": "circle"},
+        {"id": "Web-sites", "size": 5, "score": 0.4 , "title": "Web-sites", "type": "circle"},
 
       
 
-        {"id": "blank-nodes", "size": 5, "score": 0.4 , "title": "blank-nodes", "type": "circle"},
+        {"id": "browser", "size": 5, "score": 0.4 , "title": "browser", "type": "circle"},
 
       
 
-        {"id": "OWL-DL", "size": 5, "score": 0.4 , "title": "OWL-DL", "type": "circle"},
+        {"id": "pages", "size": 5, "score": 0.4 , "title": "pages", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "real-world-objects", "size": 5, "score": 0.4 , "title": "real-world-objects", "type": "circle"},
 
       
 
-        {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
+
+      
+
+        {"id": "prototype", "size": 5, "score": 0.4 , "title": "prototype", "type": "circle"},
+
+      
+
+        {"id": "user-prototypes", "size": 5, "score": 0.4 , "title": "user-prototypes", "type": "circle"},
+
+      
+
+        {"id": "bike", "size": 5, "score": 0.4 , "title": "bike", "type": "circle"},
 
        
 

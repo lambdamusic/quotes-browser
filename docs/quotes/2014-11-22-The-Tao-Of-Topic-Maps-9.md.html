@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Conceptual graphs | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-11-22-The-Tao-Of-Topic-Maps-9.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,6 +706,12 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "nets", "target": "graph" },
+      
+          { "source": "nets", "target": "logic" },
+      
+          { "source": "nets", "target": "field-of-AI" },
+      
           { "source": "graph", "target": "knowledge-graph" },
       
           { "source": "graph", "target": "data-analytics" },
@@ -718,110 +720,76 @@ var data_local_dynamic = {
       
           { "source": "graph", "target": "semantics" },
       
-          { "source": "graph", "target": "specification" },
+          { "source": "logic", "target": "science" },
       
-          { "source": "knowledge-graph", "target": "data-analytics" },
+          { "source": "logic", "target": "things" },
       
-          { "source": "knowledge-graph", "target": "analytics" },
+          { "source": "logic", "target": "assumption" },
       
-          { "source": "knowledge-graph", "target": "graph" },
+          { "source": "logic", "target": "words" },
       
-          { "source": "knowledge-graph", "target": "search-engines" },
+          { "source": "field-of-AI", "target": "graph" },
       
-          { "source": "data-analytics", "target": "knowledge-graph" },
+          { "source": "field-of-AI", "target": "nets" },
       
-          { "source": "data-analytics", "target": "analytics" },
+          { "source": "field-of-AI", "target": "logic" },
       
-          { "source": "data-analytics", "target": "graph" },
-      
-          { "source": "data-analytics", "target": "transactions" },
-      
-          { "source": "analytics", "target": "knowledge-graph" },
-      
-          { "source": "analytics", "target": "data-analytics" },
-      
-          { "source": "analytics", "target": "graph" },
-      
-          { "source": "analytics", "target": "Semantic-Web" },
-      
-          { "source": "semantics", "target": "annotation-properties" },
-      
-          { "source": "semantics", "target": "data-properties" },
-      
-          { "source": "semantics", "target": "blank-nodes" },
-      
-          { "source": "semantics", "target": "OWL-DL" },
-      
-          { "source": "specification", "target": "graph" },
-      
-          { "source": "specification", "target": "semantics" },
-      
-          { "source": "specification", "target": "metadata" },
-      
-          { "source": "specification", "target": "things" },
+          { "source": "field-of-AI", "target": "Internet-of-Things" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "knowledge-graph", "size": 70, "score": 0 , "title": "knowledge-graph", "type": "circle"},
+        {"id": "graph", "size": 70, "score": 0 , "title": "graph", "type": "circle"},
 
       
 
-        {"id": "data-analytics", "size": 70, "score": 0 , "title": "data-analytics", "type": "circle"},
+        {"id": "logic", "size": 70, "score": 0 , "title": "logic", "type": "circle"},
 
       
 
-        {"id": "analytics", "size": 70, "score": 0 , "title": "analytics", "type": "circle"},
+        {"id": "field-of-AI", "size": 70, "score": 0 , "title": "field-of-AI", "type": "circle"},
 
       
 
-        {"id": "semantics", "size": 70, "score": 0 , "title": "semantics", "type": "circle"},
+        {"id": "nets", "size": 140, "score": 0.5 , "title": "nets", "type": "circle"},
 
       
 
-        {"id": "specification", "size": 70, "score": 0 , "title": "specification", "type": "circle"},
+        {"id": "knowledge-graph", "size": 5, "score": 0.4 , "title": "knowledge-graph", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 140, "score": 0.5 , "title": "graph", "type": "circle"},
+        {"id": "data-analytics", "size": 5, "score": 0.4 , "title": "data-analytics", "type": "circle"},
 
       
 
-        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
+        {"id": "analytics", "size": 5, "score": 0.4 , "title": "analytics", "type": "circle"},
 
       
 
-        {"id": "transactions", "size": 5, "score": 0.4 , "title": "transactions", "type": "circle"},
+        {"id": "semantics", "size": 5, "score": 0.4 , "title": "semantics", "type": "circle"},
 
       
 
-        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
-
-      
-
-        {"id": "annotation-properties", "size": 5, "score": 0.4 , "title": "annotation-properties", "type": "circle"},
-
-      
-
-        {"id": "data-properties", "size": 5, "score": 0.4 , "title": "data-properties", "type": "circle"},
-
-      
-
-        {"id": "blank-nodes", "size": 5, "score": 0.4 , "title": "blank-nodes", "type": "circle"},
-
-      
-
-        {"id": "OWL-DL", "size": 5, "score": 0.4 , "title": "OWL-DL", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
 
       
 
         {"id": "things", "size": 5, "score": 0.4 , "title": "things", "type": "circle"},
+
+      
+
+        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
+
+      
+
+        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+
+      
+
+        {"id": "Internet-of-Things", "size": 5, "score": 0.4 , "title": "Internet-of-Things", "type": "circle"},
 
        
 

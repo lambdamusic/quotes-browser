@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Annotation structures vs exploratory structures | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Callimachusavoiding-The-Pitfalls-Of-Xml-For-Collaborative-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,6 +710,48 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "project", "target": "product-owners" },
+      
+          { "source": "project", "target": "owners" },
+      
+          { "source": "project", "target": "business" },
+      
+          { "source": "project", "target": "product-backlog" },
+      
+          { "source": "project", "target": "information" },
+      
+          { "source": "product-owners", "target": "owners" },
+      
+          { "source": "product-owners", "target": "project" },
+      
+          { "source": "product-owners", "target": "business" },
+      
+          { "source": "product-owners", "target": "product-backlog" },
+      
+          { "source": "owners", "target": "product-owners" },
+      
+          { "source": "owners", "target": "project" },
+      
+          { "source": "owners", "target": "business" },
+      
+          { "source": "owners", "target": "product-backlog" },
+      
+          { "source": "business", "target": "product-owners" },
+      
+          { "source": "business", "target": "owners" },
+      
+          { "source": "business", "target": "project" },
+      
+          { "source": "business", "target": "product-backlog" },
+      
+          { "source": "product-backlog", "target": "product-owners" },
+      
+          { "source": "product-backlog", "target": "owners" },
+      
+          { "source": "product-backlog", "target": "project" },
+      
+          { "source": "product-backlog", "target": "business" },
+      
           { "source": "information", "target": "nanopublications" },
       
           { "source": "information", "target": "metadata" },
@@ -721,119 +759,49 @@ var data_local_dynamic = {
           { "source": "information", "target": "contextual-information" },
       
           { "source": "information", "target": "collection-objects" },
-      
-          { "source": "information", "target": "objects" },
-      
-          { "source": "nanopublications", "target": "metadata" },
-      
-          { "source": "nanopublications", "target": "information" },
-      
-          { "source": "nanopublications", "target": "contextual-information" },
-      
-          { "source": "nanopublications", "target": "graph" },
-      
-          { "source": "metadata", "target": "RDF-databases" },
-      
-          { "source": "metadata", "target": "platform" },
-      
-          { "source": "metadata", "target": "database" },
-      
-          { "source": "metadata", "target": "server" },
-      
-          { "source": "contextual-information", "target": "nanopublications" },
-      
-          { "source": "contextual-information", "target": "metadata" },
-      
-          { "source": "contextual-information", "target": "information" },
-      
-          { "source": "contextual-information", "target": "data-sets" },
-      
-          { "source": "collection-objects", "target": "metadata" },
-      
-          { "source": "collection-objects", "target": "objects" },
-      
-          { "source": "collection-objects", "target": "information" },
-      
-          { "source": "collection-objects", "target": "collection" },
-      
-          { "source": "objects", "target": "class" },
-      
-          { "source": "objects", "target": "real-world" },
-      
-          { "source": "objects", "target": "instances" },
-      
-          { "source": "objects", "target": "types" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "nanopublications", "size": 70, "score": 0 , "title": "nanopublications", "type": "circle"},
+        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
+        {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "contextual-information", "size": 70, "score": 0 , "title": "contextual-information", "type": "circle"},
+        {"id": "business", "size": 70, "score": 0 , "title": "business", "type": "circle"},
 
       
 
-        {"id": "collection-objects", "size": 70, "score": 0 , "title": "collection-objects", "type": "circle"},
+        {"id": "product-backlog", "size": 70, "score": 0 , "title": "product-backlog", "type": "circle"},
 
       
 
-        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
+        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
 
       
 
-        {"id": "information", "size": 140, "score": 0.5 , "title": "information", "type": "circle"},
+        {"id": "project", "size": 140, "score": 0.5 , "title": "project", "type": "circle"},
 
       
 
-        {"id": "graph", "size": 5, "score": 0.4 , "title": "graph", "type": "circle"},
+        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
 
       
 
-        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
+        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
-        {"id": "data-sets", "size": 5, "score": 0.4 , "title": "data-sets", "type": "circle"},
-
-      
-
-        {"id": "collection", "size": 5, "score": 0.4 , "title": "collection", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
-
-      
-
-        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
-
-      
-
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
-
-      
-
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
+        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
 
        
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>...going &quot;beyond search and access&quot;... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-11-19-Core-Three-Access-Levels-To-Underpin-Open-4.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -712,31 +708,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "digital-libraries", "target": "raw-data" },
+          { "source": "metadata-model", "target": "services" },
       
-          { "source": "digital-libraries", "target": "access" },
+          { "source": "metadata-model", "target": "digital-libraries" },
       
-          { "source": "digital-libraries", "target": "services" },
+          { "source": "metadata-model", "target": "resources" },
       
-          { "source": "digital-libraries", "target": "metadata-model" },
+          { "source": "metadata-model", "target": "raw-data" },
       
-          { "source": "digital-libraries", "target": "resources" },
-      
-          { "source": "raw-data", "target": "digital-libraries" },
-      
-          { "source": "raw-data", "target": "access" },
-      
-          { "source": "raw-data", "target": "services" },
-      
-          { "source": "raw-data", "target": "metadata-model" },
-      
-          { "source": "access", "target": "humans" },
-      
-          { "source": "access", "target": "need" },
-      
-          { "source": "access", "target": "publications" },
-      
-          { "source": "access", "target": "situation" },
+          { "source": "metadata-model", "target": "text-mining" },
       
           { "source": "services", "target": "things" },
       
@@ -746,13 +726,13 @@ var data_local_dynamic = {
       
           { "source": "services", "target": "metadata-model" },
       
-          { "source": "metadata-model", "target": "services" },
+          { "source": "digital-libraries", "target": "raw-data" },
       
-          { "source": "metadata-model", "target": "digital-libraries" },
+          { "source": "digital-libraries", "target": "access" },
       
-          { "source": "metadata-model", "target": "resources" },
+          { "source": "digital-libraries", "target": "services" },
       
-          { "source": "metadata-model", "target": "raw-data" },
+          { "source": "digital-libraries", "target": "metadata-model" },
       
           { "source": "resources", "target": "services" },
       
@@ -761,25 +741,33 @@ var data_local_dynamic = {
           { "source": "resources", "target": "digital-libraries" },
       
           { "source": "resources", "target": "raw-data" },
+      
+          { "source": "raw-data", "target": "digital-libraries" },
+      
+          { "source": "raw-data", "target": "access" },
+      
+          { "source": "raw-data", "target": "services" },
+      
+          { "source": "raw-data", "target": "metadata-model" },
+      
+          { "source": "text-mining", "target": "metadata-model" },
+      
+          { "source": "text-mining", "target": "tool" },
+      
+          { "source": "text-mining", "target": "mining" },
+      
+          { "source": "text-mining", "target": "World-Wide-Web-Consortium" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
-
-      
-
-        {"id": "access", "size": 70, "score": 0 , "title": "access", "type": "circle"},
-
-      
-
         {"id": "services", "size": 70, "score": 0 , "title": "services", "type": "circle"},
 
       
 
-        {"id": "metadata-model", "size": 70, "score": 0 , "title": "metadata-model", "type": "circle"},
+        {"id": "digital-libraries", "size": 70, "score": 0 , "title": "digital-libraries", "type": "circle"},
 
       
 
@@ -787,23 +775,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "digital-libraries", "size": 140, "score": 0.5 , "title": "digital-libraries", "type": "circle"},
+        {"id": "raw-data", "size": 70, "score": 0 , "title": "raw-data", "type": "circle"},
 
       
 
-        {"id": "humans", "size": 5, "score": 0.4 , "title": "humans", "type": "circle"},
+        {"id": "text-mining", "size": 70, "score": 0 , "title": "text-mining", "type": "circle"},
 
       
 
-        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
-
-      
-
-        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
-
-      
-
-        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
+        {"id": "metadata-model", "size": 140, "score": 0.5 , "title": "metadata-model", "type": "circle"},
 
       
 
@@ -816,6 +796,22 @@ var data_local_dynamic = {
       
 
         {"id": "bits", "size": 5, "score": 0.4 , "title": "bits", "type": "circle"},
+
+      
+
+        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
+
+      
+
+        {"id": "tool", "size": 5, "score": 0.4 , "title": "tool", "type": "circle"},
+
+      
+
+        {"id": "mining", "size": 5, "score": 0.4 , "title": "mining", "type": "circle"},
+
+      
+
+        {"id": "World-Wide-Web-Consortium", "size": 5, "score": 0.4 , "title": "World-Wide-Web-Consortium", "type": "circle"},
 
        
 

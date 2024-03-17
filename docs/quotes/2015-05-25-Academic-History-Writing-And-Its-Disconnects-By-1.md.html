@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Limitations of note taking on ebooks | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-05-25-Academic-History-Writing-And-Its-Disconnects-By-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,39 +704,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "book", "target": "news" },
+          { "source": "readers", "target": "text" },
       
-          { "source": "book", "target": "journals" },
+          { "source": "readers", "target": "book" },
       
-          { "source": "book", "target": "nature" },
+          { "source": "readers", "target": "words" },
       
-          { "source": "book", "target": "text" },
+          { "source": "readers", "target": "algorithm" },
       
-          { "source": "book", "target": "readers" },
-      
-          { "source": "news", "target": "journals" },
-      
-          { "source": "news", "target": "book" },
-      
-          { "source": "news", "target": "nature" },
-      
-          { "source": "news", "target": "grammar" },
-      
-          { "source": "journals", "target": "news" },
-      
-          { "source": "journals", "target": "book" },
-      
-          { "source": "journals", "target": "nature" },
-      
-          { "source": "journals", "target": "database" },
-      
-          { "source": "nature", "target": "news" },
-      
-          { "source": "nature", "target": "journals" },
-      
-          { "source": "nature", "target": "book" },
-      
-          { "source": "nature", "target": "people" },
+          { "source": "readers", "target": "digital-media" },
       
           { "source": "text", "target": "story" },
       
@@ -750,52 +722,64 @@ var data_local_dynamic = {
       
           { "source": "text", "target": "interactive-fiction" },
       
-          { "source": "readers", "target": "text" },
+          { "source": "book", "target": "news" },
       
-          { "source": "readers", "target": "book" },
+          { "source": "book", "target": "journals" },
       
-          { "source": "readers", "target": "words" },
+          { "source": "book", "target": "nature" },
       
-          { "source": "readers", "target": "algorithm" },
+          { "source": "book", "target": "text" },
+      
+          { "source": "words", "target": "language" },
+      
+          { "source": "words", "target": "Sapir-Whorf-hypothesis" },
+      
+          { "source": "words", "target": "readers" },
+      
+          { "source": "words", "target": "algorithm" },
+      
+          { "source": "algorithm", "target": "server" },
+      
+          { "source": "algorithm", "target": "metadata" },
+      
+          { "source": "algorithm", "target": "words" },
+      
+          { "source": "algorithm", "target": "readers" },
+      
+          { "source": "digital-media", "target": "culture" },
+      
+          { "source": "digital-media", "target": "communication" },
+      
+          { "source": "digital-media", "target": "readers" },
+      
+          { "source": "digital-media", "target": "humanity" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "news", "size": 70, "score": 0 , "title": "news", "type": "circle"},
-
-      
-
-        {"id": "journals", "size": 70, "score": 0 , "title": "journals", "type": "circle"},
-
-      
-
-        {"id": "nature", "size": 70, "score": 0 , "title": "nature", "type": "circle"},
-
-      
-
         {"id": "text", "size": 70, "score": 0 , "title": "text", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 70, "score": 0 , "title": "readers", "type": "circle"},
+        {"id": "book", "size": 70, "score": 0 , "title": "book", "type": "circle"},
 
       
 
-        {"id": "book", "size": 140, "score": 0.5 , "title": "book", "type": "circle"},
+        {"id": "words", "size": 70, "score": 0 , "title": "words", "type": "circle"},
 
       
 
-        {"id": "grammar", "size": 5, "score": 0.4 , "title": "grammar", "type": "circle"},
+        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
 
       
 
-        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
+        {"id": "digital-media", "size": 70, "score": 0 , "title": "digital-media", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "readers", "size": 140, "score": 0.5 , "title": "readers", "type": "circle"},
 
       
 
@@ -815,11 +799,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "news", "size": 5, "score": 0.4 , "title": "news", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 5, "score": 0.4 , "title": "algorithm", "type": "circle"},
+        {"id": "journals", "size": 5, "score": 0.4 , "title": "journals", "type": "circle"},
+
+      
+
+        {"id": "nature", "size": 5, "score": 0.4 , "title": "nature", "type": "circle"},
+
+      
+
+        {"id": "language", "size": 5, "score": 0.4 , "title": "language", "type": "circle"},
+
+      
+
+        {"id": "Sapir-Whorf-hypothesis", "size": 5, "score": 0.4 , "title": "Sapir-Whorf-hypothesis", "type": "circle"},
+
+      
+
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
+
+      
+
+        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+
+      
+
+        {"id": "culture", "size": 5, "score": 0.4 , "title": "culture", "type": "circle"},
+
+      
+
+        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
+
+      
+
+        {"id": "humanity", "size": 5, "score": 0.4 , "title": "humanity", "type": "circle"},
 
        
 

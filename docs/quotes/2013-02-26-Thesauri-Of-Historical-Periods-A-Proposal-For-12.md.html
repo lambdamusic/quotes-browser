@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Intuitively, many  systems regard... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Thesauri-Of-Historical-Periods-A-Proposal-For-12.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,15 +709,39 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "period", "target": "relationship" },
+          { "source": "point", "target": "humans" },
       
-          { "source": "period", "target": "cultural-heritage" },
+          { "source": "point", "target": "persons" },
       
-          { "source": "period", "target": "heritage" },
+          { "source": "point", "target": "efforts" },
       
-          { "source": "period", "target": "thesaurus" },
+          { "source": "point", "target": "relationship" },
       
-          { "source": "period", "target": "unity" },
+          { "source": "point", "target": "differences" },
+      
+          { "source": "humans", "target": "access" },
+      
+          { "source": "humans", "target": "need" },
+      
+          { "source": "humans", "target": "publications" },
+      
+          { "source": "humans", "target": "situation" },
+      
+          { "source": "persons", "target": "team" },
+      
+          { "source": "persons", "target": "role" },
+      
+          { "source": "persons", "target": "benefits" },
+      
+          { "source": "persons", "target": "humans" },
+      
+          { "source": "efforts", "target": "humans" },
+      
+          { "source": "efforts", "target": "persons" },
+      
+          { "source": "efforts", "target": "point" },
+      
+          { "source": "efforts", "target": "truth" },
       
           { "source": "relationship", "target": "verbs" },
       
@@ -731,62 +751,72 @@ var data_local_dynamic = {
       
           { "source": "relationship", "target": "relation" },
       
-          { "source": "cultural-heritage", "target": "computer-science" },
+          { "source": "differences", "target": "records" },
       
-          { "source": "cultural-heritage", "target": "definition" },
+          { "source": "differences", "target": "DOI" },
       
-          { "source": "cultural-heritage", "target": "project" },
+          { "source": "differences", "target": "version" },
       
-          { "source": "cultural-heritage", "target": "heritage" },
-      
-          { "source": "heritage", "target": "cultural-heritage" },
-      
-          { "source": "heritage", "target": "period" },
-      
-          { "source": "heritage", "target": "thesaurus" },
-      
-          { "source": "thesaurus", "target": "authority-files" },
-      
-          { "source": "thesaurus", "target": "indexing" },
-      
-          { "source": "thesaurus", "target": "vocabulary" },
-      
-          { "source": "thesaurus", "target": "files" },
-      
-          { "source": "unity", "target": "types" },
-      
-          { "source": "unity", "target": "entities" },
-      
-          { "source": "unity", "target": "domain" },
-      
-          { "source": "unity", "target": "terms" },
+          { "source": "differences", "target": "data" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "humans", "size": 70, "score": 0 , "title": "humans", "type": "circle"},
+
+      
+
+        {"id": "persons", "size": 70, "score": 0 , "title": "persons", "type": "circle"},
+
+      
+
+        {"id": "efforts", "size": 70, "score": 0 , "title": "efforts", "type": "circle"},
+
+      
+
         {"id": "relationship", "size": 70, "score": 0 , "title": "relationship", "type": "circle"},
 
       
 
-        {"id": "cultural-heritage", "size": 70, "score": 0 , "title": "cultural-heritage", "type": "circle"},
+        {"id": "differences", "size": 70, "score": 0 , "title": "differences", "type": "circle"},
 
       
 
-        {"id": "heritage", "size": 70, "score": 0 , "title": "heritage", "type": "circle"},
+        {"id": "point", "size": 140, "score": 0.5 , "title": "point", "type": "circle"},
 
       
 
-        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
+        {"id": "access", "size": 5, "score": 0.4 , "title": "access", "type": "circle"},
 
       
 
-        {"id": "unity", "size": 70, "score": 0 , "title": "unity", "type": "circle"},
+        {"id": "need", "size": 5, "score": 0.4 , "title": "need", "type": "circle"},
 
       
 
-        {"id": "period", "size": 140, "score": 0.5 , "title": "period", "type": "circle"},
+        {"id": "publications", "size": 5, "score": 0.4 , "title": "publications", "type": "circle"},
+
+      
+
+        {"id": "situation", "size": 5, "score": 0.4 , "title": "situation", "type": "circle"},
+
+      
+
+        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
+
+      
+
+        {"id": "role", "size": 5, "score": 0.4 , "title": "role", "type": "circle"},
+
+      
+
+        {"id": "benefits", "size": 5, "score": 0.4 , "title": "benefits", "type": "circle"},
+
+      
+
+        {"id": "truth", "size": 5, "score": 0.4 , "title": "truth", "type": "circle"},
 
       
 
@@ -798,51 +828,27 @@ var data_local_dynamic = {
 
       
 
+        {"id": "period", "size": 5, "score": 0.4 , "title": "period", "type": "circle"},
+
+      
+
         {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "computer-science", "size": 5, "score": 0.4 , "title": "computer-science", "type": "circle"},
+        {"id": "records", "size": 5, "score": 0.4 , "title": "records", "type": "circle"},
 
       
 
-        {"id": "definition", "size": 5, "score": 0.4 , "title": "definition", "type": "circle"},
+        {"id": "DOI", "size": 5, "score": 0.4 , "title": "DOI", "type": "circle"},
 
       
 
-        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
+        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
 
       
 
-        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
-
-      
-
-        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
-
-      
-
-        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
-
-      
-
-        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
-
-      
-
-        {"id": "entities", "size": 5, "score": 0.4 , "title": "entities", "type": "circle"},
-
-      
-
-        {"id": "domain", "size": 5, "score": 0.4 , "title": "domain", "type": "circle"},
-
-      
-
-        {"id": "terms", "size": 5, "score": 0.4 , "title": "terms", "type": "circle"},
+        {"id": "data", "size": 5, "score": 0.4 , "title": "data", "type": "circle"},
 
        
 

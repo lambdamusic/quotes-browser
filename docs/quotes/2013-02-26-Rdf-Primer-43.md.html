@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>All properties in RDF are... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Rdf-Primer-43.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,32 +710,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "kind", "target": "properties" },
-      
-          { "source": "kind", "target": "reference" },
-      
-          { "source": "kind", "target": "class" },
-      
-          { "source": "kind", "target": "slots" },
-      
-          { "source": "kind", "target": "range" },
-      
-          { "source": "properties", "target": "network" },
-      
-          { "source": "properties", "target": "instances" },
-      
-          { "source": "properties", "target": "range" },
-      
-          { "source": "properties", "target": "class" },
-      
-          { "source": "reference", "target": "properties" },
-      
-          { "source": "reference", "target": "class" },
-      
-          { "source": "reference", "target": "slots" },
-      
-          { "source": "reference", "target": "range" },
-      
           { "source": "class", "target": "cases" },
       
           { "source": "class", "target": "occurrence" },
@@ -748,72 +718,94 @@ var data_local_dynamic = {
       
           { "source": "class", "target": "instances" },
       
-          { "source": "slots", "target": "properties" },
+          { "source": "class", "target": "objects" },
       
-          { "source": "slots", "target": "reference" },
+          { "source": "cases", "target": "title" },
       
-          { "source": "slots", "target": "class" },
+          { "source": "cases", "target": "content" },
       
-          { "source": "slots", "target": "range" },
+          { "source": "cases", "target": "story" },
       
-          { "source": "range", "target": "properties" },
+          { "source": "cases", "target": "occurrence" },
       
-          { "source": "range", "target": "instances" },
+          { "source": "occurrence", "target": "cases" },
       
-          { "source": "range", "target": "class" },
+          { "source": "occurrence", "target": "events" },
       
-          { "source": "range", "target": "values" },
+          { "source": "occurrence", "target": "instances" },
+      
+          { "source": "occurrence", "target": "class" },
+      
+          { "source": "events", "target": "cases" },
+      
+          { "source": "events", "target": "occurrence" },
+      
+          { "source": "events", "target": "instances" },
+      
+          { "source": "events", "target": "class" },
+      
+          { "source": "instances", "target": "cases" },
+      
+          { "source": "instances", "target": "occurrence" },
+      
+          { "source": "instances", "target": "events" },
+      
+          { "source": "instances", "target": "class" },
+      
+          { "source": "objects", "target": "class" },
+      
+          { "source": "objects", "target": "real-world" },
+      
+          { "source": "objects", "target": "instances" },
+      
+          { "source": "objects", "target": "types" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
+        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "reference", "size": 70, "score": 0 , "title": "reference", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
+        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "slots", "size": 70, "score": 0 , "title": "slots", "type": "circle"},
+        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "range", "size": 70, "score": 0 , "title": "range", "type": "circle"},
+        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
 
       
 
-        {"id": "kind", "size": 140, "score": 0.5 , "title": "kind", "type": "circle"},
+        {"id": "class", "size": 140, "score": 0.5 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
+        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
 
       
 
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
 
       
 
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
-
-      
-
-        {"id": "values", "size": 5, "score": 0.4 , "title": "values", "type": "circle"},
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
 
        
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Episodes, brand and series | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-29-Designing-A-Url-Structure-For-Bbc-Programmes-8.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -711,16 +707,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "risk", "target": "episodes" },
-      
-          { "source": "risk", "target": "orphans" },
-      
-          { "source": "risk", "target": "series" },
-      
-          { "source": "risk", "target": "health" },
-      
-          { "source": "risk", "target": "years" },
-      
           { "source": "episodes", "target": "orphans" },
       
           { "source": "episodes", "target": "series" },
@@ -728,6 +714,8 @@ var data_local_dynamic = {
           { "source": "episodes", "target": "years" },
       
           { "source": "episodes", "target": "time" },
+      
+          { "source": "episodes", "target": "program" },
       
           { "source": "orphans", "target": "episodes" },
       
@@ -745,14 +733,6 @@ var data_local_dynamic = {
       
           { "source": "series", "target": "time" },
       
-          { "source": "health", "target": "zuccheri" },
-      
-          { "source": "health", "target": "fruttosio" },
-      
-          { "source": "health", "target": "eating" },
-      
-          { "source": "health", "target": "years" },
-      
           { "source": "years", "target": "factors" },
       
           { "source": "years", "target": "article" },
@@ -760,14 +740,26 @@ var data_local_dynamic = {
           { "source": "years", "target": "citations" },
       
           { "source": "years", "target": "episodes" },
+      
+          { "source": "time", "target": "weeks" },
+      
+          { "source": "time", "target": "experience" },
+      
+          { "source": "time", "target": "days" },
+      
+          { "source": "time", "target": "lack" },
+      
+          { "source": "program", "target": "episodes" },
+      
+          { "source": "program", "target": "events" },
+      
+          { "source": "program", "target": "duration" },
+      
+          { "source": "program", "target": "same-episode" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
-      
-
-        {"id": "episodes", "size": 70, "score": 0 , "title": "episodes", "type": "circle"},
-
       
 
         {"id": "orphans", "size": 70, "score": 0 , "title": "orphans", "type": "circle"},
@@ -778,31 +770,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "health", "size": 70, "score": 0 , "title": "health", "type": "circle"},
-
-      
-
         {"id": "years", "size": 70, "score": 0 , "title": "years", "type": "circle"},
 
       
 
-        {"id": "risk", "size": 140, "score": 0.5 , "title": "risk", "type": "circle"},
+        {"id": "time", "size": 70, "score": 0 , "title": "time", "type": "circle"},
 
       
 
-        {"id": "time", "size": 5, "score": 0.4 , "title": "time", "type": "circle"},
+        {"id": "program", "size": 70, "score": 0 , "title": "program", "type": "circle"},
 
       
 
-        {"id": "zuccheri", "size": 5, "score": 0.4 , "title": "zuccheri", "type": "circle"},
-
-      
-
-        {"id": "fruttosio", "size": 5, "score": 0.4 , "title": "fruttosio", "type": "circle"},
-
-      
-
-        {"id": "eating", "size": 5, "score": 0.4 , "title": "eating", "type": "circle"},
+        {"id": "episodes", "size": 140, "score": 0.5 , "title": "episodes", "type": "circle"},
 
       
 
@@ -815,6 +795,34 @@ var data_local_dynamic = {
       
 
         {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+
+      
+
+        {"id": "weeks", "size": 5, "score": 0.4 , "title": "weeks", "type": "circle"},
+
+      
+
+        {"id": "experience", "size": 5, "score": 0.4 , "title": "experience", "type": "circle"},
+
+      
+
+        {"id": "days", "size": 5, "score": 0.4 , "title": "days", "type": "circle"},
+
+      
+
+        {"id": "lack", "size": 5, "score": 0.4 , "title": "lack", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
+
+      
+
+        {"id": "duration", "size": 5, "score": 0.4 , "title": "duration", "type": "circle"},
+
+      
+
+        {"id": "same-episode", "size": 5, "score": 0.4 , "title": "same-episode", "type": "circle"},
 
        
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>..the ontology view might be... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-08-13-Ontology-Views-For-Collaborative-Ontology-Development-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,126 +704,82 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "set", "target": "reasoning" },
+          { "source": "ontology", "target": "use-cases" },
       
-          { "source": "set", "target": "knowledge-representation" },
+          { "source": "ontology", "target": "data-model" },
       
-          { "source": "set", "target": "information-systems" },
+          { "source": "ontology", "target": "architecture" },
       
-          { "source": "set", "target": "instances" },
+          { "source": "ontology", "target": "requirements" },
       
-          { "source": "set", "target": "extension" },
+          { "source": "ontology", "target": "domain-specific-ontology" },
       
-          { "source": "reasoning", "target": "knowledge-representation" },
+          { "source": "use-cases", "target": "ontology" },
       
-          { "source": "reasoning", "target": "set" },
+          { "source": "use-cases", "target": "data-model" },
       
-          { "source": "reasoning", "target": "information-systems" },
+          { "source": "use-cases", "target": "architecture" },
       
-          { "source": "reasoning", "target": "argument" },
+          { "source": "use-cases", "target": "requirements" },
       
-          { "source": "knowledge-representation", "target": "reasoning" },
+          { "source": "data-model", "target": "ontology" },
       
-          { "source": "knowledge-representation", "target": "set" },
+          { "source": "data-model", "target": "use-cases" },
       
-          { "source": "knowledge-representation", "target": "information-systems" },
+          { "source": "data-model", "target": "architecture" },
       
-          { "source": "knowledge-representation", "target": "concept" },
+          { "source": "data-model", "target": "requirements" },
       
-          { "source": "information-systems", "target": "ontology" },
+          { "source": "architecture", "target": "ontology" },
       
-          { "source": "information-systems", "target": "Semantic-Web" },
+          { "source": "architecture", "target": "use-cases" },
       
-          { "source": "information-systems", "target": "companies" },
+          { "source": "architecture", "target": "data-model" },
       
-          { "source": "information-systems", "target": "taxonomy" },
+          { "source": "architecture", "target": "requirements" },
       
-          { "source": "instances", "target": "cases" },
+          { "source": "requirements", "target": "ontology" },
       
-          { "source": "instances", "target": "occurrence" },
+          { "source": "requirements", "target": "use-cases" },
       
-          { "source": "instances", "target": "events" },
+          { "source": "requirements", "target": "data-model" },
       
-          { "source": "instances", "target": "class" },
+          { "source": "requirements", "target": "architecture" },
       
-          { "source": "extension", "target": "instances" },
+          { "source": "domain-specific-ontology", "target": "ontology" },
       
-          { "source": "extension", "target": "set" },
+          { "source": "domain-specific-ontology", "target": "use-cases" },
       
-          { "source": "extension", "target": "information-systems" },
+          { "source": "domain-specific-ontology", "target": "data-model" },
       
-          { "source": "extension", "target": "universe" },
+          { "source": "domain-specific-ontology", "target": "architecture" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "reasoning", "size": 70, "score": 0 , "title": "reasoning", "type": "circle"},
+        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
 
       
 
-        {"id": "knowledge-representation", "size": 70, "score": 0 , "title": "knowledge-representation", "type": "circle"},
+        {"id": "data-model", "size": 70, "score": 0 , "title": "data-model", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 70, "score": 0 , "title": "information-systems", "type": "circle"},
+        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
 
       
 
-        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
+        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
 
       
 
-        {"id": "extension", "size": 70, "score": 0 , "title": "extension", "type": "circle"},
+        {"id": "domain-specific-ontology", "size": 70, "score": 0 , "title": "domain-specific-ontology", "type": "circle"},
 
       
 
-        {"id": "set", "size": 140, "score": 0.5 , "title": "set", "type": "circle"},
-
-      
-
-        {"id": "argument", "size": 5, "score": 0.4 , "title": "argument", "type": "circle"},
-
-      
-
-        {"id": "concept", "size": 5, "score": 0.4 , "title": "concept", "type": "circle"},
-
-      
-
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
-
-      
-
-        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
-
-      
-
-        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
-
-      
-
-        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
-
-      
-
-        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
-
-      
-
-        {"id": "universe", "size": 5, "score": 0.4 , "title": "universe", "type": "circle"},
+        {"id": "ontology", "size": 140, "score": 0.5 , "title": "ontology", "type": "circle"},
 
        
 

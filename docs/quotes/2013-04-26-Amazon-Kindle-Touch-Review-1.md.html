@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Amazon xray feature | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-04-26-Amazon-Kindle-Touch-Review-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,15 +704,13 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "name", "target": "book" },
+          { "source": "figures", "target": "book" },
       
-          { "source": "name", "target": "figures" },
+          { "source": "figures", "target": "name" },
       
-          { "source": "name", "target": "cases" },
+          { "source": "figures", "target": "past" },
       
-          { "source": "name", "target": "philosophy" },
-      
-          { "source": "name", "target": "connectionism" },
+          { "source": "figures", "target": "power" },
       
           { "source": "book", "target": "news" },
       
@@ -726,37 +720,27 @@ var data_local_dynamic = {
       
           { "source": "book", "target": "text" },
       
-          { "source": "figures", "target": "book" },
+          { "source": "name", "target": "book" },
       
-          { "source": "figures", "target": "name" },
+          { "source": "name", "target": "figures" },
       
-          { "source": "figures", "target": "past" },
+          { "source": "name", "target": "cases" },
       
-          { "source": "figures", "target": "power" },
+          { "source": "name", "target": "philosophy" },
       
-          { "source": "cases", "target": "title" },
+          { "source": "past", "target": "figures" },
       
-          { "source": "cases", "target": "content" },
+          { "source": "past", "target": "power" },
       
-          { "source": "cases", "target": "story" },
+          { "source": "past", "target": "history" },
       
-          { "source": "cases", "target": "occurrence" },
+          { "source": "power", "target": "wood" },
       
-          { "source": "philosophy", "target": "ontology" },
+          { "source": "power", "target": "beaches" },
       
-          { "source": "philosophy", "target": "ethics" },
+          { "source": "power", "target": "past" },
       
-          { "source": "philosophy", "target": "schema" },
-      
-          { "source": "philosophy", "target": "fact" },
-      
-          { "source": "connectionism", "target": "philosophy" },
-      
-          { "source": "connectionism", "target": "artificial-intelligence" },
-      
-          { "source": "connectionism", "target": "intelligence" },
-      
-          { "source": "connectionism", "target": "name" },
+          { "source": "power", "target": "figures" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -767,23 +751,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "figures", "size": 70, "score": 0 , "title": "figures", "type": "circle"},
+        {"id": "name", "size": 70, "score": 0 , "title": "name", "type": "circle"},
 
       
 
-        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
+        {"id": "past", "size": 70, "score": 0 , "title": "past", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 70, "score": 0 , "title": "philosophy", "type": "circle"},
+        {"id": "power", "size": 70, "score": 0 , "title": "power", "type": "circle"},
 
       
 
-        {"id": "connectionism", "size": 70, "score": 0 , "title": "connectionism", "type": "circle"},
-
-      
-
-        {"id": "name", "size": 140, "score": 0.5 , "title": "name", "type": "circle"},
+        {"id": "figures", "size": 140, "score": 0.5 , "title": "figures", "type": "circle"},
 
       
 
@@ -803,51 +783,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "past", "size": 5, "score": 0.4 , "title": "past", "type": "circle"},
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "power", "size": 5, "score": 0.4 , "title": "power", "type": "circle"},
+        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
 
       
 
-        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+        {"id": "history", "size": 5, "score": 0.4 , "title": "history", "type": "circle"},
 
       
 
-        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+        {"id": "wood", "size": 5, "score": 0.4 , "title": "wood", "type": "circle"},
 
       
 
-        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
-
-      
-
-        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
-
-      
-
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
-
-      
-
-        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
-
-      
-
-        {"id": "schema", "size": 5, "score": 0.4 , "title": "schema", "type": "circle"},
-
-      
-
-        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
-
-      
-
-        {"id": "artificial-intelligence", "size": 5, "score": 0.4 , "title": "artificial-intelligence", "type": "circle"},
-
-      
-
-        {"id": "intelligence", "size": 5, "score": 0.4 , "title": "intelligence", "type": "circle"},
+        {"id": "beaches", "size": 5, "score": 0.4 , "title": "beaches", "type": "circle"},
 
        
 

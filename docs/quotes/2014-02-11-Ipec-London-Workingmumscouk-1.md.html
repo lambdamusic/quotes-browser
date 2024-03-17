@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Life coaching | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-02-11-Ipec-London-Workingmumscouk-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -718,38 +714,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "clients", "target": "action" },
-      
-          { "source": "clients", "target": "method" },
-      
-          { "source": "clients", "target": "investment" },
-      
-          { "source": "clients", "target": "goal" },
-      
-          { "source": "clients", "target": "information-resources" },
-      
-          { "source": "action", "target": "clients" },
-      
-          { "source": "action", "target": "method" },
-      
-          { "source": "action", "target": "people" },
-      
-          { "source": "action", "target": "persons" },
-      
-          { "source": "method", "target": "action" },
-      
-          { "source": "method", "target": "clients" },
-      
-          { "source": "method", "target": "user-testing" },
-      
-          { "source": "method", "target": "developers" },
-      
-          { "source": "investment", "target": "clients" },
-      
-          { "source": "investment", "target": "goal" },
-      
-          { "source": "investment", "target": "money" },
-      
           { "source": "goal", "target": "team" },
       
           { "source": "goal", "target": "link" },
@@ -758,88 +722,98 @@ var data_local_dynamic = {
       
           { "source": "goal", "target": "product-owners" },
       
-          { "source": "information-resources", "target": "URI" },
+          { "source": "goal", "target": "clients" },
       
-          { "source": "information-resources", "target": "server" },
+          { "source": "team", "target": "goal" },
       
-          { "source": "information-resources", "target": "clients" },
+          { "source": "team", "target": "link" },
       
-          { "source": "information-resources", "target": "resources" },
+          { "source": "team", "target": "owners" },
+      
+          { "source": "team", "target": "product-owners" },
+      
+          { "source": "link", "target": "team" },
+      
+          { "source": "link", "target": "goal" },
+      
+          { "source": "link", "target": "owners" },
+      
+          { "source": "link", "target": "product-owners" },
+      
+          { "source": "owners", "target": "product-owners" },
+      
+          { "source": "owners", "target": "project" },
+      
+          { "source": "owners", "target": "business" },
+      
+          { "source": "owners", "target": "product-backlog" },
+      
+          { "source": "product-owners", "target": "owners" },
+      
+          { "source": "product-owners", "target": "project" },
+      
+          { "source": "product-owners", "target": "business" },
+      
+          { "source": "product-owners", "target": "product-backlog" },
+      
+          { "source": "clients", "target": "action" },
+      
+          { "source": "clients", "target": "method" },
+      
+          { "source": "clients", "target": "investment" },
+      
+          { "source": "clients", "target": "goal" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "action", "size": 70, "score": 0 , "title": "action", "type": "circle"},
+        {"id": "team", "size": 70, "score": 0 , "title": "team", "type": "circle"},
 
       
 
-        {"id": "method", "size": 70, "score": 0 , "title": "method", "type": "circle"},
+        {"id": "link", "size": 70, "score": 0 , "title": "link", "type": "circle"},
 
       
 
-        {"id": "investment", "size": 70, "score": 0 , "title": "investment", "type": "circle"},
+        {"id": "owners", "size": 70, "score": 0 , "title": "owners", "type": "circle"},
 
       
 
-        {"id": "goal", "size": 70, "score": 0 , "title": "goal", "type": "circle"},
+        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
 
       
 
-        {"id": "information-resources", "size": 70, "score": 0 , "title": "information-resources", "type": "circle"},
+        {"id": "clients", "size": 70, "score": 0 , "title": "clients", "type": "circle"},
 
       
 
-        {"id": "clients", "size": 140, "score": 0.5 , "title": "clients", "type": "circle"},
+        {"id": "goal", "size": 140, "score": 0.5 , "title": "goal", "type": "circle"},
 
       
 
-        {"id": "people", "size": 5, "score": 0.4 , "title": "people", "type": "circle"},
+        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
 
       
 
-        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
+        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "product-backlog", "size": 5, "score": 0.4 , "title": "product-backlog", "type": "circle"},
 
       
 
-        {"id": "developers", "size": 5, "score": 0.4 , "title": "developers", "type": "circle"},
+        {"id": "action", "size": 5, "score": 0.4 , "title": "action", "type": "circle"},
 
       
 
-        {"id": "money", "size": 5, "score": 0.4 , "title": "money", "type": "circle"},
+        {"id": "method", "size": 5, "score": 0.4 , "title": "method", "type": "circle"},
 
       
 
-        {"id": "team", "size": 5, "score": 0.4 , "title": "team", "type": "circle"},
-
-      
-
-        {"id": "link", "size": 5, "score": 0.4 , "title": "link", "type": "circle"},
-
-      
-
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
-
-      
-
-        {"id": "product-owners", "size": 5, "score": 0.4 , "title": "product-owners", "type": "circle"},
-
-      
-
-        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
-
-      
-
-        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
-
-      
-
-        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
+        {"id": "investment", "size": 5, "score": 0.4 , "title": "investment", "type": "circle"},
 
        
 

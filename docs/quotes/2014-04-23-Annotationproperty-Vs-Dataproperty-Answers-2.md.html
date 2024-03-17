@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>DatatypeProperty and AnnotationProperty are not... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-04-23-Annotationproperty-Vs-Dataproperty-Answers-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -715,82 +711,102 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "ontology", "target": "use-cases" },
+          { "source": "instances", "target": "cases" },
       
-          { "source": "ontology", "target": "data-model" },
+          { "source": "instances", "target": "occurrence" },
       
-          { "source": "ontology", "target": "architecture" },
+          { "source": "instances", "target": "events" },
       
-          { "source": "ontology", "target": "requirements" },
+          { "source": "instances", "target": "class" },
       
-          { "source": "ontology", "target": "domain-specific-ontology" },
+          { "source": "instances", "target": "objects" },
       
-          { "source": "use-cases", "target": "ontology" },
+          { "source": "cases", "target": "title" },
       
-          { "source": "use-cases", "target": "data-model" },
+          { "source": "cases", "target": "content" },
       
-          { "source": "use-cases", "target": "architecture" },
+          { "source": "cases", "target": "story" },
       
-          { "source": "use-cases", "target": "requirements" },
+          { "source": "cases", "target": "occurrence" },
       
-          { "source": "data-model", "target": "ontology" },
+          { "source": "occurrence", "target": "cases" },
       
-          { "source": "data-model", "target": "use-cases" },
+          { "source": "occurrence", "target": "events" },
       
-          { "source": "data-model", "target": "architecture" },
+          { "source": "occurrence", "target": "instances" },
       
-          { "source": "data-model", "target": "requirements" },
+          { "source": "occurrence", "target": "class" },
       
-          { "source": "architecture", "target": "ontology" },
+          { "source": "events", "target": "cases" },
       
-          { "source": "architecture", "target": "use-cases" },
+          { "source": "events", "target": "occurrence" },
       
-          { "source": "architecture", "target": "data-model" },
+          { "source": "events", "target": "instances" },
       
-          { "source": "architecture", "target": "requirements" },
+          { "source": "events", "target": "class" },
       
-          { "source": "requirements", "target": "ontology" },
+          { "source": "class", "target": "cases" },
       
-          { "source": "requirements", "target": "use-cases" },
+          { "source": "class", "target": "occurrence" },
       
-          { "source": "requirements", "target": "data-model" },
+          { "source": "class", "target": "events" },
       
-          { "source": "requirements", "target": "architecture" },
+          { "source": "class", "target": "instances" },
       
-          { "source": "domain-specific-ontology", "target": "ontology" },
+          { "source": "objects", "target": "class" },
       
-          { "source": "domain-specific-ontology", "target": "use-cases" },
+          { "source": "objects", "target": "real-world" },
       
-          { "source": "domain-specific-ontology", "target": "data-model" },
+          { "source": "objects", "target": "instances" },
       
-          { "source": "domain-specific-ontology", "target": "architecture" },
+          { "source": "objects", "target": "types" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "use-cases", "size": 70, "score": 0 , "title": "use-cases", "type": "circle"},
+        {"id": "cases", "size": 70, "score": 0 , "title": "cases", "type": "circle"},
 
       
 
-        {"id": "data-model", "size": 70, "score": 0 , "title": "data-model", "type": "circle"},
+        {"id": "occurrence", "size": 70, "score": 0 , "title": "occurrence", "type": "circle"},
 
       
 
-        {"id": "architecture", "size": 70, "score": 0 , "title": "architecture", "type": "circle"},
+        {"id": "events", "size": 70, "score": 0 , "title": "events", "type": "circle"},
 
       
 
-        {"id": "requirements", "size": 70, "score": 0 , "title": "requirements", "type": "circle"},
+        {"id": "class", "size": 70, "score": 0 , "title": "class", "type": "circle"},
 
       
 
-        {"id": "domain-specific-ontology", "size": 70, "score": 0 , "title": "domain-specific-ontology", "type": "circle"},
+        {"id": "objects", "size": 70, "score": 0 , "title": "objects", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 140, "score": 0.5 , "title": "ontology", "type": "circle"},
+        {"id": "instances", "size": 140, "score": 0.5 , "title": "instances", "type": "circle"},
+
+      
+
+        {"id": "title", "size": 5, "score": 0.4 , "title": "title", "type": "circle"},
+
+      
+
+        {"id": "content", "size": 5, "score": 0.4 , "title": "content", "type": "circle"},
+
+      
+
+        {"id": "story", "size": 5, "score": 0.4 , "title": "story", "type": "circle"},
+
+      
+
+        {"id": "real-world", "size": 5, "score": 0.4 , "title": "real-world", "type": "circle"},
+
+      
+
+        {"id": "types", "size": 5, "score": 0.4 , "title": "types", "type": "circle"},
 
        
 

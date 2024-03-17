@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>What is  a graph database? | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-08-12-Graph-Databases-Bloor-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -713,15 +709,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "graph-database", "target": "triple-stores" },
+          { "source": "stores", "target": "triple-stores" },
       
-          { "source": "graph-database", "target": "RDF-databases" },
+          { "source": "stores", "target": "graph-database" },
       
-          { "source": "graph-database", "target": "database" },
+          { "source": "stores", "target": "RDF-databases" },
       
-          { "source": "graph-database", "target": "stores" },
+          { "source": "stores", "target": "database" },
       
-          { "source": "graph-database", "target": "schema" },
+          { "source": "stores", "target": "technology" },
       
           { "source": "triple-stores", "target": "graph-database" },
       
@@ -730,6 +726,14 @@ var data_local_dynamic = {
           { "source": "triple-stores", "target": "database" },
       
           { "source": "triple-stores", "target": "stores" },
+      
+          { "source": "graph-database", "target": "triple-stores" },
+      
+          { "source": "graph-database", "target": "RDF-databases" },
+      
+          { "source": "graph-database", "target": "database" },
+      
+          { "source": "graph-database", "target": "stores" },
       
           { "source": "RDF-databases", "target": "metadata" },
       
@@ -747,21 +751,13 @@ var data_local_dynamic = {
       
           { "source": "database", "target": "dataset" },
       
-          { "source": "stores", "target": "triple-stores" },
+          { "source": "technology", "target": "computer-systems" },
       
-          { "source": "stores", "target": "graph-database" },
+          { "source": "technology", "target": "work" },
       
-          { "source": "stores", "target": "RDF-databases" },
+          { "source": "technology", "target": "semantic-enrichment" },
       
-          { "source": "stores", "target": "database" },
-      
-          { "source": "schema", "target": "ontology" },
-      
-          { "source": "schema", "target": "ethics" },
-      
-          { "source": "schema", "target": "philosophy" },
-      
-          { "source": "schema", "target": "fact" },
+          { "source": "technology", "target": "users" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -769,6 +765,10 @@ var data_local_dynamic = {
       
 
         {"id": "triple-stores", "size": 70, "score": 0 , "title": "triple-stores", "type": "circle"},
+
+      
+
+        {"id": "graph-database", "size": 70, "score": 0 , "title": "graph-database", "type": "circle"},
 
       
 
@@ -780,15 +780,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "stores", "size": 70, "score": 0 , "title": "stores", "type": "circle"},
+        {"id": "technology", "size": 70, "score": 0 , "title": "technology", "type": "circle"},
 
       
 
-        {"id": "schema", "size": 70, "score": 0 , "title": "schema", "type": "circle"},
-
-      
-
-        {"id": "graph-database", "size": 140, "score": 0.5 , "title": "graph-database", "type": "circle"},
+        {"id": "stores", "size": 140, "score": 0.5 , "title": "stores", "type": "circle"},
 
       
 
@@ -804,19 +800,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "computer-systems", "size": 5, "score": 0.4 , "title": "computer-systems", "type": "circle"},
 
       
 
-        {"id": "ethics", "size": 5, "score": 0.4 , "title": "ethics", "type": "circle"},
+        {"id": "work", "size": 5, "score": 0.4 , "title": "work", "type": "circle"},
 
       
 
-        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+        {"id": "semantic-enrichment", "size": 5, "score": 0.4 , "title": "semantic-enrichment", "type": "circle"},
 
       
 
-        {"id": "fact", "size": 5, "score": 0.4 , "title": "fact", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
        
 

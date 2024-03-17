@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Any HTTP URI should be dereferenceable | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-04-Linked-Data-Evolving-The-Web-Into-A-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -714,16 +710,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "real-world-objects", "target": "URI" },
-      
-          { "source": "real-world-objects", "target": "web-documents" },
-      
-          { "source": "real-world-objects", "target": "search-engines" },
-      
-          { "source": "real-world-objects", "target": "Web" },
-      
-          { "source": "real-world-objects", "target": "documents" },
-      
           { "source": "URI", "target": "web-documents" },
       
           { "source": "URI", "target": "documents" },
@@ -731,6 +717,8 @@ var data_local_dynamic = {
           { "source": "URI", "target": "files" },
       
           { "source": "URI", "target": "Web" },
+      
+          { "source": "URI", "target": "pages" },
       
           { "source": "web-documents", "target": "URI" },
       
@@ -740,13 +728,21 @@ var data_local_dynamic = {
       
           { "source": "web-documents", "target": "Web" },
       
-          { "source": "search-engines", "target": "Web-sites" },
+          { "source": "documents", "target": "web-documents" },
       
-          { "source": "search-engines", "target": "browser" },
+          { "source": "documents", "target": "URI" },
       
-          { "source": "search-engines", "target": "pages" },
+          { "source": "documents", "target": "files" },
       
-          { "source": "search-engines", "target": "real-world-objects" },
+          { "source": "documents", "target": "Web" },
+      
+          { "source": "files", "target": "authority-files" },
+      
+          { "source": "files", "target": "indexing" },
+      
+          { "source": "files", "target": "thesaurus" },
+      
+          { "source": "files", "target": "vocabulary" },
       
           { "source": "Web", "target": "web-documents" },
       
@@ -756,32 +752,20 @@ var data_local_dynamic = {
       
           { "source": "Web", "target": "files" },
       
-          { "source": "documents", "target": "web-documents" },
+          { "source": "pages", "target": "Web-sites" },
       
-          { "source": "documents", "target": "URI" },
+          { "source": "pages", "target": "browser" },
       
-          { "source": "documents", "target": "files" },
+          { "source": "pages", "target": "search-engines" },
       
-          { "source": "documents", "target": "Web" },
+          { "source": "pages", "target": "web-documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "URI", "size": 70, "score": 0 , "title": "URI", "type": "circle"},
-
-      
-
         {"id": "web-documents", "size": 70, "score": 0 , "title": "web-documents", "type": "circle"},
-
-      
-
-        {"id": "search-engines", "size": 70, "score": 0 , "title": "search-engines", "type": "circle"},
-
-      
-
-        {"id": "Web", "size": 70, "score": 0 , "title": "Web", "type": "circle"},
 
       
 
@@ -789,11 +773,35 @@ var data_local_dynamic = {
 
       
 
-        {"id": "real-world-objects", "size": 140, "score": 0.5 , "title": "real-world-objects", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "Web", "size": 70, "score": 0 , "title": "Web", "type": "circle"},
+
+      
+
+        {"id": "pages", "size": 70, "score": 0 , "title": "pages", "type": "circle"},
+
+      
+
+        {"id": "URI", "size": 140, "score": 0.5 , "title": "URI", "type": "circle"},
+
+      
+
+        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
+
+      
+
+        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
+
+      
+
+        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
+
+      
+
+        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
 
       
 
@@ -805,7 +813,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "pages", "size": 5, "score": 0.4 , "title": "pages", "type": "circle"},
+        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
 
        
 

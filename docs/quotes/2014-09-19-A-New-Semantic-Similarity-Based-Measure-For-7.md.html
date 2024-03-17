@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Citations are insufficient evidence of impact, quality and research contribution | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-09-19-A-New-Semantic-Similarity-Based-Measure-For-7.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,16 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "attributes", "target": "citations" },
-      
-          { "source": "attributes", "target": "evidence" },
-      
-          { "source": "attributes", "target": "impact" },
-      
-          { "source": "attributes", "target": "users" },
-      
-          { "source": "attributes", "target": "information" },
-      
           { "source": "citations", "target": "attributes" },
       
           { "source": "citations", "target": "evidence" },
@@ -727,6 +713,16 @@ var data_local_dynamic = {
           { "source": "citations", "target": "impact" },
       
           { "source": "citations", "target": "evaluation" },
+      
+          { "source": "citations", "target": "measures" },
+      
+          { "source": "attributes", "target": "citations" },
+      
+          { "source": "attributes", "target": "evidence" },
+      
+          { "source": "attributes", "target": "impact" },
+      
+          { "source": "attributes", "target": "users" },
       
           { "source": "evidence", "target": "citations" },
       
@@ -744,28 +740,28 @@ var data_local_dynamic = {
       
           { "source": "impact", "target": "attributes" },
       
-          { "source": "users", "target": "user-testing" },
+          { "source": "evaluation", "target": "citations" },
       
-          { "source": "users", "target": "Google" },
+          { "source": "evaluation", "target": "measures" },
       
-          { "source": "users", "target": "search" },
+          { "source": "evaluation", "target": "analysis" },
       
-          { "source": "users", "target": "version" },
+          { "source": "evaluation", "target": "attention" },
       
-          { "source": "information", "target": "nanopublications" },
+          { "source": "measures", "target": "citations" },
       
-          { "source": "information", "target": "metadata" },
+          { "source": "measures", "target": "evaluation" },
       
-          { "source": "information", "target": "contextual-information" },
+          { "source": "measures", "target": "analysis" },
       
-          { "source": "information", "target": "collection-objects" },
+          { "source": "measures", "target": "attention" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "citations", "size": 70, "score": 0 , "title": "citations", "type": "circle"},
+        {"id": "attributes", "size": 70, "score": 0 , "title": "attributes", "type": "circle"},
 
       
 
@@ -777,19 +773,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "users", "size": 70, "score": 0 , "title": "users", "type": "circle"},
+        {"id": "evaluation", "size": 70, "score": 0 , "title": "evaluation", "type": "circle"},
 
       
 
-        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
+        {"id": "measures", "size": 70, "score": 0 , "title": "measures", "type": "circle"},
 
       
 
-        {"id": "attributes", "size": 140, "score": 0.5 , "title": "attributes", "type": "circle"},
+        {"id": "citations", "size": 140, "score": 0.5 , "title": "citations", "type": "circle"},
 
       
 
-        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
       
 
@@ -805,35 +801,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "user-testing", "size": 5, "score": 0.4 , "title": "user-testing", "type": "circle"},
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
 
       
 
-        {"id": "Google", "size": 5, "score": 0.4 , "title": "Google", "type": "circle"},
-
-      
-
-        {"id": "search", "size": 5, "score": 0.4 , "title": "search", "type": "circle"},
-
-      
-
-        {"id": "version", "size": 5, "score": 0.4 , "title": "version", "type": "circle"},
-
-      
-
-        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
-
-      
-
-        {"id": "contextual-information", "size": 5, "score": 0.4 , "title": "contextual-information", "type": "circle"},
-
-      
-
-        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
+        {"id": "attention", "size": 5, "score": 0.4 , "title": "attention", "type": "circle"},
 
        
 

@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>The design of such thesauri... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-02-26-Thesauri-Of-Historical-Periods-A-Proposal-For-5.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -709,15 +705,31 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "communication", "target": "culture" },
+          { "source": "cultural-period", "target": "terminology" },
       
-          { "source": "communication", "target": "digital-media" },
+          { "source": "cultural-period", "target": "name" },
       
-          { "source": "communication", "target": "human-communication" },
+          { "source": "cultural-period", "target": "culture" },
       
-          { "source": "communication", "target": "information" },
+          { "source": "cultural-period", "target": "researchers" },
       
-          { "source": "communication", "target": "information-systems" },
+          { "source": "cultural-period", "target": "concept" },
+      
+          { "source": "terminology", "target": "concept" },
+      
+          { "source": "terminology", "target": "community" },
+      
+          { "source": "terminology", "target": "notion" },
+      
+          { "source": "terminology", "target": "mental-concepts" },
+      
+          { "source": "name", "target": "book" },
+      
+          { "source": "name", "target": "figures" },
+      
+          { "source": "name", "target": "cases" },
+      
+          { "source": "name", "target": "philosophy" },
       
           { "source": "culture", "target": "communication" },
       
@@ -727,64 +739,84 @@ var data_local_dynamic = {
       
           { "source": "culture", "target": "oggi" },
       
-          { "source": "digital-media", "target": "culture" },
+          { "source": "researchers", "target": "data-sets" },
       
-          { "source": "digital-media", "target": "communication" },
+          { "source": "researchers", "target": "information" },
       
-          { "source": "digital-media", "target": "readers" },
+          { "source": "researchers", "target": "set" },
       
-          { "source": "digital-media", "target": "humanity" },
+          { "source": "researchers", "target": "contextual-information" },
       
-          { "source": "human-communication", "target": "communication" },
+          { "source": "concept", "target": "article" },
       
-          { "source": "human-communication", "target": "conversation" },
+          { "source": "concept", "target": "Obama" },
       
-          { "source": "human-communication", "target": "persons" },
+          { "source": "concept", "target": "information-science" },
       
-          { "source": "human-communication", "target": "language-action-perspective" },
-      
-          { "source": "information", "target": "nanopublications" },
-      
-          { "source": "information", "target": "metadata" },
-      
-          { "source": "information", "target": "contextual-information" },
-      
-          { "source": "information", "target": "collection-objects" },
-      
-          { "source": "information-systems", "target": "ontology" },
-      
-          { "source": "information-systems", "target": "Semantic-Web" },
-      
-          { "source": "information-systems", "target": "companies" },
-      
-          { "source": "information-systems", "target": "taxonomy" },
+          { "source": "concept", "target": "users" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
+        {"id": "terminology", "size": 70, "score": 0 , "title": "terminology", "type": "circle"},
+
+      
+
+        {"id": "name", "size": 70, "score": 0 , "title": "name", "type": "circle"},
+
+      
+
         {"id": "culture", "size": 70, "score": 0 , "title": "culture", "type": "circle"},
 
       
 
-        {"id": "digital-media", "size": 70, "score": 0 , "title": "digital-media", "type": "circle"},
+        {"id": "researchers", "size": 70, "score": 0 , "title": "researchers", "type": "circle"},
 
       
 
-        {"id": "human-communication", "size": 70, "score": 0 , "title": "human-communication", "type": "circle"},
+        {"id": "concept", "size": 70, "score": 0 , "title": "concept", "type": "circle"},
 
       
 
-        {"id": "information", "size": 70, "score": 0 , "title": "information", "type": "circle"},
+        {"id": "cultural-period", "size": 140, "score": 0.5 , "title": "cultural-period", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 70, "score": 0 , "title": "information-systems", "type": "circle"},
+        {"id": "community", "size": 5, "score": 0.4 , "title": "community", "type": "circle"},
 
       
 
-        {"id": "communication", "size": 140, "score": 0.5 , "title": "communication", "type": "circle"},
+        {"id": "notion", "size": 5, "score": 0.4 , "title": "notion", "type": "circle"},
+
+      
+
+        {"id": "mental-concepts", "size": 5, "score": 0.4 , "title": "mental-concepts", "type": "circle"},
+
+      
+
+        {"id": "book", "size": 5, "score": 0.4 , "title": "book", "type": "circle"},
+
+      
+
+        {"id": "figures", "size": 5, "score": 0.4 , "title": "figures", "type": "circle"},
+
+      
+
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+
+      
+
+        {"id": "philosophy", "size": 5, "score": 0.4 , "title": "philosophy", "type": "circle"},
+
+      
+
+        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
+
+      
+
+        {"id": "digital-media", "size": 5, "score": 0.4 , "title": "digital-media", "type": "circle"},
 
       
 
@@ -796,31 +828,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "data-sets", "size": 5, "score": 0.4 , "title": "data-sets", "type": "circle"},
 
       
 
-        {"id": "humanity", "size": 5, "score": 0.4 , "title": "humanity", "type": "circle"},
+        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
 
       
 
-        {"id": "conversation", "size": 5, "score": 0.4 , "title": "conversation", "type": "circle"},
-
-      
-
-        {"id": "persons", "size": 5, "score": 0.4 , "title": "persons", "type": "circle"},
-
-      
-
-        {"id": "language-action-perspective", "size": 5, "score": 0.4 , "title": "language-action-perspective", "type": "circle"},
-
-      
-
-        {"id": "nanopublications", "size": 5, "score": 0.4 , "title": "nanopublications", "type": "circle"},
-
-      
-
-        {"id": "metadata", "size": 5, "score": 0.4 , "title": "metadata", "type": "circle"},
+        {"id": "set", "size": 5, "score": 0.4 , "title": "set", "type": "circle"},
 
       
 
@@ -828,23 +844,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "collection-objects", "size": 5, "score": 0.4 , "title": "collection-objects", "type": "circle"},
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
 
       
 
-        {"id": "ontology", "size": 5, "score": 0.4 , "title": "ontology", "type": "circle"},
+        {"id": "Obama", "size": 5, "score": 0.4 , "title": "Obama", "type": "circle"},
 
       
 
-        {"id": "Semantic-Web", "size": 5, "score": 0.4 , "title": "Semantic-Web", "type": "circle"},
+        {"id": "information-science", "size": 5, "score": 0.4 , "title": "information-science", "type": "circle"},
 
       
 
-        {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
-
-      
-
-        {"id": "taxonomy", "size": 5, "score": 0.4 , "title": "taxonomy", "type": "circle"},
+        {"id": "users", "size": 5, "score": 0.4 , "title": "users", "type": "circle"},
 
        
 

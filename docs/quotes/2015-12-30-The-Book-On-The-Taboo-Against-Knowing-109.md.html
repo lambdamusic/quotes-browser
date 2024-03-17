@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Is it possible that myself,... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-12-30-The-Book-On-The-Taboo-Against-Knowing-109.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,16 +704,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "world", "target": "relation" },
-      
-          { "source": "world", "target": "real-world" },
-      
-          { "source": "world", "target": "relationship" },
-      
-          { "source": "world", "target": "Calvinism" },
-      
-          { "source": "world", "target": "confession" },
-      
           { "source": "relation", "target": "world" },
       
           { "source": "relation", "target": "real-world" },
@@ -725,6 +711,16 @@ var data_local_dynamic = {
           { "source": "relation", "target": "relationship" },
       
           { "source": "relation", "target": "properties" },
+      
+          { "source": "relation", "target": "instances" },
+      
+          { "source": "world", "target": "relation" },
+      
+          { "source": "world", "target": "real-world" },
+      
+          { "source": "world", "target": "relationship" },
+      
+          { "source": "world", "target": "Calvinism" },
       
           { "source": "real-world", "target": "relation" },
       
@@ -742,24 +738,28 @@ var data_local_dynamic = {
       
           { "source": "relationship", "target": "relation" },
       
-          { "source": "Calvinism", "target": "tradition" },
+          { "source": "properties", "target": "network" },
       
-          { "source": "Calvinism", "target": "confession" },
+          { "source": "properties", "target": "instances" },
       
-          { "source": "Calvinism", "target": "world" },
+          { "source": "properties", "target": "range" },
       
-          { "source": "confession", "target": "Calvinism" },
+          { "source": "properties", "target": "class" },
       
-          { "source": "confession", "target": "world" },
+          { "source": "instances", "target": "cases" },
       
-          { "source": "confession", "target": "Church" },
+          { "source": "instances", "target": "occurrence" },
+      
+          { "source": "instances", "target": "events" },
+      
+          { "source": "instances", "target": "class" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "relation", "size": 70, "score": 0 , "title": "relation", "type": "circle"},
+        {"id": "world", "size": 70, "score": 0 , "title": "world", "type": "circle"},
 
       
 
@@ -771,19 +771,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "Calvinism", "size": 70, "score": 0 , "title": "Calvinism", "type": "circle"},
+        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
 
       
 
-        {"id": "confession", "size": 70, "score": 0 , "title": "confession", "type": "circle"},
+        {"id": "instances", "size": 70, "score": 0 , "title": "instances", "type": "circle"},
 
       
 
-        {"id": "world", "size": 140, "score": 0.5 , "title": "world", "type": "circle"},
+        {"id": "relation", "size": 140, "score": 0.5 , "title": "relation", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 5, "score": 0.4 , "title": "properties", "type": "circle"},
+        {"id": "Calvinism", "size": 5, "score": 0.4 , "title": "Calvinism", "type": "circle"},
 
       
 
@@ -803,11 +803,23 @@ var data_local_dynamic = {
 
       
 
-        {"id": "tradition", "size": 5, "score": 0.4 , "title": "tradition", "type": "circle"},
+        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
 
       
 
-        {"id": "Church", "size": 5, "score": 0.4 , "title": "Church", "type": "circle"},
+        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
+
+      
+
+        {"id": "cases", "size": 5, "score": 0.4 , "title": "cases", "type": "circle"},
+
+      
+
+        {"id": "occurrence", "size": 5, "score": 0.4 , "title": "occurrence", "type": "circle"},
+
+      
+
+        {"id": "events", "size": 5, "score": 0.4 , "title": "events", "type": "circle"},
 
        
 

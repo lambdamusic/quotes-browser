@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>A taxonomy is typically a... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-02-05-About-Taxonomies-Controlled-Vocabularies-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -716,6 +712,24 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "nodes", "target": "hierarchy" },
+      
+          { "source": "nodes", "target": "vocabulary" },
+      
+          { "source": "nodes", "target": "taxonomy" },
+      
+          { "source": "nodes", "target": "impact" },
+      
+          { "source": "nodes", "target": "measures" },
+      
+          { "source": "hierarchy", "target": "article" },
+      
+          { "source": "hierarchy", "target": "social-sciences" },
+      
+          { "source": "hierarchy", "target": "science" },
+      
+          { "source": "hierarchy", "target": "nodes" },
+      
           { "source": "vocabulary", "target": "authority-files" },
       
           { "source": "vocabulary", "target": "indexing" },
@@ -724,40 +738,6 @@ var data_local_dynamic = {
       
           { "source": "vocabulary", "target": "files" },
       
-          { "source": "vocabulary", "target": "taxonomy" },
-      
-          { "source": "authority-files", "target": "indexing" },
-      
-          { "source": "authority-files", "target": "thesaurus" },
-      
-          { "source": "authority-files", "target": "vocabulary" },
-      
-          { "source": "authority-files", "target": "files" },
-      
-          { "source": "indexing", "target": "authority-files" },
-      
-          { "source": "indexing", "target": "thesaurus" },
-      
-          { "source": "indexing", "target": "vocabulary" },
-      
-          { "source": "indexing", "target": "files" },
-      
-          { "source": "thesaurus", "target": "authority-files" },
-      
-          { "source": "thesaurus", "target": "indexing" },
-      
-          { "source": "thesaurus", "target": "vocabulary" },
-      
-          { "source": "thesaurus", "target": "files" },
-      
-          { "source": "files", "target": "authority-files" },
-      
-          { "source": "files", "target": "indexing" },
-      
-          { "source": "files", "target": "thesaurus" },
-      
-          { "source": "files", "target": "vocabulary" },
-      
           { "source": "taxonomy", "target": "ontology" },
       
           { "source": "taxonomy", "target": "Semantic-Web" },
@@ -765,25 +745,33 @@ var data_local_dynamic = {
           { "source": "taxonomy", "target": "information-systems" },
       
           { "source": "taxonomy", "target": "companies" },
+      
+          { "source": "impact", "target": "use" },
+      
+          { "source": "impact", "target": "assumption" },
+      
+          { "source": "impact", "target": "citations" },
+      
+          { "source": "impact", "target": "attributes" },
+      
+          { "source": "measures", "target": "citations" },
+      
+          { "source": "measures", "target": "evaluation" },
+      
+          { "source": "measures", "target": "analysis" },
+      
+          { "source": "measures", "target": "attention" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "authority-files", "size": 70, "score": 0 , "title": "authority-files", "type": "circle"},
+        {"id": "hierarchy", "size": 70, "score": 0 , "title": "hierarchy", "type": "circle"},
 
       
 
-        {"id": "indexing", "size": 70, "score": 0 , "title": "indexing", "type": "circle"},
-
-      
-
-        {"id": "thesaurus", "size": 70, "score": 0 , "title": "thesaurus", "type": "circle"},
-
-      
-
-        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
+        {"id": "vocabulary", "size": 70, "score": 0 , "title": "vocabulary", "type": "circle"},
 
       
 
@@ -791,7 +779,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "vocabulary", "size": 140, "score": 0.5 , "title": "vocabulary", "type": "circle"},
+        {"id": "impact", "size": 70, "score": 0 , "title": "impact", "type": "circle"},
+
+      
+
+        {"id": "measures", "size": 70, "score": 0 , "title": "measures", "type": "circle"},
+
+      
+
+        {"id": "nodes", "size": 140, "score": 0.5 , "title": "nodes", "type": "circle"},
+
+      
+
+        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+
+      
+
+        {"id": "social-sciences", "size": 5, "score": 0.4 , "title": "social-sciences", "type": "circle"},
+
+      
+
+        {"id": "science", "size": 5, "score": 0.4 , "title": "science", "type": "circle"},
+
+      
+
+        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
+
+      
+
+        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
+
+      
+
+        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
+
+      
+
+        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
 
       
 
@@ -808,6 +832,34 @@ var data_local_dynamic = {
       
 
         {"id": "companies", "size": 5, "score": 0.4 , "title": "companies", "type": "circle"},
+
+      
+
+        {"id": "use", "size": 5, "score": 0.4 , "title": "use", "type": "circle"},
+
+      
+
+        {"id": "assumption", "size": 5, "score": 0.4 , "title": "assumption", "type": "circle"},
+
+      
+
+        {"id": "citations", "size": 5, "score": 0.4 , "title": "citations", "type": "circle"},
+
+      
+
+        {"id": "attributes", "size": 5, "score": 0.4 , "title": "attributes", "type": "circle"},
+
+      
+
+        {"id": "evaluation", "size": 5, "score": 0.4 , "title": "evaluation", "type": "circle"},
+
+      
+
+        {"id": "analysis", "size": 5, "score": 0.4 , "title": "analysis", "type": "circle"},
+
+      
+
+        {"id": "attention", "size": 5, "score": 0.4 , "title": "attention", "type": "circle"},
 
        
 

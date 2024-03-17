@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>In the simplest view of... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-03-11-Chemical-Bond-Wikipedia-The-Free-Encyclopedia-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -708,16 +704,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "electrons", "target": "atoms" },
-      
-          { "source": "electrons", "target": "charge" },
-      
-          { "source": "electrons", "target": "nucleus" },
-      
-          { "source": "electrons", "target": "quantum-theory" },
-      
-          { "source": "electrons", "target": "properties" },
-      
           { "source": "atoms", "target": "electrons" },
       
           { "source": "atoms", "target": "charge" },
@@ -725,6 +711,14 @@ var data_local_dynamic = {
           { "source": "atoms", "target": "nucleus" },
       
           { "source": "atoms", "target": "bonding" },
+      
+          { "source": "electrons", "target": "atoms" },
+      
+          { "source": "electrons", "target": "charge" },
+      
+          { "source": "electrons", "target": "nucleus" },
+      
+          { "source": "electrons", "target": "quantum-theory" },
       
           { "source": "charge", "target": "electrons" },
       
@@ -740,26 +734,18 @@ var data_local_dynamic = {
       
           { "source": "nucleus", "target": "charge" },
       
-          { "source": "quantum-theory", "target": "electrons" },
+          { "source": "bonding", "target": "atoms" },
       
-          { "source": "quantum-theory", "target": "properties" },
+          { "source": "bonding", "target": "charge" },
       
-          { "source": "quantum-theory", "target": "objects" },
-      
-          { "source": "properties", "target": "network" },
-      
-          { "source": "properties", "target": "instances" },
-      
-          { "source": "properties", "target": "range" },
-      
-          { "source": "properties", "target": "class" },
+          { "source": "bonding", "target": "-bonding" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "atoms", "size": 70, "score": 0 , "title": "atoms", "type": "circle"},
+        {"id": "electrons", "size": 70, "score": 0 , "title": "electrons", "type": "circle"},
 
       
 
@@ -771,39 +757,19 @@ var data_local_dynamic = {
 
       
 
-        {"id": "quantum-theory", "size": 70, "score": 0 , "title": "quantum-theory", "type": "circle"},
+        {"id": "bonding", "size": 70, "score": 0 , "title": "bonding", "type": "circle"},
 
       
 
-        {"id": "properties", "size": 70, "score": 0 , "title": "properties", "type": "circle"},
+        {"id": "atoms", "size": 140, "score": 0.5 , "title": "atoms", "type": "circle"},
 
       
 
-        {"id": "electrons", "size": 140, "score": 0.5 , "title": "electrons", "type": "circle"},
+        {"id": "quantum-theory", "size": 5, "score": 0.4 , "title": "quantum-theory", "type": "circle"},
 
       
 
-        {"id": "bonding", "size": 5, "score": 0.4 , "title": "bonding", "type": "circle"},
-
-      
-
-        {"id": "objects", "size": 5, "score": 0.4 , "title": "objects", "type": "circle"},
-
-      
-
-        {"id": "network", "size": 5, "score": 0.4 , "title": "network", "type": "circle"},
-
-      
-
-        {"id": "instances", "size": 5, "score": 0.4 , "title": "instances", "type": "circle"},
-
-      
-
-        {"id": "range", "size": 5, "score": 0.4 , "title": "range", "type": "circle"},
-
-      
-
-        {"id": "class", "size": 5, "score": 0.4 , "title": "class", "type": "circle"},
+        {"id": "-bonding", "size": 5, "score": 0.4 , "title": "-bonding", "type": "circle"},
 
        
 

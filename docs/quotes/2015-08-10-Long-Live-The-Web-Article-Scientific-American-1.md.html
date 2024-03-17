@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Linked data | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2015-08-10-Long-Live-The-Web-Article-Scientific-American-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -710,16 +706,6 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "business-value", "target": "Web" },
-      
-          { "source": "business-value", "target": "documents" },
-      
-          { "source": "business-value", "target": "data" },
-      
-          { "source": "business-value", "target": "product-owners" },
-      
-          { "source": "business-value", "target": "product-backlog" },
-      
           { "source": "Web", "target": "web-documents" },
       
           { "source": "Web", "target": "URI" },
@@ -727,6 +713,24 @@ var data_local_dynamic = {
           { "source": "Web", "target": "documents" },
       
           { "source": "Web", "target": "files" },
+      
+          { "source": "Web", "target": "pages" },
+      
+          { "source": "web-documents", "target": "URI" },
+      
+          { "source": "web-documents", "target": "documents" },
+      
+          { "source": "web-documents", "target": "files" },
+      
+          { "source": "web-documents", "target": "Web" },
+      
+          { "source": "URI", "target": "web-documents" },
+      
+          { "source": "URI", "target": "documents" },
+      
+          { "source": "URI", "target": "files" },
+      
+          { "source": "URI", "target": "Web" },
       
           { "source": "documents", "target": "web-documents" },
       
@@ -736,36 +740,32 @@ var data_local_dynamic = {
       
           { "source": "documents", "target": "Web" },
       
-          { "source": "data", "target": "information" },
+          { "source": "files", "target": "authority-files" },
       
-          { "source": "data", "target": "information-systems" },
+          { "source": "files", "target": "indexing" },
       
-          { "source": "data", "target": "communication" },
+          { "source": "files", "target": "thesaurus" },
       
-          { "source": "data", "target": "number" },
+          { "source": "files", "target": "vocabulary" },
       
-          { "source": "product-owners", "target": "owners" },
+          { "source": "pages", "target": "Web-sites" },
       
-          { "source": "product-owners", "target": "project" },
+          { "source": "pages", "target": "browser" },
       
-          { "source": "product-owners", "target": "business" },
+          { "source": "pages", "target": "search-engines" },
       
-          { "source": "product-owners", "target": "product-backlog" },
-      
-          { "source": "product-backlog", "target": "product-owners" },
-      
-          { "source": "product-backlog", "target": "owners" },
-      
-          { "source": "product-backlog", "target": "project" },
-      
-          { "source": "product-backlog", "target": "business" },
+          { "source": "pages", "target": "web-documents" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "Web", "size": 70, "score": 0 , "title": "Web", "type": "circle"},
+        {"id": "web-documents", "size": 70, "score": 0 , "title": "web-documents", "type": "circle"},
+
+      
+
+        {"id": "URI", "size": 70, "score": 0 , "title": "URI", "type": "circle"},
 
       
 
@@ -773,59 +773,43 @@ var data_local_dynamic = {
 
       
 
-        {"id": "data", "size": 70, "score": 0 , "title": "data", "type": "circle"},
+        {"id": "files", "size": 70, "score": 0 , "title": "files", "type": "circle"},
 
       
 
-        {"id": "product-owners", "size": 70, "score": 0 , "title": "product-owners", "type": "circle"},
+        {"id": "pages", "size": 70, "score": 0 , "title": "pages", "type": "circle"},
 
       
 
-        {"id": "product-backlog", "size": 70, "score": 0 , "title": "product-backlog", "type": "circle"},
+        {"id": "Web", "size": 140, "score": 0.5 , "title": "Web", "type": "circle"},
 
       
 
-        {"id": "business-value", "size": 140, "score": 0.5 , "title": "business-value", "type": "circle"},
+        {"id": "authority-files", "size": 5, "score": 0.4 , "title": "authority-files", "type": "circle"},
 
       
 
-        {"id": "web-documents", "size": 5, "score": 0.4 , "title": "web-documents", "type": "circle"},
+        {"id": "indexing", "size": 5, "score": 0.4 , "title": "indexing", "type": "circle"},
 
       
 
-        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
+        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
 
       
 
-        {"id": "files", "size": 5, "score": 0.4 , "title": "files", "type": "circle"},
+        {"id": "vocabulary", "size": 5, "score": 0.4 , "title": "vocabulary", "type": "circle"},
 
       
 
-        {"id": "information", "size": 5, "score": 0.4 , "title": "information", "type": "circle"},
+        {"id": "Web-sites", "size": 5, "score": 0.4 , "title": "Web-sites", "type": "circle"},
 
       
 
-        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+        {"id": "browser", "size": 5, "score": 0.4 , "title": "browser", "type": "circle"},
 
       
 
-        {"id": "communication", "size": 5, "score": 0.4 , "title": "communication", "type": "circle"},
-
-      
-
-        {"id": "number", "size": 5, "score": 0.4 , "title": "number", "type": "circle"},
-
-      
-
-        {"id": "owners", "size": 5, "score": 0.4 , "title": "owners", "type": "circle"},
-
-      
-
-        {"id": "project", "size": 5, "score": 0.4 , "title": "project", "type": "circle"},
-
-      
-
-        {"id": "business", "size": 5, "score": 0.4 , "title": "business", "type": "circle"},
+        {"id": "search-engines", "size": 5, "score": 0.4 , "title": "search-engines", "type": "circle"},
 
        
 

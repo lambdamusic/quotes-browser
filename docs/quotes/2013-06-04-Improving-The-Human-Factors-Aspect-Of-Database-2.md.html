@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>Introspection (hci research method) | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2013-06-04-Improving-The-Human-Factors-Aspect-Of-Database-2.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -712,15 +708,15 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
-          { "source": "comprehension", "target": "task" },
+          { "source": "judgments", "target": "task" },
       
-          { "source": "comprehension", "target": "judgments" },
+          { "source": "judgments", "target": "comprehension" },
       
-          { "source": "comprehension", "target": "skills" },
+          { "source": "judgments", "target": "skills" },
       
-          { "source": "comprehension", "target": "learning" },
+          { "source": "judgments", "target": "learning" },
       
-          { "source": "comprehension", "target": "style" },
+          { "source": "judgments", "target": "interpretation" },
       
           { "source": "task", "target": "comprehension" },
       
@@ -730,13 +726,13 @@ var data_local_dynamic = {
       
           { "source": "task", "target": "learning" },
       
-          { "source": "judgments", "target": "task" },
+          { "source": "comprehension", "target": "task" },
       
-          { "source": "judgments", "target": "comprehension" },
+          { "source": "comprehension", "target": "judgments" },
       
-          { "source": "judgments", "target": "skills" },
+          { "source": "comprehension", "target": "skills" },
       
-          { "source": "judgments", "target": "learning" },
+          { "source": "comprehension", "target": "learning" },
       
           { "source": "skills", "target": "task" },
       
@@ -754,13 +750,13 @@ var data_local_dynamic = {
       
           { "source": "learning", "target": "programmers" },
       
-          { "source": "style", "target": "relation" },
+          { "source": "interpretation", "target": "judgments" },
       
-          { "source": "style", "target": "painting" },
+          { "source": "interpretation", "target": "conversation" },
       
-          { "source": "style", "target": "experts" },
+          { "source": "interpretation", "target": "game" },
       
-          { "source": "style", "target": "movies" },
+          { "source": "interpretation", "target": "text" },
                 
     //{"source": 0, "target": 1},
     ],
@@ -771,7 +767,7 @@ var data_local_dynamic = {
 
       
 
-        {"id": "judgments", "size": 70, "score": 0 , "title": "judgments", "type": "circle"},
+        {"id": "comprehension", "size": 70, "score": 0 , "title": "comprehension", "type": "circle"},
 
       
 
@@ -783,11 +779,11 @@ var data_local_dynamic = {
 
       
 
-        {"id": "style", "size": 70, "score": 0 , "title": "style", "type": "circle"},
+        {"id": "interpretation", "size": 70, "score": 0 , "title": "interpretation", "type": "circle"},
 
       
 
-        {"id": "comprehension", "size": 140, "score": 0.5 , "title": "comprehension", "type": "circle"},
+        {"id": "judgments", "size": 140, "score": 0.5 , "title": "judgments", "type": "circle"},
 
       
 
@@ -807,19 +803,15 @@ var data_local_dynamic = {
 
       
 
-        {"id": "relation", "size": 5, "score": 0.4 , "title": "relation", "type": "circle"},
+        {"id": "conversation", "size": 5, "score": 0.4 , "title": "conversation", "type": "circle"},
 
       
 
-        {"id": "painting", "size": 5, "score": 0.4 , "title": "painting", "type": "circle"},
+        {"id": "game", "size": 5, "score": 0.4 , "title": "game", "type": "circle"},
 
       
 
-        {"id": "experts", "size": 5, "score": 0.4 , "title": "experts", "type": "circle"},
-
-      
-
-        {"id": "movies", "size": 5, "score": 0.4 , "title": "movies", "type": "circle"},
+        {"id": "text", "size": 5, "score": 0.4 , "title": "text", "type": "circle"},
 
        
 

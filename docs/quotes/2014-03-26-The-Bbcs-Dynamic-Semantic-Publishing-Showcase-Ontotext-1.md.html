@@ -38,14 +38,14 @@
     <link rel="icon" href="../media/static/favicon.ico">
 
 	
-  <title>Quotes | Michele Pasin</title>
+  <title>BBC Future Media &amp; Technology... | quotes.michelepasin.org</title>
 
 
     <!-- Bootstrap core CSS -->
     
     <!-- Bootswatch:  -->
     <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -444,11 +444,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         
           ><a href="../about/index.html">About</a></li>
           
-        <li>
-          <a href="2014-03-26-The-Bbcs-Dynamic-Semantic-Publishing-Showcase-Ontotext-1.md.html#modalSearch" data-toggle="modal" data-target="#modalSearch">
-            <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-          </a>
-       </li>
+          
 
 
       </ul>
@@ -709,6 +705,14 @@ var data_local_dynamic = {
   "graph": [],
   "links": [
       
+          { "source": "semantic-metadata", "target": "metadata" },
+      
+          { "source": "semantic-metadata", "target": "information-resources" },
+      
+          { "source": "semantic-metadata", "target": "capability" },
+      
+          { "source": "semantic-metadata", "target": "task" },
+      
           { "source": "metadata", "target": "RDF-databases" },
       
           { "source": "metadata", "target": "platform" },
@@ -717,102 +721,112 @@ var data_local_dynamic = {
       
           { "source": "metadata", "target": "server" },
       
-          { "source": "metadata", "target": "algorithm" },
+          { "source": "information-resources", "target": "URI" },
       
-          { "source": "RDF-databases", "target": "metadata" },
+          { "source": "information-resources", "target": "server" },
       
-          { "source": "RDF-databases", "target": "platform" },
+          { "source": "information-resources", "target": "clients" },
       
-          { "source": "RDF-databases", "target": "database" },
+          { "source": "information-resources", "target": "resources" },
       
-          { "source": "RDF-databases", "target": "triple-stores" },
+          { "source": "capability", "target": "different-information-systems" },
       
-          { "source": "platform", "target": "RDF-databases" },
+          { "source": "capability", "target": "system" },
       
-          { "source": "platform", "target": "metadata" },
+          { "source": "capability", "target": "information-systems" },
       
-          { "source": "platform", "target": "database" },
+          { "source": "capability", "target": "interoperability" },
       
-          { "source": "platform", "target": "thesaurus" },
+          { "source": "task", "target": "comprehension" },
       
-          { "source": "database", "target": "RDF-databases" },
+          { "source": "task", "target": "judgments" },
       
-          { "source": "database", "target": "metadata" },
+          { "source": "task", "target": "skills" },
       
-          { "source": "database", "target": "platform" },
-      
-          { "source": "database", "target": "dataset" },
-      
-          { "source": "server", "target": "metadata" },
-      
-          { "source": "server", "target": "algorithm" },
-      
-          { "source": "server", "target": "publishing" },
-      
-          { "source": "server", "target": "article" },
-      
-          { "source": "algorithm", "target": "server" },
-      
-          { "source": "algorithm", "target": "metadata" },
-      
-          { "source": "algorithm", "target": "words" },
-      
-          { "source": "algorithm", "target": "readers" },
+          { "source": "task", "target": "learning" },
                 
     //{"source": 0, "target": 1},
     ],
   "nodes": [
       
 
-        {"id": "RDF-databases", "size": 70, "score": 0 , "title": "RDF-databases", "type": "circle"},
+        {"id": "metadata", "size": 70, "score": 0 , "title": "metadata", "type": "circle"},
 
       
 
-        {"id": "platform", "size": 70, "score": 0 , "title": "platform", "type": "circle"},
+        {"id": "information-resources", "size": 70, "score": 0 , "title": "information-resources", "type": "circle"},
 
       
 
-        {"id": "database", "size": 70, "score": 0 , "title": "database", "type": "circle"},
+        {"id": "capability", "size": 70, "score": 0 , "title": "capability", "type": "circle"},
 
       
 
-        {"id": "server", "size": 70, "score": 0 , "title": "server", "type": "circle"},
+        {"id": "task", "size": 70, "score": 0 , "title": "task", "type": "circle"},
 
       
 
-        {"id": "algorithm", "size": 70, "score": 0 , "title": "algorithm", "type": "circle"},
+        {"id": "semantic-metadata", "size": 140, "score": 0.5 , "title": "semantic-metadata", "type": "circle"},
 
       
 
-        {"id": "metadata", "size": 140, "score": 0.5 , "title": "metadata", "type": "circle"},
+        {"id": "RDF-databases", "size": 5, "score": 0.4 , "title": "RDF-databases", "type": "circle"},
 
       
 
-        {"id": "triple-stores", "size": 5, "score": 0.4 , "title": "triple-stores", "type": "circle"},
+        {"id": "platform", "size": 5, "score": 0.4 , "title": "platform", "type": "circle"},
 
       
 
-        {"id": "thesaurus", "size": 5, "score": 0.4 , "title": "thesaurus", "type": "circle"},
+        {"id": "database", "size": 5, "score": 0.4 , "title": "database", "type": "circle"},
 
       
 
-        {"id": "dataset", "size": 5, "score": 0.4 , "title": "dataset", "type": "circle"},
+        {"id": "server", "size": 5, "score": 0.4 , "title": "server", "type": "circle"},
 
       
 
-        {"id": "publishing", "size": 5, "score": 0.4 , "title": "publishing", "type": "circle"},
+        {"id": "URI", "size": 5, "score": 0.4 , "title": "URI", "type": "circle"},
 
       
 
-        {"id": "article", "size": 5, "score": 0.4 , "title": "article", "type": "circle"},
+        {"id": "clients", "size": 5, "score": 0.4 , "title": "clients", "type": "circle"},
 
       
 
-        {"id": "words", "size": 5, "score": 0.4 , "title": "words", "type": "circle"},
+        {"id": "resources", "size": 5, "score": 0.4 , "title": "resources", "type": "circle"},
 
       
 
-        {"id": "readers", "size": 5, "score": 0.4 , "title": "readers", "type": "circle"},
+        {"id": "different-information-systems", "size": 5, "score": 0.4 , "title": "different-information-systems", "type": "circle"},
+
+      
+
+        {"id": "system", "size": 5, "score": 0.4 , "title": "system", "type": "circle"},
+
+      
+
+        {"id": "information-systems", "size": 5, "score": 0.4 , "title": "information-systems", "type": "circle"},
+
+      
+
+        {"id": "interoperability", "size": 5, "score": 0.4 , "title": "interoperability", "type": "circle"},
+
+      
+
+        {"id": "comprehension", "size": 5, "score": 0.4 , "title": "comprehension", "type": "circle"},
+
+      
+
+        {"id": "judgments", "size": 5, "score": 0.4 , "title": "judgments", "type": "circle"},
+
+      
+
+        {"id": "skills", "size": 5, "score": 0.4 , "title": "skills", "type": "circle"},
+
+      
+
+        {"id": "learning", "size": 5, "score": 0.4 , "title": "learning", "type": "circle"},
 
        
 
