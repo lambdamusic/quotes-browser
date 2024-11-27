@@ -57,7 +57,7 @@
 
 			<div class="col-md-8" style="margin-top: 50px;">
 
-				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >This keyword includes {{tot_quotes}} quote{{ tot_quotes|pluralize }} from {{tot_sources}} source{{ tot_sources|pluralize }}:</p>
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >The keyword <code>{{tag}}</code> includes {{tot_quotes}} quote{{ tot_quotes|pluralize }} from {{tot_sources}} source{{ tot_sources|pluralize }}:</p>
 
 				{% for obj in return_items %}
 				
@@ -121,7 +121,7 @@
 					
 			{% for tag in tags  %}
 					
-				{% if tag.1 > 1 %}
+				{% if tag.1 >= min_tags_occurrence %}
 					<!-- <a href="?tag={{tag.0}}" title="{{tag.1}} quotes" style="{{tag.1|tagsize_quotes}}">{{tag.0}}</a>&nbsp; -->
 					<a href="{% url 'quotesapp:tags' %}?tag={{tag.0}}" title="{{tag.1}} quotes" style="{{tag.1|tagsize_quotes}}">{{tag.0}}</a>&nbsp;
 				{% endif %}
