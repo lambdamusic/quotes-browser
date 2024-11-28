@@ -1,0 +1,118 @@
+{% extends "quotesapp/components/base.html" %}
+{% load extrafilters %}
+{% load static %}
+
+
+{% block pagetitle %}
+  <title>QA - Quotes | quotes.michelepasin.org</title>
+{% endblock pagetitle %}
+
+{% block navbar %}
+
+    {% with thispage="tags" %}
+
+    {% include "quotesapp/components/default-navbar.html" %}
+
+    {% endwith %}
+
+{% endblock navbar %}
+
+
+{% block bodycontent %}
+
+  <div class="page-header">
+    QA Quotes
+
+  </div>
+
+  <div class="container">
+
+
+	
+
+		<div class="row">
+
+			<div class="col-sm-7 col-md-12 text-left">
+				<p style="color: #e8e5e5; font-size: 800%; ">
+				All quotes (QA)
+				</p>
+			</div>
+
+		</div>
+
+		<div class="row" style="margin-top: 30px;">
+
+
+			<div class="col-md-8" style="margin-top: 50px;">
+
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >In total we have {{tot_quotes}} quote{{ tot_quotes|pluralize }} from {{tot_sources}} source{{ tot_sources|pluralize }}:</p>
+
+				{% for obj in return_items %}
+				
+					{% ifchanged obj.source %}  
+					{% if not forloop.first %}</fieldset><br/><br/>{% endif %}
+					<fieldset class="border p-2">
+						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}
+							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
+							{% else %}<span class="text-muted" >{{obj.source}}</span>{% endif %}</legend>
+
+					{% endifchanged %}
+						
+
+					<li class="quotes-list">
+						<!-- <a style="font-size: 120%;" href="/quotes/{{obj.filename}}">{{obj.title}}</a> -->
+						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.filename %}"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;{{obj.title}}</a>
+						<br />
+
+						{% for tag2 in obj.tags %}
+							{% ifequal tag tag2 %}
+							<span class="text-muted" style="font-weight: bold;">#{{tag2}}</span>&nbsp;
+							{% else %}
+							<a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag2}}">#{{tag2}}</a>&nbsp;
+							{% endifequal %}
+						{% endfor %}
+					
+					
+					</li>
+
+		
+				{% endfor %}
+			</div>
+
+
+
+
+		</div>
+
+	
+	<!-- end of row -->
+
+
+
+
+
+    <div class="row" style="margin-top: 60px;">
+    &nbsp;
+    </div> 
+    {% comment %} second row ends {% endcomment %}
+
+
+
+  </div> <!-- /container -->
+
+
+{% endblock bodycontent %}
+
+
+
+
+{% block extra_js %}
+
+
+  {% comment %} JS for D3 Graph {% endcomment %}
+
+   {% include 'quotesapp/components/snippet_graph.html' %}
+
+  
+
+{% endblock %}

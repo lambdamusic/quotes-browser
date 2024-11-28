@@ -39,11 +39,11 @@ def read_all_files_data():
 		if "-" in filename and filename.endswith(".md"):
 
 			counter2 +=1
-			quote =  {}
 
 			results = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename, VERBOSE)
-
+			# printDebug(results)
 			for r in results:
+				quote =  {}
 				TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = r
 				if TITLE:
 
@@ -60,7 +60,7 @@ def read_all_files_data():
 
 	# finally
 	files_data = sorted(files_data, key= lambda x: x['source'])
-	printDebug(f"""\n# Files read: {counter1}\n# Records parsed: {counter2}\n# Records selected: {counter3}\n""", "bold")
+	printDebug(f"""\n# Files read: {counter1}\n# Files parsed: {counter2}\n# Quotes found: {counter3}\n""", "bold")
 	return(files_data)
 
 
@@ -88,6 +88,9 @@ def count_tags(files_data):
 
 def parse_markdown(full_file_path, verbose=False): 
 	"""Parse the Quote markdown and return title and other metadata. 
+	
+	Return: 
+		List of quotes metadata
 
 	"""
 
@@ -255,32 +258,36 @@ review: false
 
 		else: # we are in the quotes section
 
-			if TITLE:
-				# printDebug(TITLE)
-				PURE_MARKDOWN += l
-			elif l.strip().startswith("# "): # new title: push previously found
-				if PURE_MARKDOWN:
-					printDebug("Appending: line 263")
+			if l.strip().startswith("# "): # new title: push previously found
+				NEWTITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
+				# printDebug(NEWTITLE)
+				if TITLE and PURE_MARKDOWN:
+					# printDebug("Appending: line 263")
 					results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					PURE_MARKDOWN, TAGS = "", []
-				TITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
+				TITLE = NEWTITLE
 			elif l.strip().startswith("## "): # new title: push previously found
-				if PURE_MARKDOWN:
+				NEWTITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
+				# printDebug(NEWTITLE)
+				if TITLE and PURE_MARKDOWN:
+					# printDebug("Appending: line 263")
 					results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					PURE_MARKDOWN, TAGS = "", []
-				TITLE = l.replace("# ", "")[1:-2] # remove quotes and newline char
+				TITLE = NEWTITLE
 			elif l.strip().startswith("#"):
 				tag_flag = 1
 				tags = [x.replace("#", "") for x in l.strip().split()]
 				if DEBUG_TAGS: print(f"Tags: {tags}")
 				TAGS = tags
+			elif TITLE:
+				PURE_MARKDOWN += l
 
 	# finally : catch last quote or single qupte
 	if TITLE and PURE_MARKDOWN:
-		printDebug("Appending: line 280")
+		# printDebug("Appending: line 280")
 		results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 
 
-	printDebug(f"Results size: {len(results)} \n {results}")
+	printDebug(f"Results size: {len(results)} \n {[x[0] for x in results]}")
 	return results
 	

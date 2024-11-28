@@ -124,7 +124,8 @@ def quote_detail(request, slug):
 		admin_change_url = False
 
 	quote_source_file = QUOTES_SOURCE_DIR+slug+".md"
-	TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = parse_markdown(quote_source_file)
+	data = parse_markdown(quote_source_file)
+	TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = data[0]
 	html_quote_text = markdown.markdown(PURE_MARKDOWN, extensions=['fenced_code', 'codehilite'])
 
 	print(f"Showing: \n\t=> {quote_source_file}\n")
@@ -151,6 +152,47 @@ def quote_detail(request, slug):
 	
 	return render(request, APP + '/pages/' + templatee, context)
 
+
+
+
+def qa_quotes(request,):
+	"""
+	2024-11-28: Test view for development purposes
+	"""
+	context = {}
+
+	query = request.GET.get('query', 'date')
+	tag = request.GET.get('tag', None)
+	format = request.GET.get('format', 'html')
+
+	nodes, links, tags = [], [], []
+	MIN_TAGS_OCCURRENCE = 1  # TODO in PROD it's 2
+	
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
+
+	templatee = "quotes-qa.html"
+
+	# get all MD contents from local directory
+	files_data = read_all_files_data()
+	tot_quotes = len(files_data)
+	tot_sources = len(list(set([f['source'] for f in files_data])))
+
+	# printDebug(files_data)
+
+	context = {
+		'return_items': files_data,
+		'admin_change_url': admin_change_url,
+		'urlname': "quotes",
+		'query': query,
+		'tag': tag,
+		'tot_quotes': tot_quotes,
+		'tot_sources': tot_sources,
+	}
+	
+	return render(request, APP + '/pages/' + templatee, context)
 
 
 
