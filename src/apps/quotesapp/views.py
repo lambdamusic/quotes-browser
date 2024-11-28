@@ -110,11 +110,12 @@ def tags_all(request,):
 
 
 
-def quote_detail(request, slug):
+def quote_detail(request, slug, orderno=None):
 	"""
 	TODO
 	"""
 	context = {}
+	printDebug(f"VIEW: order={orderno}")
 
 	templatee = "detail-quotes.html"
 
@@ -125,25 +126,26 @@ def quote_detail(request, slug):
 
 	quote_source_file = QUOTES_SOURCE_DIR+slug+".md"
 	data = parse_markdown(quote_source_file)
-	TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = data[0]
-	html_quote_text = markdown.markdown(PURE_MARKDOWN, extensions=['fenced_code', 'codehilite'])
+	this_quote = data[0] # TEMP TILL WE FIX ORDER INFO
+	# TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = data[0]
+	html_quote_text = markdown.markdown(this_quote['PURE_MARKDOWN'], extensions=['fenced_code', 'codehilite'])
 
 	print(f"Showing: \n\t=> {quote_source_file}\n")
 
 	# get all MD contents from local directory for Tags Network
 	files_data = read_all_files_data()
-	random_tag = random.choice(TAGS)
+	random_tag = random.choice(this_quote['TAGS'])
 	nodes, links = generate_graph_for_topic(random_tag, files_data)
 
 	context = {
 		'quote_text': html_quote_text,
 		'quote_source_file': quote_source_file,
-		'title': TITLE,
-		'tags': TAGS,
-		'source': SOURCE,
-		'source_url': SOURCE_URL,
-		'created': DATE,
-		'modified': MODIFIED,
+		'title': this_quote['TITLE'],
+		'tags': this_quote['TAGS'],
+		'source': this_quote['SOURCE'],
+		'source_url': this_quote['SOURCE_URL'],
+		'created': this_quote['CREATED'],
+		'modified': this_quote['MODIFIED'],
 		'admin_change_url': admin_change_url,
 		'nodes': nodes,
 		'links': links,

@@ -41,34 +41,26 @@ def read_all_files_data():
 			counter2 +=1
 
 			results = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename, VERBOSE)
-
-			for out in results:
+			# printDebug(results)
+			for r in results:
 				quote =  {}
-				# TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = r
-				if out['TITLE']:
+				TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = r
+				if TITLE:
 
 					quote['filename'] = filename
-					quote['title'] = out['TITLE']
-					quote['order'] = out['ORDER']
-					quote['source'] = out['SOURCE']
-					quote['source_url'] = out['SOURCE_URL']
-					quote['date']= out['CREATED']
-					quote['modified']= out['MODIFIED']
-					quote['review']= out['REVIEW']
-					quote['tags'] = out['TAGS']
-					# quote['markdown'] = out['PURE_MARKDOWN'] # not needed for index page
+					quote['title'] = TITLE
+					quote['tags'] = TAGS
+					quote['source'] = SOURCE
+					quote['source_url'] = SOURCE_URL
+					quote['review'] = REVIEW
 
-					if out['SOURCE']:
+					if SOURCE:
 						counter3 +=1
 						files_data += [quote]
 
 	# finally
 	files_data = sorted(files_data, key= lambda x: x['source'])
 	printDebug(f"""\n# Files read: {counter1}\n# Files parsed: {counter2}\n# Quotes found: {counter3}\n""", "bold")
-
-	printDebug(f"Final results size: {len(files_data)} \n {[(x['title'], x['order']) for x in files_data]}")
-
-
 	return(files_data)
 
 
@@ -143,7 +135,6 @@ review: false
 	"""
 
 	DEBUG_TAGS = False
-	out = {}
 
 	if verbose: printDebug("...quote template: SINGLE")
 
@@ -189,17 +180,7 @@ review: false
 			MODIFIED = datetime.datetime.strptime(MODIFIED, "%Y-%m-%d")
 			MODIFIED = MODIFIED.replace(tzinfo=datetime.timezone.utc).date()
 	
-	out['TITLE'] = TITLE
-	out['ORDER'] = 1 # default
-	out['SOURCE'] = SOURCE
-	out['SOURCE_URL'] = SOURCE_URL
-	out['CREATED'] = DATE
-	out['MODIFIED'] = MODIFIED
-	out['REVIEW'] = REVIEW
-	out['TAGS'] = TAGS
-	out['PURE_MARKDOWN'] = PURE_MARKDOWN
-
-	return [out]
+	return [[TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN]]
 	
 
 
@@ -236,7 +217,7 @@ review: false
 
 	if verbose: printDebug("...quote template: MULTI")
 
-	text_begins_flag = tag_flag = ORDER = 0
+	text_begins_flag = tag_flag = 0
 	TITLE, SOURCE, SOURCE_URL, PURE_MARKDOWN = "", "", "", ""
 	REVIEW = False
 	DATE, MODIFIED = None, None
@@ -282,42 +263,15 @@ review: false
 				# printDebug(NEWTITLE)
 				if TITLE and PURE_MARKDOWN:
 					# printDebug("Appending: line 263")
-					out = {}
-					ORDER += 1
-					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-					out['TITLE'] = TITLE
-					out['ORDER'] = ORDER
-					out['SOURCE'] = SOURCE
-					out['SOURCE_URL'] = SOURCE_URL
-					out['CREATED'] = DATE
-					out['MODIFIED'] = MODIFIED
-					out['REVIEW'] = REVIEW
-					out['TAGS'] = TAGS
-					out['PURE_MARKDOWN'] = PURE_MARKDOWN
-					results.append(out)
-
-					PURE_MARKDOWN, TAGS = "", [] # reset
+					results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
+					PURE_MARKDOWN, TAGS = "", []
 				TITLE = NEWTITLE
 			elif l.strip().startswith("## "): # new title: push previously found
 				NEWTITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
 				# printDebug(NEWTITLE)
 				if TITLE and PURE_MARKDOWN:
 					# printDebug("Appending: line 263")
-					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-					out = {}
-					ORDER += 1
-					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-					out['TITLE'] = TITLE
-					out['ORDER'] = ORDER
-					out['SOURCE'] = SOURCE
-					out['SOURCE_URL'] = SOURCE_URL
-					out['CREATED'] = DATE
-					out['MODIFIED'] = MODIFIED
-					out['REVIEW'] = REVIEW
-					out['TAGS'] = TAGS
-					out['PURE_MARKDOWN'] = PURE_MARKDOWN
-					results.append(out)
-
+					results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					PURE_MARKDOWN, TAGS = "", []
 				TITLE = NEWTITLE
 			elif l.strip().startswith("#"):
@@ -331,21 +285,9 @@ review: false
 	# finally : catch last quote or single qupte
 	if TITLE and PURE_MARKDOWN:
 		# printDebug("Appending: line 280")
-		# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-		out = {}
-		ORDER += 1
-		# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-		out['TITLE'] = TITLE
-		out['ORDER'] = ORDER
-		out['SOURCE'] = SOURCE
-		out['SOURCE_URL'] = SOURCE_URL
-		out['CREATED'] = DATE
-		out['MODIFIED'] = MODIFIED
-		out['REVIEW'] = REVIEW
-		out['TAGS'] = TAGS
-		out['PURE_MARKDOWN'] = PURE_MARKDOWN
-		results.append(out)
+		results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 
-	printDebug(f"Results size: {len(results)} \n {[x['TITLE'] for x in results]}")
+
+	printDebug(f"Results size: {len(results)} \n {[x[0] for x in results]}")
 	return results
 	
