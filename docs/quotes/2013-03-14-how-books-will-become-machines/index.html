@@ -1,0 +1,1752 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4B4FDV3TR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T4B4FDV3TR');
+</script>
+
+
+    
+    
+
+    <script src="../../media/static/libs/d3-v3/d3.v3.min.js"></script>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Michele Pasin">
+  
+    <meta name="description" property="og:description" content=" Portfolio website of Michele Pasin - computer science ontology knowledge graph digital humanities knowledge engineering pilosophy livecoding algorithmic composition">
+  
+
+
+    <link rel="icon" href="../../media/static/favicon.ico">
+
+	
+  <title>Source | quotes.michelepasin.org</title>
+
+
+    <!-- Bootstrap core CSS -->
+    
+    <!-- Bootswatch:  -->
+    <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
+    <link href="../../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../media/static/libs/bootstrap-3.3.7-dist/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+    .tooltip-inner {
+        max-width: 200px;
+        /* If max-width does not work, try using width instead */
+        width: 200px; 
+    }
+    .lead-plus {font-size: 26.5px;}
+    .label-dark {background: #2c3e50; color: white; padding: 1px;}
+    .margin50 {margin-top: 50px; margin-bottom: 50px;}
+    .marginb100 {margin-bottom: 100px;}
+
+    .breadcrumbs {margin-top: 80px;}
+    .namespaces {background: #ced2d6; width: 100%;}
+    .footer {background-color: #3e3f3a;}
+    .footer a {color: #cac0bf;}
+
+    .margin50Top {margin-top: 50px;}
+    .margin20Top {margin-top: 20px;}
+    .margin50Bottom { margin-bottom: 50px;}
+    .margin20Bottom { margin-bottom: 20px;}
+
+    /*so that the d3plus tooltip panel doesnt cover the top banner*/
+    .navbar {z-index: 3000;}
+
+
+    .navbar-alpha {
+        font-size: 65%;
+        font-style: italic;
+        font-weight: bold;
+        color: darkgoldenrod;
+    }
+
+
+    .btn-xxs {
+    padding: 1px 4px;
+    font-size: 10px;
+    line-height: 1.2;
+    border-radius: 2px;
+    }
+
+
+    .code-example {
+        overflow: auto;
+        height: 400px;
+    }
+
+
+    #side_title a {
+        color: blue;
+        text-decoration: underline;
+
+    }
+    .text-dark {
+        color: #5d5c5c;
+        
+    }
+
+
+    .paragraph_embed {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+
+    a.project-title {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a.project-title:hover {
+      background: indianred;
+      color: white;
+    }
+
+    a.project-active {
+      background: #d87064;
+      color: white;
+      padding: 2px;
+    }
+
+    .keyword {
+      font-style: italic;
+      color: grey;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .keyword-sm {
+      font-style: italic;
+      color: grey;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    a.paper-active {
+      background: #d9230f;
+      color: white;
+    }
+
+    a.ext_link {
+      color: darkgrey;
+    }
+
+    .text-black {
+      color: black;
+    }
+
+     /* modal google search */ 
+
+    .modal .modal-dialog
+    {
+        width: 800px;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-open .modal, a:focus
+    {
+        outline: none !important;
+    }
+
+
+    
+
+
+    h2.blogtitle {
+      color: black;
+      margin-top: 40px;
+    }
+
+
+    .blogentry {
+      font-size: 1.3em;
+      margin-top: 50px;
+      margin-bottom: 120px;
+      color: #444;
+      /* font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;  */
+    }
+
+    .blogentry p.first-paragraph {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .blogentry p {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .blogentry div {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .blogentry blockquote:first-of-type {
+      font-size: 20px;
+      font-weight: normal;
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.7em 10px;
+    }
+
+
+    .blogentry blockquote {
+      font-size: 16px;
+      background: #f9f9f9;
+      margin: 10px 30px 40px 10px; /* top right bottom left */
+      padding: 25px;
+    }
+
+
+    .blogentry  blockquote p:first-child, blockquote ul:first-child, blockquote ol:first-child {
+      margin-top: 0;
+    }
+
+
+    .blogentry pre {
+      margin-bottom: 40px;
+    }
+
+    .blogentry h1,  
+    .blogentry h2,  
+    .blogentry h3,  
+    .blogentry h4  {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .blogentry img {
+      max-width: 80%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .blogentry iframe {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .blogentry ul {
+      margin-bottom: 20px;
+    }
+
+    .blogentry li {
+      padding: 5px;
+    }
+
+
+    .quote-title {
+      font-size: 2.0em;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+
+    .quote-block {
+      font-family: sans-serif, Helvetica;
+      font-size: 25px;
+      border-left: 5px solid #9bccea;  //  /* #ffe700 2024-11-27 changed */ 
+      background: #f9f9f9;
+      margin: 0px 30px 40px 10px;
+      padding: 25px;
+    }
+
+    
+    .quote-block p::first-letter {
+      font-size: 150%;
+      color: rgb(62, 61, 61);
+    }
+
+    li.quotes-list {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+
+
+    fieldset {
+      border: 1px groove #ddd !important;
+      padding: 0 1.4em 1.4em 1.4em !important;
+      margin: 0 0 1.5em 0 !important;
+      -webkit-box-shadow:  0px 0px 0px 0px #000;
+              box-shadow:  0px 0px 0px 0px #000;
+    }
+  
+    legend {
+      width:inherit; /* Or auto */
+      padding:0 10px; /* To give a bit of padding on the left and right */
+      border-bottom:none;
+    }
+
+</style>
+
+
+<style>
+
+<!-- Autogenerated with pygmentize => https://python-markdown.github.io/extensions/code_hilite/#step-2-add-css-classes -->
+
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #f8f8f8; }
+.codehilite .c { color: #3D7B7B; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #9C6500 } /* Comment.Preproc */
+.codehilite .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #E40000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #008400 } /* Generic.Inserted */
+.codehilite .go { color: #717171 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #687822 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #767600 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #A45A77 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+</style>
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+
+
+
+
+
+    
+
+    
+
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+
+        <li >
+          <a href="../../tags/index.html">Tags</a></li>
+
+        
+        
+           
+
+        <li 
+        
+          ><a href="../../about/index.html">About</a></li>
+          
+          
+
+
+      </ul>
+    </div><!--/.nav-collapse -->
+
+  </div>
+</nav>
+
+
+
+<!-- Search Modal -->
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Search michelepasin.org</h4>
+          </div>
+          <div class="modal-body">
+
+
+            <script>
+              (function ()
+              {
+                  var cx = 'c23e79d025688b327:nr0bhziz1xo';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                      '//cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+              })();
+          </script>
+          <gcse:search></gcse:search>
+          
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+    <!-- Begin page content -->
+    <div class="container">
+
+
+	
+
+  <div class="page-header">
+    Source
+
+	
+
+  </div>
+
+  <div class="container">
+
+
+	
+
+		<div class="row">
+
+			<div class="col-sm-7 col-md-12 text-left">
+				<p style="color: #e8e5e5; font-size: 800%; ">
+				How Books Will Become Machines
+				
+				<span style="color: #e8e5e5; font-size: 20%; "><a href="http://fkaplan.files.wordpress.com/2011/08/kaplan-colloquelitteracies.pdf" class="-underline text-muted" target="_blank">http://fkaplan.files.wordpress.com/2011/08/kaplan-colloquelitteracies.pdf</a></span>
+			</p>
+		  
+			</div>
+
+		</div>
+
+		<div class="row" style="margin-top: 30px;">
+
+
+			<div class="col-md-8" style="margin-top: 50px;">
+
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >In total we have 21 quotes from this source:</p>
+
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="1/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;About every ten years, it...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>About every ten years, it becomes urgent to confront ideas and ask the expertise of scholars and visionaries about this issue. But as if we were trapped in a per- petual present, the circling debates do not manage to go beyond the direct confrontation between two objects, between the comparisons of two reading experiences. They present the book and ebook side- by-side and just ask: which do you prefer? By simplifying this com- plex problem into the direct confrontation between two objects, the- se debates make a reassuring move. Everything looks as if the future of the book would just be bound to a question of user’s adoption.
+[...]
+Unfortunately, technological paradigm changes do not work that way. Side-by-side comparison is good for forecasting the success or failures of comparable technological products. But these compari- sons do not manage to grasp the longer historical dynamics involved and the forces that drive them.
+[...]
+Hypotheses to explain the resistance of the Book must be articu- lated at a systemic level. We could for instance consider that books are much more complex cultural tools than maps as they are linked with a larger network of actors, related laws, distribution channels. As this ‘ecosystem’ took a long time to stabilize and as it involves a large collection of actors, it is normal that it offers some resilience to the impact of change.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=debate.html">#debate</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=actors.html">#actors</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="2/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Cultural tool vs cultural machine</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>As machines, they offer much more possibilities than traditional ones. However, these various new modes of usage are explicitly programmed. A paper map can be used freely, including for other purposes than its original function (wrapping an object, taking a note). It is a cultural tool. A digital map can only be accessed through specific input and output commands: the specific usage rules have been internalized. It is a cultural machine.
+[...]
+As maps became machines, they are progressively merged into a global me- chanic system in which a multitude of maps became aggregated into a single one. This is the corollary of our hypothetical rule: As regu- lated representations get more regular, they tend to aggregate into unified systems.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=cultural-tools.html">#cultural-tools</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=machine.html">#machine</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=representation.html">#representation</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=rules.html">#rules</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="3/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The CD-rom rise and fall...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The CD-rom rise and fall should make us reflect on the power and the limit of closed systems. Like book application, CD-rom had all the potential to continue the way of the Book. They were celebrated as its future. As closed environments they offered great creative freedom, but they failed to build bridges with the rest of the digital environment. When the web emerged as open-ended information system, CD-roms progressively appeared as an obsolete technology.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=freedom.html">#freedom</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=power.html">#power</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="4/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Tim Berners-Lee and the other...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>Tim Berners-Lee and the other members of the W3C have been arguing for a long time about the importance of producing standards enabling semantic tagging and organization of information (Berners-Lee, 1999). The web is currently a web of documents. It should become a web of well-structured data. Thus, the goal of the semantic web is organize worldwide information at a superior level of abstraction than the document unit. One current incarnation of this effort is the RDF format (Resource Description Framework) that permits to decompose the information into set of triplets. Each triplet contains a subject (the resource to described for instance an URL), a predicate (the property applicable to this resource, also an URL) and an object (also an URL). Such triplets form complex graphs over algorithms can perform various computations. The implicit encyclopedic ambition of the RDF format is to transform all the data contained in the docu- ments of the web in a single huge database, even if in practice several databases of this sort are currently created in parallel. The success of failure of this endeavor will depend directly on the way such coding could be done in practice through an organized self-motivated collaborative process. It is not clear for the moment how this will happen.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=Web.html">#Web</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=information.html">#information</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=format.html">#format</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=web-of-documents.html">#web-of-documents</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=Tim-Berners-Lee.html">#Tim-Berners-Lee</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="5/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;We shape our tools and...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>We shape our tools and they shape us in return. Trapped in an invisible technological loop, we underestimate the pervasive impact of the tools we use, ignorant of the fact that each technological transition can change the way we act, feel or think. Worse, our understanding of technological evolutionary dynamics is still in its infancy. We are missing the equivalent of a Darwinian Theory of Evolution for technological systems.Without such a theory, technology evolves uncontrolled, impacting deeply our lives in ways we are unable to predict.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=theory.html">#theory</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=tool.html">#tool</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="6/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;As pages and paragraphs offered...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>As pages and paragraphs offered clear organizational landmarks in a volume of text, we got used to positioning ourselves spatially within a discourse, to evaluate the length of journey that we need to take to reach the conclusion of a demonstration. We got ac- customed to experiencing the spatial unfolding of discourses.
+The phenomenological experience of the encyclopedia is quite different. Inside an encyclopedic medium, the reader can only grasp its direction surroundings based on local links but cannot localize himself globally. He must act like a hunter, attentive to pattern, ca- pable of contextual reactions. His eyes develop different kinds of skills than those used for book reading. He is in charge of his jour- ney, responsible for taking the right path. Skimming and scanning become the norm in order to always find the right compromise be- tween exploration and exploitation.
+[..]
+The hunter makes relevant uses of specific tools like search en- gine, push notifications, aggregators in order to create a whole tech- nological cockpit helping him to answer the permanently relevant question: What should I read, listen, watch or play now?</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=discourse.html">#discourse</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=text.html">#text</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=readers.html">#readers</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="7/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Reading analytics</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The transformation of the readers’ behavior into data in- augurates the new domain of reading analytics. Reading patterns can now be analyzed, compared and maybe predicted. Through this process they also gain a commercial value. Gathering and reselling reading logs and profiling readers is becoming a new industry. It is not impossible that one day it becomes more important economically than the industry of cultural goods. That day, books will be offered for free in exchange for the harvesting and exploitation of the reader’s behavior.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=analytics.html">#analytics</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=readers.html">#readers</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=industry.html">#industry</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="8/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;It seems that books embodied...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>It seems that books embodied in machines fail to deliver the main function of the printed book, i.e. allowing to structure complex discourses and narration. This is counterintuitive because mechanization steps usually offer more structuring options. Formalizing its conventional usage rules into mechanized processes, a book-machine should have the poten- tial to give more power to the author-architect.
+[...]
+We believe that by entering the realm of machines, the architec- tural function of books enters in direct competition with another powerful cultural tool that supports a dangerously seductive antag- onistic function, the Encyclopedia and its totalizing endeavor to document the entire world.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=cultural-tools.html">#cultural-tools</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=discourse.html">#discourse</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=realm.html">#realm</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="9/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Our core hypothesis is that...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>Our core hypothesis is that regulated representations get more regular over time. The general process of this regulating tendency is the transformation of a convention into a mechanism. The regulation usually proceeds in two consecutive steps, firstly mechanizing the representation production rules and secondly its conventional usag- es. Ultimately, through this process, regulated representations tend to become machines.
+In the case of maps, the mechanization process has begun by a progressive automatization of the recording, gathering, storage and unification of geographical information.
+[...]
+We shall argue that books, as regulated representations and cul- tural tools, share many similarities with maps and tables. Because of this, there will exist a strong technological pressure to transform them into machines.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=machine.html">#machine</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=process.html">#process</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=maps.html">#maps</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="10/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The core business model of search engines is about selling words</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>If search engines become the most direct way to discover books, writers will be encouraged to adapt their style and chosen vocabularies in consequences, reusing, for instance, words often searched or choosing them based on marketing considerations. We will progressively discover that writing a searchable text is not the same thing as writing a book to sell. In particular, one should be aware that the core business model of search engines is about selling words. The encyclopedia extends the realm of capitalism to the language itself (Kaplan 2011).</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=words.html">#words</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=writers.html">#writers</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=language.html">#language</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=text.html">#text</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="11/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;A representation is a man-made...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>A representation is a man-made material document that stands for something else, typically a complex, highly dimensional event or phenomenon. Example: A picture of a scene, a sculpture of a Greek hero, a theater play, a novel. To avoid any misunderstanding we shall make clear that a representation is always based on a material reality. A regulated representa- tion is a representation governed by a set of production and usage rules. These rules can be intrinsically embedded in the production process of the representation or the result of cultural conventions. Example of regulated representations: A list of names, an accounting table, a family tree, a flow-chart diagram, a map of a region, a printed book, a video, an encyclopedia, an Excel Sheet, a Powerpoint presentation. On the contrary, the production of a sculpture, a painting, a theater play are too weakly regulated by conventional rules to be considered as regulated representations. Although slightly different, this notion is inspired by the concept of intellectual technology developed by Pascal Robert in Mnémotechnologies.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=representation.html">#representation</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=play.html">#play</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=sculpture.html">#sculpture</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="12/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Even if Diderot and d’Alembert’s...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>Even if Diderot and d’Alembert’s Encyclopedia is entitled Dic- tionnaire raisonné des sciences, des arts et des métiers, its ambition is to be much more than a dictionary. The encyclopedia has aimed since its genesis at being in continuous expansion in order to en- compass the ever-growing world of arts, sciences and techniques. The encyclopedia is not a series of buildings; it is a never-ending building site.
+[...]
+These two intellectual technologies have antagonistic functions. The Book has evolved as a closed space capable of hosting sophisticated inte- rior architecture: long discourses, elaborated narratives and other kinds of architectural thoughts that oral tradition used to transmit. On the contrary, the encyclopedia’s function is to encompass the whole world, past, present, future, real and imaginary. There will never be enough pages for such an unbounded commitment. The Book offers specific paths, guided tours. The Encyclopedia offers a small-scale model of the world. Book writing is about learning to finish. Encyclopedia writing is an ever-going activity aiming at con- tinuous improvement.
+When the technology was ready, the encyclopedia happily left its inappropriate body of printed volumes, to exploit the potential of hypertexts, the digital incarnation of principles it had already in- vented at the time of Diderot and d’Alembert in order to escape the imprisoning linearity imposed by the codex pages.
+[...]
+The network has successfully decomposed music albums into single songs, newspapers into sets of articles. Now it tries to decom- pose the courageous books that wander into its territory as collection of chapters, sets of linked fact-sheets, units of content in the World Wide Encyclopedia.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=writing.html">#writing</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=world.html">#world</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=Encyclopedia.html">#Encyclopedia</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="13/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The future of books in...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The future of books in the 1830s. ‘Before this century shall end, journalism will be the whole press - the whole human thought. Thought will spread across the world with the rapidity of light, instantly conceived, instantly written, instantly understood. It will blanket the earth from one pole to the other -sudden, instanta- neous, burning with the fervor of the soul from which it burst forth. This will be the reign of the human word in all its plenitude. Thought will not have time to ripen, to accumulate into the form of a book - the book will arrive too late. The only book possible form today is a newspaper.’ Alphonse de Lamartine in 1831, cited and translated in (Carr 2010:109).</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=thought.html">#thought</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=future-of-books.html">#future-of-books</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="14/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The first way to continue...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The first way to continue the book mechanization process consists in taking an encyclopedic perspective on book contents, introducing descriptive formalisms in order to turn structured text into well standardized resources.
+[...]
+This de- coupling between form and content has many advantages. In princi- ple at least, it allows to envision texts that can change layout on demand
+[...]
+Explicitly standardizing the implicit structure of books makes them searchable and browsable in new ways. And this is just the beginning. In on-going standardization steps, the encyclopedia would like to tag the semantic content of each of these resources..
+[...]
+The goal is now to create open standards to describe bookmarks, dog-ears, notes, commentary, book loans. Each book-reader encounter should be documented. The whole life of a book will be made explicit. Tra- jectories of books and readers will form a new information mesh from which numerous correlations could be extracted.
+[...]
+Digitalization is actual- ly not a very good term to describe this content extraction and standardization process. Books are containers, and the so-called digitalization process consists precisely in extracting their contents. In this new world of data, book contents extracted from their origi- nal physical shells become digital resources among others, databases linked with other databases.
+[...]
+We cannot help feeling the power of this global bibliographic machine as it directly corresponds to one of the oldest dream of hu- manity: creating a library with all the books or, expressed different- ly, an infinitely dense book of books.19 But we should also be aware that the dream of the Alexandria library is precisely an encyclopedic dream. The industrial extraction of book contents from books means nothing but the end of the primary function of the book: the isola- tion, organization and layout of contents in a confined volume. It means the total victory of the encyclopedia over the Book. This is not without consequences.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=dreams.html">#dreams</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=text.html">#text</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=Encyclopedia.html">#Encyclopedia</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="15/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Nature of the book</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>One of the most obvious differences between books and maps is that books are representations of an higher dimension. A book is a container, a volume of dimension 3, capable of hosting one-dimensional text and bi-dimensional maps, tables, diagrams and trees. As a volume, a book offers essentially a solution to organize a discourse in space. It has an architectural function.
+[...]
+The architectural function of books has made possible architec- tural discourses like long demonstrations and rich narratives. The effect of books on our culture is not limited to the discourses them- selves. It is a consequence more generally of the unique capacity of the template to efficiently convey such structured ideas.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=discourse.html">#discourse</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=text.html">#text</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=narratives.html">#narratives</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="16/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The intrinsic conservatism of the encyclopedia paradigm</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>In evolutionary terms, in a closed and protected volume the Book offered room for constant innovation. Each printed book could be an isolated island. [...] As a standalone autonomous object, a book could take parts in an infinite number of publishing experiments.
+[..]
+It is difficult to imagine how such evolution could continue if books just became standardized articulated data part of a worldwide machine. The encyclopedia core principle is the regulation and standardization of knowledge nodes. Innovation is limited to local contents
+[..]
+We do not realize yet the intrinsic conservatism of the encyclo- pedia paradigm because we are fascinated by the spectacle of the global information harvest. We see the human society becoming explicit and look at this crystallization process with fascination.
+[..]
+How can such a paradigm shifting evolution be a factor of cultural immobili- ty? As long as the encyclopedia is growing, its cultural standardiza- tion effects will be partially masked. But what will happen, when all the books, all the concepts, all the places, all the readers will be mapped into standardized templates? Will cultural innovation still be possible within such a framework?</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=fascination.html">#fascination</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="17/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;In the Evolution of Technology,...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>In the Evolution of Technology, George Basalla gives a rather complete account of these various frameworks. Part of our study is influenced by the work of the French philosopher George Simodon. In Du Mode d’Existence des Objets techniques, Simondon articulates the role of the concretization process, the way technical sub-systems merge to create better integrated entities in a general evolutionary framework. This process is also at work for cultural tools and plays a major role in the evolution of regulated representations.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=cultural-tools.html">#cultural-tools</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=work.html">#work</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=framework.html">#framework</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=representation.html">#representation</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="18/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The future of books in...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The future of books in the 1930s. This is how Paul Oltet in the 1930s was de- scribing the future reading desktop ‘The worktable does not hold any book. In- stead, there is a screen and a telephone. All the books are far away, in a huge building (...)’ cited in (Levie 2006).</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=future-of-books.html">#future-of-books</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=future.html">#future</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=screen.html">#screen</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="19/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Books could survive by becoming closed interactive applications</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The second way to continue the book mechanization process is to design a new close vehicle for its contents.
+[..]
+Applications are fully interactive programs adapted to dedicated interfaces like smartphones, tablets or desktop computers. They can fetch their contents directly from the Internet and offer access to data and flux on the Internet, bypassing the web through more con- trolled and powerful user interfaces.
+[..]
+Because they offer clear boundaries, applications like books can be seen as containers.
+[...]
+Most contemporary voices condemn this lack of openness. Knowledge should be open, easy to share and link: the encyclopedia ideology. They rightfully point out that without open standards, ap- plication contents might rapidly become obsolete, impossible to read with standard hardware.
+[..]
+Book applications correspond to the second stage of the mechani- zation process, the mechanization of usages. By becoming applica- tions, books internalize their interactivity.
+[..]
+It would be an error to think that book applications are only rele- vant for hypermedia interactive contents. A book application allows designing the interactivity adapted to the goals and reading practices of documents as different as scientific articles, textbooks or novels. They permit to avoid the one-size-fits-all philosophy of the encyclo- pedia to offer specific solutions adapted to specific objectives. And of course they permit to invent radically new kinds of books: books that change depending on where or when you read them, books that learn as you read them, books that adapt to the news and other kinds of algorithmic books.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=Internet.html">#Internet</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=ideology.html">#ideology</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="20/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;Thirty years after the ‘invention’...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>Thirty years after the ‘invention’ of the printing press, most of the books print- ed were just copies of medieval manuscripts. The ‘readers’ just wanted more of the same. For several decades, this paradigm-shifting technology essentially produced ‘old-styled’ books. Old-styled books made differently. Thus, while the user experi- ence stayed relatively stable during this whole period, a crucial structural change happened to the Book, introducing the potential for new forms of regulatory effects to its internal structure. Not only could books now be mass-produced but most importantly they were now ‘generated’ out of standardized typographic matrices. Even though in the early years of this first mechanization of the book, much efforts we made to try copy the layout and style of manuscripts, this transition imposed a controlled structure to all the copies of the same book. The regularity of this new internal structure had profound effects on the way we perceive the world. It literal- ly shaped our perceptions in an apparently irreversible manner.</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=manuscript.html">#manuscript</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=printing-press.html">#printing-press</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="21/index.html"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;The future of books in...</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p><p>The future of books in the 1880s. ‘Many books and stories may not see the light of print al all; they will go into the hands of their readers, or hearers rather, as phonograms’ Hubert, Philippe in an 1889 essay in the Atlantic Monthly. The same year, Edward Bellamy predicted in a Harper’s article that people will read ‘with the eyes shut’, carrying tiny audio players which would contains all theirs books, newspapers and magazines’ (Carr 2010: 109).</p></p>	
+						</blockquote>
+
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=book.html">#book</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=future-of-books.html">#future-of-books</a>&nbsp;
+					
+					
+					
+					<a class="text-muted" href="../../tags/index.html%3Ftag=article.html">#article</a>&nbsp;
+					
+					
+
+					
+					</fieldset>
+	
+				
+
+
+			</div>
+
+
+
+
+		</div>
+
+	
+	<!-- end of row -->
+
+
+
+
+
+    <div class="row" style="margin-top: 60px;">
+    &nbsp;
+    </div> 
+    
+
+
+
+  </div> <!-- /container -->
+
+
+
+
+
+	</div>
+
+
+  
+
+
+
+  
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+    
+      <p class="text-muted">Find me also on: &nbsp;
+      
+
+  <a href="http://kcl.academia.edu/MichelePasin" target="_blank">Academia</a> | 
+  <a href="https://github.com/lambdamusic" target="_blank">GitHub</a> | 
+  <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
+  <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
+  <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
+  <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
+  <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
+  <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
+  <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
+  <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
+  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
+  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
+      
+      </p>
+    
+    </div>
+  </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../media/static/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../media/static/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../media/static/libs/bootstrap-3.3.7-dist/js/ie10-viewport-bug-workaround.js"></script>
+
+     <!-- Google site search --> 
+    <script async src="https://cse.google.com/cse.js?cx=c23e79d025688b327"></script>
+
+    
+
+
+  
+
+   
+
+
+
+<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+
+<script>
+
+// based on http://bl.ocks.org/eyaler/10586116 
+
+
+
+
+
+var data_local_dynamic = {
+  "graph": [],
+  "links": [
+                
+    //{"source": 0, "target": 1},
+    ],
+  "nodes": [
+       
+
+    // {"size": 60, "score": 0, "id": "Androsynth", "type": "circle"},
+  ],
+    "directed": false,
+   "multigraph": false
+} 
+
+var chartDiv = document.getElementById("graph_div");
+// Extract the width and height that was computed by CSS.
+var divWidth = chartDiv.clientWidth;
+var divHeight = chartDiv.clientHeight;
+
+//var w = window.innerWidth;
+//var h = window.innerHeight;
+
+var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
+
+var focus_node = null, highlight_node = null;
+
+var text_center = false;
+var outline = false;
+
+var min_score = 0;
+var max_score = 1;
+
+var color = d3.scale.linear()
+  .domain([min_score, (min_score+max_score)/2, max_score])
+  .range(["lime", "yellow", "red"]);
+
+var highlight_color = "blue";
+var highlight_trans = 0.1;
+  
+var size = d3.scale.pow().exponent(1)
+  .domain([1,100])
+  .range([8,24]);
+	
+var force = d3.layout.force()
+  .linkDistance(100)
+  .charge(-500) // was 800
+  .size([divWidth,divHeight]);
+
+var default_node_color = "#ccc";
+//var default_node_color = "rgb(3,190,100)";
+var default_link_color = "#888";
+var nominal_base_node_size = 8;
+var nominal_text_size = 10;
+var max_text_size = 24;
+var nominal_stroke = 1.5;
+var max_stroke = 4.5;
+var max_base_node_size = 36;
+var min_zoom = 0.1;
+var max_zoom = 7;
+// append to DOM
+var svg = d3.select("#graph_div").append("svg");
+var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom])
+var g = svg.append("g");
+//
+svg.style("cursor","move");
+
+// d3.json("graph.json", function(error, graph) {
+
+    var graph = data_local_dynamic;
+
+    var linkedByIndex = {};
+    graph.links.forEach(function(d) {
+        linkedByIndex[d.source + "," + d.target] = true;
+    });
+
+    console.log(linkedByIndex);
+
+    function isConnected(a, b) {
+        return linkedByIndex[a.id + "," + b.id] || linkedByIndex[b.id + "," + a.id] || a.id == b.id;
+    }
+    // console.log( isConnected(graph.nodes[0], graph.nodes[1]));
+
+    function hasConnections(a) {
+        for (var property in linkedByIndex) {
+                s = property.split(",");
+                if ((s[0] == a.id || s[1] == a.id) && linkedByIndex[property]) 					return true;
+        }
+    return false;
+    }
+
+    /* resolve node IDs (not optimized at all!)
+    http://bl.ocks.org/nitaku/7483341
+    */
+    _ref = graph.links;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      l = _ref[_i];
+      _ref2 = graph.nodes;
+      for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+        n = _ref2[_j];
+        if (l.source === n.id) {
+          l.source = n;
+          continue;
+        }
+        if (l.target === n.id) {
+          l.target = n;
+          continue;
+        }
+      }
+    }
+
+    force
+        .nodes(graph.nodes)
+        .links(graph.links)
+        .start();
+
+    var link = g.selectAll(".link")
+        .data(graph.links)
+        .enter().append("line")
+        .attr("class", "link")
+        .style("stroke-width",nominal_stroke)
+        .style("stroke", function(d) { 
+        if (isNumber(d.score) && d.score>=0) return color(d.score);
+        else return default_link_color; })
+
+
+    var node = g.selectAll(".node")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("class", "node")
+        
+        .call(force.drag)
+
+ 
+    //
+    // Update page based on dbclick 
+    //
+
+         
+
+    node.on("dblclick", function(d) { d3.event.stopPropagation();
+            if (window.location.host.includes("michelepasin.org")) {
+                window.location.href = "https://quotes.michelepasin.org/tags/index.html%3Ftag=" + d.id + ".html";
+            } else {
+                window.location.href = "/tags/?tag=" + d.id;
+            }
+            
+        });   
+
+        
+        var tocolor = "fill";
+        var towhite = "stroke";
+        if (outline) {
+            tocolor = "stroke"
+            towhite = "fill"
+        }
+            
+        
+        
+    var circle = node.append("path")
+    .attr("d", d3.svg.symbol()
+        .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); })
+        .type(function(d) { return d.type; }))
+    
+        .style(tocolor, function(d) { 
+        if (isNumber(d.score) && d.score>=0) return color(d.score);
+        else return default_node_color; })
+        //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+        .style("stroke-width", nominal_stroke)
+        .style(towhite, "white");
+        
+                    
+    var text = g.selectAll(".text")
+        .data(graph.nodes)
+        .enter().append("text")
+        .attr("dy", ".35em")
+        .style("font-size", nominal_text_size + "px")
+
+        if (text_center)
+        text.text(function(d) { return d.title; })
+        .style("text-anchor", "middle");
+        else 
+        text.attr("dx", function(d) {return (size(d.size)||nominal_base_node_size);})
+        .text(function(d) { return '\u2002'+d.title; });
+
+        node.on("mouseover", function(d) {
+        set_highlight(d);
+        })
+    .on("mousedown", function(d) { d3.event.stopPropagation();
+        focus_node = d;
+        set_focus(d)
+        if (highlight_node === null) set_highlight(d)
+        
+    }	).on("mouseout", function(d) {
+            exit_highlight();
+
+    }	);
+
+            d3.select(window).on("mouseup",  
+            function() {
+            if (focus_node!==null)
+            {
+                focus_node = null;
+                if (highlight_trans<1)
+                {
+        
+            circle.style("opacity", 1);
+        text.style("opacity", 1);
+        link.style("opacity", 1);
+        }
+            }
+        
+        if (highlight_node === null) exit_highlight();
+            });
+
+    function exit_highlight()
+    {
+            highlight_node = null;
+        if (focus_node===null)
+        {
+            svg.style("cursor","move");
+            if (highlight_color!="white")
+        {
+        circle.style(towhite, "white");
+        text.style("font-weight", "normal");
+        link.style("stroke", function(o) {return (isNumber(o.score) && o.score>=0)?color(o.score):default_link_color});
+    }
+                
+        }
+    }
+
+    function set_focus(d)
+    {	
+    if (highlight_trans<1)  {
+        circle.style("opacity", function(o) {
+                    return isConnected(d, o) ? 1 : highlight_trans;
+                });
+
+                text.style("opacity", function(o) {
+                    return isConnected(d, o) ? 1 : highlight_trans;
+                });
+                
+                link.style("opacity", function(o) {
+                    return o.source.id == d.id || o.target.id == d.id ? 1 : highlight_trans;
+                });		
+        }
+    }
+
+
+    function set_highlight(d)
+    {
+        svg.style("cursor","pointer");
+        if (focus_node!==null) d = focus_node;
+        highlight_node = d;
+
+        if (highlight_color!="white")
+        {
+            circle.style(towhite, function(o) {
+                    return isConnected(d, o) ? highlight_color : "white";});
+                text.style("font-weight", function(o) {
+                    return isConnected(d, o) ? "bold" : "normal";});
+                link.style("stroke", function(o) {
+                return o.source.id == d.id || o.target.id == d.id ? highlight_color : ((isNumber(o.score) && o.score>=0)?color(o.score):default_link_color);
+
+                });
+        }
+    }
+        
+        
+    zoom.on("zoom", function() {
+    
+        var stroke = nominal_stroke;
+        if (nominal_stroke*zoom.scale()>max_stroke) stroke = max_stroke/zoom.scale();
+        link.style("stroke-width",stroke);
+        circle.style("stroke-width",stroke);
+        
+        var base_radius = nominal_base_node_size;
+        if (nominal_base_node_size*zoom.scale()>max_base_node_size) base_radius = max_base_node_size/zoom.scale();
+            circle.attr("d", d3.svg.symbol()
+            .size(function(d) { return Math.PI*Math.pow(size(d.size)*base_radius/nominal_base_node_size||base_radius,2); })
+            .type(function(d) { return d.type; }))
+            
+        //circle.attr("r", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); })
+        if (!text_center) text.attr("dx", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); });
+        
+        var text_size = nominal_text_size;
+        if (nominal_text_size*zoom.scale()>max_text_size) text_size = max_text_size/zoom.scale();
+        text.style("font-size",text_size + "px");
+
+        g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+        });
+        
+    svg.call(zoom);	  
+    svg.attr("transform","scale(1.3,1.3)");  // initial zoom
+        
+    resize();
+    //window.focus();
+    d3.select(window).on("resize", resize).on("keydown", keydown);
+        
+    force.on("tick", function() {
+        
+        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+        text.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    
+        link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+            
+        node.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+        });
+    
+    function resize() {
+        var width = chartDiv.clientWidth, height = chartDiv.clientHeight;
+        svg.attr("width", width).attr("height", height);
+        
+        force.size([force.size()[0]+(width-divWidth)/zoom.scale(),force.size()[1]+(height-divHeight)/zoom.scale()]).resume();
+        w = width;
+        h = height;
+        }
+        
+        function keydown() {
+        if (d3.event.keyCode==32) {  force.stop();}
+        else if (d3.event.keyCode>=48 && d3.event.keyCode<=90 && !d3.event.ctrlKey && !d3.event.altKey && !d3.event.metaKey)
+        {
+    switch (String.fromCharCode(d3.event.keyCode)) {
+        case "C": keyc = !keyc; break;
+        case "S": keys = !keys; break;
+        case "T": keyt = !keyt; break;
+        case "R": keyr = !keyr; break;
+        case "X": keyx = !keyx; break;
+        case "D": keyd = !keyd; break;
+        case "L": keyl = !keyl; break;
+        case "M": keym = !keym; break;
+        case "H": keyh = !keyh; break;
+        case "1": key1 = !key1; break;
+        case "2": key2 = !key2; break;
+        case "3": key3 = !key3; break;
+        case "0": key0 = !key0; break;
+    }
+        
+    link.style("display", function(d) {
+                    var flag  = vis_by_type(d.source.type)&&vis_by_type(d.target.type)&&vis_by_node_score(d.source.score)&&vis_by_node_score(d.target.score)&&vis_by_link_score(d.score);
+                    // console.log(d);
+                    linkedByIndex[d.source.id + "," + d.target.id] = flag; // IMPORTANT?
+                return flag?"inline":"none";});
+    node.style("display", function(d) {
+                    return (key0||hasConnections(d))&&vis_by_type(d.type)&&vis_by_node_score(d.score)?"inline":"none";});
+    text.style("display", function(d) {
+                    return (key0||hasConnections(d))&&vis_by_type(d.type)&&vis_by_node_score(d.score)?"inline":"none";});
+                    
+                    if (highlight_node !== null)
+                    {
+                        if ((key0||hasConnections(highlight_node))&&vis_by_type(highlight_node.type)&&vis_by_node_score(highlight_node.score)) { 
+                        if (focus_node!==null) set_focus(focus_node);
+                        set_highlight(highlight_node);
+                        }
+                        else {exit_highlight();}
+                    }
+
+    }	
+    }
+ 
+// });  // original d3.json ends here
+
+function vis_by_type(type)
+{
+	switch (type) {
+	  case "circle": return keyc;
+	  case "square": return keys;
+	  case "triangle-up": return keyt;
+	  case "diamond": return keyr;
+	  case "cross": return keyx;
+	  case "triangle-down": return keyd;
+	  default: return true;
+}
+}
+function vis_by_node_score(score)
+{
+	if (isNumber(score))
+	{
+	if (score>=0.666) return keyh;
+	else if (score>=0.333) return keym;
+	else if (score>=0) return keyl;
+	}
+	return true;
+}
+
+function vis_by_link_score(score)
+{
+	if (isNumber(score))
+	{
+	if (score>=0.666) return key3;
+	else if (score>=0.333) return key2;
+	else if (score>=0) return key1;
+}
+	return true;
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}	
+
+
+</script>
+
+
+  
+
+
+
+    
+
+      
+
+
+
+  </body>
+</html>

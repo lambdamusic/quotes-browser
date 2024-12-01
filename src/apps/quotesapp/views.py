@@ -216,7 +216,7 @@ def tags_all(request,):
 	format = request.GET.get('format', 'html')
 
 	nodes, links, tags = [], [], []
-	MIN_TAGS_OCCURRENCE = 1  # TODO in PROD it's 2
+	MIN_TAGS_OCCURRENCE = 2  # NOTE 
 	
 	if request.user.is_superuser:
 		admin_change_url = True
