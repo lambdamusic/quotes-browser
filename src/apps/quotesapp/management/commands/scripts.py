@@ -13,6 +13,10 @@ from settings import BLOGS_ROOT
 # SCRIPTS 
 # 
 # command containing multiple little fixes 
+
+#
+#
+#   TODO 2024-12-01: merge with main quote_helper 
 #######################
 
 

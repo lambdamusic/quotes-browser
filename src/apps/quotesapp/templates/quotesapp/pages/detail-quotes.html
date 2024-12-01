@@ -61,8 +61,13 @@
 
             <br />
             <footer class="blockquote-footer">Words taken from <cite title="{{source}}">
-              {% if source_url %}<a href="{{source_url}}" class="-underline -text-muted" target="_blank">
-                {% else %}<a class="-underline -text-muted">{% endif %}{{source}}</a></cite></footer>
+
+              <a href="{% url 'quotesapp:source' quotesource %}">{{source}}</a>&nbsp;				
+							{% if source_url %}<a href="{{source_url}}" class="text-muted" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true" style="color: #cbcbcb; font-size: 80%;"></span></a>
+							{% endif %}
+
+              <!-- {% if source_url %}<a href="{{source_url}}" class="-underline -text-muted" target="_blank"> -->
+                <!-- {% else %}<a class="-underline -text-muted">{% endif %}{{source}}</a></cite></footer> -->
       
       
             </blockquote>

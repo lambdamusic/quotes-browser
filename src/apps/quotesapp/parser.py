@@ -18,7 +18,7 @@ from settings import STATICFILES_DIRS, QUOTES_SOURCE_DIR
 
 
 
-def read_all_files_data():
+def read_all_files_data(verbose=False, strict=True):
 	"""
 	Reads MD files
 
@@ -32,7 +32,6 @@ def read_all_files_data():
 	"""
 	counter1, counter2, counter3 = 0, 0, 0
 	files_data = []
-	VERBOSE = True # debugging only
  
 	for filename in os.listdir(QUOTES_SOURCE_DIR):
 		counter1 +=1
@@ -40,36 +39,51 @@ def read_all_files_data():
 
 			counter2 +=1
 
-			results = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename, VERBOSE)
+			results = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename, verbose=False)
 
 			for out in results:
-				quote =  {}
-				# TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = r
-				if out['TITLE']:
 
-					quote['filename'] = filename
-					quote['title'] = out['TITLE']
-					quote['order'] = out['ORDER']
-					quote['source'] = out['SOURCE']
-					quote['source_url'] = out['SOURCE_URL']
-					quote['date']= out['CREATED']
-					quote['modified']= out['MODIFIED']
-					quote['review']= out['REVIEW']
-					quote['tags'] = out['TAGS']
-					# quote['markdown'] = out['PURE_MARKDOWN'] # not needed for index page
-
-					if out['SOURCE']:
+				if strict:
+					if out['TITLE'] and out['SOURCE']:
+						quote = build_single_quote_dict(out, filename)
 						counter3 +=1
 						files_data += [quote]
+				else:
+					quote = build_single_quote_dict(out, filename)
+					counter3 +=1
+					files_data += [quote]
 
 	# finally
 	files_data = sorted(files_data, key= lambda x: x['source'])
 	printDebug(f"""\n# Files read: {counter1}\n# Files parsed: {counter2}\n# Quotes found: {counter3}\n""", "bold")
 
-	printDebug(f"Final results size: {len(files_data)} \n {[(x['title'], x['order']) for x in files_data]}")
+	if verbose: printDebug(f"Final results size: {len(files_data)} \n {[(x['title'], x['QUOTEINDEX']) for x in files_data]}")
 
 
 	return(files_data)
+
+
+
+def build_single_quote_dict(raw_quote_dict, filename):
+	"""Generate standard dict representation for a single quote
+	This is then consumed by views and templates"""
+
+	quote = {}
+	out = raw_quote_dict
+
+	quote['filename'] = filename
+	quote['title'] = out['TITLE']
+	quote['quoteindex'] = out['QUOTEINDEX']
+	quote['quotesource'] = f'{filename.replace(".md", "")}' 
+	quote['source'] = out['SOURCE']
+	quote['source_url'] = out['SOURCE_URL']
+	quote['date']= out['CREATED']
+	quote['modified']= out['MODIFIED']
+	quote['review']= out['REVIEW']
+	quote['tags'] = out['TAGS']
+	quote['markdown'] = out['PURE_MARKDOWN'] # not needed for index page
+
+	return quote
 
 
 
@@ -110,7 +124,6 @@ def parse_markdown(full_file_path, verbose=False):
 		# print(lines[1], lines[2])
 		# check top of file for header markup
 		if "template: quote-multi.html" in lines[1] or "template: quote-multi.html" in lines[2]:
-			print("multi")
 			return _parse_markdown_multi(lines, full_file_path, verbose=verbose)
 		elif "template: quote.html" in lines[1] or "template: quote.html" in lines[2]:
 			return _parse_markdown_single(lines, full_file_path, verbose=verbose)		
@@ -190,7 +203,7 @@ review: false
 			MODIFIED = MODIFIED.replace(tzinfo=datetime.timezone.utc).date()
 	
 	out['TITLE'] = TITLE
-	out['ORDER'] = 1 # default
+	out['QUOTEINDEX'] = 1 # default
 	out['SOURCE'] = SOURCE
 	out['SOURCE_URL'] = SOURCE_URL
 	out['CREATED'] = DATE
@@ -236,7 +249,7 @@ review: false
 
 	if verbose: printDebug("...quote template: MULTI")
 
-	text_begins_flag = tag_flag = ORDER = 0
+	text_begins_flag = tag_flag = QUOTEINDEX = 0
 	TITLE, SOURCE, SOURCE_URL, PURE_MARKDOWN = "", "", "", ""
 	REVIEW = False
 	DATE, MODIFIED = None, None
@@ -283,10 +296,10 @@ review: false
 				if TITLE and PURE_MARKDOWN:
 					# printDebug("Appending: line 263")
 					out = {}
-					ORDER += 1
+					QUOTEINDEX += 1
 					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					out['TITLE'] = TITLE
-					out['ORDER'] = ORDER
+					out['QUOTEINDEX'] = QUOTEINDEX
 					out['SOURCE'] = SOURCE
 					out['SOURCE_URL'] = SOURCE_URL
 					out['CREATED'] = DATE
@@ -305,10 +318,10 @@ review: false
 					# printDebug("Appending: line 263")
 					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					out = {}
-					ORDER += 1
+					QUOTEINDEX += 1
 					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 					out['TITLE'] = TITLE
-					out['ORDER'] = ORDER
+					out['QUOTEINDEX'] = QUOTEINDEX
 					out['SOURCE'] = SOURCE
 					out['SOURCE_URL'] = SOURCE_URL
 					out['CREATED'] = DATE
@@ -333,10 +346,10 @@ review: false
 		# printDebug("Appending: line 280")
 		# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 		out = {}
-		ORDER += 1
+		QUOTEINDEX += 1
 		# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 		out['TITLE'] = TITLE
-		out['ORDER'] = ORDER
+		out['QUOTEINDEX'] = QUOTEINDEX
 		out['SOURCE'] = SOURCE
 		out['SOURCE_URL'] = SOURCE_URL
 		out['CREATED'] = DATE
@@ -346,6 +359,6 @@ review: false
 		out['PURE_MARKDOWN'] = PURE_MARKDOWN
 		results.append(out)
 
-	printDebug(f"Results size: {len(results)} \n {[x['TITLE'] for x in results]}")
+	if verbose: printDebug(f"Results size: {len(results)} \n {[x['TITLE'] for x in results]}")
 	return results
 	

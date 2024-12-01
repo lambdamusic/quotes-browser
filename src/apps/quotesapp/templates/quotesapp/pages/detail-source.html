@@ -1,0 +1,121 @@
+{% extends "quotesapp/components/base.html" %}
+{% load extrafilters %}
+{% load static %}
+
+
+{% block pagetitle %}
+  <title>Source | quotes.michelepasin.org</title>
+{% endblock pagetitle %}
+
+{% block navbar %}
+
+    {% with thispage="source" %}
+
+    {% include "quotesapp/components/default-navbar.html" %}
+
+    {% endwith %}
+
+{% endblock navbar %}
+
+
+{% block bodycontent %}
+
+  <div class="page-header">
+    Source
+
+	{% if admin_change_url %}
+	&nbsp;<a href="vscode://file/{{quote_source_file}}" style="background: yellow; font-style: 20%;">Edit in VSCode</a>&nbsp;
+	{% endif %}
+
+  </div>
+
+  <div class="container">
+
+
+	
+
+		<div class="row">
+
+			<div class="col-sm-7 col-md-12 text-left">
+				<p style="color: #e8e5e5; font-size: 800%; ">
+				{{return_items.0.source}}
+				
+				{% if return_items.0.source_url %}<span style="color: #e8e5e5; font-size: 20%; "><a href="{{return_items.0.source_url}}" class="-underline text-muted" target="_blank">{{return_items.0.source_url}}{% endif %}</a></span>
+			</p>
+		  
+			</div>
+
+		</div>
+
+		<div class="row" style="margin-top: 30px;">
+
+
+			<div class="col-md-8" style="margin-top: 50px;">
+
+				<p class="lead margin50Bottom " style="color: rgb(186, 184, 184);" >In total we have {{tot_quotes}} quote{{ tot_quotes|pluralize }} from this source:</p>
+
+				{% for obj in return_items %}
+				
+				<fieldset class="border p-2">
+					<legend class="w-auto"><small>
+						<a style="-font-size: 120%;" href="{% url 'quotesapp:quotes' obj.quotesource obj.quoteindex %}"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;{{obj.title}}</a>
+						</small>
+					</legend>
+
+					<blockquote class="-quote-block">
+						<p>{{obj.quote_text|safe}}</p>	
+						</blockquote>
+
+					{% for tag2 in obj.tags %}
+					{% ifequal tag tag2 %}
+					<span class="text-muted" style="font-weight: bold;">#{{tag2}}</span>&nbsp;
+					{% else %}
+					<a class="text-muted" href="{% url 'quotesapp:tags' %}?tag={{tag2}}">#{{tag2}}</a>&nbsp;
+					{% endifequal %}
+					{% endfor %}
+
+					
+					</fieldset>
+	
+				{% endfor %}
+
+
+			</div>
+
+
+
+
+		</div>
+
+	
+	<!-- end of row -->
+
+
+
+
+
+    <div class="row" style="margin-top: 60px;">
+    &nbsp;
+    </div> 
+    {% comment %} second row ends {% endcomment %}
+
+
+
+  </div> <!-- /container -->
+
+
+{% endblock bodycontent %}
+
+
+
+
+{% block extra_js %}
+
+
+  {% comment %} JS for D3 Graph {% endcomment %}
+
+   {% include 'quotesapp/components/snippet_graph.html' %}
+
+  
+
+{% endblock %}

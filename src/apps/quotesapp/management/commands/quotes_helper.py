@@ -15,8 +15,8 @@ import os
 import datetime
 from django.utils import timezone
 
-
-from quotesapp.views_quotes import count_tags, read_all_files_data, QUOTES_SOURCE_DIR
+from libs.myutils.myutils import slugify
+from quotesapp.views import count_tags, read_all_files_data, QUOTES_SOURCE_DIR
 
 # take the path used by webapp / override here is needed for testing purposes
 QUOTES_PATH = QUOTES_SOURCE_DIR
@@ -47,6 +47,7 @@ class Command(BaseCommand):
 	def handle(self, *args, **options):
 		
 		verbose = options['verbose']
+		LOCK = True
 
 		print(f"==> QUOTES_PATH: {QUOTES_PATH}")
 
@@ -69,7 +70,7 @@ class Command(BaseCommand):
 			# update all files
 			for f in os.listdir(QUOTES_PATH):
 				if f.endswith(".md"):
-					do_remove_tags(f, badtags, False, verbose)
+					if not LOCK: do_remove_tags(f, badtags, False, verbose)
 
 
 		#################
@@ -86,8 +87,60 @@ class Command(BaseCommand):
 			# update all files
 			for f in os.listdir(QUOTES_PATH):
 				if f.endswith(".md"):
-					do_remove_tags(f, badtags, False, verbose)
+					if not LOCK: do_remove_tags(f, badtags, False, verbose)
 
+
+
+		#################
+		# SCRIPT 3: merge files that come from same source
+		# NOTE This skips anything that has no title or no source!!!!!
+		#################
+		if 3 in options['script_number']:
+			print("==> SCRIPT 3: merge files")
+
+			quotes_from_files_data = read_all_files_data()
+			# group by source
+			data_by_source = {}
+			for q in quotes_from_files_data:
+				if q['source'] not in data_by_source:
+					data_by_source[q['source']] = [q]
+				else:
+					if q['quoteindex'] == 1: # increment automatically
+						q['quoteindex'] = len(data_by_source[q['source']]) + 1
+					data_by_source[q['source']].append(q)
+
+			# rebuild files
+			output_path = "/Users/michele.pasin/tmp/quotes-reformat/"
+
+			for x in data_by_source:
+				q1 = data_by_source[x][0]
+				date = q1['date']
+				filename = f'{date}-{"-".join([x for x in slugify(x).split("-")[:10]])}.md' 
+		
+				print(filename, ">>quotes:", len(data_by_source[x]), [y['quoteindex'] for y in data_by_source[x]])
+
+				header = f"""---
+template: quote-multi.html
+source: "{q1['source']}"
+url: {q1['source_url']}
+date: {q1['date']}
+modified: {q1['modified'] or q1['date']}
+review: {q1['review']}
+---					
+					"""
+				# build header from first quotes, as default
+				with open(output_path+filename, "w") as f:
+					f.write(header)
+
+					for q in data_by_source[x]: # for each quote in source
+						f.write(f"\n\n# {q['title']}")
+						f.write(f"""\n{" ".join(["#"+t for t in q['tags']])}""")
+						if q['markdown'].startswith("\n"):
+							q['markdown'] = q['markdown'][1:]
+						f.write(f"\n{q['markdown']}")
+
+
+			print("---\nTotal unique sources: ", len(data_by_source))
 
 
 		#################

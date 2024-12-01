@@ -29,11 +29,11 @@ APP = "quotesapp"
 # ===========
 
 
-def home(request):
-	"""
-	just an index of what's available  in /static for this app
-	"""
-	return redirect('/projects')
+# def home(request):
+# 	"""
+# 	just an index of what's available  in /static for this app
+# 	"""
+# 	return redirect('/projects')
 
 
 
@@ -47,10 +47,158 @@ def about(request):
 
 
 # ===========
-# views with single landing page
+# views for quotes
 # ===========
 
 
+def quote_detail(request, source_slug, quoteindex=1):
+	"""
+	Single quote view
+	"""
+	context = {}
+	printDebug(f"VIEW ARGS: source_slug={source_slug}, quoteindex={quoteindex}")
+
+	templatee = "detail-quotes.html"
+
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
+
+	quote_source_file = QUOTES_SOURCE_DIR+source_slug+".md"
+	data = parse_markdown(quote_source_file)
+
+	# get single quote using index
+	try:
+		this_quote = data[int(quoteindex)-1] 
+	except:
+		raise Http404
+	
+	this_quote = build_single_quote_dict(this_quote, source_slug)
+	this_quote['quote_text'] = markdown.markdown(this_quote['markdown'], extensions=['fenced_code', 'codehilite'])
+	
+	print(f"Showing: \n\t=> {quote_source_file}\n")
+
+	# get all MD contents from local directory for Tags Network
+	files_data = read_all_files_data()
+	random_tag = random.choice(this_quote['tags'])
+	nodes, links = generate_graph_for_topic(random_tag, files_data)
+
+	# TODO pass object instead of fields
+	context = {
+		'quote_text': this_quote['quote_text'],
+		'quote_source_file': quote_source_file,
+		'title': this_quote['title'],
+		'tags': this_quote['tags'],
+		'quoteindex': this_quote['quoteindex'],
+		'quotesource': this_quote['quotesource'],
+		'source': this_quote['source'],
+		'source_url': this_quote['source_url'],
+		'created': this_quote['date'],
+		'modified': this_quote['modified'],
+		'admin_change_url': admin_change_url,
+		'nodes': nodes,
+		'links': links,
+	}
+	
+	return render(request, APP + '/pages/' + templatee, context)
+
+
+
+
+def source_detail(request, source_slug):
+	"""
+	All quotes for a single source
+	"""
+	context = {}
+	printDebug(f"VIEW ARGS: source_slug={source_slug}")
+
+	templatee = "detail-source.html"
+
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
+
+	quote_source_file = QUOTES_SOURCE_DIR+source_slug+".md"
+	data = parse_markdown(quote_source_file)
+	tot_quotes = len(data)
+
+	data_encoded = []
+	# add rendered md for each quote included
+	for el in data:
+		quote = build_single_quote_dict(el, source_slug)
+		quote['quote_text'] = markdown.markdown(quote['markdown'], extensions=['fenced_code', 'codehilite'])
+		data_encoded.append(quote)
+
+	# print(data_encoded)
+
+	print(f"Showing: \n\t=> {quote_source_file}\n")
+
+	# get all MD contents from local directory for Tags Network
+	files_data = read_all_files_data()
+	random_tag = random.choice(data[0]['TAGS']) # TODO get tags from all quotes in this set, not just first one
+	nodes, links = generate_graph_for_topic(random_tag, files_data)
+
+	context = {
+		'return_items': data_encoded,
+		'admin_change_url': admin_change_url,
+		'quote_source_file': quote_source_file,
+		'urlname': "source",
+		'tot_quotes': tot_quotes,
+	}
+
+	return render(request, APP + '/pages/' + templatee, context)
+
+
+
+
+
+def qa_quotes(request,):
+	"""
+	2024-11-28: Test view for development purposes
+	"""
+	context = {}
+
+	query = request.GET.get('query', 'date')
+	tag = request.GET.get('tag', None)
+	format = request.GET.get('format', 'html')
+
+	nodes, links, tags = [], [], []
+	MIN_TAGS_OCCURRENCE = 1  # TODO in PROD it's 2
+	
+	if request.user.is_superuser:
+		admin_change_url = True
+	else:
+		admin_change_url = False
+
+	templatee = "quotes-qa.html"
+
+	# get all MD contents from local directory
+	files_data = read_all_files_data()
+	tot_quotes = len(files_data)
+	tot_sources = len(list(set([f['source'] for f in files_data])))
+
+	# printDebug(files_data)
+
+	context = {
+		'return_items': files_data,
+		'admin_change_url': admin_change_url,
+		'urlname': "quotes",
+		'query': query,
+		'tag': tag,
+		'tot_quotes': tot_quotes,
+		'tot_sources': tot_sources,
+	}
+	
+	return render(request, APP + '/pages/' + templatee, context)
+
+
+
+
+# ===========
+# views for landing page
+# ===========
 
 
 def tags_all(request,):
@@ -108,93 +256,6 @@ def tags_all(request,):
 	return render(request, APP + '/pages/' + templatee, context)
 
 
-
-
-def quote_detail(request, slug, orderno=None):
-	"""
-	TODO
-	"""
-	context = {}
-	printDebug(f"VIEW: order={orderno}")
-
-	templatee = "detail-quotes.html"
-
-	if request.user.is_superuser:
-		admin_change_url = True
-	else:
-		admin_change_url = False
-
-	quote_source_file = QUOTES_SOURCE_DIR+slug+".md"
-	data = parse_markdown(quote_source_file)
-	this_quote = data[0] # TEMP TILL WE FIX ORDER INFO
-	# TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN = data[0]
-	html_quote_text = markdown.markdown(this_quote['PURE_MARKDOWN'], extensions=['fenced_code', 'codehilite'])
-
-	print(f"Showing: \n\t=> {quote_source_file}\n")
-
-	# get all MD contents from local directory for Tags Network
-	files_data = read_all_files_data()
-	random_tag = random.choice(this_quote['TAGS'])
-	nodes, links = generate_graph_for_topic(random_tag, files_data)
-
-	context = {
-		'quote_text': html_quote_text,
-		'quote_source_file': quote_source_file,
-		'title': this_quote['TITLE'],
-		'tags': this_quote['TAGS'],
-		'source': this_quote['SOURCE'],
-		'source_url': this_quote['SOURCE_URL'],
-		'created': this_quote['CREATED'],
-		'modified': this_quote['MODIFIED'],
-		'admin_change_url': admin_change_url,
-		'nodes': nodes,
-		'links': links,
-	}
-
-	
-	return render(request, APP + '/pages/' + templatee, context)
-
-
-
-
-def qa_quotes(request,):
-	"""
-	2024-11-28: Test view for development purposes
-	"""
-	context = {}
-
-	query = request.GET.get('query', 'date')
-	tag = request.GET.get('tag', None)
-	format = request.GET.get('format', 'html')
-
-	nodes, links, tags = [], [], []
-	MIN_TAGS_OCCURRENCE = 1  # TODO in PROD it's 2
-	
-	if request.user.is_superuser:
-		admin_change_url = True
-	else:
-		admin_change_url = False
-
-	templatee = "quotes-qa.html"
-
-	# get all MD contents from local directory
-	files_data = read_all_files_data()
-	tot_quotes = len(files_data)
-	tot_sources = len(list(set([f['source'] for f in files_data])))
-
-	# printDebug(files_data)
-
-	context = {
-		'return_items': files_data,
-		'admin_change_url': admin_change_url,
-		'urlname': "quotes",
-		'query': query,
-		'tag': tag,
-		'tot_quotes': tot_quotes,
-		'tot_sources': tot_sources,
-	}
-	
-	return render(request, APP + '/pages/' + templatee, context)
 
 
 

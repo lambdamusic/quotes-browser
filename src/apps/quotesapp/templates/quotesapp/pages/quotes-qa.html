@@ -52,16 +52,16 @@
 					{% ifchanged obj.source %}  
 					{% if not forloop.first %}</fieldset><br/><br/>{% endif %}
 					<fieldset class="border p-2">
-						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank">{{obj.source}}
-							&nbsp;<small><span class="glyphicon glyphicon-new-window" aria-hidden="true" style="color: #cbcbcb;"></span></small></a>
-							{% else %}<span class="text-muted" >{{obj.source}}</span>{% endif %}</legend>
-
+						<legend class="w-auto"><small><span class="glyphicon glyphicon-book" aria-hidden="true" style="color: #cbcbcb;"></span></small>&nbsp;<a href="{% url 'quotesapp:source' obj.quotesource %}" class="text-muted">{{obj.source}}</a>&nbsp;				
+							{% if obj.source_url %}<a href="{{obj.source_url}}" class="text-muted" target="_blank"><small><span class="glyphicon glyphicon-link" aria-hidden="true" style="color: #cbcbcb; font-size: 80%;"></span></small></a>
+							{% endif %}</legend>
+							
 					{% endifchanged %}
 						
 
 					<li class="quotes-list">
 						<!-- <a style="font-size: 120%;" href="/quotes/{{obj.filename}}">{{obj.title}}</a> -->
-						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.filename %}"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;{{obj.title}}</a>
+						<a style="font-size: 120%;" href="{% url 'quotesapp:quotes' obj.quotesource obj.quoteindex %}"><small><span class="glyphicon glyphicon-pushpin" aria-hidden="true" -style="color: #cbcbcb;"></span></small>&nbsp;{{obj.title}}</a>
 						<br />
 
 						{% for tag2 in obj.tags %}
