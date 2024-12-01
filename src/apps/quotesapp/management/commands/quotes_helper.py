@@ -92,7 +92,7 @@ class Command(BaseCommand):
 
 
 		#################
-		# SCRIPT 3: merge files that come from same source
+		# SCRIPT 3: merge files that come from same source - 2024-12-01
 		# NOTE This skips anything that has no title or no source!!!!!
 		#################
 		if 3 in options['script_number']:
@@ -126,18 +126,18 @@ url: {q1['source_url']}
 date: {q1['date']}
 modified: {q1['modified'] or q1['date']}
 review: {q1['review']}
----					
-					"""
+---"""
 				# build header from first quotes, as default
-				with open(output_path+filename, "w") as f:
-					f.write(header)
+				if False: # LOCK
+					with open(output_path+filename, "w") as f:
+						f.write(header)
 
-					for q in data_by_source[x]: # for each quote in source
-						f.write(f"\n\n# {q['title']}")
-						f.write(f"""\n{" ".join(["#"+t for t in q['tags']])}""")
-						if q['markdown'].startswith("\n"):
-							q['markdown'] = q['markdown'][1:]
-						f.write(f"\n{q['markdown']}")
+						for q in data_by_source[x]: # for each quote in source
+							f.write(f"\n\n# {q['title']}")
+							f.write(f"""\n{" ".join(["#"+t for t in q['tags']])}""")
+							if q['markdown'].startswith("\n"):
+								q['markdown'] = q['markdown'][1:]
+							f.write(f"\n{q['markdown']}")
 
 
 			print("---\nTotal unique sources: ", len(data_by_source))

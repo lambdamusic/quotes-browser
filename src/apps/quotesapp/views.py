@@ -81,8 +81,12 @@ def quote_detail(request, source_slug, quoteindex=1):
 
 	# get all MD contents from local directory for Tags Network
 	files_data = read_all_files_data()
-	random_tag = random.choice(this_quote['tags'])
-	nodes, links = generate_graph_for_topic(random_tag, files_data)
+
+	if len(this_quote['tags']) > 1:
+		random_tag = random.choice(this_quote['tags'])
+		nodes, links = generate_graph_for_topic(random_tag, files_data)
+	else:
+		nodes, links = [], []
 
 	# TODO pass object instead of fields
 	context = {
@@ -137,8 +141,8 @@ def source_detail(request, source_slug):
 
 	# get all MD contents from local directory for Tags Network
 	files_data = read_all_files_data()
-	random_tag = random.choice(data[0]['TAGS']) # TODO get tags from all quotes in this set, not just first one
-	nodes, links = generate_graph_for_topic(random_tag, files_data)
+	# random_tag = random.choice(data[0]['TAGS']) # TODO get tags from all quotes in this set, not just first one
+	# nodes, links = generate_graph_for_topic(random_tag, files_data)
 
 	context = {
 		'return_items': data_encoded,

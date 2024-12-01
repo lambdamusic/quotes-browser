@@ -42,9 +42,9 @@ def read_all_files_data(verbose=False, strict=True):
 			results = parse_markdown(QUOTES_SOURCE_DIR+"/"+filename, verbose=False)
 
 			for out in results:
-
-				if strict:
-					if out['TITLE'] and out['SOURCE']:
+				if strict:	
+					if out['SOURCE']:
+						if not out['TITLE']: out['TITLE'] = "Untitled"
 						quote = build_single_quote_dict(out, filename)
 						counter3 +=1
 						files_data += [quote]
@@ -77,8 +77,8 @@ def build_single_quote_dict(raw_quote_dict, filename):
 	quote['quotesource'] = f'{filename.replace(".md", "")}' 
 	quote['source'] = out['SOURCE']
 	quote['source_url'] = out['SOURCE_URL']
-	quote['date']= out['CREATED']
-	quote['modified']= out['MODIFIED']
+	quote['date']= out['CREATED'] or ""
+	quote['modified']= out['MODIFIED'] or ""
 	quote['review']= out['REVIEW']
 	quote['tags'] = out['TAGS']
 	quote['markdown'] = out['PURE_MARKDOWN'] # not needed for index page
@@ -221,10 +221,10 @@ review: false
 
 
 def _parse_markdown_multi(lines, full_file_path, verbose=False): 
-	"""Parse the Obsidian markdown and return title and other metadata. 
+	"""Parse the notes markdown and return title and other metadata. 
 	For multi quote files 
 
-	2024-11-27 TODO TODO TODO
+	2024-11-27
 
 	EG 
 	```

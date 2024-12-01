@@ -1,13 +1,11 @@
 ---
 template: quote-multi.html
-title: "Is BI dead?"
 source: "Is BI dead?"
 url: https://benn.substack.com/p/is-bi-dead
 date: 2022-09-28
 review: false
-note: I added tags in both places to make it work..
 ---
-#dashboard #BI #visualization #story #text #game #character #interactive-fiction
+
 
 # Title of first quote (one of two)
 #dashboard #BI #visualization #story #text #game #character #interactive-fiction
