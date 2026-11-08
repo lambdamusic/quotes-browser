@@ -143,6 +143,15 @@ def random_other(quote, files_data):
     return random.choice(pool or files_data)
 
 
+def random_url():
+    """a random quote's URL, for the top bar's Random link (picked per page,
+    so per site dump on the static mirror)"""
+    from django.urls import reverse
+    from .parser import read_all_files_data
+    q = random.choice(read_all_files_data())
+    return reverse('quotesapp:quotes', args=[q['quotesource'], q['quoteindex']])
+
+
 # ===========
 # tag and source helpers
 # ===========

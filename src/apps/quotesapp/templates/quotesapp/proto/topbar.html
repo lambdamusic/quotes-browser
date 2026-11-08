@@ -9,6 +9,7 @@
   <nav class="topbar-nav" aria-label="Site navigation">
     <a href="{% url 'quotesapp:tags' %}" {% if section == "tags" %}class="is-current"{% endif %}>Tags</a>
     <a href="{% url 'quotesapp:qa_quotes' %}" {% if section == "qa_quotes" or section == "source" %}class="is-current"{% endif %}>Sources</a>
+    <a href="{{ random_url }}" title="A random quote">Random</a>
     <a href="{% url 'quotesapp:about' %}" {% if section == "about" %}class="is-current"{% endif %}>About</a>
     <a class="topbar-out" href="https://www.michelepasin.org">michelepasin.org &#8599;</a>
   </nav>
