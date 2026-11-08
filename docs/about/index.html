@@ -1,12 +1,7 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4B4FDV3TR"></script>
 <script>
@@ -16,308 +11,26 @@
 
   gtag('config', 'G-T4B4FDV3TR');
 </script>
-
-
-    
-    
-
-    <script src="../media/static/libs/d3-v3/d3.v3.min.js"></script>
-
-
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="author" content="Michele Pasin">
-  
-    <meta name="description" property="og:description" content=" Portfolio website of Michele Pasin - computer science ontology knowledge graph digital humanities knowledge engineering pilosophy livecoding algorithmic composition">
-  
-
-
+    <title>About | Quotes | Michele Pasin</title>
+    
+    
+    <meta name="description" content="About this commonplace book: passages Michele Pasin saved while reading books, papers and web pages since 2013, kept as plain markdown files.">
+    <link rel="canonical" href="https://quotes.michelepasin.org/about/">
+    
+    <meta property="og:site_name" content="Quotes · Michele Pasin">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="About this commonplace book: passages Michele Pasin saved while reading books, papers and web pages since 2013, kept as plain markdown files.">
+    <meta property="og:url" content="https://quotes.michelepasin.org/about/">
+    <meta name="twitter:card" content="summary">
+    
     <link rel="icon" href="../media/static/favicon.ico">
-
-	
-<title>About | quotes.michelepasin.org</title>
-
-
-    <!-- Bootstrap core CSS -->
-    
-    <!-- Bootswatch:  -->
-    <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
-    <link href="../media/static/libs/bootswatch3.2/simplex/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../media/static/libs/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../media/static/libs/bootstrap-3.3.7-dist/css/sticky-footer-navbar.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<style type="text/css">
-
-    .tooltip-inner {
-        max-width: 200px;
-        /* If max-width does not work, try using width instead */
-        width: 200px; 
-    }
-    .lead-plus {font-size: 26.5px;}
-    .label-dark {background: #2c3e50; color: white; padding: 1px;}
-    .margin50 {margin-top: 50px; margin-bottom: 50px;}
-    .marginb100 {margin-bottom: 100px;}
-
-    .breadcrumbs {margin-top: 80px;}
-    .namespaces {background: #ced2d6; width: 100%;}
-    .footer {background-color: #3e3f3a;}
-    .footer a {color: #cac0bf;}
-
-    .margin50Top {margin-top: 50px;}
-    .margin20Top {margin-top: 20px;}
-    .margin50Bottom { margin-bottom: 50px;}
-    .margin20Bottom { margin-bottom: 20px;}
-
-    /*so that the d3plus tooltip panel doesnt cover the top banner*/
-    .navbar {z-index: 3000;}
-
-
-    .navbar-alpha {
-        font-size: 65%;
-        font-style: italic;
-        font-weight: bold;
-        color: darkgoldenrod;
-    }
-
-
-    .btn-xxs {
-    padding: 1px 4px;
-    font-size: 10px;
-    line-height: 1.2;
-    border-radius: 2px;
-    }
-
-
-    .code-example {
-        overflow: auto;
-        height: 400px;
-    }
-
-
-    #side_title a {
-        color: blue;
-        text-decoration: underline;
-
-    }
-    .text-dark {
-        color: #5d5c5c;
-        
-    }
-
-
-    .paragraph_embed {
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
-
-
-    a.project-title {
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a.project-title:hover {
-      background: indianred;
-      color: white;
-    }
-
-    a.project-active {
-      background: #d87064;
-      color: white;
-      padding: 2px;
-    }
-
-    .keyword {
-      font-style: italic;
-      color: grey;
-      text-decoration: none;
-      font-size: 12px;
-    }
-    .keyword-sm {
-      font-style: italic;
-      color: grey;
-      text-decoration: none;
-      font-size: 11px;
-    }
-
-    a.paper-active {
-      background: #d9230f;
-      color: white;
-    }
-
-    a.ext_link {
-      color: darkgrey;
-    }
-
-    .text-black {
-      color: black;
-    }
-
-     /* modal google search */ 
-
-    .modal .modal-dialog
-    {
-        width: 800px;
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .modal-open .modal, a:focus
-    {
-        outline: none !important;
-    }
-
-
-    
-
-
-    h2.blogtitle {
-      color: black;
-      margin-top: 40px;
-    }
-
-
-    .blogentry {
-      font-size: 1.3em;
-      margin-top: 50px;
-      margin-bottom: 120px;
-      color: #444;
-      /* font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;  */
-    }
-
-    .blogentry p.first-paragraph {
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .blogentry p {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    .blogentry div {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .blogentry blockquote:first-of-type {
-      font-size: 20px;
-      font-weight: normal;
-      background: #f9f9f9;
-      border-left: 10px solid #ccc;
-      margin: 1.5em 10px;
-      padding: 0.7em 10px;
-    }
-
-
-    .blogentry blockquote {
-      font-size: 16px;
-      background: #f9f9f9;
-      margin: 10px 30px 40px 10px; /* top right bottom left */
-      padding: 25px;
-    }
-
-
-    .blogentry  blockquote p:first-child, blockquote ul:first-child, blockquote ol:first-child {
-      margin-top: 0;
-    }
-
-
-    .blogentry pre {
-      margin-bottom: 40px;
-    }
-
-    .blogentry h1,  
-    .blogentry h2,  
-    .blogentry h3,  
-    .blogentry h4  {
-      margin-top: 50px;
-      margin-bottom: 30px;
-      font-weight: bold;
-      color: #000;
-    }
-
-    .blogentry img {
-      max-width: 80%;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .blogentry iframe {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .blogentry ul {
-      margin-bottom: 20px;
-    }
-
-    .blogentry li {
-      padding: 5px;
-    }
-
-
-    .quote-title {
-      font-size: 2.0em;
-      font-weight: bold;
-      color: rgb(0, 0, 0);
-    }
-
-    .quote-block {
-      font-family: sans-serif, Helvetica;
-      font-size: 25px;
-      border-left: 5px solid #9bccea;  //  /* #ffe700 2024-11-27 changed */ 
-      background: #f9f9f9;
-      margin: 0px 30px 40px 10px;
-      padding: 25px;
-    }
-
-    
-    .quote-block p::first-letter {
-      font-size: 150%;
-      color: rgb(62, 61, 61);
-    }
-
-    li.quotes-list {
-      list-style-type: none;
-      margin-bottom: 10px;
-    }
-
-
-
-    fieldset {
-      border: 1px groove #ddd !important;
-      padding: 0 1.4em 1.4em 1.4em !important;
-      margin: 0 0 1.5em 0 !important;
-      -webkit-box-shadow:  0px 0px 0px 0px #000;
-              box-shadow:  0px 0px 0px 0px #000;
-    }
-  
-    legend {
-      width:inherit; /* Or auto */
-      padding:0 10px; /* To give a bit of padding on the left and right */
-      border-bottom:none;
-    }
-
-</style>
-
-
-<style>
+    <link href="../media/static/css/parerga.css" rel="stylesheet">
+    <link href="../media/static/css/quotes.css" rel="stylesheet">
+    <style>
 
 <!-- Autogenerated with pygmentize => https://python-markdown.github.io/extensions/code_hilite/#step-2-add-css-classes -->
 
@@ -398,215 +111,46 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 
 </style>
-
-
-
-
-
-
-
+    
   </head>
 
-  <body>
+  <body class="">
 
-
-
-
-
-
-
-
-
-
-<!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="../index.html"><span style="color: #1A8DBB;">&nbsp;quotes.</span>michelepasin<sup style="color: rgb(22, 21, 21);">&nbsp;.org</sup></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-
-        <li >
-          <a href="../tags/index.html">Tags</a></li>
-
-        
-        
-           
-
-        <li 
-        class="active"
-          ><a href="index.html">About</a></li>
-          
-          
-
-
-      </ul>
-    </div><!--/.nav-collapse -->
-
-  </div>
-</nav>
-
-
-
-<!-- Search Modal -->
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Search michelepasin.org</h4>
-          </div>
-          <div class="modal-body">
-
-
-            <script>
-              (function ()
-              {
-                  var cx = 'c23e79d025688b327:nr0bhziz1xo';
-                  var gcse = document.createElement('script');
-                  gcse.type = 'text/javascript';
-                  gcse.async = true;
-                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                      '//cse.google.com/cse.js?cx=' + cx;
-                  var s = document.getElementsByTagName('script')[0];
-                  s.parentNode.insertBefore(gcse, s);
-              })();
-          </script>
-          <gcse:search></gcse:search>
-          
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Begin page content -->
-    <div class="container">
-
-
-	
-
-<div class="page-header">
-  About
-</div>
-
-<div class="container">
-
-
-
-
-
-  <div class="row" style="-margin-top: 40px;">
-
-
-    <div class="col-md-6 lead" >
-      See this <a target="_blank" href="https://www.michelepasin.org/blog/2022/07/28/introducing-quotes-section/index.html">blog post</a>.
-      </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-  <div class="row" style="margin-top: 40px;">
-
-    &nbsp;
-
-  </div>
-
-
-</div> <!-- /container -->
-
-
-
-
-
-	</div>
-
-
-  
-
-
-
-  
-
-
-
-
-  <footer class="footer">
-    <div class="container">
     
-      <p class="text-muted">Find me also on: &nbsp;
       
 
-  <a href="http://kcl.academia.edu/MichelePasin" target="_blank">Academia</a> | 
-  <a href="https://github.com/lambdamusic" target="_blank">GitHub</a> | 
-  <a href="https://scholar.google.com/citations?user=zj-99x0AAAAJ&hl=en" target="_blank">Google Scholar</a> | 
-  <a href="https://www.instagram.com/lambdamusic/" target="_blank">Instagram</a> |
-  <a href="http://www.linkedin.com/pub/michele-pasin/1/223/a0" target="_blank">LinkedIn</a> |
-  <a href="http://orcid.org/0000-0001-8909-7766" target="_blank">Orcid</a> |
-  <a href="http://www.slideshare.net/mpasin" target="_blank">SlideShare</a> |
-  <a href="https://soundcloud.com/magicrebirth" target="_blank">Soundcloud</a> |
-  <a href="http://stackoverflow.com/users/109304/magicrebirth" target="_blank">StackOverflow</a> |
-  <a href="http://twitter.com/#!/lambdaman" target="_blank">Twitter</a> |
-  <a href="https://vimeo.com/lambdamusic" target="_blank">Vimeo</a> | 
-  <a href="https://www.youtube.com/channel/UCanqSICbxzRNEZGMlu8qfyw" target="_blank">YouTube</a>
+<header class="topbar">
+  <a class="topbar-name" href="../index.html">Michele Pasin <span class="topbar-site">/ Quotes</span></a>
+  <nav class="topbar-nav" aria-label="Site navigation">
+    <a href="../tags/index.html" >Tags</a>
+    <a href="../quotes/index.html" >Sources</a>
+    <a href="../random/index.html" title="A random quote">Random</a>
+    <a href="index.html" class="is-current">About</a>
+    <a class="topbar-out" href="https://www.michelepasin.org">michelepasin.org &#8599;</a>
+  </nav>
+</header>
+
+    
+
+    <main class="site-main">
       
-      </p>
-    
-    </div>
-  </footer>
+  <header class="pagehead">
+    <p class="sectionlabel"><b>About</b> <span class="sep">/</span> this site</p>
+    <h1 class="pagetitle">About</h1>
+  </header>
+  <div class="blogentry">
+    <p>A commonplace book: passages I saved while reading books, papers and web pages, each kept with its source and a few tags.</p>
+    <p>The background is in <a href="https://www.michelepasin.org/blog/2022/07/28/introducing-quotes-section/index.html">this blog post</a>. The quotes are plain markdown files; the site is a small Django app mirrored to static HTML with wget, as described in <a href="https://www.michelepasin.org/blog/2021/10/29/django-wget-static-site/index.html">A static site generator using Django, Wget and Github Pages</a>.</p>
+    <p>Browse by <a href="../tags/index.html">tag</a> or by <a href="../quotes/index.html">source</a>, or go back to <a href="https://www.michelepasin.org">michelepasin.org</a>.</p>
+  </div>
 
+    </main>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../media/static/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../media/static/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../media/static/libs/bootstrap-3.3.7-dist/js/ie10-viewport-bug-workaround.js"></script>
-
-     <!-- Google site search --> 
-    <script async src="https://cse.google.com/cse.js?cx=c23e79d025688b327"></script>
-
-    
-
+    <footer class="site-foot">
+      <p class="sectionlabel"><b>Quotes</b> <span class="sep">/</span> part of <a href="https://www.michelepasin.org">michelepasin.org</a></p>
+      <p class="foot-legal">&copy; Michele Pasin. Quoted passages belong to their authors. Built with Django, mirrored as a static site.</p>
+    </footer>
 
     
-
-    
-
-      
-
-
-
   </body>
 </html>

@@ -1,0 +1,394 @@
+/* ==========================================================================
+   quotes.css - quotes.michelepasin.org
+   --------------------------------------------------------------------------
+   Loaded after parerga.css (copied from michelepasin.org) by
+   templates/quotesapp/components/base.html. Same tokens and type as the
+   main site; the frame is its "A · Top bar" layout.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Frame: reset, accent rule, top bar, content edge
+   -------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; border-top: 4px solid var(--accent); }
+
+body {
+  --edge: max(1.25rem, calc((100vw - 72rem) / 2));
+  --measure-wide: min(72rem, calc(100vw - 2.5rem));
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem 2rem;
+  padding: 1.1rem var(--edge) .9rem;
+  border-bottom: 1px solid var(--rule);
+}
+.topbar-name {
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.topbar-name:hover { color: var(--accent); }
+.topbar-site { color: var(--muted); }
+.topbar-nav { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1.4rem; }
+.topbar-nav a {
+  padding: 0 0 .2rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.topbar-nav a:hover { color: var(--accent); }
+.topbar-nav a.is-current { background: var(--accent); padding: 1px 5px; }
+.topbar-nav a.topbar-out { color: var(--muted); text-transform: none; letter-spacing: 0; font-size: .8rem; }
+.topbar-nav a.topbar-out:hover { color: var(--accent); }
+
+.site-main,
+.site-foot {
+  margin-left: var(--edge);
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+.site-main { padding-top: .25rem; }
+
+
+/* --------------------------------------------------------------------------
+   2. Page heads, shared bits
+   -------------------------------------------------------------------------- */
+
+.pagehead { margin: 0 0 calc(var(--step) * 1.5); }
+.pagehead .sectionlabel { margin-bottom: .4rem; }
+.pagetitle { margin: 0 0 .5rem; font-size: 2.25rem; line-height: 1.1; overflow-wrap: anywhere; }
+.pagetitle--source { font-size: 2rem; max-width: var(--measure); }
+.pagelede { margin: 0 0 .4rem; max-width: var(--measure); color: var(--body); }
+.pagelede--tags { font-size: .85rem; line-height: 1.8; color: var(--muted); }
+.pagelede--tags a { font-weight: 400; color: var(--muted); margin-right: .15rem; }
+.pagelede--tags a:hover { color: var(--accent); }
+
+.sep { color: var(--faint); padding: 0 .15rem; }
+
+a.qext { font-weight: 400; color: var(--muted); }
+a.qext:hover { color: var(--accent); }
+
+.qtags { margin: 0 0 var(--step); font-size: .85rem; line-height: 1.8; }
+.qtags a { font-weight: 400; color: var(--muted); margin-right: .45rem; white-space: nowrap; }
+.qtags a:hover { color: var(--accent); }
+
+.chip {
+  display: inline-block;
+  padding: .1rem .5rem;
+  border: 1px solid var(--rule);
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--link);
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.is-current, .chip.is-current:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.hub-more {
+  display: inline-block;
+  margin: .6rem 0 0;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Quote text and quote rows
+   -------------------------------------------------------------------------- */
+
+/* the quote itself: parerga's blockquote, with the red rule of .quote-block */
+blockquote.qtext,
+.qtext {
+  margin: 0 0 var(--step);
+  padding: 0 0 0 1.25rem;
+  border-left: 4px solid var(--accent);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  color: var(--body);
+  overflow-wrap: break-word;
+}
+.qtext p { margin: 0 0 1rem; }
+.qtext p:last-child { margin-bottom: 0; }
+.qtext a { font-weight: 400; text-decoration: underline; text-decoration-color: var(--faint); }
+
+.qrow { padding: .85rem 0; border-top: 1px solid var(--rule); max-width: var(--measure); }
+.qgroup + .qrow, .sectionlabel + .qrow { border-top: 0; padding-top: .25rem; }
+.qrow-title { margin: 0 0 .2rem; font-size: 1rem; line-height: 1.35; }
+.qrow-excerpt { margin: 0 0 .3rem; font-size: .92rem; line-height: 1.5; color: var(--body); }
+a.qrow-textlink { font-weight: 400; color: var(--body); }
+a.qrow-textlink:hover { color: var(--accent); }
+.qrow-meta { margin: 0; font-size: .75rem; line-height: 1.6; color: var(--muted); }
+.qrow-meta a.qrow-source {
+  margin-right: .5rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.qrow-meta a.qrow-source:hover { color: var(--accent); }
+.qrow-tag { margin-right: .3rem; white-space: nowrap; }
+.qrow-meta a.qrow-tag { font-weight: 400; color: var(--muted); }
+.qrow-meta a.qrow-tag.is-shared { color: var(--ink); }
+.qrow-meta a.qrow-tag:hover { color: var(--accent); }
+.qrow-meta b.qrow-tag { color: var(--ink); }
+
+/* source headings inside a tag page */
+.qgroup {
+  margin: calc(var(--step) * 1.5) 0 .25rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: 1.05rem;
+  max-width: var(--measure);
+}
+.qgroup:first-child { margin-top: 0; }
+.qgroup a { color: var(--ink); }
+.qgroup a:hover { color: var(--accent); }
+
+
+
+/* --------------------------------------------------------------------------
+   4. Homepage
+   -------------------------------------------------------------------------- */
+
+.hub-intro { max-width: var(--measure); margin: calc(var(--step) * 1.75) 0 calc(var(--step) * 1.5); }
+.hub-name { margin: 0 0 .5rem; font-size: 2.25rem; }
+.hub-lede { margin: 0; font-size: 1.15rem; line-height: 1.55; color: var(--body); }
+.hub-lede .hub-about { white-space: nowrap; font-size: .85rem; }
+
+.hub-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 0 3rem;
+}
+.hub-cols .sectionlabel:first-child { margin-top: 0; }
+.hub-side .hub-more + .sectionlabel { margin-top: calc(var(--step) * 1.75); }
+
+.hub-list { list-style: none; margin: 0; padding: 0; }
+.hub-list li { padding: .55rem 0; border-top: 1px solid var(--rule); line-height: 1.35; font-size: .92rem; }
+.hub-list li:first-child { border-top: 0; padding-top: 0; }
+.hub-list-meta { display: block; margin-top: .15rem; font-size: .75rem; color: var(--muted); }
+
+.qfeature { margin: 0 0 calc(var(--step) * 2); max-width: var(--measure); }
+.qfeature-title { margin: 0 0 .75rem; font-size: 1.45rem; }
+.qfeature-title a { color: var(--ink); }
+.qfeature-title a:hover { color: var(--accent); }
+.qfeature-text { font-size: 1.25rem; line-height: 1.55; color: var(--ink); }
+.qfeature-source { font-size: .9rem; color: var(--muted); }
+
+/* a tag cloud kept to the top tags, five sizes, alphabetical */
+.qcloud { margin: 0; line-height: 1.9; }
+.qcloud a { margin-right: .3rem; white-space: nowrap; }
+.qcloud-1 { font-size: .8rem; font-weight: 400; }
+.qcloud-2 { font-size: .9rem; font-weight: 400; }
+.qcloud-3 { font-size: 1rem; }
+.qcloud-4 { font-size: 1.15rem; }
+.qcloud-5 { font-size: 1.35rem; }
+
+
+/* --------------------------------------------------------------------------
+   5. A-Z tag index (/tags/)
+   -------------------------------------------------------------------------- */
+
+.az-tools {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1.25rem;
+  padding: .6rem 0;
+  margin-bottom: .5rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.az-filter {
+  width: 16rem;
+  max-width: 100%;
+  padding: .35rem .5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  font: inherit;
+  font-size: .9rem;
+  color: var(--ink);
+}
+.az-filter:focus { outline: none; border-color: var(--accent); }
+.az-letters { margin: 0; display: flex; flex-wrap: wrap; gap: .1rem .55rem; font-size: .8rem; }
+.az-letters a { font-weight: 700; }
+
+.az-group { padding-top: .5rem; scroll-margin-top: 3.5rem; }
+.az-letter {
+  margin: var(--step) 0 .4rem;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: 1.15rem;
+}
+.az-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 4 11rem;
+  column-gap: 2rem;
+  font-size: .9rem;
+}
+.hub-main .az-list { columns: 3 10rem; }
+.az-list li { padding: .1rem 0; break-inside: avoid; }
+.az-count { margin-left: .2rem; font-size: .72rem; color: var(--muted); }
+.az-empty { color: var(--muted); }
+
+
+/* --------------------------------------------------------------------------
+   6. Quote page
+   -------------------------------------------------------------------------- */
+
+.qpage { max-width: var(--measure); }
+.qhead { margin: 0 0 var(--step); }
+.qhead .sectionlabel { margin: calc(var(--step) * 1.25) 0 .5rem; }
+.qhead .sectionlabel a { font-weight: 700; }
+/* the title is the reader's label, not the author's: set small and grey */
+.qtitle { margin: 0; font-size: 1.15rem; line-height: 1.3; letter-spacing: .01em; color: var(--muted); }
+.qpage .qtext { font-size: 1.15rem; }
+.qmeta { margin: 0 0 .3rem; font-size: .8rem; color: var(--muted); }
+
+.qpager {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 1.5rem;
+  margin: calc(var(--step) * 1.5) 0 0;
+  padding-top: var(--step);
+  border-top: 1px solid var(--rule);
+  font-size: .92rem;
+  line-height: 1.35;
+}
+.qpager small {
+  display: block;
+  margin-bottom: .2rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.qpager-prev { grid-column: 1; }
+.qpager-next { grid-column: 3; text-align: right; }
+
+/* "Another quote": a random quote, picked
+   in the browser by /random/ */
+.qanother { margin: 0; }
+.qpager .qanother { grid-column: 2; grid-row: 1; }
+.qanother a {
+  display: inline-block;
+  padding: .3rem .8rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.qanother a:hover { background: #d81414; color: #fff; }
+.hub-main > .qanother { margin: -1rem 0 calc(var(--step) * 2); }
+
+.qrelated { max-width: var(--measure); margin-top: calc(var(--step) * 1.5); }
+
+/* --------------------------------------------------------------------------
+   7. Sources (index and single source)
+   -------------------------------------------------------------------------- */
+
+.srcfilter { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin: 0 0 var(--step); }
+.srcorder { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; margin: 0; }
+.srcorder-label {
+  margin-right: .25rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.srclist { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.srclist li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .5rem 0;
+  border-top: 1px solid var(--rule);
+  line-height: 1.35;
+}
+.srclist li:first-child { border-top: 0; }
+.srclist-meta { flex: 0 0 auto; font-size: .78rem; color: var(--muted); white-space: nowrap; }
+
+.srctoc { max-width: var(--measure); margin: 0 0 calc(var(--step) * 1.5); }
+.srctoc .sectionlabel { margin: 0 0 .4rem; }
+.srctoc ol { margin: 0; padding-left: 1.6rem; columns: 2 18rem; column-gap: 2.5rem; font-size: .88rem; }
+.srctoc li { padding: .12rem 0; break-inside: avoid; color: var(--muted); }
+
+.srcquote { max-width: var(--measure); padding: var(--step) 0 .5rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.srcquote-title { margin: 0 0 .75rem; font-size: 1.1rem; }
+.srcquote-title a { color: var(--ink); }
+.srcquote-title a:hover { color: var(--accent); }
+.srcquote:target .srcquote-title a { background: var(--accent); color: #fff; padding: 1px 4px; }
+
+
+/* --------------------------------------------------------------------------
+   8. Tag graph (tag and quote pages, components/_graph.html)
+   -------------------------------------------------------------------------- */
+
+.qside-layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(16rem, 22rem);
+  gap: 0 3.5rem;
+  align-items: start;
+}
+.qside { position: sticky; top: 1rem; }
+.qside .sectionlabel { margin-top: calc(var(--step) * 1.25); }
+.qgroups + .qside .sectionlabel { margin-top: .4rem; }
+
+.qgraph { display: block; width: 100%; height: auto; overflow: visible; }
+.qgraph-links line,
+.qgraph-links path { fill: none; stroke: var(--rule); }
+.qgraph-links .is-spoke { stroke: var(--faint); }
+.qgraph.is-hovering .qgraph-links > * { stroke-opacity: .25; }
+.qgraph.is-hovering .qgraph-links .is-lit { stroke: var(--accent); stroke-opacity: 1; }
+
+.qgraph-node circle { fill: var(--muted); fill-opacity: .55; stroke: var(--paper); stroke-width: 1.5; }
+.qgraph-node text { font-size: 11px; fill: var(--body); }
+.qgraph-node.is-seed circle { fill: var(--accent); fill-opacity: 1; }
+.qgraph-node.is-seed text { font-weight: 700; fill: var(--ink); }
+.qgraph-node:hover circle { fill: var(--accent); fill-opacity: 1; }
+.qgraph-node:hover text { fill: var(--accent); }
+
+
+/* --------------------------------------------------------------------------
+   9. Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .hub-cols { grid-template-columns: minmax(0, 1fr); }
+  .qside-layout { grid-template-columns: minmax(0, 1fr); }
+  .qside { position: static; max-width: 26rem; }
+  .qgroups + .qside { order: -1; }  /* above a tag's long list; after a quote */
+  .hub-side { margin-top: calc(var(--step) * 1.5); }
+}
+
+@media (max-width: 560px) {
+  .topbar { padding-top: .8rem; padding-bottom: .7rem; }
+  .pagetitle { font-size: 1.75rem; }
+  .pagetitle--source { font-size: 1.5rem; }
+  .qfeature-text { font-size: 1.1rem; }
+  .qpager { grid-template-columns: 1fr; }
+  .qpager-prev, .qpager .qanother, .qpager-next { grid-column: 1; grid-row: auto; text-align: left; }
+}
