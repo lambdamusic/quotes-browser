@@ -22,7 +22,7 @@ echo "================="
 echo "Dumping site.."
 echo "================="
 
-./tools/site-dump
+./tools/site-dump || { echo "site-dump failed (see its CHECKS): not publishing"; exit 1; }
 
 
 echo "================="

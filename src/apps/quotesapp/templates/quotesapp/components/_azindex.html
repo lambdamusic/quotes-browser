@@ -12,7 +12,7 @@
     <section class="az-group" id="az-{{ initial }}">
       <h2 class="az-letter">{{ initial }}</h2>
       <ul class="az-list">
-        {% for t, c in items %}<li data-tag="{{ t|lower }}"><a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">{{ t }}</a> <span class="az-count">{{ c }}</span></li>{% endfor %}
+        {% for t, c in items %}<li data-tag="{{ t|lower }}"><a href="{% url 'quotesapp:tag' t %}">{{ t }}</a> <span class="az-count">{{ c }}</span></li>{% endfor %}
       </ul>
     </section>
   {% endfor %}

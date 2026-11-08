@@ -59,12 +59,18 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'quotesapp.context_processors.site_url',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'wsgi.application'
+
+# The published site. Absolute URLs (canonical, sitemap, Open Graph, JSON-LD)
+# use it, never the request's host: the static site is a wget mirror of the
+# dev server at 127.0.0.1:8000.
+SITE_URL = "https://quotes.michelepasin.org"
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

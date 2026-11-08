@@ -6,7 +6,7 @@
 <header class="topbar">
   <a class="topbar-name" href="{% url 'quotesapp:home' %}">Michele Pasin <span class="topbar-site">/ Quotes</span></a>
   <nav class="topbar-nav" aria-label="Site navigation">
-    <a href="{% url 'quotesapp:tags' %}" {% if section == "tags" %}class="is-current"{% endif %}>Tags</a>
+    <a href="{% url 'quotesapp:tags' %}" {% if section == "tags" or section == "tag" %}class="is-current"{% endif %}>Tags</a>
     <a href="{% url 'quotesapp:sources' %}" {% if section == "sources" or section == "source" %}class="is-current"{% endif %}>Sources</a>
     <a href="{% url 'quotesapp:random' %}" title="A random quote">Random</a>
     <a href="{% url 'quotesapp:about' %}" {% if section == "about" %}class="is-current"{% endif %}>About</a>

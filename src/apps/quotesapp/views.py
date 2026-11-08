@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+from collections import OrderedDict
+
 from django.http.response import Http404
 from django.shortcuts import render
+from django.urls import reverse
 
 import markdown
 
@@ -26,7 +29,11 @@ def about(request):
 	"""
 	bio page
 	"""
-	return render(request, APP + '/pages/about.html', {})
+	context = {
+		'og_title': 'About',
+		'meta_description': 'About this commonplace book: passages Michele Pasin saved while reading books, papers and web pages since 2013, kept as plain markdown files.',
+	}
+	return render(request, APP + '/pages/about.html', context)
 
 
 
@@ -44,9 +51,28 @@ def random_quote(request):
 
 
 
+def not_found(request):
+	"""
+	/404.html, which GitHub Pages serves for any missing page. A 200 here,
+	since wget only saves pages that load (fetched explicitly by site-dump)
+	"""
+	return render(request, APP + '/pages/404.html', {})
+
+
+
 # ===========
 # views for quotes
 # ===========
+
+
+def _graph(request, seeds, files_data, n):
+	"""the tag graph for the right-hand column (helpers.tag_graph,
+	components/_graph.html), each tag with its page's URL"""
+	graph = helpers.tag_graph(seeds, files_data, n=n)
+	for node in graph['nodes']:
+		node['url'] = reverse('quotesapp:tag', args=[node['id']])
+	return {'graph': graph}
+
 
 
 def quote_detail(request, source_slug, quoteindex=1):
@@ -92,7 +118,13 @@ def quote_detail(request, source_slug, quoteindex=1):
 		'prev': prev,
 		'next': nxt,
 		'related': helpers.related(this_quote, files_data),
+		'og_title': this_quote['title'],
+		'og_type': 'article',
+		'meta_description': helpers.shorten(this_quote['plain'], 155),
+		'jsonld': helpers.quote_jsonld(this_quote, request.path),
 	}
+	if [t for t in this_quote['tags'] if t]:
+		context.update(_graph(request, this_quote['tags'][:6], files_data, n=10))
 
 	return render(request, APP + '/pages/quote.html', context)
 
@@ -117,6 +149,7 @@ def source_detail(request, source_slug):
 
 	print(f"Showing: \n\t=> {quote_source_file}\n")
 
+	source = data_encoded[0] if data_encoded else None
 	context = {
 		'return_items': data_encoded,
 		'admin_change_url': request.user.is_superuser,
@@ -125,7 +158,9 @@ def source_detail(request, source_slug):
 		'tot_quotes': len(data),
 		# tags from every quote in the source, not just the first one
 		'source_tags': sorted(helpers.tag_counts(data_encoded).items(), key=lambda x: (-x[1], x[0].lower())),
-		'source': data_encoded[0] if data_encoded else None,
+		'source': source,
+		'og_title': source['source'] if source else None,
+		'meta_description': helpers.source_description(data_encoded) if source else None,
 	}
 
 	return render(request, APP + '/pages/source.html', context)
@@ -150,6 +185,8 @@ def sources(request):
 		'return_items': rows,
 		'order': order,
 		'tot_quotes': len(files_data),
+		'og_title': 'Sources',
+		'meta_description': f'All {len(rows)} sources of the {len(files_data)} quotes: books, papers and web pages, by title, number of quotes or date saved.',
 	}
 	return render(request, APP + '/pages/sources.html', context)
 
@@ -161,9 +198,34 @@ def sources(request):
 # ===========
 
 
+def tag_detail(request, tag):
+	"""
+	A single tag: its quotes grouped by source
+	"""
+	files_data = read_all_files_data()
+	tag_quotes = [helpers.annotate(f) for f in files_data if tag in f['tags']]
+	if not tag_quotes:
+		raise Http404
+	sources = list(OrderedDict.fromkeys(f['source'] for f in tag_quotes))
+	context = {
+		'return_items': tag_quotes,
+		'tag': tag,
+		'neighbours': helpers.neighbours(tag, files_data, n=16),
+		'tot_quotes': len(tag_quotes),
+		'tot_sources': len(sources),
+		'og_title': f'#{tag}',
+		'meta_description': helpers.tag_description(tag, tag_quotes, sources),
+	}
+	context.update(_graph(request, [tag], files_data, n=14))
+	return render(request, APP + '/pages/tag.html', context)
+
+
+
 def tags_all(request,):
 	"""
-	The homepage, the index of all tags, and a single tag (?tag=)
+	The homepage and the index of all tags. A single tag used to be ?tag=x;
+	that URL now renders a redirect page to /tags/x/, so the old mirrored
+	files (tags/index.html%3Ftag=x.html) keep working (see tools/tag-redirects)
 	"""
 	tag = request.GET.get('tag', None)
 	MIN_TAGS_OCCURRENCE = 2  # NOTE
@@ -172,17 +234,9 @@ def tags_all(request,):
 	files_data = read_all_files_data()
 
 	if tag:
-		tag_quotes = [helpers.annotate(f) for f in files_data if tag in f['tags']]
-		if not tag_quotes:
-			raise Http404
-		context = {
-			'return_items': tag_quotes,
-			'tag': tag,
-			'neighbours': helpers.neighbours(tag, files_data, n=16),
-			'tot_quotes': len(tag_quotes),
-			'tot_sources': len(set(f['source'] for f in tag_quotes)),
-		}
-		return render(request, APP + '/pages/tag.html', context)
+		known = tag in helpers.tag_counts(files_data)
+		target = reverse('quotesapp:tag', args=[tag]) if known else reverse('quotesapp:tags')
+		return render(request, APP + '/pages/redirect.html', {'target': target})
 
 	if request.resolver_match.url_name == 'home':
 		all_sources = helpers.sources(files_data)
@@ -194,12 +248,16 @@ def tags_all(request,):
 			'tot_quotes': len(files_data),
 			'tot_sources': len(all_sources),
 			'tot_tags': len(helpers.tag_counts(files_data)),
+			'jsonld': helpers.website_jsonld(),
 		}
 		return render(request, APP + '/pages/home.html', context)
 
+	tot_tags = len(helpers.tag_counts(files_data))
 	context = {
 		'tag_index': helpers.tag_index(files_data, min_count=MIN_TAGS_OCCURRENCE),
-		'tot_tags': len(helpers.tag_counts(files_data)),
+		'tot_tags': tot_tags,
 		'min_tags_occurrence': MIN_TAGS_OCCURRENCE,
+		'og_title': 'Tags',
+		'meta_description': f'All {tot_tags} tags in the commonplace book, A to Z: the topics of {len(files_data)} quotes from books, papers and web pages.',
 	}
 	return render(request, APP + '/pages/tags.html', context)

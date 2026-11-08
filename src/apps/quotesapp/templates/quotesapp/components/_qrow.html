@@ -13,6 +13,6 @@
   {% endif %}
   <p class="qrow-meta">
     {% if show_source %}<a class="qrow-source" href="{% url 'quotesapp:source' q.quotesource %}">{{ q.source }}</a>{% endif %}
-    {% for t in q.tags %}{% if t == tag %}<b class="qrow-tag">#{{ t }}</b>{% elif t in q.shared %}<a class="qrow-tag is-shared" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% else %}<a class="qrow-tag" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% endif %} {% endfor %}
+    {% for t in q.tags %}{% if t == tag %}<b class="qrow-tag">#{{ t }}</b>{% elif t in q.shared %}<a class="qrow-tag is-shared" href="{% url 'quotesapp:tag' t %}">#{{ t }}</a>{% else %}<a class="qrow-tag" href="{% url 'quotesapp:tag' t %}">#{{ t }}</a>{% endif %} {% endfor %}
   </p>
 </div>

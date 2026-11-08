@@ -18,7 +18,27 @@ from settings import STATICFILES_DIRS, QUOTES_SOURCE_DIR
 
 
 
+_CACHE = {}
+
+
 def read_all_files_data(verbose=False, strict=True):
+	"""
+	Every quote, parsed once and then kept until a quote file is added, removed
+	or modified (the key is every file's name and mtime, a cheap stat), so the
+	views don't re-parse ~740 files on every request. Each call gets its own
+	copies of the dicts, since views annotate them in place.
+	"""
+	try:
+		names = sorted(os.listdir(QUOTES_SOURCE_DIR))
+		key = (QUOTES_SOURCE_DIR, strict, tuple((n, os.stat(QUOTES_SOURCE_DIR + "/" + n).st_mtime_ns) for n in names))
+	except FileNotFoundError:  # a file went while listing: parse afresh
+		key = None
+	if verbose or key is None or _CACHE.get('key') != key:
+		_CACHE['key'], _CACHE['data'] = key, _read_all_files_data(verbose, strict)
+	return [dict(q) for q in _CACHE['data']]
+
+
+def _read_all_files_data(verbose=False, strict=True):
 	"""
 	Reads MD files
 

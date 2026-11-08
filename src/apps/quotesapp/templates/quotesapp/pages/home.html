@@ -33,7 +33,7 @@
 
     <aside class="hub-side">
       <p class="sectionlabel"><b>Tags</b> <span class="sep">/</span> the most used</p>
-      <p class="qcloud">{% for t, c, s in cloud %}<a class="qcloud-{{ s }}" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}" title="{{ c }} quotes">{{ t }}</a> {% endfor %}</p>
+      <p class="qcloud">{% for t, c, s in cloud %}<a class="qcloud-{{ s }}" href="{% url 'quotesapp:tag' t %}" title="{{ c }} quotes">{{ t }}</a> {% endfor %}</p>
       <a class="hub-more" href="{% url 'quotesapp:tags' %}">All {{ tot_tags }} tags &rarr;</a>
 
       <p class="sectionlabel"><b>Sources</b> <span class="sep">/</span> most quoted</p>

@@ -11,12 +11,14 @@ seeded by the data (featured) or picked in the browser (/random/), so a
 site dump only rewrites pages whose quotes changed.
 """
 
+import json
 import math
 import random
 import re
 from collections import Counter, OrderedDict
 
 import markdown
+from django.conf import settings
 from django.utils.html import strip_tags
 
 
@@ -40,11 +42,15 @@ def annotate(quote, excerpt_chars=280):
     if 'plain' not in quote:
         html = markdown.markdown(quote['markdown'] or '')
         quote['plain'] = re.sub(r'\s+', ' ', strip_tags(html)).strip()
-    plain = quote['plain']
-    if len(plain) > excerpt_chars:
-        plain = plain[:excerpt_chars].rsplit(' ', 1)[0].rstrip(',;:.') + '…'
-    quote['excerpt'] = plain
+    quote['excerpt'] = shorten(quote['plain'], excerpt_chars)
     return quote
+
+
+def shorten(text, n):
+    """text cut to at most n characters, on a word boundary"""
+    if len(text) <= n:
+        return text
+    return text[:n - 1].rsplit(' ', 1)[0].rstrip(',;:.') + '…'
 
 
 def latest(files_data, n=10, per_source=2):
@@ -170,3 +176,107 @@ def sources(files_data):
         })
         row['count'] += 1
     return list(rows.values())
+
+
+# ===========
+# descriptions and structured data, for search engines and link previews
+# ===========
+
+
+def _names(items, n=3):
+    """'a, b and c', or 'a, b, c and others'"""
+    items = list(items)
+    if len(items) > n:
+        return ', '.join(items[:n]) + ' and others'
+    return ' and '.join([', '.join(items[:-1]), items[-1]]) if len(items) > 1 else ''.join(items)
+
+
+def tag_description(tag, quotes, sources):
+    n = len(quotes)
+    return shorten(f"{n} quote{'s' if n != 1 else ''} tagged #{tag}, from {_names(sources)}.", 155)
+
+
+def source_description(quotes):
+    n = len(quotes)
+    titles = [q['title'] for q in quotes if q['title'] and not q['title'].endswith('...')]
+    text = f"{n} quote{'s' if n != 1 else ''} from {quotes[0]['source']}"
+    return shorten(text + (f": {_names(titles)}." if titles else "."), 155)
+
+
+def _jsonld(data):
+    """a JSON-LD script body, safe inside <script>"""
+    return json.dumps(data, ensure_ascii=False, indent=1).replace('</', '<\\/')
+
+
+def website_jsonld():
+    return _jsonld({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Quotes",
+        "description": "A commonplace book: passages Michele Pasin saved while reading, browsable by tag and source.",
+        "url": settings.SITE_URL + "/",
+        "author": {"@type": "Person", "name": "Michele Pasin", "url": "https://www.michelepasin.org"},
+        "isPartOf": {"@type": "WebSite", "name": "Michele Pasin", "url": "https://www.michelepasin.org"},
+    })
+
+
+def quote_jsonld(quote, path):
+    """a schema.org Quotation, with the source as the work it is based on"""
+    source = {"@type": "CreativeWork", "name": quote['source']}
+    if quote.get('source_url'):
+        source["url"] = quote['source_url']
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Quotation",
+        "name": quote['title'],
+        "text": quote['plain'],
+        "url": settings.SITE_URL + path,
+        "isBasedOn": source,
+        "keywords": [t for t in quote['tags'] if t],
+        "isPartOf": {"@type": "WebSite", "name": "Quotes", "url": settings.SITE_URL + "/"},
+    }
+    if quote.get('date'):
+        data["dateCreated"] = str(quote['date'])
+    return _jsonld(data)
+
+
+# ===========
+# the tag graph on tag and quote pages (backlog #2)
+# ===========
+
+
+def tag_graph(seeds, files_data, n=12, max_links=40):
+    """the seed tags, the n tags used most often with them, and the links
+    between all of these, weighted by the number of quotes sharing both tags.
+
+    Returns {'nodes': [{id, count, seed}], 'links': [{source, target, weight}]},
+    nodes ordered seeds first, then by how often they appear with the seeds.
+    Seed-to-tag links are always kept; tag-to-tag links only the strongest,
+    up to max_links in all, so the picture stays readable.
+    """
+    seeds = [s for s in seeds if s]
+    seedset = set(seeds)
+    df = tag_counts(files_data)
+    near = Counter()
+    for q in files_data:
+        tags = set(t for t in q['tags'] if t)
+        hits = len(tags & seedset)
+        if hits:
+            for t in tags - seedset:
+                near[t] += hits
+    ids = seeds + [t for t, c in near.most_common(n)]
+    idset = set(ids)
+    pairs = Counter()
+    for q in files_data:
+        tags = sorted(set(t for t in q['tags'] if t in idset))
+        for i, a in enumerate(tags):
+            for b in tags[i + 1:]:
+                pairs[(a, b)] += 1
+    spokes = [p for p in pairs.items() if (p[0][0] in seedset) != (p[0][1] in seedset) or len(seedset) > 1 and p[0][0] in seedset]
+    others = sorted([p for p in pairs.items() if p not in spokes], key=lambda p: -p[1])
+    keep = spokes + others[:max(0, max_links - len(spokes))]
+    return {
+        'nodes': [{'id': t, 'count': df.get(t, 0), 'seed': t in seedset} for t in ids],
+        'links': [{'source': a, 'target': b, 'weight': w} for (a, b), w in keep],
+    }
+

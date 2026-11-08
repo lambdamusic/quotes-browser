@@ -5,14 +5,17 @@
 
 {% block pagetitle %}<title>#{{ tag }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
 
+{% block bodyclass %}{% if graph %}is-wide{% endif %}{% endblock %}
+
 {% block bodycontent %}
 
   <header class="pagehead">
     <p class="sectionlabel"><a href="{% url 'quotesapp:tags' %}">Tags</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }} from {{ tot_sources }} source{{ tot_sources|pluralize }}</p>
     <h1 class="pagetitle">#{{ tag }}</h1>
-    {% if neighbours %}<p class="pagelede pagelede--tags">Often with {% for t, c, pc in neighbours|slice:":12" %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a> {% endfor %}</p>{% endif %}
+    {% if neighbours %}<p class="pagelede pagelede--tags">Often with {% for t, c, pc in neighbours|slice:":12" %}<a href="{% url 'quotesapp:tag' t %}">#{{ t }}</a> {% endfor %}</p>{% endif %}
   </header>
 
+  <div class="qside-layout">
   <div class="qgroups">
     {% for q in return_items %}
       {% ifchanged q.quotesource %}
@@ -20,6 +23,8 @@
       {% endifchanged %}
       {% include "quotesapp/components/_qrow.html" %}
     {% endfor %}
+  </div>
+  {% if graph %}{% include "quotesapp/components/_graph.html" %}{% endif %}
   </div>
 
 {% endblock bodycontent %}

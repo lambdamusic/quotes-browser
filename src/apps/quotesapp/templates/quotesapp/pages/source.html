@@ -14,7 +14,7 @@
     <p class="sectionlabel"><a href="{% url 'quotesapp:sources' %}">Sources</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }}{% if source.date %}, saved {{ source.date|date:"F Y" }}{% endif %}</p>
     <h1 class="pagetitle pagetitle--source">{{ source.source }}</h1>
     {% if source.source_url %}<p class="pagelede"><a class="qext" href="{{ source.source_url }}" target="_blank" rel="noopener">{{ source.source_url|url_domain }} &#8599;</a></p>{% endif %}
-    {% if source_tags %}<p class="pagelede pagelede--tags">{% for t, c in source_tags|slice:":24" %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% if c > 1 %}<span class="az-count">{{ c }}</span>{% endif %} {% endfor %}</p>{% endif %}
+    {% if source_tags %}<p class="pagelede pagelede--tags">{% for t, c in source_tags|slice:":24" %}<a href="{% url 'quotesapp:tag' t %}">#{{ t }}</a>{% if c > 1 %}<span class="az-count">{{ c }}</span>{% endif %} {% endfor %}</p>{% endif %}
     {% if admin_change_url %}<p class="admin-note"><a href="vscode://file/{{ quote_source_file }}">Edit in VSCode</a></p>{% endif %}
   </header>
 

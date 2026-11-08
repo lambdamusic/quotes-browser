@@ -119,3 +119,5 @@ backups/*
 tools/db-bootstrap
 build_test
 xxx-researchapp
+# backlog: a symlink to the central backlog folder (Dropbox), like researcher
+/backlog

@@ -344,11 +344,43 @@ a.qrow-textlink:hover { color: var(--accent); }
 
 
 /* --------------------------------------------------------------------------
-   8. Responsive
+   8. Tag graph (tag and quote pages, components/_graph.html)
+   -------------------------------------------------------------------------- */
+
+.qside-layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(16rem, 22rem);
+  gap: 0 3.5rem;
+  align-items: start;
+}
+.qside { position: sticky; top: 1rem; }
+.qside .sectionlabel { margin-top: calc(var(--step) * 1.25); }
+.qgroups + .qside .sectionlabel { margin-top: .4rem; }
+
+.qgraph { display: block; width: 100%; height: auto; overflow: visible; }
+.qgraph-links line,
+.qgraph-links path { fill: none; stroke: var(--rule); }
+.qgraph-links .is-spoke { stroke: var(--faint); }
+.qgraph.is-hovering .qgraph-links > * { stroke-opacity: .25; }
+.qgraph.is-hovering .qgraph-links .is-lit { stroke: var(--accent); stroke-opacity: 1; }
+
+.qgraph-node circle { fill: var(--muted); fill-opacity: .55; stroke: var(--paper); stroke-width: 1.5; }
+.qgraph-node text { font-size: 11px; fill: var(--body); }
+.qgraph-node.is-seed circle { fill: var(--accent); fill-opacity: 1; }
+.qgraph-node.is-seed text { font-weight: 700; fill: var(--ink); }
+.qgraph-node:hover circle { fill: var(--accent); fill-opacity: 1; }
+.qgraph-node:hover text { fill: var(--accent); }
+
+
+/* --------------------------------------------------------------------------
+   9. Responsive
    -------------------------------------------------------------------------- */
 
 @media (max-width: 860px) {
   .hub-cols { grid-template-columns: minmax(0, 1fr); }
+  .qside-layout { grid-template-columns: minmax(0, 1fr); }
+  .qside { position: static; max-width: 26rem; }
+  .qgroups + .qside { order: -1; }  /* above a tag's long list; after a quote */
   .hub-side { margin-top: calc(var(--step) * 1.5); }
 }
 

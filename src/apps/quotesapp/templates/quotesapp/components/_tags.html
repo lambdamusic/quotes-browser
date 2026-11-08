@@ -1,2 +1,2 @@
 {# a quote's tags as a quiet inline list #}
-{% if tags %}<p class="qtags">{% for t in tags %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a> {% endfor %}</p>{% endif %}
+{% if tags %}<p class="qtags">{% for t in tags %}<a href="{% url 'quotesapp:tag' t %}">#{{ t }}</a> {% endfor %}</p>{% endif %}

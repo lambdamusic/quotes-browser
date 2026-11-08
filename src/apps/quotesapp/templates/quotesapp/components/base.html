@@ -9,11 +9,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Michele Pasin">
-    {% block metadescription %}
-    <meta name="description" content="A commonplace book: passages Michele Pasin saved while reading, browsable by tag and source.">
-    {% endblock %}
-    <link rel="icon" href="{% static 'favicon.ico' %}">
     {% block pagetitle %}<title>Quotes | Michele Pasin</title>{% endblock pagetitle %}
+    {% comment %}
+      For search engines and link previews. Views set meta_description,
+      og_title and og_type; jsonld is a ready JSON-LD body (helpers.py).
+      The canonical drops any query string, and query-string views get
+      noindex (the sources sort orders, the old ?tag= redirects).
+    {% endcomment %}
+    {% firstof meta_description "A commonplace book: passages Michele Pasin saved while reading, browsable by tag and source." as description %}
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ SITE_URL }}{% block canonical_path %}{{ request.path }}{% endblock %}">
+    {% block robots %}{% if request.GET %}<meta name="robots" content="noindex,follow">{% endif %}{% endblock robots %}
+    <meta property="og:site_name" content="Quotes · Michele Pasin">
+    <meta property="og:type" content="{{ og_type|default:'website' }}">
+    <meta property="og:title" content="{{ og_title|default:'Quotes' }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ SITE_URL }}{{ request.path }}">
+    <meta name="twitter:card" content="summary">
+    {% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
+    <link rel="icon" href="{% static 'favicon.ico' %}">
     <link href="{% static 'css/parerga.css' %}" rel="stylesheet">
     <link href="{% static 'css/quotes.css' %}" rel="stylesheet">
     {% include "quotesapp/components/pygments.html" %}
@@ -32,9 +46,6 @@
 
     <footer class="site-foot">
       <p class="sectionlabel"><b>Quotes</b> <span class="sep">/</span> part of <a href="https://www.michelepasin.org">michelepasin.org</a></p>
-      <p class="foot-links">
-        {% include "quotesapp/components/outlinks.html" %}
-      </p>
       <p class="foot-legal">&copy; Michele Pasin. Quoted passages belong to their authors. Built with Django, mirrored as a static site.</p>
     </footer>
 

@@ -105,11 +105,29 @@ rm -rf $DIR_BUILD/*
 # opt: -p, --page-requisites: Download things like CSS style-sheets and images required to properly display the page offline.
 # opt: -np, --no-parent: When recursing do not ascend to the parent directory. It useful for restricting the download to only a portion of the site.
 # opt: -nH, --no-host-directories Disable generation of host-prefixed directories. By default, invoking Wget with ‘-r http://fly.srk.fer.hr/’ will create a structure of directories beginning with fly.srk.fer.hr/. This option disables such behavior.
-# opt: -w, --wait: Waiting time between calls. Set reasonable or random waiting times between two downloads to avoid the Connection closed by peer error.
+# NOTE: no --wait here (was 0.1s/request, about 9 of the 16 minutes a dump took
+# on 2026-11-08) - that throttle is meant for being polite to someone else's
+# server, this is our own localhost dev server. As in researcher's site-dump.
 #
-echo -e "\nWGET SITE INTO TEMP BUILD DIRECTORY.." 
+echo -e "\nWGET SITE INTO TEMP BUILD DIRECTORY.."
 echo "+++++++++++++++++"
-wget  -P $DIR_BUILD -mkEpnp -nH http://127.0.0.1:8000/ --wait=0.1 --exclude-domains www.michelepasin.org
+wget  -P $DIR_BUILD -mkEpnp -nH http://127.0.0.1:8000/ --exclude-domains www.michelepasin.org
+
+# robots.txt, sitemap.xml and 404.html: no page links to them, so wget never
+# finds them (see views_seo.py). curl rather than wget: 404.html is served by
+# GitHub Pages at any missing URL, at any depth, so its links must stay
+# root-relative (/tags/...) instead of wget -k's relative ones.
+echo -e "\nROBOTS.TXT, SITEMAP.XML, 404.HTML.."
+echo "+++++++++++++++++"
+for f in robots.txt sitemap.xml 404.html; do
+    curl -sf http://127.0.0.1:8000/$f -o $DIR_BUILD/$f || { echo "failed to fetch /$f"; exit 1; }
+done
+
+# a redirect page at every tag URL published before tags got /tags/x/ pages
+# (2026-11), so the old URLs keep working once rsync --delete removes them
+echo -e "\nREDIRECTS FOR OLD TAG URLS.."
+echo "+++++++++++++++++"
+tools/tag-redirects $DIR_BUILD || exit 1
 
 # add a log file
 cd $DIR_BUILD
@@ -129,6 +147,24 @@ cd ..
 echo -e "\nRSYNC TEMP BUILD DIRECTORY INTO FINAL LOCATION:  /$DIR_DOCS"
 echo "+++++++++++++++++"
 rsync -av --delete --checksum --exclude '.nojekyll' --exclude 'CNAME' --exclude archived --exclude assets $DIR_BUILD/ $DIR_DOCS/
+
+
+#
+# CHECKS: fail loudly rather than publish a site that lost its SEO basics
+# (backlog #1). 127.0.0.1:8000 is this dev server; a quote may legitimately
+# cite some other localhost URL as its source.
+#
+echo -e "\nCHECKS.."
+echo "+++++++++++++++++"
+FAILED=0
+for f in robots.txt sitemap.xml 404.html; do
+    [ -s $DIR_DOCS/$f ] || { echo "MISSING: $DIR_DOCS/$f"; FAILED=1; }
+done
+NO_CANONICAL=$(find $DIR_DOCS -name '*.html' -not -path "$DIR_DOCS/media/*" -print0 | xargs -0 grep -L 'rel="canonical"' | head -5)
+[ -z "$NO_CANONICAL" ] || { echo "PAGES WITHOUT A CANONICAL LINK (first 5):"; echo "$NO_CANONICAL"; FAILED=1; }
+LOCALHOST=$(grep -rl '127.0.0.1:8000' $DIR_DOCS --include='*.html' --include='*.xml' --include='*.txt' | head -5)
+[ -z "$LOCALHOST" ] || { echo "127.0.0.1:8000 FOUND IN (first 5):"; echo "$LOCALHOST"; FAILED=1; }
+[ $FAILED = 0 ] && echo "all checks passed" || { echo "CHECKS FAILED"; exit 1; }
 
 
 

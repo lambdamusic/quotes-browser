@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+"""
+Put a redirect page at every tag page published before 2026-11, when tags
+were query strings (/tags/?tag=x, mirrored by wget as tags/index.html?tag=x.html).
+Tag pages are /tags/x/ now; without this, the old URLs Google has indexed
+would 404 once site-dump's rsync --delete removes the old files.
+
+    tools/tag-redirects BUILD_DIR
+
+Each page is fetched from the dev server (/tags/?tag=x renders a redirect to
+/tags/x/, or to /tags/ for a tag that no longer exists; see views.tags_all)
+and saved under its old file name. The list is tools/legacy-tag-files.txt.
+"""
+
+import os
+import sys
+import urllib.parse
+import urllib.request
+
+SERVER = 'http://127.0.0.1:8000'
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def main(build_dir):
+    paths = [l.rstrip('\n') for l in open(os.path.join(HERE, 'legacy-tag-files.txt'), encoding='utf-8')
+             if l.strip() and not l.startswith('#')]
+    for path in paths:
+        # tags/index.html?tag=RDF%2FXML.html -> /tags/?tag=RDF%2FXML
+        page, query = path[:-len('.html')].split('?', 1)
+        params = urllib.parse.parse_qsl(query)
+        url = SERVER + '/' + page.replace('index.html', '') + '?' + urllib.parse.urlencode(params)
+        with urllib.request.urlopen(url) as r:
+            html = r.read()
+        out = os.path.join(build_dir, path)
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        with open(out, 'wb') as f:
+            f.write(html)
+    print(f'{len(paths)} redirect pages for old tag URLs')
+
+
+if __name__ == '__main__':
+    main(sys.argv[1])

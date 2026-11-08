@@ -8,14 +8,14 @@
   sources sharing its tags).
 {% endcomment %}
 
-{% block metadescription %}
-  <meta name="description" content="{{ quote.excerpt|truncatechars:155 }}">
-{% endblock %}
-
 {% block pagetitle %}<title>{{ title }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodyclass %}{% if graph %}is-wide{% endif %}{% endblock %}
 
 {% block bodycontent %}
 
+  <div class="qside-layout">
+  <div class="qside-main">
   <article class="qpage">
     <header class="qhead">
       <p class="sectionlabel"><a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if siblings|length > 1 %} <span class="sep">/</span> quote {{ quoteindex }} of {{ siblings|length }}{% endif %}</p>
@@ -43,5 +43,8 @@
     {% for q in related %}{% include "quotesapp/components/_qrow.html" with show_source=True %}{% endfor %}
   </section>
   {% endif %}
+  </div>
+  {% if graph %}{% include "quotesapp/components/_graph.html" %}{% endif %}
+  </div>
 
 {% endblock bodycontent %}

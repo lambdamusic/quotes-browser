@@ -1,0 +1,81 @@
+{% load static %}
+{% comment %}
+  The tag graph in the right-hand column of tag and quote pages (backlog #2).
+  `graph` is helpers.tag_graph(): the page's tags (seeds), the tags used most
+  often with them, and links weighted by the number of quotes sharing both.
+  A force layout drawn in the browser with d3 v4, laid out in one go (so it
+  doesn't move about, and looks the same on every load) and kept inside its
+  box, labels included. Every node links to its tag page. A server-drawn
+  radial version was tried on 2026-11-08 and dropped: tidier, but the ring's
+  order says nothing about which tags belong together.
+{% endcomment %}
+<aside class="qside" aria-label="Related tags">
+  <p class="sectionlabel"><b>Tags nearby</b> <span class="sep">/</span> {% if tag %}used most with #{{ tag }}{% else %}around this quote's tags{% endif %}</p>
+
+  <svg class="qgraph" id="qgraph" viewBox="0 0 420 340" role="group" aria-label="Tags used most often together with {% if tag %}#{{ tag }}{% else %}this quote's tags{% endif %}"></svg>
+  {{ graph|json_script:"qgraph-data" }}
+  <script src="{% static 'libs/d3-v4/d3.min.js' %}"></script>
+  <script>
+  (function () {
+    var data = JSON.parse(document.getElementById('qgraph-data').textContent);
+    var W = 420, H = 340, cx = W / 2, cy = H / 2;
+    var label = function (n) { return n.id.length > 18 ? n.id.slice(0, 17) + '…' : n.id; };
+    var labelWidth = function (n) { return label(n).length * 6; };  // 11px Helvetica, roughly
+    var hi = d3.max(data.nodes, function (n) { return n.count; }) || 1;
+    var hiw = d3.max(data.links, function (l) { return l.weight; }) || 1;
+    var radius = function (n) { return 3 + 7 * Math.sqrt(n.count / hi); };
+    var seeds = data.nodes.filter(function (n) { return n.seed; });
+    if (seeds.length === 1) { seeds[0].fx = cx; seeds[0].fy = cy; }
+
+    var sim = d3.forceSimulation(data.nodes)
+      .force('link', d3.forceLink(data.links).id(function (n) { return n.id; })
+        .distance(function (l) { return 120 - 40 * l.weight / hiw; })
+        .strength(function (l) { return 0.15 + 0.6 * l.weight / hiw; }))
+      .force('charge', d3.forceManyBody().strength(-320))
+      .force('collide', d3.forceCollide(function (n) { return radius(n) + 8 + labelWidth(n) * 0.4; }).iterations(3))
+      .force('x', d3.forceX(cx).strength(0.05))
+      .force('y', d3.forceY(cy).strength(0.12))
+      .stop();
+    // lay out in one go: no animation, and the same picture on every load
+    for (var i = 0; i < 300; i++) sim.tick();
+    data.nodes.forEach(function (n) {
+      var r = radius(n);
+      // keep the label inside the box too: it sits on the side away from the centre
+      n.x = n.x >= cx ? Math.min(W - r - 6 - labelWidth(n), n.x) : Math.max(r + 6 + labelWidth(n), n.x);
+      n.y = Math.max(r + 14, Math.min(H - r - 6, n.y));
+    });
+
+    var svg = d3.select('#qgraph');
+    var links = svg.append('g').attr('class', 'qgraph-links').selectAll('line')
+      .data(data.links).enter().append('line')
+      .attr('class', function (l) { return l.source.seed || l.target.seed ? 'is-spoke' : null; })
+      .attr('x1', function (l) { return l.source.x; }).attr('y1', function (l) { return l.source.y; })
+      .attr('x2', function (l) { return l.target.x; }).attr('y2', function (l) { return l.target.y; })
+      .attr('stroke-width', function (l) { return 0.6 + 2.4 * l.weight / hiw; });
+
+    var nodes = svg.selectAll('a.qgraph-node').data(data.nodes).enter().append('a')
+      .attr('class', function (n) { return 'qgraph-node' + (n.seed ? ' is-seed' : ''); })
+      .attr('href', function (n) { return n.url; })
+      .attr('xlink:href', function (n) { return n.url; });
+    nodes.append('title').text(function (n) { return '#' + n.id + ': ' + n.count + ' quote' + (n.count === 1 ? '' : 's'); });
+    nodes.append('circle').attr('cx', function (n) { return n.x; }).attr('cy', function (n) { return n.y; }).attr('r', radius);
+    // labels point away from the centre, so they stay inside the box
+    nodes.append('text')
+      .attr('x', function (n) { return n.x + (n.x >= cx ? 1 : -1) * (radius(n) + 4); })
+      .attr('y', function (n) { return n.y + 3.5; })
+      .attr('text-anchor', function (n) { return n.seed && seeds.length === 1 ? 'middle' : (n.x >= cx ? 'start' : 'end'); })
+      .attr('dy', function (n) { return n.seed && seeds.length === 1 ? -(radius(n) + 6) : 0; })
+      .attr('dx', function (n) { return n.seed && seeds.length === 1 ? -(n.x >= cx ? 1 : -1) * (radius(n) + 4) : 0; })
+      .text(label);
+
+    // hovering a tag shows its links
+    nodes.on('mouseenter', function (n) {
+      svg.classed('is-hovering', true);
+      links.classed('is-lit', function (l) { return l.source === n || l.target === n; });
+    }).on('mouseleave', function () {
+      svg.classed('is-hovering', false);
+      links.classed('is-lit', false);
+    });
+  })();
+  </script>
+</aside>

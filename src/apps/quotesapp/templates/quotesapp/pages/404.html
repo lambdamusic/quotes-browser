@@ -1,0 +1,15 @@
+{% extends "quotesapp/components/base.html" %}
+
+{# /404.html: GitHub Pages serves it for any page that doesn't exist (views.not_found) #}
+
+{% block pagetitle %}<title>Not found | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block robots %}<meta name="robots" content="noindex,follow">{% endblock robots %}
+
+{% block bodycontent %}
+  <header class="pagehead">
+    <p class="sectionlabel"><b>Not found</b> <span class="sep">/</span> 404</p>
+    <h1 class="pagetitle">This page isn't here</h1>
+    <p class="pagelede">It may have moved: quote numbers change when a source is edited. Try the <a href="{% url 'quotesapp:tags' %}">tags</a>, the <a href="{% url 'quotesapp:sources' %}">sources</a>, or <a href="{% url 'quotesapp:random' %}">a random quote</a>.</p>
+  </header>
+{% endblock bodycontent %}
