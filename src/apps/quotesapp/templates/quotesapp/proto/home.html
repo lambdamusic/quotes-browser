@@ -74,6 +74,7 @@
         <figcaption class="qfeature-source">&mdash; <a href="{% url 'quotesapp:source' featured.quotesource %}">{{ featured.source }}</a>
           {% if not featured.titled %}<span class="sep">/</span> <a href="{% url 'quotesapp:quotes' featured.quotesource featured.quoteindex %}">open</a>{% endif %}</figcaption>
       </figure>
+      <p class="qanother"><a href="{% url 'quotesapp:quotes' random_quote.quotesource random_quote.quoteindex %}">Another quote &rarr;</a></p>
 
       <p class="sectionlabel"><b>Latest</b> <span class="sep">/</span> recently saved</p>
       {% for q in latest %}{% include "quotesapp/proto/_qrow.html" with show_source=True %}{% endfor %}

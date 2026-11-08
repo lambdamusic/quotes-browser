@@ -61,12 +61,12 @@
 
       {% if admin_change_url %}<p class="admin-note"><a href="vscode://file/{{ quote_source_file }}">Edit in VSCode</a></p>{% endif %}
 
-      {% if prev or next %}
-      <nav class="qpager" aria-label="In this source">
+      {# previous / next in the source, and a jump to a quote from another one #}
+      <nav class="qpager" aria-label="More quotes">
         {% if prev %}<a class="qpager-prev" href="{% url 'quotesapp:quotes' prev.quotesource prev.quoteindex %}"><small>&larr; Previous</small>{{ prev.title }}</a>{% endif %}
+        <p class="qanother"><a href="{% url 'quotesapp:quotes' random_quote.quotesource random_quote.quoteindex %}">Another quote</a></p>
         {% if next %}<a class="qpager-next" href="{% url 'quotesapp:quotes' next.quotesource next.quoteindex %}"><small>Next &rarr;</small>{{ next.title }}</a>{% endif %}
       </nav>
-      {% endif %}
     </article>
 
     {% if layout == "b" %}
