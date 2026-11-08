@@ -290,10 +290,10 @@ review: false
 
 		else: # we are in the quotes section
 
-			if l.strip().startswith("# "): # new title: push previously found
-				NEWTITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
+			if l.strip().startswith("# ") or l.strip().startswith("## "): # new title: push previously found
+				NEWTITLE = l.strip().lstrip("#").strip() # '## Title' used to keep a leading '#'
 				# printDebug(NEWTITLE)
-				if TITLE and PURE_MARKDOWN:
+				if TITLE and PURE_MARKDOWN.strip(): # a title with no text is a chapter heading, not a quote
 					# printDebug("Appending: line 263")
 					out = {}
 					QUOTEINDEX += 1
@@ -309,29 +309,7 @@ review: false
 					out['PURE_MARKDOWN'] = PURE_MARKDOWN
 					results.append(out)
 
-					PURE_MARKDOWN, TAGS = "", [] # reset
-				TITLE = NEWTITLE
-			elif l.strip().startswith("## "): # new title: push previously found
-				NEWTITLE = l.replace("# ", "")[0:-1] # remove quotes and newline char
-				# printDebug(NEWTITLE)
-				if TITLE and PURE_MARKDOWN:
-					# printDebug("Appending: line 263")
-					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-					out = {}
-					QUOTEINDEX += 1
-					# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
-					out['TITLE'] = TITLE
-					out['QUOTEINDEX'] = QUOTEINDEX
-					out['SOURCE'] = SOURCE
-					out['SOURCE_URL'] = SOURCE_URL
-					out['CREATED'] = DATE
-					out['MODIFIED'] = MODIFIED
-					out['REVIEW'] = REVIEW
-					out['TAGS'] = TAGS
-					out['PURE_MARKDOWN'] = PURE_MARKDOWN
-					results.append(out)
-
-					PURE_MARKDOWN, TAGS = "", []
+				PURE_MARKDOWN, TAGS = "", [] # reset
 				TITLE = NEWTITLE
 			elif l.strip().startswith("#"):
 				tag_flag = 1
@@ -342,7 +320,7 @@ review: false
 				PURE_MARKDOWN += l
 
 	# finally : catch last quote or single qupte
-	if TITLE and PURE_MARKDOWN:
+	if TITLE and PURE_MARKDOWN.strip():
 		# printDebug("Appending: line 280")
 		# results.append([TITLE, SOURCE, SOURCE_URL, DATE, MODIFIED, REVIEW, TAGS, PURE_MARKDOWN])
 		out = {}
