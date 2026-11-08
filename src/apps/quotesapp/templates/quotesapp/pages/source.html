@@ -1,4 +1,4 @@
-{% extends "quotesapp/proto/base.html" %}
+{% extends "quotesapp/components/base.html" %}
 {% load extrafilters %}
 
 {% comment %}
@@ -11,7 +11,7 @@
 {% block bodycontent %}
 
   <header class="pagehead">
-    <p class="sectionlabel"><a href="{% url 'quotesapp:qa_quotes' %}">Sources</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }}{% if source.date %}, saved {{ source.date|date:"F Y" }}{% endif %}</p>
+    <p class="sectionlabel"><a href="{% url 'quotesapp:sources' %}">Sources</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }}{% if source.date %}, saved {{ source.date|date:"F Y" }}{% endif %}</p>
     <h1 class="pagetitle pagetitle--source">{{ source.source }}</h1>
     {% if source.source_url %}<p class="pagelede"><a class="qext" href="{{ source.source_url }}" target="_blank" rel="noopener">{{ source.source_url|url_domain }} &#8599;</a></p>{% endif %}
     {% if source_tags %}<p class="pagelede pagelede--tags">{% for t, c in source_tags|slice:":24" %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% if c > 1 %}<span class="az-count">{{ c }}</span>{% endif %} {% endfor %}</p>{% endif %}
@@ -31,7 +31,7 @@
     <section class="srcquote" id="q{{ q.quoteindex }}">
       <h2 class="srcquote-title"><a href="{% url 'quotesapp:quotes' q.quotesource q.quoteindex %}">{{ q.title }}</a></h2>
       <blockquote class="qtext">{{ q.quote_text|safe }}</blockquote>
-      {% include "quotesapp/proto/_tags.html" with tags=q.tags %}
+      {% include "quotesapp/components/_tags.html" with tags=q.tags %}
     </section>
   {% endfor %}
 

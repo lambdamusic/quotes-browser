@@ -1,0 +1,37 @@
+{% extends "quotesapp/components/base.html" %}
+
+{% comment %}
+  /random/: picks a quote in the browser, so on the static mirror every
+  click is a new pick and the page only changes when quotes are added.
+  `counts` is [[source slug, number of quotes], ...]; every quote is
+  equally likely. location.replace keeps /random/ out of the history, so
+  Back returns to the page the link was on.
+{% endcomment %}
+
+{% block pagetitle %}<title>Random quote | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+  <header class="pagehead">
+    <p class="sectionlabel"><b>Random</b> <span class="sep">/</span> one of {{ tot_quotes }} quotes</p>
+    <h1 class="pagetitle">Picking a quote&hellip;</h1>
+    <noscript><p class="pagelede">This needs JavaScript. Browse by <a href="{% url 'quotesapp:tags' %}">tag</a> or by <a href="{% url 'quotesapp:sources' %}">source</a> instead.</p></noscript>
+  </header>
+{% endblock bodycontent %}
+
+{% block extra_js %}
+{{ counts|json_script:"quote-counts" }}
+<script>
+  (function () {
+    var counts = JSON.parse(document.getElementById('quote-counts').textContent);
+    var total = counts.reduce(function (n, c) { return n + c[1]; }, 0);
+    var pick = Math.floor(Math.random() * total);
+    for (var i = 0; i < counts.length; i++) {
+      if (pick < counts[i][1]) {
+        location.replace('{% url "quotesapp:quotes" "SLUG" 1 %}'.replace('SLUG/1/', counts[i][0] + '/' + (pick + 1) + '/'));
+        return;
+      }
+      pick -= counts[i][1];
+    }
+  })();
+</script>
+{% endblock extra_js %}

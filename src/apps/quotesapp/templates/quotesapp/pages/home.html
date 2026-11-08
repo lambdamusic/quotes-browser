@@ -1,0 +1,47 @@
+{% extends "quotesapp/components/base.html" %}
+{% load extrafilters %}
+
+{% comment %}
+  The homepage: a featured quote, the latest additions, the main tags and
+  sources. `featured` only changes when quotes are added (helpers.featured),
+  so a site dump doesn't rewrite this page for nothing.
+{% endcomment %}
+
+{% block bodyclass %}is-wide{% endblock %}
+
+{% block bodycontent %}
+
+  <section class="hub-intro">
+    <h1 class="hub-name">Quotes</h1>
+    <p class="hub-lede">A commonplace book: {{ tot_quotes }} passages from {{ tot_sources }} books, papers and web pages, saved while reading since 2013. <a class="hub-about" href="{% url 'quotesapp:about' %}">About &rarr;</a></p>
+  </section>
+
+  <div class="hub-cols">
+    <section class="hub-main">
+      <p class="sectionlabel"><b>Featured</b> <span class="sep">/</span> a random pick</p>
+      <figure class="qfeature">
+        {% if featured.titled %}<h2 class="qfeature-title"><a href="{% url 'quotesapp:quotes' featured.quotesource featured.quoteindex %}">{{ featured.title }}</a></h2>{% endif %}
+        <blockquote class="qtext qfeature-text">{{ featured.markdown|markdown|safe }}</blockquote>
+        <figcaption class="qfeature-source">&mdash; <a href="{% url 'quotesapp:source' featured.quotesource %}">{{ featured.source }}</a>
+          {% if not featured.titled %}<span class="sep">/</span> <a href="{% url 'quotesapp:quotes' featured.quotesource featured.quoteindex %}">open</a>{% endif %}</figcaption>
+      </figure>
+      <p class="qanother"><a href="{% url 'quotesapp:random' %}">Another quote &rarr;</a></p>
+
+      <p class="sectionlabel"><b>Latest</b> <span class="sep">/</span> recently saved</p>
+      {% for q in latest %}{% include "quotesapp/components/_qrow.html" with show_source=True %}{% endfor %}
+    </section>
+
+    <aside class="hub-side">
+      <p class="sectionlabel"><b>Tags</b> <span class="sep">/</span> the most used</p>
+      <p class="qcloud">{% for t, c, s in cloud %}<a class="qcloud-{{ s }}" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}" title="{{ c }} quotes">{{ t }}</a> {% endfor %}</p>
+      <a class="hub-more" href="{% url 'quotesapp:tags' %}">All {{ tot_tags }} tags &rarr;</a>
+
+      <p class="sectionlabel"><b>Sources</b> <span class="sep">/</span> most quoted</p>
+      <ul class="hub-list">
+        {% for s in top_sources %}<li><a href="{% url 'quotesapp:source' s.quotesource %}">{{ s.source }}</a><span class="hub-list-meta">{{ s.count }} quotes</span></li>{% endfor %}
+      </ul>
+      <a class="hub-more" href="{% url 'quotesapp:sources' %}">All {{ tot_sources }} sources &rarr;</a>
+    </aside>
+  </div>
+
+{% endblock bodycontent %}

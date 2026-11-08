@@ -1,0 +1,25 @@
+{% extends "quotesapp/components/base.html" %}
+{% load extrafilters %}
+
+{# one tag: its quotes grouped by source, title and excerpt per quote #}
+
+{% block pagetitle %}<title>#{{ tag }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+
+  <header class="pagehead">
+    <p class="sectionlabel"><a href="{% url 'quotesapp:tags' %}">Tags</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }} from {{ tot_sources }} source{{ tot_sources|pluralize }}</p>
+    <h1 class="pagetitle">#{{ tag }}</h1>
+    {% if neighbours %}<p class="pagelede pagelede--tags">Often with {% for t, c, pc in neighbours|slice:":12" %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a> {% endfor %}</p>{% endif %}
+  </header>
+
+  <div class="qgroups">
+    {% for q in return_items %}
+      {% ifchanged q.quotesource %}
+        <h2 class="qgroup"><a href="{% url 'quotesapp:source' q.quotesource %}">{{ q.source }}</a></h2>
+      {% endifchanged %}
+      {% include "quotesapp/components/_qrow.html" %}
+    {% endfor %}
+  </div>
+
+{% endblock bodycontent %}

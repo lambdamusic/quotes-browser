@@ -2,23 +2,13 @@
 # encoding: utf-8
 
 """
-Layout prototypes (branch `layout-prototypes`, not for the live site).
+Data for the pages: quotes annotated for lists, latest and related quotes,
+tag and source indexes. Everything here works on the list of quote dicts
+from parser.read_all_files_data().
 
-`?layout=a|b|c` picks a prototype and keeps it in the session, so it sticks
-while clicking around; `?layout=off` goes back to the current design.
-
-All three use the michelepasin.org top bar and parerga.css tokens and type;
-they differ in how the quotes are reached:
-
-    a   commonplace: the homepage is a stream (a featured quote, the latest
-        additions, the main tags); quote pages are one reading column
-    b   index: the homepage is a catalogue (topics A-Z beside the sources);
-        quote pages keep the tags graph in a right rail
-    c   reading room: one quote at a time in large type, with next/previous
-        in its source and a random jump; the homepage is a single quote
-
-Templates live in templates/quotesapp/proto/. Don't site-dump this branch:
-wget would follow the switcher's ?layout= links.
+The site is mirrored to static HTML: anything picked at random is either
+seeded by the data (featured) or picked in the browser (/random/), so a
+site dump only rewrites pages whose quotes changed.
 """
 
 import math
@@ -30,32 +20,13 @@ import markdown
 from django.utils.html import strip_tags
 
 
-LAYOUTS = OrderedDict([
-    ('a', 'Commonplace'),
-    ('b', 'Index'),
-    ('c', 'Reading room'),
-])
-
-
-def current_layout(request):
-    """the active prototype key, or '' for the current design"""
-    choice = request.GET.get('layout')
-    if choice is not None:
-        request.session['layout'] = choice if choice in LAYOUTS else ''
-    return request.session.get('layout', '')
-
-
-def template(page):
-    return 'quotesapp/proto/' + page
-
-
 # ===========
 # quote helpers
 # ===========
 
 
 def annotate(quote, excerpt_chars=280):
-    """add the fields the prototype templates need to a quote dict (in place)
+    """add the fields the templates need to a quote dict (in place)
 
     titled
         False when the title is just the opening words of the quote
@@ -93,9 +64,11 @@ def latest(files_data, n=10, per_source=2):
 
 
 def featured(files_data, min_chars=160, max_chars=700):
-    """a random quote short enough to set large; changes on every site dump"""
+    """a random quote short enough to set large, seeded by the number of
+    quotes: it changes when quotes are added, not on every site dump"""
     pool = [q for q in files_data if min_chars <= len(q['markdown'] or '') <= max_chars]
-    return annotate(random.choice(pool or files_data), excerpt_chars=max_chars + 100)
+    pool = sorted(pool or files_data, key=lambda q: (q['quotesource'], int(q['quoteindex'])))
+    return annotate(dict(random.Random(len(files_data)).choice(pool)), excerpt_chars=max_chars + 100)
 
 
 def related(quote, files_data, n=6):
@@ -138,18 +111,10 @@ def tag_sizes(tags, files_data):
     return sorted([(t, counts.get(t, 0)) for t in tags if t], key=lambda x: -x[1])
 
 
-def random_other(quote, files_data):
-    pool = [q for q in files_data if q['quotesource'] != quote.get('quotesource')]
-    return random.choice(pool or files_data)
-
-
-def random_url():
-    """a random quote's URL, for the top bar's Random link (picked per page,
-    so per site dump on the static mirror)"""
-    from django.urls import reverse
-    from .parser import read_all_files_data
-    q = random.choice(read_all_files_data())
-    return reverse('quotesapp:quotes', args=[q['quotesource'], q['quoteindex']])
+def quote_counts(files_data):
+    """[[source slug, number of quotes], ...], for /random/"""
+    counts = Counter(q['quotesource'] for q in files_data)
+    return [[slug, counts[slug]] for slug in sorted(counts)]
 
 
 # ===========

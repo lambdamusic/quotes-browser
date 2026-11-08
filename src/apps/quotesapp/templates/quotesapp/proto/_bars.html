@@ -1,6 +1,0 @@
-{# ranked tags with a bar for their count: rows of (tag, count, percent) #}
-<ol class="qbars">
-  {% for t, c, pc in rows %}
-    <li><a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a> <span class="az-count">{{ c }}</span><span class="qbars-bar" style="width: {{ pc }}%"></span></li>
-  {% endfor %}
-</ol>

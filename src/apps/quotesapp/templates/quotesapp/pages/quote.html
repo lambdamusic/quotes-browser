@@ -1,0 +1,47 @@
+{% extends "quotesapp/components/base.html" %}
+{% load static %}
+{% load extrafilters %}
+
+{% comment %}
+  A single quote, in one reading column: source above, text, tags, then
+  previous/next in the source, a random jump, and related quotes (other
+  sources sharing its tags).
+{% endcomment %}
+
+{% block metadescription %}
+  <meta name="description" content="{{ quote.excerpt|truncatechars:155 }}">
+{% endblock %}
+
+{% block pagetitle %}<title>{{ title }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+
+  <article class="qpage">
+    <header class="qhead">
+      <p class="sectionlabel"><a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if siblings|length > 1 %} <span class="sep">/</span> quote {{ quoteindex }} of {{ siblings|length }}{% endif %}</p>
+      {% if quote.titled %}<h1 class="qtitle">{{ title }}</h1>{% endif %}
+    </header>
+
+    <blockquote class="qtext">{{ quote_text|safe }}</blockquote>
+
+    <p class="qmeta">{% if created %}Saved {{ created|date:"j F Y" }}{% endif %}{% if source_url %} <span class="sep">/</span> <a class="qext" href="{{ source_url }}" target="_blank" rel="noopener">{{ source_url|url_domain }} &#8599;</a>{% endif %}</p>
+    {% include "quotesapp/components/_tags.html" %}
+
+    {% if admin_change_url %}<p class="admin-note"><a href="vscode://file/{{ quote_source_file }}">Edit in VSCode</a></p>{% endif %}
+
+    {# previous / next in the source, and a jump to a random quote #}
+    <nav class="qpager" aria-label="More quotes">
+      {% if prev %}<a class="qpager-prev" href="{% url 'quotesapp:quotes' prev.quotesource prev.quoteindex %}"><small>&larr; Previous</small>{{ prev.title }}</a>{% endif %}
+      <p class="qanother"><a href="{% url 'quotesapp:random' %}">Another quote</a></p>
+      {% if next %}<a class="qpager-next" href="{% url 'quotesapp:quotes' next.quotesource next.quoteindex %}"><small>Next &rarr;</small>{{ next.title }}</a>{% endif %}
+    </nav>
+  </article>
+
+  {% if related %}
+  <section class="qrelated">
+    <p class="sectionlabel"><b>Related</b> <span class="sep">/</span> other sources, sharing tags</p>
+    {% for q in related %}{% include "quotesapp/components/_qrow.html" with show_source=True %}{% endfor %}
+  </section>
+  {% endif %}
+
+{% endblock bodycontent %}
