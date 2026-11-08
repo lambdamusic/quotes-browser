@@ -19,6 +19,7 @@ from myutils.myutils import printDebug
 from settings import STATICFILES_DIRS, QUOTES_SOURCE_DIR
 
 from .parser import *
+from . import proto
 
 APP = "quotesapp"
 
@@ -42,6 +43,8 @@ def about(request):
 	bio page
 	"""
 	context = {}
+	if proto.current_layout(request):
+		return render(request, proto.template('about.html'), context)
 	return render(request, APP + '/pages/about.html', context)
 
 
@@ -104,6 +107,20 @@ def quote_detail(request, source_slug, quoteindex=1):
 		'nodes': nodes,
 		'links': links,
 	}
+
+	if proto.current_layout(request):
+		proto.annotate(this_quote)
+		same, prev, nxt = proto.siblings(this_quote, files_data)
+		context.update({
+			'quote': this_quote,
+			'siblings': same,
+			'prev': prev,
+			'next': nxt,
+			'related': proto.related(this_quote, files_data),
+			'random_quote': proto.random_other(this_quote, files_data),
+			'tag_sizes': proto.tag_sizes(this_quote['tags'], files_data),
+		})
+		return render(request, proto.template('quote.html'), context)
 	
 	return render(request, APP + '/pages/' + templatee, context)
 
@@ -152,6 +169,12 @@ def source_detail(request, source_slug):
 		'tot_quotes': tot_quotes,
 	}
 
+	if proto.current_layout(request):
+		# tags from every quote in the source, not just the first one
+		context['source_tags'] = sorted(proto.tag_counts(data_encoded).items(), key=lambda x: (-x[1], x[0].lower()))
+		context['source'] = data_encoded[0] if data_encoded else None
+		return render(request, proto.template('source.html'), context)
+
 	return render(request, APP + '/pages/' + templatee, context)
 
 
@@ -161,7 +184,11 @@ def source_detail(request, source_slug):
 def qa_quotes(request,):
 	"""
 	2024-11-28: Test view for development purposes
+	(with a layout prototype on, the index of all sources instead)
 	"""
+	if proto.current_layout(request):
+		return _proto_sources(request)
+
 	context = {}
 
 	query = request.GET.get('query', 'date')
@@ -194,8 +221,60 @@ def qa_quotes(request,):
 		'tot_quotes': tot_quotes,
 		'tot_sources': tot_sources,
 	}
+
 	
 	return render(request, APP + '/pages/' + templatee, context)
+
+
+
+def _proto_tags(request, context, files_data, tag):
+	"""homepage, tag index and single tag page for the layout prototypes"""
+	if tag:
+		context['return_items'] = [proto.annotate(q) for q in files_data]
+		context['neighbours'] = proto.neighbours(tag, files_data, n=16)
+		return render(request, proto.template('tag.html'), context)
+
+	if request.resolver_match.url_name == 'home':
+		all_sources = proto.sources(files_data)
+		context.update({
+			'featured': proto.featured(files_data),
+			'latest': proto.latest(files_data),
+			'cloud': proto.tag_cloud(files_data),
+			'tag_index': proto.tag_index(files_data, min_count=5),
+			'top_sources': sorted(all_sources, key=lambda s: -s['count'])[:15],
+			'tot_quotes': len(files_data),
+			'tot_sources': len(all_sources),
+			'tot_tags': len(proto.tag_counts(files_data)),
+		})
+		if context['featured']:
+			context['random_quote'] = proto.random_other(context['featured'], files_data)
+		return render(request, proto.template('home.html'), context)
+
+	context.update({
+		'tag_index': proto.tag_index(files_data, min_count=context['min_tags_occurrence']),
+		'tot_tags': len(proto.tag_counts(files_data)),
+	})
+	return render(request, proto.template('tags.html'), context)
+
+
+
+def _proto_sources(request):
+	"""index of every source, for the layout prototypes"""
+	files_data = read_all_files_data()
+	order = request.GET.get('order', 'title')
+	rows = proto.sources(files_data)
+	if order == 'count':
+		rows = sorted(rows, key=lambda s: -s['count'])
+	elif order == 'date':
+		rows = sorted(rows, key=lambda s: str(s['date']), reverse=True)
+	else:
+		rows = sorted(rows, key=lambda s: s['source'].lower())
+	context = {
+		'return_items': rows,
+		'order': order,
+		'tot_quotes': len(files_data),
+	}
+	return render(request, proto.template('sources.html'), context)
 
 
 
@@ -256,6 +335,9 @@ def tags_all(request,):
 		'tot_quotes': tot_quotes,
 		'tot_sources': tot_sources,
 	}
+
+	if proto.current_layout(request):
+		return _proto_tags(request, context, files_data, tag)
 	
 	return render(request, APP + '/pages/' + templatee, context)
 

@@ -1,0 +1,38 @@
+{% extends "quotesapp/proto/base.html" %}
+{% load extrafilters %}
+
+{% comment %}
+  One source and all its quotes, in file order. Long sources get a contents
+  list. The tags line gathers the tags of every quote, not just the first.
+{% endcomment %}
+
+{% block pagetitle %}<title>{{ source.source }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+
+  <header class="pagehead">
+    <p class="sectionlabel"><a href="{% url 'quotesapp:qa_quotes' %}">Sources</a> <span class="sep">/</span> {{ tot_quotes }} quote{{ tot_quotes|pluralize }}{% if source.date %}, saved {{ source.date|date:"F Y" }}{% endif %}</p>
+    <h1 class="pagetitle pagetitle--source">{{ source.source }}</h1>
+    {% if source.source_url %}<p class="pagelede"><a class="qext" href="{{ source.source_url }}" target="_blank" rel="noopener">{{ source.source_url|url_domain }} &#8599;</a></p>{% endif %}
+    {% if source_tags %}<p class="pagelede pagelede--tags">{% for t, c in source_tags|slice:":24" %}<a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% if c > 1 %}<span class="az-count">{{ c }}</span>{% endif %} {% endfor %}</p>{% endif %}
+    {% if admin_change_url %}<p class="admin-note"><a href="vscode://file/{{ quote_source_file }}">Edit in VSCode</a></p>{% endif %}
+  </header>
+
+  {% if tot_quotes > 3 %}
+  <nav class="srctoc" aria-label="Contents">
+    <p class="sectionlabel"><b>Contents</b></p>
+    <ol>
+      {% for q in return_items %}<li><a href="#q{{ q.quoteindex }}">{{ q.title }}</a></li>{% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
+  {% for q in return_items %}
+    <section class="srcquote" id="q{{ q.quoteindex }}">
+      <h2 class="srcquote-title"><a href="{% url 'quotesapp:quotes' q.quotesource q.quoteindex %}">{{ q.title }}</a></h2>
+      <blockquote class="qtext">{{ q.quote_text|safe }}</blockquote>
+      {% include "quotesapp/proto/_tags.html" with tags=q.tags %}
+    </section>
+  {% endfor %}
+
+{% endblock bodycontent %}

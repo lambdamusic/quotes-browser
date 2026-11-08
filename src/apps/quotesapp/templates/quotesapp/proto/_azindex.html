@@ -1,0 +1,41 @@
+{% comment %}
+  Tags grouped by initial, with a letter strip and a filter box that hides
+  what doesn't match (plain JS, so it still works on the static mirror).
+{% endcomment %}
+
+<div class="azindex" data-azindex>
+  <div class="az-tools">
+    <input class="az-filter" type="search" placeholder="Filter tags&hellip;" aria-label="Filter tags" data-az-filter>
+    <p class="az-letters">{% for initial, items in tag_index %}<a href="#az-{{ initial }}">{{ initial }}</a>{% endfor %}</p>
+  </div>
+  {% for initial, items in tag_index %}
+    <section class="az-group" id="az-{{ initial }}">
+      <h2 class="az-letter">{{ initial }}</h2>
+      <ul class="az-list">
+        {% for t, c in items %}<li data-tag="{{ t|lower }}"><a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">{{ t }}</a> <span class="az-count">{{ c }}</span></li>{% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+  <p class="az-empty" hidden>No tags match.</p>
+</div>
+
+<script>
+(function () {
+  var box = document.querySelector('[data-az-filter]');
+  if (!box) return;
+  var root = box.closest('[data-azindex]');
+  box.addEventListener('input', function () {
+    var q = box.value.trim().toLowerCase(), any = false;
+    root.querySelectorAll('.az-group').forEach(function (g) {
+      var shown = 0;
+      g.querySelectorAll('li').forEach(function (li) {
+        var hit = !q || li.dataset.tag.indexOf(q) !== -1;
+        li.hidden = !hit; if (hit) shown++;
+      });
+      g.hidden = !shown; if (shown) any = true;
+    });
+    root.querySelector('.az-empty').hidden = any;
+    root.querySelector('.az-letters').hidden = !!q;
+  });
+})();
+</script>

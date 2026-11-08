@@ -1,0 +1,45 @@
+{% extends "quotesapp/proto/base.html" %}
+
+{# every source, at /quotes/ while a prototype is on (views._proto_sources) #}
+
+{% block pagetitle %}<title>Sources | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+  <header class="pagehead">
+    <p class="sectionlabel"><b>Sources</b> <span class="sep">/</span> {{ return_items|length }} books, papers and web pages, {{ tot_quotes }} quotes</p>
+    <h1 class="pagetitle">Sources</h1>
+  </header>
+
+  <div class="srcfilter">
+    <p class="srcorder">
+      <span class="srcorder-label">Order</span>
+      <a class="chip {% if order == 'title' %}is-current{% endif %}" href="?order=title">A&ndash;Z</a>
+      <a class="chip {% if order == 'count' %}is-current{% endif %}" href="?order=count">Most quoted</a>
+      <a class="chip {% if order == 'date' %}is-current{% endif %}" href="?order=date">Recently saved</a>
+    </p>
+    <input class="az-filter" type="search" placeholder="Filter sources&hellip;" aria-label="Filter sources" data-src-filter>
+  </div>
+
+  <ol class="srclist">
+    {% for s in return_items %}
+      <li data-src="{{ s.source|lower }}">
+        <a href="{% url 'quotesapp:source' s.quotesource %}">{{ s.source }}</a>
+        <span class="srclist-meta">{{ s.count }} quote{{ s.count|pluralize }}{% if s.date %} &middot; {{ s.date|date:"Y" }}{% endif %}</span>
+      </li>
+    {% endfor %}
+  </ol>
+{% endblock bodycontent %}
+
+{% block extra_js %}
+<script>
+(function () {
+  var box = document.querySelector('[data-src-filter]');
+  box.addEventListener('input', function () {
+    var q = box.value.trim().toLowerCase();
+    document.querySelectorAll('.srclist li').forEach(function (li) {
+      li.hidden = q && li.dataset.src.indexOf(q) === -1;
+    });
+  });
+})();
+</script>
+{% endblock extra_js %}

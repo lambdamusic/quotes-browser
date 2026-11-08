@@ -1,0 +1,15 @@
+{% extends "quotesapp/proto/base.html" %}
+
+{% block pagetitle %}<title>About | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodycontent %}
+  <header class="pagehead">
+    <p class="sectionlabel"><b>About</b> <span class="sep">/</span> this site</p>
+    <h1 class="pagetitle">About</h1>
+  </header>
+  <div class="blogentry">
+    <p>A commonplace book: passages I saved while reading books, papers and web pages, each kept with its source and a few tags.</p>
+    <p>The background is in <a href="https://www.michelepasin.org/blog/2022/07/28/introducing-quotes-section/index.html">this blog post</a>. The quotes are plain markdown files; the site is a small Django app mirrored to static HTML with wget, as described in <a href="https://www.michelepasin.org/blog/2021/10/29/django-wget-static-site/index.html">A static site generator using Django, Wget and Github Pages</a>.</p>
+    <p>Browse by <a href="{% url 'quotesapp:tags' %}">tag</a> or by <a href="{% url 'quotesapp:qa_quotes' %}">source</a>, or go back to <a href="https://www.michelepasin.org">michelepasin.org</a>.</p>
+  </div>
+{% endblock bodycontent %}

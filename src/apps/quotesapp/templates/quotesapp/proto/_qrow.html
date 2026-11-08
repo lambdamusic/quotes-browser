@@ -1,0 +1,18 @@
+{% comment %}
+  One quote in a list. `q` is an annotated quote (proto.annotate). When its
+  title is just the opening words, the excerpt itself is the link. Pass
+  show_source=True outside a source grouping; `tag` is bolded, not linked.
+{% endcomment %}
+
+<div class="qrow">
+  {% if q.titled %}
+    <h3 class="qrow-title"><a href="{% url 'quotesapp:quotes' q.quotesource q.quoteindex %}">{{ q.title }}</a></h3>
+    <p class="qrow-excerpt">{{ q.excerpt }}</p>
+  {% else %}
+    <p class="qrow-excerpt"><a class="qrow-textlink" href="{% url 'quotesapp:quotes' q.quotesource q.quoteindex %}">{{ q.excerpt }}</a></p>
+  {% endif %}
+  <p class="qrow-meta">
+    {% if show_source %}<a class="qrow-source" href="{% url 'quotesapp:source' q.quotesource %}">{{ q.source }}</a>{% endif %}
+    {% for t in q.tags %}{% if t == tag %}<b class="qrow-tag">#{{ t }}</b>{% elif t in q.shared %}<a class="qrow-tag is-shared" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% else %}<a class="qrow-tag" href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a>{% endif %} {% endfor %}
+  </p>
+</div>

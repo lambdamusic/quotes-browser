@@ -1,0 +1,15 @@
+{% extends "quotesapp/proto/base.html" %}
+
+{# all tags, A-Z with a filter box: replaces the 1,200-word cloud #}
+
+{% block pagetitle %}<title>Tags | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodyclass %}is-wide{% endblock %}
+
+{% block bodycontent %}
+  <header class="pagehead">
+    <p class="sectionlabel"><b>Tags</b> <span class="sep">/</span> {{ tot_tags }} in all, those used at least {{ min_tags_occurrence }} times below</p>
+    <h1 class="pagetitle">Tags</h1>
+  </header>
+  {% include "quotesapp/proto/_azindex.html" %}
+{% endblock bodycontent %}

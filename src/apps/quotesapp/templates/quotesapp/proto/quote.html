@@ -1,0 +1,104 @@
+{% extends "quotesapp/proto/base.html" %}
+{% load static %}
+{% load extrafilters %}
+
+{% comment %}
+  A single quote.
+    a  one reading column: source above, text, tags, then previous/next in
+       the source and related quotes (shared tags) instead of the graph
+    b  the same column with a right rail: source, date, tags with their
+       sizes and the other quotes in the source
+    c  reading room: large type, previous / another / next as the main way on
+{% endcomment %}
+
+{% block metadescription %}
+  <meta name="description" content="{{ quote.excerpt|truncatechars:155 }}">
+{% endblock %}
+
+{% block pagetitle %}<title>{{ title }} | Quotes | Michele Pasin</title>{% endblock pagetitle %}
+
+{% block bodyclass %}{% if layout == "b" %}is-wide{% endif %}{% endblock %}
+
+{% block bodycontent %}
+
+{% if layout == "c" %}
+
+  <article class="room">
+    <p class="sectionlabel"><a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if siblings|length > 1 %} <span class="sep">/</span> {{ quoteindex }} of {{ siblings|length }}{% endif %}</p>
+    {% if quote.titled %}<h1 class="room-title">{{ title }}</h1>{% endif %}
+    <div class="room-text">{{ quote_text|safe }}</div>
+    <p class="room-source">&mdash; <a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if source_url %} <a class="qext" href="{{ source_url }}" target="_blank" rel="noopener">original &#8599;</a>{% endif %}{% if created %} <span class="room-date">saved {{ created|date:"j M Y" }}</span>{% endif %}</p>
+    {% include "quotesapp/proto/_tags.html" %}
+    <nav class="room-nav" aria-label="Quotes">
+      {% if prev %}<a href="{% url 'quotesapp:quotes' prev.quotesource prev.quoteindex %}">&larr; Previous</a>{% else %}<span></span>{% endif %}
+      <a class="room-next" href="{% url 'quotesapp:quotes' random_quote.quotesource random_quote.quoteindex %}">Another quote</a>
+      {% if next %}<a href="{% url 'quotesapp:quotes' next.quotesource next.quoteindex %}">Next &rarr;</a>{% else %}<span></span>{% endif %}
+    </nav>
+  </article>
+
+  {% if related %}
+  <section class="room-begin">
+    <p class="sectionlabel"><b>Follow a thread</b> <span class="sep">/</span> quotes sharing its tags</p>
+    {% for q in related|slice:":3" %}{% include "quotesapp/proto/_qrow.html" with show_source=True %}{% endfor %}
+  </section>
+  {% endif %}
+
+{% else %}
+
+  <div class="{% if layout == 'b' %}qrail-layout{% endif %}">
+    <article class="qpage">
+      <header class="qhead">
+        <p class="sectionlabel"><a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if siblings|length > 1 %} <span class="sep">/</span> quote {{ quoteindex }} of {{ siblings|length }}{% endif %}</p>
+        {% if quote.titled %}<h1 class="qtitle">{{ title }}</h1>{% endif %}
+      </header>
+
+      <blockquote class="qtext">{{ quote_text|safe }}</blockquote>
+
+      {% if layout != "b" %}
+      <p class="qmeta">{% if created %}Saved {{ created|date:"j F Y" }}{% endif %}{% if source_url %} <span class="sep">/</span> <a class="qext" href="{{ source_url }}" target="_blank" rel="noopener">{{ source_url|url_domain }} &#8599;</a>{% endif %}</p>
+      {% include "quotesapp/proto/_tags.html" %}
+      {% endif %}
+
+      {% if admin_change_url %}<p class="admin-note"><a href="vscode://file/{{ quote_source_file }}">Edit in VSCode</a></p>{% endif %}
+
+      {% if prev or next %}
+      <nav class="qpager" aria-label="In this source">
+        {% if prev %}<a class="qpager-prev" href="{% url 'quotesapp:quotes' prev.quotesource prev.quoteindex %}"><small>&larr; Previous</small>{{ prev.title }}</a>{% endif %}
+        {% if next %}<a class="qpager-next" href="{% url 'quotesapp:quotes' next.quotesource next.quoteindex %}"><small>Next &rarr;</small>{{ next.title }}</a>{% endif %}
+      </nav>
+      {% endif %}
+    </article>
+
+    {% if layout == "b" %}
+    <aside class="qrail">
+      <p class="qrail-label">Source</p>
+      <p class="qrail-text"><a href="{% url 'quotesapp:source' quotesource %}">{{ source }}</a>{% if source_url %}<br><a class="qext" href="{{ source_url }}" target="_blank" rel="noopener">{{ source_url|url_domain }} &#8599;</a>{% endif %}</p>
+      {% if created %}<p class="qrail-label">Saved</p><p class="qrail-text">{{ created|date:"j F Y" }}</p>{% endif %}
+      {% if tag_sizes %}
+        <p class="qrail-label">Tags</p>
+        <ul class="qrail-tags">{% for t, c in tag_sizes %}<li><a href="{% url 'quotesapp:tags' %}?tag={{ t|urlencode }}">#{{ t }}</a> <span class="az-count">{{ c }} quote{{ c|pluralize }}</span></li>{% endfor %}</ul>
+      {% endif %}
+      {% if siblings|length > 1 %}
+        <p class="qrail-label">In this source</p>
+        {% if siblings|length <= 12 %}
+        <ol class="qrail-list">
+          {% for q in siblings %}<li>{% if q.quoteindex == quote.quoteindex %}<span class="is-here">{{ q.title }}</span>{% else %}<a href="{% url 'quotesapp:quotes' q.quotesource q.quoteindex %}">{{ q.title }}</a>{% endif %}</li>{% endfor %}
+        </ol>
+        {% else %}
+        <p class="qrail-text"><a href="{% url 'quotesapp:source' quotesource %}">All {{ siblings|length }} quotes &rarr;</a></p>
+        {% endif %}
+      {% endif %}
+    </aside>
+    {% endif %}
+  </div>
+
+  {% if related %}
+  <section class="qrelated">
+    <p class="sectionlabel"><b>Related</b> <span class="sep">/</span> other sources, sharing tags</p>
+    {% for q in related %}{% include "quotesapp/proto/_qrow.html" with show_source=True %}{% endfor %}
+  </section>
+  {% endif %}
+
+{% endif %}
+
+{% endblock bodycontent %}
